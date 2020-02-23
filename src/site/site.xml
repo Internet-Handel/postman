@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Postman">
+	<custom>
+		<fluidoSkin>
+			<topBarEnabled>false</topBarEnabled>
+			<sideBarEnabled>true</sideBarEnabled>
+			<skipGenerationDate>true</skipGenerationDate>
+		</fluidoSkin>
+	</custom>
+	<bannerLeft>
+		<name>Postman</name>
+	</bannerLeft>
+	<publishDate format="yyyy-MM-dd" position="none" />
+	<version position="none" />
+	<skin>
+		<groupId>org.apache.maven.skins</groupId>
+		<artifactId>maven-fluido-skin</artifactId>
+		<version>1.8</version>
+	</skin>
+	<body>
+		<menu name="Postman">
+			<item name="Index" href="./index.html" />
+			<item name="Notes" href="./notes.html" />
+		</menu>
+		<footer>
+		</footer>
+	</body>
+</project>
