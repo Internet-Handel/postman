@@ -1,6 +1,6 @@
-# Začátek
+# Poznamky
 
-## 22.2. Poznamky, co jsme si rikali 
+## 22.2. co jsme si rikali 
 
 * Bivoj potrebuje navrh systemu. Hlavne:
      * Analyzu & logickou architekturu.
@@ -21,4 +21,16 @@
 * bude to bezet v ruznych jazycich na ruznych domenach.
 * Co zeme, kam dorucujem to vlastni trasa baliku.
 * Pokud DPD nedpruci, pak vraci zpet. 
+
+
+## Otazky
+
+* Musi se zakaznik pro odeslani baliku hlasit loginem?
+* Ma zakaznik moznost se hlasit loginem?
+* Co vlastne budes chtit videt jako admin?
+* Komunikacni kanaly pro zakaznika telefon, email, neco dalsiho, nejake formulare?
+* Chcem zakaznikovy potvrdit, ze jsme balik dorucili? Vime to vubec?
+* Nektere UC zaznamenat, ale rovou oznacit jako prioritu 2.
+
+
 

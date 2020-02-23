@@ -9,5 +9,6 @@ release.properties
 .settings/
 .classpath
 .checkstyle
+velocity.log
 *~
 *.iml

@@ -1,0 +1,13 @@
+@startuml
+
+actor :Dispecer: as dispecer
+
+(Prijmout baliky) as (accept_packages)
+(Rozdelit baliky) as (dispatch_packages)
+(Predat baliky) as (send_packages)
+
+dispecer --> (accept_packages)
+dispecer --> (dispatch_packages)
+dispecer --> (send_packages)
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+'left to right direction
+
+actor :Uzivatel: as uzivatel
+actor :Zakaznik: as zakaznik
+actor :eShop: as eShop
+actor :Admin: as admin
+actor :Dispecer: as dispecer
+actor :Prepravce: as prepravce
+
+
+'zakaznik --> uzivatel
+admin --> uzivatel
+dispecer --> uzivatel
+eShop --> zakaznik
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+
+actor :Uzivatel: as user
+
+(Prihlaseni) as (login)
+(Zapomenute heslo) as (forgotten_password)
+(Zapomenuty login) as (forgotten_login)
+(Odhlaseni) as (logout)
+
+user --> (login)
+user --> (forgotten_password)
+user --> (forgotten_login)
+user --> (logout)
+
+
+@enduml

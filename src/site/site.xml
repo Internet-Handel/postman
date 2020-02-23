@@ -20,7 +20,8 @@
 	<body>
 		<menu name="Postman">
 			<item name="Index" href="./index.html" />
-			<item name="Notes" href="./notes.html" />
+			<item name="Poznamky" href="./notes.html" />
+			<item name="Analyza" href="./analyza.html" />
 		</menu>
 		<footer>
 		</footer>
