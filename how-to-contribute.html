@@ -38,6 +38,7 @@
     <li><a href="index.html" title="Index"><span class="none"></span>Index</a></li>
     <li><a href="notes.html" title="Poznamky"><span class="none"></span>Poznamky</a></li>
     <li><a href="analyza.html" title="Analyza"><span class="none"></span>Analyza</a></li>
+    <li><a href="screens.html" title="Obrazovky"><span class="none"></span>Obrazovky</a></li>
     <li class="active"><a href="#"><span class="none"></span>Jak přispět</a></li>
   </ul>
           </nav>
@@ -55,9 +56,20 @@
 <h1>Jak dal rozsirovat tuto dokumentaci</h1>
 <p>Navod jsem zkousel pouze na Apple.</p><section>
 <h2><a name="Zakladni_informace"></a>Zakladni informace</h2>
-<p>Struktura projektu vyuziva strukturu <a class="externalLink" href="https://maven.apache.org">maven</a> projektu. Stejne tak proces generovani dokumentace vyuziva funkci mavenu.</p></section><section>
+<p>Struktura projektu vyuziva strukturu <a class="externalLink" href="https://maven.apache.org">maven</a> projektu a vypada takto:</p>
+
+<div>
+<div>
+<pre class="source">&#x2514;&#x2500;&#x2500; src
+&#xa0;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; site
+ &#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; markdown
+ &#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; plantuml
+ &#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; resources
+</pre></div></div>
+
+<p>Jednotlive adresare obsahuji dokumenty pro ruzne technologie. Proces generovani dokumentace vyuziva funkci mavenu. Detaily jsou v oubory pom.xml.</p></section><section>
 <h2><a name="Predpoklady"></a>Predpoklady</h2>
-<p>Aby jste mohli texty uptavovat a publikovat zmeny, pak budete potrebovat:</p>
+<p>Aby jste mohli texty upravovat a publikovat zmeny, pak budete potrebovat:</p>
 <ul>
 
 <li>Nainstalovany git</li>
@@ -66,11 +78,11 @@
 <li>Stahnuty projekt <a class="externalLink" href="https://github.com/jajir/postman">github.com/jajir/postman</a>.</li>
 </ul></section><section>
 <h2><a name="Jak_upravovat_texty"></a>Jak upravovat texty</h2>
-<p>Texty jsou v adresari src/site/markdown. Pro upravu staci znat jednoduchou strukuru markdownu a zacit upravovat. Az budete s upravami hotovi, spustte:</p>
+<p>Texty jsou v adresari src/site/markdown. Pro upravu staci znat jednoduchou strukuru markdownu a zacit upravovat. Markdown je popsany napriklad <a class="externalLink" href="https://daringfireball.net/projects/markdown/syntax">zde</a>. Az budete s upravami hotovi, spustte:</p>
 
 <div>
 <div>
-<pre class="source">mvn site-deploy
+<pre class="source">mvn site
 </pre></div></div>
 
 <p>v adresari target/site/index.html uvidite pregenerovanou a upraven	ou dokumentaci.</p></section><section>
@@ -92,7 +104,7 @@
 <pre class="source">mvn site-deploy
 </pre></div></div>
 
-<p>se novy nebo upraveny obrazek vygeneruje. Je pohodlne obrazky upravovat a vytvaret v nejakem on0line editoru, napriklad <a class="externalLink" href="https://www.planttext.com">www.planttext.com</a>.</p></section></section><section>
+<p>se novy nebo upraveny obrazek vygeneruje. Je pohodlne obrazky upravovat a vytvaret v nejakem on-	line editoru, napriklad <a class="externalLink" href="https://www.planttext.com">www.planttext.com</a>.</p></section></section><section>
 <h2><a name="Jak_publikovat_upravy_na_jajir.github.io.2Fpostman.2F"></a>Jak publikovat upravy na <a class="externalLink" href="https://jajir.github.io/postman/">jajir.github.io/postman/</a></h2><section>
 <h3><a name="Postup"></a>Postup</h3>
 <ul>
@@ -113,7 +125,7 @@
 	...
 </pre></div></div>
 
-<p>Stim, ze misto  ___jmeno___ bude vase jmeno a misto ___heslo___ bude vase heslo.</p>
+<p>Stim, ze misto  ___jmeno___ bude vase jmeno a misto ___heslo___ bude vase heslo na githubu.</p>
 <ul>
 
 <li>Na konzoli spustte:</li>
