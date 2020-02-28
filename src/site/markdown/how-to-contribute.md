@@ -4,11 +4,20 @@ Navod jsem zkousel pouze na Apple.
 
 ## Zakladni informace
 
-Struktura projektu vyuziva strukturu [maven](https://maven.apache.org) projektu. Stejne tak proces generovani dokumentace vyuziva funkci mavenu.
+Struktura projektu vyuziva strukturu [maven](https://maven.apache.org) projektu a vypada takto:
+```
+└── src
+    └── site
+        ├── markdown
+        ├── plantuml
+        └── resources
+```
+Jednotlive adresare obsahuji dokumenty pro ruzne technologie. Proces generovani dokumentace vyuziva funkci mavenu. Detaily jsou v oubory ``pom.xml``. 
+
 
 ## Predpoklady
 
-Aby jste mohli texty uptavovat a publikovat zmeny, pak budete potrebovat:
+Aby jste mohli texty upravovat a publikovat zmeny, pak budete potrebovat:
  
 * Nainstalovany git
 * Nainstalovanou javu, pouzivam verzi OpenJDK 11.
@@ -17,10 +26,10 @@ Aby jste mohli texty uptavovat a publikovat zmeny, pak budete potrebovat:
 
 ## Jak upravovat texty
 
-Texty jsou v adresari ``src/site/markdown``. Pro upravu staci znat jednoduchou strukuru markdownu a zacit upravovat. Az budete s upravami hotovi, spustte:
+Texty jsou v adresari ``src/site/markdown``. Pro upravu staci znat jednoduchou strukuru markdownu a zacit upravovat. Markdown je popsany napriklad [zde](https://daringfireball.net/projects/markdown/syntax). Az budete s upravami hotovi, spustte:
 
 ```
-mvn site-deploy
+mvn site
 ```
 v adresari ``target/site/index.html`` uvidite pregenerovanou a upraven	ou dokumentaci.
 
@@ -41,7 +50,7 @@ Obrazky jsou generovat pomoci plant uml ze souboru ulozenych v ``src/site/plantu
 ```
 mvn site-deploy
 ```
-se novy nebo upraveny obrazek vygeneruje. Je pohodlne obrazky upravovat a vytvaret v nejakem on0line editoru, napriklad [www.planttext.com](https://www.planttext.com).
+se novy nebo upraveny obrazek vygeneruje. Je pohodlne obrazky upravovat a vytvaret v nejakem on-	line editoru, napriklad [www.planttext.com](https://www.planttext.com).
 
 
 ## Jak publikovat upravy na [jajir.github.io/postman/](https://jajir.github.io/postman/)
@@ -61,7 +70,7 @@ se novy nebo upraveny obrazek vygeneruje. Je pohodlne obrazky upravovat a vytvar
 	...
 ```
 
-Stim, ze misto  ``___jmeno___`` bude vase jmeno a misto ``___heslo___`` bude vase heslo.
+Stim, ze misto  ``___jmeno___`` bude vase jmeno a misto ``___heslo___`` bude vase heslo na githubu.
 
 - Na konzoli spustte:
 

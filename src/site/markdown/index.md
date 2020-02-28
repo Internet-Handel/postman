@@ -7,3 +7,8 @@ V [poznamkach](./notes.html) je, co jsem si odnesl z naseho povidani. Zbytek je 
 
 ## Jak to bude fungovat
 ![Zakladni princip](./princip.png "Zakladni princip")
+
+Se zakaznikem budem komunikovat:
+
+* email
+* telefon

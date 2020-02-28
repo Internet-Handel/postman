@@ -7,10 +7,11 @@ actor :Zakaznik: as zakaznik
 actor :eShop: as eShop
 actor :Admin: as admin
 actor :Dispecer: as dispecer
+actor :Support: as support
 actor :Prepravce: as prepravce
 
 
-'zakaznik --> uzivatel
+support --> uzivatel
 admin --> uzivatel
 dispecer --> uzivatel
 eShop --> zakaznik

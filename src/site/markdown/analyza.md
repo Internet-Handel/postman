@@ -29,9 +29,19 @@ Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.
 
 ### Dispecer
 
-Pracovnik dorucivaci sluzby, odpovedny za prevzeti baliku od zakaznika a predani prepravci.
+Pracovnik dorucovaci sluzby, odpovedny za prevzeti baliku od zakaznika a predani prepravci.
 
 ![Co muze delat Despecer](./ucs-dispecer.png "UCS for Dispecer")
+
+Dispecer musi byt v depu. Depo bude umistene tak, aby bylo v dobrem dosahu prepravcu.
+
+### Support
+
+Pracovnik nasi dorucovaci sluzby. Je odpovdny za hladky provoz sluzby. Vyrizuje reklamace, nesparovan baliky a pomoha s procesem doruceni baliku.
+
+![Co muze delat Support](./ucs-support.png "UCS for Support")
+
+Support muze byt fyzicky na centrale.
 
 ### eShop
 
