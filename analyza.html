@@ -38,7 +38,7 @@
     <li><a href="index.html" title="Index"><span class="none"></span>Index</a></li>
     <li><a href="notes.html" title="Poznamky"><span class="none"></span>Poznamky</a></li>
     <li class="active"><a href="#"><span class="none"></span>Analyza</a></li>
-    <li><a href="screens.html" title="Obrazovky"><span class="none"></span>Obrazovky</a></li>
+    <li><a href="uc-04.html" title="UC-04"><span class="none"></span>UC-04</a></li>
     <li><a href="how-to-contribute.html" title="Jak přispět"><span class="none"></span>Jak přispět</a></li>
   </ul>
           </nav>
@@ -58,11 +58,28 @@
 <p>Mame tyto role:</p>
 <p><img src="./actors.png" alt="Actors" title="Role" /></p><section>
 <h3><a name="Uzivatel"></a>Uzivatel</h3>
-<p>Predstavuje nekoho, kdo ma pristup do systemu. Muze se prihlasit. Podle jeho dalsi specializace ma dalsi moznosti.</p>
-<p><img src="./ucs-uzivatel.png" alt="Co muze delat Uzivatel" title="UCS for Uzivatel" /></p></section><section>
+<p>Predstavuje nekoho, kdo ma pristup do systemu. Podle jeho dalsi specializace ma dalsi moznosti.</p>
+<p><img src="./ucs-uzivatel.png" alt="Co muze delat Uzivatel" title="UCS for Uzivatel" /></p>
+<p>Uzivatel muze:</p>
+<ul>
+
+<li>UC-01 - Prihlasit se pomoci jmena a hesla.</li>
+<li>UC-02 - Zapomenute heslo.</li>
+<li>UC-03 - Zapomenuty login.</li>
+<li>UC-04 - Odhlaseni ze systemu.</li>
+</ul>
+<p><b>Nebudem implementovat</b></p></section><section>
 <h3><a name="Zakaznik"></a>Zakaznik</h3>
 <p>Zakaznik nasi dorucovaci sluzby. Muze to byt fyzicka osoba nebo spolecnost. Zakaznim muze:</p>
 <p><img src="./ucs-zakaznik.png" alt="Co muze delat Zakaznik" title="UCS for Zakaznik" /></p>
+<p>Zakaznik muze:</p>
+<ul>
+
+<li>UC-04 <a href="./uc-04.html">Registrovat balik</a></li>
+<li>UC-05 Dorucit balik do depa. Pouze zakaznikovi nabidnem moznost poslat libovolnou postou nebo fyzicky prinest na sberne misto.</li>
+<li>UC-05 Sledovani baliku. Zakaznik musi mit moznost sledovat zasilku. Kde je a co se s ni deje.</li>
+<li>UC-06 Zaplatit za doruceni. Posledni krok UC-04.</li>
+</ul>
 <p><b>TODO negativni scenare</b></p></section><section>
 <h3><a name="Admin"></a>Admin</h3>
 <p>Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.</p>
