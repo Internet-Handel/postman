@@ -1,6 +1,6 @@
 # Navrh obrazovek
 
-## UC regostrace balicku
+## UC registrace baliku
 
 Zakaznik objednava doruceni na cilovou adresu. Cely proces je rozdeleny do nekolika kroku. Finalne lze cele udelat na jedne strance.
 
