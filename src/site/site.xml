@@ -22,7 +22,11 @@
 			<item name="Index" href="./index.html" />
 			<item name="Poznamky" href="./notes.html" />
 			<item name="Analyza" href="./analyza.html" />
-			<item name="Obrazovky" href="./screens.html" />
+			<item name="UC-00" href="./uc-00.html#uc-00" />
+			<item name="UC-03" href="./uc-00.html#uc-03" />
+			<item name="UC-04" href="./uc-04.html" />
+			<item name="UC-06" href="./uc-06.html" />
+			<item name="Šablony" href="./templates.html" />
 			<item name="Jak přispět" href="./how-to-contribute.html" />
 		</menu>
 		<footer>

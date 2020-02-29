@@ -37,6 +37,11 @@
 * Dostal jsem starsi verze obrazovek registracni formular.
 * Od klienta data pouze sbirame, validace se dela klidne rucne.
 
+## 28.02.2020
+
+* Omezíme pouze na Německo.
+* Resili jsme UC-04.
+
 ## Otevrene otazky
 
 * Nejaky konkretni priklad koncoveho dopravce. Chci se podivat na API a sluzby co nabizi.
