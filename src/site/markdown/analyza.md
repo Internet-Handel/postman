@@ -55,8 +55,18 @@ Pracovnik dorucovaci sluzby, odpovedny za prevzeti baliku od zakaznika a predani
 
 Dispecer musi byt v depu. Depo bude umistene tak, aby bylo v dobrem dosahu prepravcu. Co dispečer dela:
 
-* UC-10 Prijmout baliky. Tento UC nebudem dal rozpracovavat. 
-* UC-11 Rozdelit baliky. Projit balizky zkontrolovat stav a podle toho je rozdelit.
+fronty jsou minimalne dve.
+
+* UC-10 Prijmout baliky. Zada do systemu kod. Dispecer premeri a zvazi balik vse zapise do systemu. System ukaze detaily odesilatele dispecer to zkontroluje. Pokud vse sedi a je zaplaceno, pak system oznami a vytiskne pruvodni listek. Pokud neni zaplaceno vytiskne indetifikacni stitek s kodem, bude obsahovat zpetnou adresu, jmeno odesilatele a carovej kod. Tento stitem musi byt hodne jiny nez pruvodni listek.
+
+Nas stitek musi mit velke okraje, aby sli na 100% prikryt pruvodnim listkem.
+
+* UC-11 Rozdelit baliky. Cteckou nacte carovy kod ze stitku. Pokud je zaplaceno, pak se vytiskne pruvodni listek. Pruvodni listek nalepi prez nas identifikacni listek.
+
+Projit balizky zkontrolovat stav a podle toho je rozdelit. Balik zapise do systemu. Pokud je zaplaceno system vytiskne stitek pro dopravce a rekneme mu co se bude dit. Stiskne dalsi balik. Uvidi informace o cilove adrese, aby to zkontroloval.
+
+Prevazujem baliky z odchozi fronty vzdy. Radeji neodeslem, nez neprevazime.
+
 * UC-12 Predat baliku. Dispečer vezme hromadku z balíkama pro daného dopravce a předá mu je. Nebudem dal popisovat.
 
 ### Support
@@ -70,11 +80,12 @@ Support může být fyzicky na centrále. Je odpovědný za:
 * Podpora uzivatelu
     * UC-31 Zmena/obnova hesla 
     * UC-32 Zapomenuté přihlašovací jméno
-* UC-33 - Kontrola úctu
+* UC-33 - Kontrola úctu, zpracuju.
 * Vyhledaní balíku
 * Vystaveni dobropisu
-* Urgovani zaplacni
-* Reklamace
+* Urgovani zaplacni, po 7 dnech od doruceni do depa.
+* Reklamace, oncall/email. musime se napojit na last mile prepravce informace o zasilce.
+* resit email. 
 
 ### eShop
 

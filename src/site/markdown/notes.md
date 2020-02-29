@@ -42,6 +42,11 @@
 * Omezíme pouze na Německo.
 * Resili jsme UC-04.
 
+## 29.02.2020
+
+* Nebudem aktivne rikat zakaznikovy, jakeho dopravce pouzivame. Muze pozdeji zjistit.
+* Nebudel lidi navolavat z rozdelanych zadosti. Tede je ani nebudem ukladat.
+
 ## Otevrene otazky
 
 * Nejaky konkretni priklad koncoveho dopravce. Chci se podivat na API a sluzby co nabizi.

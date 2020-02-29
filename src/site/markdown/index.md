@@ -22,3 +22,10 @@ Se zakaznikem budem komunikovat:
 
 * email
 * telefon
+
+## Busines otazky ##
+
+* Jak to bude s odvadenim DPH.
+* Pojisteni musime baliky pojistovat?, lze pojisteni nabizet klientovi?
+* Nebezpecne a nelegalni zasilky.
+
