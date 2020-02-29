@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="Apache Maven Doxia Site Renderer 1.9.1" />
-    <title>Postman &#x2013; UC-04 Registrovat balik</title>
+    <title>Postman &#x2013; UC-04 Registrovat balík</title>
     <link rel="stylesheet" href="./css/apache-maven-fluido-1.8.min.css" />
     <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -38,7 +38,11 @@
     <li><a href="index.html" title="Index"><span class="none"></span>Index</a></li>
     <li><a href="notes.html" title="Poznamky"><span class="none"></span>Poznamky</a></li>
     <li><a href="analyza.html" title="Analyza"><span class="none"></span>Analyza</a></li>
+    <li><a href="uc-00.html#uc-00" title="UC-00"><span class="none"></span>UC-00</a></li>
+    <li><a href="uc-00.html#uc-03" title="UC-03"><span class="none"></span>UC-03</a></li>
     <li class="active"><a href="#"><span class="none"></span>UC-04</a></li>
+    <li><a href="uc-06.html" title="UC-06"><span class="none"></span>UC-06</a></li>
+    <li><a href="templates.html" title="Šablony"><span class="none"></span>Šablony</a></li>
     <li><a href="how-to-contribute.html" title="Jak přispět"><span class="none"></span>Jak přispět</a></li>
   </ul>
           </nav>
@@ -54,35 +58,62 @@
         </header>
         <main id="bodyColumn"  class="span10" >
 <section>
-<h2><a name="UC-04_Registrovat_balik"></a>UC-04 Registrovat balik</h2>
-<p>Zakaznik objednava doruceni na cilovou adresu. Cely proces je rozdeleny do nekolika kroku. Finalne lze cele udelat na jedne strance.</p><section>
-<h3><a name="Zakladni_informace_o_zakaznikovy"></a>Zakladni informace o zakaznikovy</h3>
+<h2><a name="UC-04_Registrovat_bal.C3.ADk"></a>UC-04 Registrovat bal&#xed;k</h2>
+<p>Zakaznik objednava doruceni na cilovou adresu. Cely proces je rozdeleny do n&#x11b;skolika kroku. Finalne lze cele udelat na jedne strance.</p>
+<p>Pokud z&#xe1;kazn&#xed;k n&#x11b;jak&#xe9; informace vypln&#xed; a pozd&#x11b;ji se k nim vr&#xe1;t&#xed;, pak se mu ty n&#xe1;sledn&#x11b; vypln&#x11b;n&#xe9; nesma&#x17e;ou. Nap&#x159;&#xed;klad, pokud se dostane na pokyny k zaplacen&#xed; pak se vr&#xe1;t&#xed; a uprav&#xed; c&#xed;lovou adresu, pak se mu nesma&#x17e;e adresa odes&#xed;latele.</p>
+<p>Pokud se bude realizovat na jedn&#xe9; str&#xe1;nce, pak s vyjimkou c&#xed;lov&#xe9; zem&#x11b;. Pokud j&#xed; zm&#x11b;n&#xed; v hlavn&#xed;m nadpisu, pak se mu p&#x159;epo&#x10d;te str&#xe1;nka s cenu.</p><section>
+<h3><a name="a.C3.9Avod"></a>&#xda;vod</h3>
+<p>Na tuto obrazovku p&#x159;ich&#xe1;zi z&#xe1;kazn&#xed;k z vyhled&#xe1;va&#x10d;e. Proto mu m&#x16f;&#x17e;em p&#x159;edvyplnit zemi. Protoze jsme na to c&#xed;lili reklamu. Hodnota zeme prichazi jako parametr.</p>
 <p><img src="./krok-1.png" alt="Krok 1" title="Krok 1" /></p>
-<p>Zakaznik zada:</p>
+<p>Pokud to budem v dob&#x11b; spu&#x161;t&#x11b;n&#xed; um&#x11b;t, pak se jm&#xe9;no zem&#x11b; objev&#xed; jako dropdown box, kde si bude moct c&#xed;lovou zemi vybrat.</p>
+<p><b>TODO Jaky parametr to bude? Jake ma hodnoty? Nejake kodovani?</b></p>
+<p><b>TODO Jakou zemi nastavit, pokud zakaznik neprijde prez vyhledavac.</b></p></section><section>
+<h3><a name="Z.C3.A1kazn.C3.ADk_zad.C3.A1_rozm.C4.9Bry_a_c.C3.ADlovou_zemi"></a>Z&#xe1;kazn&#xed;k zad&#xe1; rozm&#x11b;ry a c&#xed;lovou zemi</h3>
+<p>Zji&#x161;t&#x11b;n&#xed; ceny je jako prvn&#xed;, proto&#x17e;e to je to, co ho zaj&#xed;m&#xe1; nejv&#xed;c. Nal&#xe1;kali jsme ho na to.</p>
+<p><img src="./krok-2.png" alt="Krok 2" title="Krok 2" /></p>
+<p>V dal&#x161;&#xed;m kroku z&#xe1;kazn&#xed;k vypln&#xed;:</p>
 <ul>
 
-<li>Jmeno a prijmeni - to vyuzijem pro pripadne zaslani na zpatecni adresu a osloveni v emailech.</li>
+<li>&#x160;&#xed;&#x159;k v&#xfd;&#x161;ku a hloubku bal&#xed;ky - hodnoty mus&#xed; m&#xed;t vypln&#x11b;n&#x11b; &#x10d;&#xed;slo.</li>
+<li>Hmotnost v Kg - hodnota musi byt vyplnena a musi byt cislo.</li>
+</ul>
+<p>Po ka&#x17e;d&#xe9; zm&#x11b;n&#x11b; jak&#xe9;hokoliv pole p&#x159;epo&#x10d;&#xed;t&#xe1;me v&#xfd;slednou cenu. Cena je rozhoduj&#xed;c&#xed; parametr pro z&#xe1;kazn&#xed;ka.</p>
+<p><b>TODO Co bude v polich na rozmery a vahu po otevreni formulare?</b></p>
+<p><b>TODO Jak rict zakaznikovy, ze pokud posila balicek 0.5Kg, ze staci vyplnit 0 Kg?</b></p>
+<p><b>TODO Zamysleme se, jestli nejak nerict, ze rozmery jsou pribliznes.</b></p>
+<p><b>TODO Budem u poli kontrolovat nejaky rozumny rozsah? napr.; Vaha musi byt od 0 do 100 Kg?</b></p></section><section>
+<h3><a name="Zadani_c.C3.ADlove_adresy"></a>Zadani c&#xed;love adresy</h3>
+<p>Po&#x17e;&#xe1;d&#xe1;me o zad&#xe1;n&#xed; doru&#x10d;ovac&#xed; adresy.</p>
+<p><img src="./krok-3.png" alt="Krok 3" title="Krok 3" /></p>
+<p>Zakaznik zada c&#xed;lovou doru&#x10d;ovaci adresu. Pouze zvalidujem, &#x17e;e jsou po&#x17e;adovan&#xe1; pole vypln&#x11b;n&#xe1;.</p>
+<p><b>TODO navrhuji odstranit, ze to je do nemecka, udelat to pouze jako oznameni, protoze zmenou zeme ovlivnime cenu.</b></p></section><section>
+<h3><a name="Zad.C3.A1n.C3.AD_zp.C3.A1te.C4.8Dn.C3.AD_adresy"></a>Zad&#xe1;n&#xed; zp&#xe1;te&#x10d;n&#xed; adresy</h3>
+<p>Z&#xe1;kaznik zada zpatecni adresu. Adresu muzem validovat, ze je vyplnena, ale ne, ze je platna.</p>
+<p>Zakaznik zad&#xe1;:</p>
+<ul>
+
+<li>Jm&#xe9;no - to vyuzijem pro pripadne zaslani na zpatecni adresu a osloveni v emailech.</li>
 <li>Email - na email budem posilat shrnuti objednavky s instrukcema kam zaplatit a poslat balik</li>
 <li>Telefon - Kdyz se neco pokazi support bude volat, aby domluvit dalsi postup.</li>
-</ul></section><section>
-<h3><a name="Zadani_zpatecni_adresy"></a>Zadani zpatecni adresy</h3>
-<p><img src="./krok-2.png" alt="Krok 2" title="Krok 2" /></p>
-<p>Zakaznik zada zpatecni adresu. Adresu muzem validovat, ze je vyplnena, ale ne, ze je platna.</p></section><section>
-<h3><a name="Zadani_cilove_adresy"></a>Zadani cilove adresy</h3>
-<p><img src="./krok-3.png" alt="Krok 3" title="Krok 3" /></p>
-<p>Zakaznik zada cilovou dorucovaci adresu. Nebudem validovat.</p></section><section>
-<h3><a name="Poslani_baliku_k_nam"></a>Poslani baliku k nam</h3>
-<p><img src="./krok-4.png" alt="Krok 4" title="Krok 4" /></p>
-<p>Zde z&#xe1;kazn&#xed;m uvid&#xed;, jak m&#xe1; popsat bal&#xed;&#x10d;ek do naseho sberneho mista (depa), jak&#xfd; bal&#xed;k k&#xf3;d.</p></section><section>
+</ul>
+<p><img src="./krok-4.png" alt="Krok 4" title="Krok 4" /></p></section><section>
+<h3><a name="Posl.C3.A1ni_baliku_k_n.C3.A1m"></a>Posl&#xe1;ni baliku k n&#xe1;m</h3>
+<p>Zde z&#xe1;kazn&#xed;m uvid&#xed;, jak m&#xe1; popsat bal&#xed;&#x10d;ek do na&#x161;eho sb&#x11b;rn&#xe9;ho m&#xed;sta (depa). Je d&#x16f;le&#x17e;it&#xe9; p&#x159;inut z&#xe1;kazn&#xed;ka, aby na bal&#xed;&#x10d;et dal spr&#xe1;vn&#xfd; k&#xf3;d. I kdy&#x17e; to neud&#x11b;l&#xe1;, tak si pozd&#x11b;j&#xed; m&#x16f;&#x17e;em &#x10d;&#xe1;ste&#x10d;n&#x11b; pomoct adresama.</p>
+<p><img src="./krok-5.png" alt="Krok 5" title="Krok 5" /></p></section><section>
 <h3><a name="Platba"></a>Platba</h3>
-<p><img src="./krok-5.png" alt="Krok 5" title="Krok 5" /></p>
-<p>Zakaznim muze vybrat, jak chce platit.</p></section><section>
-<h3><a name="Zaver"></a>Zaver</h3>
-<p><img src="./krok-6.png" alt="Krok 6" title="Krok 6" /></p>
-<p>Podekovani a informace o potvrzovacim emailu. Zaroven zakaznikovi odchazi email.</p>
-<p><b>TODO: Obsah emailu</b></p>
-<p><b>Budeme mu sem psat, ze kdyz neposle penize, tak balicek nedorucime?</b></p>
-<p><b>Je potreba uchovavat jak postupne zadaval informace? Napriklad pro obvolavani nedokoncenych objednavek</b></p></section></section>
+<p>Zakaznim m&#x16f;ze vybrat, jak chce platit. Pokud v tomto kroku nezaplat&#xed;, tak to nevad&#xed;. Platebn&#xed; pokyny mu po&#x161;lem pro jistotu v potvrzovac&#xed;m emailu.</p>
+<p><img src="./krok-6.png" alt="Krok 6" title="Krok 6" /></p></section><section>
+<h3><a name="Z.C3.A1v.C4.9Br"></a>Z&#xe1;v&#x11b;r</h3>
+<p>Pod&#x11b;kov&#xe1;n&#xed; a informace o potvrzovacim emailu. Zaroven zakaznikovi odchazi potvrzovac&#xed; email.</p>
+<p><img src="./krok-7.png" alt="Krok 7" title="Krok 7" /></p>
+<p>V tuto chv&#xed;li z&#xe1;kazn&#xed;kovi ode&#x161;lem potvrzovac&#xed; email s <a href="./templates.html#T-01" title="šablona potvrzující objednávku">&#x161;ablonou potvrzuj&#xed;c&#xed; objedn&#xe1;vku</a></p>
+<p><b>TODO Obsah d&#x11b;kovac&#xed;ho emaily emailu</b></p>
+<p><b>TODO Opravdu budem posilat potvrzovaci email az v poslednim kroku? Co kdyz tam nedojde?</b></p>
+<p><b>TODO P&#x159;ipravit dal&#x161;&#xed; &#x161;ablony</b></p>
+<p><b>TODO Budeme mu sem psat, ze kdyz neposle penize, tak balicek nedorucime?</b></p>
+<p><b>TODO Format kodu baliku. Pokud ho budem psat do caroveho kodu, pak to musi byt cislo?</b></p>
+<p><b>TODO Budem delat nejake shrnuti objednavky doruceni?</b></p>
+<p><b>TODO Je potreba uchovavat jak postupne zadaval informace? Napriklad pro obvolavani nedokoncenych objednavek</b></p></section></section>
         </main>
       </div>
     </div>

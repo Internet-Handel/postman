@@ -38,7 +38,11 @@
     <li><a href="index.html" title="Index"><span class="none"></span>Index</a></li>
     <li><a href="notes.html" title="Poznamky"><span class="none"></span>Poznamky</a></li>
     <li class="active"><a href="#"><span class="none"></span>Analyza</a></li>
+    <li><a href="uc-00.html#uc-00" title="UC-00"><span class="none"></span>UC-00</a></li>
+    <li><a href="uc-00.html#uc-03" title="UC-03"><span class="none"></span>UC-03</a></li>
     <li><a href="uc-04.html" title="UC-04"><span class="none"></span>UC-04</a></li>
+    <li><a href="uc-06.html" title="UC-06"><span class="none"></span>UC-06</a></li>
+    <li><a href="templates.html" title="Šablony"><span class="none"></span>Šablony</a></li>
     <li><a href="how-to-contribute.html" title="Jak přispět"><span class="none"></span>Jak přispět</a></li>
   </ul>
           </nav>
@@ -63,28 +67,30 @@
 <p>Uzivatel muze:</p>
 <ul>
 
-<li>UC-01 - Prihlasit se pomoci jmena a hesla.</li>
-<li>UC-02 - Zapomenute heslo.</li>
-<li>UC-03 - Zapomenuty login.</li>
-<li>UC-04 - Odhlaseni ze systemu.</li>
+<li>UC-00 - <a href="./uc-00.html#uc-00" title="Přihlásit se pomocí jména a hesla">P&#x159;ihl&#xe1;sit se pomoc&#xed; jm&#xe9;na a hesla</a>.</li>
+<li>UC-01 - Zapomenute heslo.</li>
+<li>UC-02 - Zapomenuty login.</li>
+<li>UC-03 - <a href="./uc-00.html#uc-03" title="Odhlášeni ze systému">Odhl&#xe1;&#x161;eni ze syst&#xe9;mu</a>.</li>
 </ul>
-<p><b>Nebudem implementovat</b></p></section><section>
+<p>UC-01 a UC-02 ted nebudem resit, stejn&#x11b; tak s t&#xed;m spojen&#xe9; UC.</p></section><section>
 <h3><a name="Zakaznik"></a>Zakaznik</h3>
-<p>Zakaznik nasi dorucovaci sluzby. Muze to byt fyzicka osoba nebo spolecnost. Zakaznim muze:</p>
+<p>Zakaznik nasi dorucovaci sluzby. Muze to byt fyzicka osoba nebo spolecnost.</p>
 <p><img src="./ucs-zakaznik.png" alt="Co muze delat Zakaznik" title="UCS for Zakaznik" /></p>
-<p>Zakaznik muze:</p>
+<p>Z&#xe1;kaznik muze:</p>
 <ul>
 
 <li>UC-04 <a href="./uc-04.html">Registrovat balik</a></li>
 <li>UC-05 Dorucit balik do depa. Pouze zakaznikovi nabidnem moznost poslat libovolnou postou nebo fyzicky prinest na sberne misto.</li>
-<li>UC-05 Sledovani baliku. Zakaznik musi mit moznost sledovat zasilku. Kde je a co se s ni deje.</li>
-<li>UC-06 Zaplatit za doruceni. Posledni krok UC-04.</li>
+<li>UC-06 <a href="./uc-06.html" title="Sledovaní balíku">Sledovan&#xed; bal&#xed;ku</a>. Z&#xe1;kazn&#xed;k mus&#xed; m&#xed;t mo&#x17e;nost sledovat z&#xe1;silku. Kde je a co se s ni deje.</li>
+<li>UC-07 Zaplatit za doru&#x10d;eni. Posledni krok UC-04.</li>
 </ul>
 <p><b>TODO negativni scenare</b></p></section><section>
 <h3><a name="Admin"></a>Admin</h3>
 <p>Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.</p>
-<p><img src="./ucs-admin.png" alt="Co muze delat Admin" title="UCS for Admin" /></p></section><section>
-<h3><a name="Dispecer"></a>Dispecer</h3>
+<p><img src="./ucs-admin.png" alt="Co muze delat Admin" title="UCS for Admin" /></p>
+<p>UC admina nebudem v prvn&#xed; f&#xe1;zi &#x159;e&#x161;it.</p>
+<p><b>TODO aspon si v bodech sepsat,co by tu m&#x11b;lo b&#xfd;t</b></p></section><section>
+<h3><a name="Dispe.C4.8Der"></a>Dispe&#x10d;er</h3>
 <p>Pracovnik dorucovaci sluzby, odpovedny za prevzeti baliku od zakaznika a predani prepravci.</p>
 <p><img src="./ucs-dispecer.png" alt="Co muze delat Despecer" title="UCS for Dispecer" /></p>
 <p>Dispecer musi byt v depu. Depo bude umistene tak, aby bylo v dobrem dosahu prepravcu.</p></section><section>
