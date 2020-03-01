@@ -1,0 +1,40 @@
+@startuml
+
+(*) --> "Připraví balík za zadání" as zadanikodu
+
+if "Má balík na sobě kód?"
+  -->[Ano] "Přepíše kód balíku\ndo systému" as prepiskodu
+else
+  -->[Ne] "TODO 1"
+endif
+
+prepiskodu --> [Stránka na zadávání\nrozměrů a váhy] "Zadá rozměry a váhu balíčku a
+stiskne tlačítko pokračovat" as zadani
+
+if "Odpovídají rozměry a váha?"
+  -->[Ano, zobrazí se stránka na\npotvrzení adresy] "
+  Dispečer zkontroluje, že zpáteční adresa\n
+  odesílatele je stejná jako je na monitoru" as kontrolaAdresy
+else
+  -->[Ne] "TODO 2"
+endif
+
+kontrolaAdresy --> if "Tlačítkem potvrdí, jestli\nadresa odpovídá?"
+  -->[Ano, odpovídá] "Systém oznámí, že tiskne interní
+  štítek na balík, dispečer ho nalepí\n
+  a potvrdí to systému" as tisk
+else
+  -->[Ne, neodpovídá] "TODO 3"
+endif
+
+tisk --> if "Systém zkontroluje,\nje balík zaplacen?"
+  -->[Ano] "Systém požádá o přesun do\nfronty 'K doručení'" as co
+else
+  -->[Ne] "Dispečer přesune balík do\n'čekací fronty'"
+  --> (*)
+endif
+
+co-->[Systém se připraví na\nzadávání dalšího balíku] (*)
+  
+  
+@enduml

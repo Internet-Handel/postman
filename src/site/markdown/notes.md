@@ -46,9 +46,11 @@
 
 * Nebudem aktivne rikat zakaznikovy, jakeho dopravce pouzivame. Muze pozdeji zjistit.
 * Nebudel lidi navolavat z rozdelanych zadosti. Tede je ani nebudem ukladat.
+* Prevazujem baliky z odchozi fronty vzdy. Radeji neodeslem, nez neprevazime.
 
 ## Otevrene otazky
 
+* Budem podporovat odlozene doruceni? Naprikald nekdo bude chtit dorucit az za tyden? Je to realny scenar?
 * Nejaky konkretni priklad koncoveho dopravce. Chci se podivat na API a sluzby co nabizi.
 * Validace adresy, to znamena, ze ji poslem koncovemu dopravci? Pokud ji schroupne tak valide je OK?
 

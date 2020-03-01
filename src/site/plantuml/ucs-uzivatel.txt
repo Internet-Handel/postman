@@ -2,10 +2,10 @@
 
 actor :Uzivatel: as user
 
-(Prihlaseni) as (login)
+(Přihlásit se pomocí\njména a hesla) as (login)
 (Zapomenute heslo) as (forgotten_password)
 (Zapomenuty login) as (forgotten_login)
-(Odhlaseni) as (logout)
+(Odhlášeni ze systému) as (logout)
 
 user --> (login)
 user --> (forgotten_password)

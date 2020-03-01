@@ -1,0 +1,21 @@
+@startuml
+
+(*) --> "Načte čárový kód" as zadanikodu
+
+if "Systém se rozhodne,\nje balík zaplacen?"
+  -->[Ano] "Zobrazí se pokyn k vložení
+  do fronty 'K doručení'" as kdoruceni
+  --> (*)
+else
+  -right-> [Ne] if "Je s balíkem nějaký problém?"
+      --> [Ano] "Zobrazí se pokyn k vložení
+      do chybové fronty" as chyba
+      --> (*)
+    else
+      --> [Ne] "Zobrazí se pokyn k vložení
+      do čekací fronty" as cekaci
+      --> (*)
+    endif
+endif
+
+@enduml

@@ -57,17 +57,10 @@ Dispecer musi byt v depu. Depo bude umistene tak, aby bylo v dobrem dosahu prepr
 
 fronty jsou minimalne dve.
 
-* UC-10 Prijmout baliky. Zada do systemu kod. Dispecer premeri a zvazi balik vse zapise do systemu. System ukaze detaily odesilatele dispecer to zkontroluje. Pokud vse sedi a je zaplaceno, pak system oznami a vytiskne pruvodni listek. Pokud neni zaplaceno vytiskne indetifikacni stitek s kodem, bude obsahovat zpetnou adresu, jmeno odesilatele a carovej kod. Tento stitem musi byt hodne jiny nez pruvodni listek.
-
-Nas stitek musi mit velke okraje, aby sli na 100% prikryt pruvodnim listkem.
-
-* UC-11 Rozdelit baliky. Cteckou nacte carovy kod ze stitku. Pokud je zaplaceno, pak se vytiskne pruvodni listek. Pruvodni listek nalepi prez nas identifikacni listek.
-
-Projit balizky zkontrolovat stav a podle toho je rozdelit. Balik zapise do systemu. Pokud je zaplaceno system vytiskne stitek pro dopravce a rekneme mu co se bude dit. Stiskne dalsi balik. Uvidi informace o cilove adrese, aby to zkontroloval.
-
-Prevazujem baliky z odchozi fronty vzdy. Radeji neodeslem, nez neprevazime.
-
-* UC-12 Predat baliku. Dispečer vezme hromadku z balíkama pro daného dopravce a předá mu je. Nebudem dal popisovat.
+* UC-20 - [Přijetí balíku](./uc-20.html#UC-20 "Přijetí balíku").
+* UC-21 - [Zpracování přijatých balíku](./uc-20.html#UC-21 "Zpracování přijatých balíku").
+* UC-22 - [Zpracování čekajícich balíků](./uc-20.html#UC-22 "Zpracování čekajícich balíků").
+* UC-23 - [Předání balíků koncovému dopravci](./uc-20.html#UC-23 "Předání balíků koncovému dopravci").
 
 ### Support
 

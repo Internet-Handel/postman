@@ -50,7 +50,7 @@ Obrazky jsou generovat pomoci plant uml ze souboru ulozenych v ``src/site/plantu
 ```
 mvn site-deploy
 ```
-se novy nebo upraveny obrazek vygeneruje. Je pohodlne obrazky upravovat a vytvaret v nejakem on-	line editoru, napriklad [www.planttext.com](https://www.planttext.com).
+se novy nebo upraveny obrazek vygeneruje. Je pohodlne obrazky upravovat a vytvaret v nejakem on-	line editoru, napriklad [www.planttext.com](https://www.planttext.com). Popis formatu zapisu obrazku je na [https://plantuml.com](https://plantuml.com "PlantUML home")
 
 
 ## Jak publikovat upravy na [jajir.github.io/postman/](https://jajir.github.io/postman/)
