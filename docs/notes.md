@@ -58,9 +58,9 @@
 * Nejaky konkretni priklad koncoveho dopravce. Chci se podivat na API a sluzby co nabizi.
 * Validace adresy, to znamena, ze ji poslem koncovemu dopravci? Pokud ji schroupne tak valide je OK?
 
-![Puvodni navrh 1](./original-1.jpeg "Puvodni 1")
-![Puvodni navrh 2](./original-2.jpeg "Puvodni 2")
-![Puvodni navrh 3](./original-3.jpeg "Puvodni 3")
+![Puvodni navrh 1](./imgs/original-1.jpeg "Puvodni 1")
+![Puvodni navrh 2](./imgs/original-2.jpeg "Puvodni 2")
+![Puvodni navrh 3](./imgs/original-3.jpeg "Puvodni 3")
 
 
 

@@ -10,5 +10,6 @@ release.properties
 .classpath
 .checkstyle
 velocity.log
+site
 *~
 *.iml

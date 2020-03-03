@@ -16,7 +16,7 @@ serazene podle vyznamu jsou:
 
 ## Jak to bude fungovat
 
-![Zakladni princip](./princip.png "Zakladni princip")
+![Zakladni princip](./diagrams/out/princip.png "Zakladni princip")
 
 Se zakaznikem budem komunikovat:
 

@@ -6,10 +6,10 @@ Objednávky a balíky během vyřizování procházejí několika stavama. V prv
 
 Objednávka prochází následujícími stavy:
 
-![Stavy objednávky](./states-order.png "Stavy objednávky")
+![Stavy objednávky](./diagrams/out/states-order.png "Stavy objednávky")
 
 ## Stavy jednotlivých balíků
 
 Balíky během doručování procházejí následujícími stavy:
 
-![Stavy balíků](./states-package.png "Stavy balíků")
+![Stavy balíků](./diagrams/out/states-package.png "Stavy balíků")

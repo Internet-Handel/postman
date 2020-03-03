@@ -1,0 +1,27 @@
+site_name: Postman
+nav:
+    - Home: index.md
+    - Analyza: analyza.md
+    - 'Usecases':
+        - UC-00: uc-00/#UC-00
+        - UC-03: uc-00/#UC-03
+        - UC-04: uc-04.md
+        - UC-06: uc-06.md
+        - UC-20: uc-20/#UC-20
+        - UC-21: uc-20/#UC-21
+        - UC-22: uc-20/#UC-22
+        - UC-23: uc-20/#UC-23
+    - Stavy: states.md
+    - Šablony: templates.md
+    - Poznamky: notes.md
+theme:
+  name: material
+plugins:
+    - build_plantuml:
+        render: "server" # or "local" for local rendering
+        bin_path: "/usr/local/bin/plantuml" # ignored when render: server
+        server: "http://www.plantuml.com/plantuml" # offical plantuml server
+        output_format: "png" # or "svg"
+        diagram_root: "docs/diagrams" # should reside under docs_dir
+        output_folder: "out"
+        input_folder: "src"
