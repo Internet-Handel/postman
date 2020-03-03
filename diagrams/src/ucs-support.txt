@@ -1,0 +1,23 @@
+@startuml
+
+actor :Support: as support
+
+(Reklamace) as (complaint)
+(Nezaplacene baliky) as (unpaid_packages)
+(Nesparovane baliky) as (unpaired_packages)
+(Chyby baliky) as (error_packages)
+(Kontrola účtů) as (check_account)
+(Vyhledání baliku) as (find_package)
+(Zobrazeni detaily baliku) as (show_details)
+(Vystaveni dobropisu) as (dobropis)
+
+support -up-> (complaint)
+support -up-> (unpaid_packages)
+support -up-> (unpaired_packages)
+support -up-> (error_packages)
+support --> (check_account)
+support --> (find_package)
+support --> (show_details)
+support --> (dobropis)
+
+@enduml

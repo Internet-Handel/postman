@@ -1,0 +1,648 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Analyza - Postman</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#analyza" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Postman" aria-label="Postman" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Postman
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Analyza
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Postman" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Postman
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Analyza
+      </label>
+    
+    <a href="./" title="Analyza" class="md-nav__link md-nav__link--active">
+      Analyza
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#role" class="md-nav__link">
+    Role
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uzivatel" class="md-nav__link">
+    Uživatel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zakaznik" class="md-nav__link">
+    Zákazník
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    Admin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispecer" class="md-nav__link">
+    Dispečer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eshop" class="md-nav__link">
+    eShop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Usecases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Usecases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uc-00/#UC-00" title="UC-00" class="md-nav__link">
+      UC-00
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uc-00/#UC-03" title="UC-03" class="md-nav__link">
+      UC-03
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uc-04/" title="UC-04" class="md-nav__link">
+      UC-04
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uc-06/" title="UC-06" class="md-nav__link">
+      UC-06
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uc-20/#UC-20" title="UC-20" class="md-nav__link">
+      UC-20
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uc-20/#UC-21" title="UC-21" class="md-nav__link">
+      UC-21
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uc-20/#UC-22" title="UC-22" class="md-nav__link">
+      UC-22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uc-20/#UC-23" title="UC-23" class="md-nav__link">
+      UC-23
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../states/" title="Stavy" class="md-nav__link">
+      Stavy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../templates/" title="Šablony" class="md-nav__link">
+      Šablony
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../notes/" title="Poznamky" class="md-nav__link">
+      Poznamky
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#role" class="md-nav__link">
+    Role
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uzivatel" class="md-nav__link">
+    Uživatel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zakaznik" class="md-nav__link">
+    Zákazník
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    Admin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispecer" class="md-nav__link">
+    Dispečer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eshop" class="md-nav__link">
+    eShop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="analyza">Analýza</h1>
+<h2 id="role">Role</h2>
+<p>Mame tyto role:</p>
+<p><img alt="Actors" src="../diagrams/out/actors.png" title="Role" /></p>
+<h3 id="uzivatel">Uživatel</h3>
+<p>Predstavuje nekoho, kdo ma pristup do systemu. Podle jeho dalsi specializace ma dalsi moznosti.</p>
+<p><img alt="Co muze delat Uzivatel" src="../diagrams/out/ucs-uzivatel.png" title="UCS for Uzivatel" /></p>
+<p>Uzivatel muze:</p>
+<ul>
+<li>UC-00 - <a href="../uc-00/#uc-00" title="Přihlásit se pomocí jména a hesla">Přihlásit se pomocí jména a hesla</a>.</li>
+<li>UC-01 - Zapomenute heslo.</li>
+<li>UC-02 - Zapomenuty login.</li>
+<li>UC-03 - <a href="../uc-00/#uc-03" title="Odhlášeni ze systému">Odhlášeni ze systému</a>.</li>
+</ul>
+<p>UC-01 a UC-02 ted nebudem resit, stejně tak s tím spojené UC.</p>
+<h3 id="zakaznik">Zákazník</h3>
+<p>Zakaznik nasi dorucovaci sluzby. Muze to byt fyzicka osoba nebo spolecnost.</p>
+<p><img alt="Co muze delat Zakaznik" src="../diagrams/out/ucs-zakaznik.png" title="UCS for Zakaznik" /></p>
+<p>Zákaznik muze:</p>
+<ul>
+<li>UC-04 <a href="../uc-04/">Registrovat balik</a></li>
+<li>UC-05 Dorucit balik do depa. Pouze zakaznikovi nabidnem moznost poslat libovolnou postou nebo fyzicky prinest na sberne misto.</li>
+<li>UC-06 <a href="../uc-06/" title="Sledovaní balíku">Sledovaní balíku</a>. Zákazník musí mít možnost sledovat zásilku. Kde je a co se s ni deje.</li>
+<li>UC-07 Zaplatit za doručeni. Posledni krok UC-04.</li>
+</ul>
+<p><strong>TODO negativni scenare</strong></p>
+<h3 id="admin">Admin</h3>
+<p>Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.</p>
+<p><img alt="Co muze delat Admin" src="../diagrams/out/ucs-admin.png" title="UCS for Admin" /></p>
+<p>UC admina nebudem v první fázi řešit.</p>
+<p><strong>TODO aspon si v bodech sepsat,co by tu mělo být</strong></p>
+<h3 id="dispecer">Dispečer</h3>
+<p>Pracovnik dorucovaci sluzby, odpovedny za prevzeti baliku od zakaznika a predani prepravci.</p>
+<p><img alt="Co muze delat Despecer" src="../diagrams/out/ucs-dispecer.png" title="UCS for Dispecer" /></p>
+<p>Dispecer musi byt v depu. Depo bude umistene tak, aby bylo v dobrem dosahu prepravcu. Co dispečer dela:</p>
+<p>fronty jsou minimalne dve.</p>
+<ul>
+<li>UC-20 - <a href="../uc-20/#UC-20" title="Přijetí balíku">Přijetí balíku</a>.</li>
+<li>UC-21 - <a href="../uc-20/#UC-21" title="Zpracování přijatých balíku">Zpracování přijatých balíku</a>.</li>
+<li>UC-22 - <a href="../uc-20/#UC-22" title="Zpracování čekajícich balíků">Zpracování čekajícich balíků</a>.</li>
+<li>UC-23 - <a href="../uc-20/#UC-23" title="Předání balíků koncovému dopravci">Předání balíků koncovému dopravci</a>.</li>
+</ul>
+<h3 id="support">Support</h3>
+<p>Pracovnik nasi dorucovaci sluzby. Je odpovdny za hladky provoz sluzby. Vyrizuje reklamace, nesparovan baliky a pomoha s procesem doruceni baliku.</p>
+<p><img alt="Co může delat Support" src="../diagrams/out/ucs-support.png" title="UCS for Support" /></p>
+<p>Support může být fyzicky na centrále. Je odpovědný za:</p>
+<ul>
+<li>Podpora uzivatelu<ul>
+<li>UC-31 Zmena/obnova hesla </li>
+<li>UC-32 Zapomenuté přihlašovací jméno</li>
+</ul>
+</li>
+<li>UC-33 - Kontrola bankovního účtu.</li>
+<li>UC-34 - párování s objednávkami. Určení koncového dopravce. </li>
+<li>UC-35 - Vyhledaní balíku podle kódu, adresy, příjemnce a odesílatele.</li>
+<li>UC-36 - Zobrazení detailů balíku.</li>
+<li>UC-37 - Vystaveni dobropisu - na základě emailu nebo telefonátu.</li>
+<li>UC-38 - Urgovani zaplacení, po ??? dnech od doruceni do depa nebo podaní objednávky.</li>
+<li>UC-39 - Reklamace, oncall/email. musime se napojit na last mile prepravce informace o zasilce.</li>
+<li>UC-40 - Kontrola chybové fronty s dispečerem. Budou si volat?</li>
+<li>UC-41 - Rozhodnutí o předaní dopravci. Musí být možnost kdykoliv z jakékoliv fronty balík přesunout do fronty ke konkrétnímu dopravci. Je to pro reklamace a storna objednávek.</li>
+</ul>
+<p>Nechem delat dobropisy, radeji volat.
+z chybbove fronty musime obvolavat.  3 krat zadat o zaplaceni + tyden cekani na platbu.
+Z fronty ceka na zaplaceni.</p>
+<h3 id="eshop">eShop</h3>
+<p>Zakaznik, ktery ma moznost zadavat hromadne posilani.</p>
+<p><img alt="Co muze delat eShop" src="../diagrams/out/ucs-eshop.png" title="UCS for eShop" /></p>
+<p>Zákazním může:</p>
+<ul>
+<li>UC-60 - Hromadná registrace balíků</li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../uc-04/" title="UC-04" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                UC-04
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

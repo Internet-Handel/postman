@@ -1,0 +1,22 @@
+@startuml
+hide footbox
+
+actor "Zakaznik\nodesilatel" as zakaznik1
+participant "Web" as web
+actor "Ceska Posta\n" as prepravce1
+actor "Dispecer\n" as dispecer
+actor "DPD\n" as prepravce2
+actor "Zakaznik\nprijemnce" as zakaznik2
+
+|||
+
+zakaznik1 -> web: Registruje balik
+web --> zakaznik1: kod baliku
+zakaznik1 -> prepravce1: Posle balik
+prepravce1 -> dispecer: Preda baliky dispecerovi
+dispecer <-> web: Zkontroluje a roztridi baliky
+dispecer -> prepravce2: Preda baliky k doruceni
+prepravce2 -> zakaznik2: Finalane doruci balik
+
+
+@enduml

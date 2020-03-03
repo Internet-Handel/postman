@@ -1,0 +1,18 @@
+@startuml
+
+(*) --> "Objednávka vytvořena" as nova
+
+nova --> "Čeká na zaplacení" as cekaNaZaplaceni
+nova --> "Zrušená" as zrusena
+
+cekaNaZaplaceni --> "Čeká na doručení" as cekaNaDoruceni
+cekaNaZaplaceni --> zrusena
+
+cekaNaDoruceni --> "Úspěšně doručeno" as uspesneDoruceno
+cekaNaDoruceni --> zrusena
+
+uspesneDoruceno --> (*)
+zrusena --> (*)
+
+
+@enduml

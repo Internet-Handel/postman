@@ -1,0 +1,15 @@
+@startuml
+
+actor :Zakaznik: as customer
+
+(Registrovat balik) as (register)
+(Dorucit balik) as (deliver)
+(Zkontrolovat stav) as (verify)
+(Zaplatit za doruceni) as (pay)
+
+customer --> (register)
+customer --> (deliver)
+customer --> (verify)
+customer --> (pay)
+	
+@enduml

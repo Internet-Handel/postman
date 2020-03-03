@@ -1,0 +1,9 @@
+@startuml
+
+actor :eShop: as eShop
+
+(Hromadna registrace baliku) as (registration2)
+
+eShop --> (registration2)
+
+@enduml

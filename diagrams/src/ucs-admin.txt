@@ -1,0 +1,9 @@
+@startuml
+
+actor :Admin: as admin
+
+(Zkontrolovat objednavky) as (check_orders)
+
+admin --> (check_orders)
+
+@enduml
