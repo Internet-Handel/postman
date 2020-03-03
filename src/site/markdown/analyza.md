@@ -1,4 +1,4 @@
-# Analyza
+# Analýza
 
 
 ## Role
@@ -7,7 +7,7 @@ Mame tyto role:
 
 ![Actors](./actors.png "Role")
 
-### Uzivatel
+### Uživatel
 
 Predstavuje nekoho, kdo ma pristup do systemu. Podle jeho dalsi specializace ma dalsi moznosti.
 
@@ -22,7 +22,7 @@ Uzivatel muze:
 
 UC-01 a UC-02 ted nebudem resit, stejně tak s tím spojené UC.
 
-### Zakaznik
+### Zákazník
 
 Zakaznik nasi dorucovaci sluzby. Muze to byt fyzicka osoba nebo spolecnost.
 
@@ -73,12 +73,19 @@ Support může být fyzicky na centrále. Je odpovědný za:
 * Podpora uzivatelu
     * UC-31 Zmena/obnova hesla 
     * UC-32 Zapomenuté přihlašovací jméno
-* UC-33 - Kontrola úctu, zpracuju.
-* Vyhledaní balíku
-* Vystaveni dobropisu
-* Urgovani zaplacni, po 7 dnech od doruceni do depa.
-* Reklamace, oncall/email. musime se napojit na last mile prepravce informace o zasilce.
-* resit email. 
+* UC-33 - Kontrola bankovního účtu.
+* UC-34 - párování s objednávkami. Určení koncového dopravce. 
+* UC-35 - Vyhledaní balíku podle kódu, adresy, příjemnce a odesílatele.
+* UC-36 - Zobrazení detailů balíku.
+* UC-37 - Vystaveni dobropisu - na základě emailu nebo telefonátu.
+* UC-38 - Urgovani zaplacení, po ??? dnech od doruceni do depa nebo podaní objednávky.
+* UC-39 - Reklamace, oncall/email. musime se napojit na last mile prepravce informace o zasilce.
+* UC-40 - Kontrola chybové fronty s dispečerem. Budou si volat?
+* UC-41 - Rozhodnutí o předaní dopravci. Musí být možnost kdykoliv z jakékoliv fronty balík přesunout do fronty ke konkrétnímu dopravci. Je to pro reklamace a storna objednávek.
+
+Nechem delat dobropisy, radeji volat.
+z chybbove fronty musime obvolavat.  3 krat zadat o zaplaceni + tyden cekani na platbu.
+Z fronty ceka na zaplaceni.
 
 ### eShop
 
@@ -88,7 +95,7 @@ Zakaznik, ktery ma moznost zadavat hromadne posilani.
  
 Zákazním může:
 
-* Hromadné podání
+* UC-60 - Hromadná registrace balíků
 
 
 

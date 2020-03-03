@@ -48,6 +48,10 @@
 * Nebudel lidi navolavat z rozdelanych zadosti. Tede je ani nebudem ukladat.
 * Prevazujem baliky z odchozi fronty vzdy. Radeji neodeslem, nez neprevazime.
 
+## 02.03.2020
+
+* Prosli jsme procesy objednavky a baliku
+
 ## Otevrene otazky
 
 * Budem podporovat odlozene doruceni? Naprikald nekdo bude chtit dorucit az za tyden? Je to realny scenar?

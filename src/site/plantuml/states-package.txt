@@ -1,0 +1,15 @@
+@startuml
+
+(*) --> "Čeká na doručení do depa" as cekaNaDoruceniDoDepa
+
+cekaNaDoruceniDoDepa --> "Přijat" as prijat
+
+prijat --> "Čeká na zaplacení" as cekaNaZaplceni
+
+cekaNaZaplceni --> "Čeká na roztřízení" as cekaNaRoztrizeni
+
+cekaNaRoztrizeni --> "Čeká na předaní dopravci" as cekaNaPredani
+
+cekaNaPredani --> (*)
+
+@enduml
