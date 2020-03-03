@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://jajir.github.io/postman/how-to-contribute/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -36,7 +38,7 @@
     
     
       
-        <title>Jak dal rozsirovat tuto dokumentaci - Postman</title>
+        <title>Jak přispět - Postman</title>
       
     
     
@@ -84,7 +86,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Postman" aria-label="Postman" class="md-header-nav__button md-logo">
+        <a href="https://jajir.github.io/postman/" title="Postman" aria-label="Postman" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -101,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Jak dal rozsirovat tuto dokumentaci
+                Jak přispět
               
             </span>
           
@@ -129,7 +131,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="Postman" class="md-nav__button md-logo">
+    <a href="https://jajir.github.io/postman/" title="Postman" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -313,9 +315,120 @@
 
 
   <li class="md-nav__item">
-    <a href="../notes/" title="Poznamky" class="md-nav__link">
-      Poznamky
+    <a href="../notes/" title="Poznámky" class="md-nav__link">
+      Poznámky
     </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Jak přispět
+      </label>
+    
+    <a href="./" title="Jak přispět" class="md-nav__link md-nav__link--active">
+      Jak přispět
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zakladni-informace" class="md-nav__link">
+    Zakladni informace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predpoklady" class="md-nav__link">
+    Predpoklady
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jak-upravovat-texty" class="md-nav__link">
+    Jak upravovat texty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jak-pridat-novou-stranku" class="md-nav__link">
+    Jak pridat novou stranku.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jak-upravovat-obrazky" class="md-nav__link">
+    Jak upravovat obrazky
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obrazky-ucs-nebo-sequece-diagramu" class="md-nav__link">
+    Obrazky UCs nebo sequece diagramu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jak-publikovat-upravy-na-jajirgithubiopostman" class="md-nav__link">
+    Jak publikovat upravy na jajir.github.io/postman/
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postup" class="md-nav__link">
+    Postup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -427,15 +540,16 @@
                 <h1 id="jak-dal-rozsirovat-tuto-dokumentaci">Jak dal rozsirovat tuto dokumentaci</h1>
 <p>Navod jsem zkousel pouze na Apple.</p>
 <h2 id="zakladni-informace">Zakladni informace</h2>
-<p>Struktura projektu vyuziva strukturu <a href="https://maven.apache.org">maven</a> projektu a vypada takto:</p>
-<pre><code>└── src
-    └── site
-        ├── markdown
-        ├── plantuml
-        └── resources
+<p>Struktura projektu vyuziva strukturu <a href="https://www.mkdocs.org">MkDocs    </a> projektu a vypada takto:</p>
+<pre><code>├── balsamiq
+└── docs
+    ├── diagrams
+    │   ├── out
+    │   └── src
+    └── imgs
 </code></pre>
 
-<p>Jednotlive adresare obsahuji dokumenty pro ruzne technologie. Proces generovani dokumentace vyuziva funkci mavenu. Detaily jsou v oubory <code>pom.xml</code>. </p>
+<p>Jednotlive adresare obsahuji dokumenty pro ruzne technologie. Proces generovani dokumentace vyuziva funkci mavenu. Detaily jsou v oubory <code>mkdocs.yml</code>. </p>
 <h2 id="predpoklady">Predpoklady</h2>
 <p>Aby jste mohli texty upravovat a publikovat zmeny, pak budete potrebovat:</p>
 <ul>
@@ -515,6 +629,27 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../notes/" title="Poznámky" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Poznámky
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

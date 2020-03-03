@@ -1,21 +1,25 @@
 @startuml
+start
 
-(*) --> "Načte čárový kód" as zadanikodu
+:Dispečer v systému vybere zpracování čekajících balíků;
+repeat
+  :Dispečer načte čárový kód;
 
-if "Systém se rozhodne,\nje balík zaplacen?"
-  -->[Ano] "Zobrazí se pokyn k vložení
-  do fronty 'K doručení'" as kdoruceni
-  --> (*)
-else
-  -right-> [Ne] if "Je s balíkem nějaký problém?"
-      --> [Ano] "Zobrazí se pokyn k vložení
-      do chybové fronty" as chyba
-      --> (*)
-    else
-      --> [Ne] "Zobrazí se pokyn k vložení
-      do čekací fronty" as cekaci
-      --> (*)
+  if (Systém se rozhodne,\nje balík zaplacen?) then (Ano)
+    :Zobrazí se pokyn k vložení
+    do fronty 'K doručení';
+  else (Ne)
+    if(Je s balíkem nějaký další problém?) then (Ano)
+      :Zobrazí se pokyn k 
+      vložení do chybové fronty;
+    else (Ne)
+      :Zobrazí se pokyn k vložení
+      do čekací fronty;
     endif
-endif
+  endif
+repeat while (Další balík k zpracování?) is (Ano)
+->Ne;
+
+stop
 
 @enduml

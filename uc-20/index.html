@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://jajir.github.io/postman/uc-20/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -84,7 +86,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Postman" aria-label="Postman" class="md-header-nav__button md-logo">
+        <a href="https://jajir.github.io/postman/" title="Postman" aria-label="Postman" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -129,7 +131,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="Postman" class="md-nav__button md-logo">
+    <a href="https://jajir.github.io/postman/" title="Postman" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -313,8 +315,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../notes/" title="Poznamky" class="md-nav__link">
-      Poznamky
+    <a href="../notes/" title="Poznámky" class="md-nav__link">
+      Poznámky
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-contribute/" title="Jak přispět" class="md-nav__link">
+      Jak přispět
     </a>
   </li>
 
@@ -409,46 +423,41 @@
 <li>Fronty pro přepravce, napřiklad fronta pro předání DPD k finálnímu doručení adresátovi.</li>
 </ul>
 <h2 id="uc-20-prijeti-baliku"><a name="UC-20"></a>UC-20 - Přijetí balíku</h2>
-<p>Dispecer prijme balik a da ho do prijimaci fronty k dalšímu zpracování. </p>
-<p>Dispečer potvrdí převzetí balíku, podepsáním protokolu dopravce.</p>
+<p>Dispecer přijme balíky od dopravce a dá je do přijímací fronty k dalšímu zpracování. </p>
+<p>Dispečer potvrdí převzetí balíku podepsáním protokolu dopravce.</p>
 <h2 id="uc-21-zpracovani-prijatych-baliku"><a name="UC-21"></a>UC-21 - Zpracování přijatých balíku</h2>
-<p>Přijate balíky je třeba vložit do systému. Dispecer si v systemu najde obrazovku pro příjem balíků a bere jeden balik po druhem. Balík zpracuje následovně:</p>
+<p>Přijate balíky je třeba vložit do systému. Dispečer bude frontu balíků zpracovávat následovně: </p>
+<p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity1.png" title="Proces zpracování přijatých balíků" /></p>
+<p>Zpracovaní jednoho balíku je pro srozumitelnost na samostatném obrázku:</p>
 <p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity.png" title="Proces zpracování přijatých balíků" /></p>
-<p>Dispečer na balík tiskne <a href="../templates/#T-06">interní štítek</a>.</p>
-<p>Porovnání rozměrů a váhy. K porovnání rozměrů bude stačit například seřadit všechny hodnoty podle velikosti a pak porovnat s tolerancí 10% ? Váha také s definovanou tolerancí? <strong>TODO</strong></p>
-<ol>
-<li>Zkontrolujem, kod, odchozi adresu. pak rozmery</li>
-</ol>
-<p>Balik bez kody do chybove fronty.</p>
-<p>balik neodpovida. Procentni tolerance bue nastavitelna. Do 5 cm rozdilu ignorujem, potom do 10%.</p>
-<p>Pokud neodpovida, pak chybova fronta.</p>
+<p>Dispečer na balík tiskne <a href="../templates/#T-06">interní štítek</a>. Je třeba na balík v procesu nalepit interní štítek co nejdřív. V případě chyby to usnadní pozdější práci s balíkem a jeho sníží možnost omylu.</p>
+<p>To jestli naměřené rozměry odpovídají zadaným zjistíme tak, že seřadíme všechny hodnoty podle velikosti a pak porovnáme s těmi hodnotami, co zadal dispečer stejně seřazenými. Jednotlivé hodnoty porovnáme tak, že pokud se budou lišit o méně než 5 cm, pak je budem považovat za shodné. Pokud se dále nebudou odlišovat o více než 10%, pak je budem považovat za shodné. Váha se bude porovnávat s tolerancí 10%.</p>
+<hr />
+<p>Pokud balik nema stitek pak, pak se zkontroluje adresa odesilatele, podarilo se zparovat jednoznacne? Pokud ano, pak se zkontroluje dorucovaci a pokud sedi, pak se vytiskne stitek.</p>
 <p>Pokud nesedi zpatecni adresa, pak chybova fronta. Prepise adresu do systemu a chybova fronty.</p>
 <p><strong>TODO 1 - dispecer se pokusi dohledat zakaznika podle odesilaci adresy, pokud se povede, tak sje dal, pokud nepovede, pak se presunu do chybove fronty. Potvrdit si.</strong></p>
-<p><strong>TODO 2 - Rovnou do chybove fronty?</strong></p>
-<p><strong>TODO 3 - Nevim, melo by to byt v poradky, kdyby se balik posilal zpet?</strong></p>
-<p><strong>TODO Navrhuji neprve kontrolovat odresu a kod, az pak rozmery, aby se v chybove fronte neobjevovali baliky bez interniho stitku.</strong></p>
-<p><strong>TODO Zpracovat, nezaplaceno, na konci se musi rict fronta, kam balik dat.</strong></p>
 <p><strong>TODO Chybove stavy</strong></p>
 <p><strong>TODO Obrazovky</strong></p>
 <h2 id="uc-22-zpracovani-cekajicich-baliku"><a name="UC-22"></a>UC-22 - Zpracování čekajících balíků</h2>
 <p>Dispečer v systému otevře stránku pro zpracování fronty ‘čekajících balíků’ a bere po jednom začne balíky zpracovávat.</p>
 <p><img alt="Proces zpracování čekajících balíků" src="../diagrams/out/uc-22-activity.png" title="Proces zpracování čekajících balíků" /></p>
-<p>Do chybové fronty se balík přesune například, když zákazním nezapltí déle než definovanou dobu.</p>
-<p>Do fronty k odeslání se balík přesune, v případě že zákazník zruší objednávku a budem balík budem posílat zákazníkovi zpět. </p>
+<p>Do chybové fronty se balík přesune například, když zákazním nezaplatí déle než definovanou dobu a supportu se jestě nepodařilo se zákazníkem domluvit co s balíckem dál dělat.</p>
+<p>Do fronty k doručení se balík přesune, v případě že zákazník zruší objednávku a budem balík budem posílat zákazníkovi zpět.</p>
+<p>Dispečer se může kdykoliv během zpracovávání fronty rozhodnout činnost přerušit.</p>
 <h2 id="uc-23-predani-baliku-koncovemu-dopravci"><a name="UC-23"></a>UC-23 - Předání balíků koncovému dopravci</h2>
-<p>Dispečer na příslušné stránce označí frontu balíků pro dopravce za uzavřenou. Potom systém vytiskne předávací protokol ????.</p>
-<p>baliky musime znovu vazit. Z prvniho vazzeni si usime s max presnosti zapamatovat hodnoty.</p>
-<p>kdyz dojde k chybe vetsi nez +/- 1g max presnost vahy.  </p>
-<p><strong>TODO potrebuji znovu probrat, nejsem si jist?</strong></p>
-<p><strong>TODO Kazdy dopravcem se bude chovat ruzne?</strong></p>
-<p>nacita a tiskne stitky pro dopravce, kdyz ukonci cinnost vytisknou se predavaci protokoly dopravcum.</p>
+<p>Před tím než dispečer předá balíky z příslušné fronty dopravci, musí připravit předávací protokol. Dispečer v systému najde příslušnou frontu dopravce a stiskne na ní, že jí chce ukončit. na to mu systém vygeneruje předávací protokol, případně jeho kopii.</p>
+<p>Když pro balíky osobně přijde dopravce, dispečer mu předá balíky a si nechá v protokolu potvrdit předání balíků.</p>
+<p>Zde budeme muset zohlednit různé chování dopravců při předávce balíků.</p>
+<p><strong>Zohlednit, pripad, ze dopravce prinesl nedorucitelne nebo odmitnute baliky.</strong>  </p>
 <h2 id="uc-24-zpracovani-baliku-k-doruceni"><a name="UC-24"></a>UC-24 - Zpracování balíků 'k doručení'</h2>
 <p>Dispečer v systému otevře stránku pro zpracování fronty 'k doručení' a bere po jednom začne balíky zpracovávat.</p>
-<p>Čtečkou čárových kódů načte z interního štítku kód balíčku. Systém řekne k jakému dopravci je balíček určen, tedy do jaké fronty má balíček vložit. Dispečet vloží balíček do dané fronty, potvrdí to v systému a pokračuje na další balíček.</p>
-<p>Musí existovat fronta pro Českou poštu. V případě chyby potřebujem poslat balík zpěet zákazníkovy.</p>
-<p><strong>TODO Budem, opravdu chtít aby to znovu vážil a měřil?</strong></p>
+<p>Čtečkou čárových kódů načte z interního štítku kód balíčku. Systém řekne k jakému dopravci je balíček určen, tedy do jaké fronty dopravce má balíček vložit. Dispečer vloží balíček do dané fronty, potvrdí to v systému a pokračuje na další balíček.</p>
+<p><img alt="Proces zpracování balíků 'k doručení'" src="../diagrams/out/uc-24-activity.png" title="Proces zpracování balíků 'k doručení'" /></p>
+<p>Po vážení se aktuální váha balíku porovná s hodnotou naměřenou po nalepení interního štítku na balík. To by mělo snížit pravděpodobnost, že dojde k záměně balíků, nebo jiné chybě.</p>
+<p>Musí existovat fronta pro Českou poštu. V případě chyby potřebujem poslat balík zpět zákazníkovy.</p>
+<p>Dispečer se může rozhodnout, že činnost přerusí i za situace, když je fronta k doručení zpracovaná jen částečně.</p>
 <h2 id="uc-25-zpracovani-baliku-v-chybove-fronte"><a name="UC-25"></a>UC-25 - Zpracování balíků v chybové frontě</h2>
-<p>Tady budou balíky s interním štítkem i bez něho. Dispečer balíky projde a spojí s podporou a společně se pokusí balíky identitfikovat a domluvit se na dalším postupu. </p>
+<p>Tady budou balíky s interním štítkem i bez něho. Dispečer balíky projde a spojí s podporou a společně se pokusí balíky identitfikovat a domluvit se na dalším postupu.  </p>
                 
                   
                 
