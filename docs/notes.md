@@ -1,4 +1,4 @@
-# Poznamky
+# Poznámky
 
 ## 22.02.2020 co jsme si rikali 
 

@@ -4,15 +4,16 @@ Navod jsem zkousel pouze na Apple.
 
 ## Zakladni informace
 
-Struktura projektu vyuziva strukturu [maven](https://maven.apache.org) projektu a vypada takto:
+Struktura projektu vyuziva strukturu [MkDocs	](https://www.mkdocs.org) projektu a vypada takto:
 ```
-└── src
-    └── site
-        ├── markdown
-        ├── plantuml
-        └── resources
+├── balsamiq
+└── docs
+    ├── diagrams
+    │   ├── out
+    │   └── src
+    └── imgs
 ```
-Jednotlive adresare obsahuji dokumenty pro ruzne technologie. Proces generovani dokumentace vyuziva funkci mavenu. Detaily jsou v oubory ``pom.xml``. 
+Jednotlive adresare obsahuji dokumenty pro ruzne technologie. Proces generovani dokumentace vyuziva funkci mavenu. Detaily jsou v oubory ``mkdocs.yml``. 
 
 
 ## Predpoklady

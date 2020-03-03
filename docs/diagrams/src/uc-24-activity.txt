@@ -1,0 +1,30 @@
+@startuml
+
+start
+
+:Dispečer vybere odkaz na třídění balíků k odeslání;
+
+-> Systém je připraven pro práci;
+
+repeat
+
+  :Dispečer naskenuj čárový kód;
+ 
+  :Dispečer zváží balík;
+
+  if (Odpovídá váha balíku?) then (Ano)
+    :Systém zobrazí jméno fronty dopravce
+    a vyskne průvodní štítek dopravce;
+    :Dispečer nalepí štítek dopravce a
+    vloží balík do fronty dopravce;
+  else (Ne)
+    :Systém požádá o vložení do chybové fronty;
+    :Dispečer vloží balík do chybové dopravce;
+  endif
+
+repeat while (Další balík k zpracování?) is (Ano)
+->Ne;
+
+stop
+
+@enduml

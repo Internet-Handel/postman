@@ -1,4 +1,5 @@
 site_name: Postman
+site_url: https://jajir.github.io/postman/
 nav:
     - Home: index.md
     - Analyza: analyza.md
@@ -13,7 +14,8 @@ nav:
         - UC-23: uc-20/#UC-23
     - Stavy: states.md
     - Šablony: templates.md
-    - Poznamky: notes.md
+    - Poznámky: notes.md
+    - Jak přispět: how-to-contribute.md
 theme:
   name: material
 plugins:
@@ -25,3 +27,4 @@ plugins:
         diagram_root: "docs/diagrams" # should reside under docs_dir
         output_folder: "out"
         input_folder: "src"
+dev_addr: 127.0.0.1:8080
