@@ -49,18 +49,18 @@ UC admina nebudem v první fázi řešit.
 
 ### Dispečer
 
-Pracovnik dorucovaci sluzby, odpovedny za prevzeti baliku od zakaznika a predani prepravci.
+Dispečet je pracovnik doručovací sluzby, odpovědný za činnosti s balíkem od převzetí balíku od dopravce až po předání dalšímu dopravci.
 
 ![Co muze delat Despecer](./diagrams/out/ucs-dispecer.png "UCS for Dispecer")
 
-Dispecer musi byt v depu. Depo bude umistene tak, aby bylo v dobrem dosahu prepravcu. Co dispečer dela:
-
-fronty jsou minimalne dve.
+Dispecer musí být v depu. Depo bude umístěné tak, aby bylo v dobrém dosahu přepravců. Co dispečer dělá:
 
 * UC-20 - [Přijetí balíku](../uc-20/#UC-20 "Přijetí balíku").
-* UC-21 - [Zpracování přijatých balíku](../uc-20/#UC-21 "Zpracování přijatých balíku").
-* UC-22 - [Zpracování čekajícich balíků](../uc-20/#UC-22 "Zpracování čekajícich balíků").
-* UC-23 - [Předání balíků koncovému dopravci](../uc-20/#UC-23 "Předání balíků koncovému dopravci").
+* UC-21 - [Zpracování přijatých balíků](../uc-20/#UC-21 "Zpracování přijatých balíků").
+* UC-22 - [Zpracování balíků v 'čekací frontě'](../uc-20/#UC-22 "Zpracování balíků v 'čekací frontě'").
+* UC-23 - [Zpracování balíků 'k doručení'](../uc-20/#UC-23 "Zpracování balíků 'k doručení'").
+* UC-24 - [Zpracování balíků v 'chybové' frontě](../uc-20/#UC-24 "Zpracování balíků v 'chybové' frontě").
+* UC-25 - [Předání balíků dopravci](../uc-20/#UC-25 "Předání balíků dopravci").
 
 ### Support
 

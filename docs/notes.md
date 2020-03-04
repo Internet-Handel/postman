@@ -54,6 +54,7 @@
 
 ## Otevrene otazky
 
+* Jek se lisi predpravce od dopravce?
 * Budem podporovat odlozene doruceni? Naprikald nekdo bude chtit dorucit az za tyden? Je to realny scenar?
 * Nejaky konkretni priklad koncoveho dopravce. Chci se podivat na API a sluzby co nabizi.
 * Validace adresy, to znamena, ze ji poslem koncovemu dopravci? Pokud ji schroupne tak valide je OK?

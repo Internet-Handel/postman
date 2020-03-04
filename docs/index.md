@@ -1,8 +1,8 @@
 # Postman
 
-Sluzba pro zasilani balilku po svete.
+Služba pro zasílání balílků po světě.
 
-V [poznamkach](./notes.html) je, co jsem si odnesl z naseho povidani. Zbytek je v [analyze](./analyza.html).
+V [poznámkách](./notes.html) je, co jsem si odnesl z našeho povídání. Zbytek je v [analyze](./analyza.html).
 
 ## Priority projektu
 

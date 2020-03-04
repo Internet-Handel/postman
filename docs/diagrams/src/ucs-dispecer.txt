@@ -3,13 +3,17 @@
 actor :Dispecer: as dispecer
 
 (Přijetí balíku) as (accept_packages)
-(Zpracování přijatých balíku) as (dispatch_packages)
-(Zpracování čekajícich balíků) as (waiting_packages)
-(Předání balíků koncovému dopravci) as (send_packages)
+(Zpracování přijatých balíků) as (dispatch_packages)
+(Zpracování balíků v 'čekací frontě') as (waiting_packages)
+(Zpracování balíků 'k doručení') as (todelivery_packages)
+(Zpracování balíků v 'chybové' frontě) as (error_packages)
+(Předání balíků dopravci) as (send_packages)
 
-dispecer --> (accept_packages)
-dispecer --> (dispatch_packages)
-dispecer --> (waiting_packages)
+dispecer -up-> (accept_packages)
+dispecer -up-> (dispatch_packages)
+dispecer -up-> (waiting_packages)
+dispecer --> (todelivery_packages)
+dispecer --> (error_packages)
 dispecer --> (send_packages)
 
 @enduml

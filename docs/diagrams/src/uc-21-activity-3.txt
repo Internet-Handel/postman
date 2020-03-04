@@ -1,0 +1,22 @@
+@startuml
+
+start
+->Dispečer má před sebou balík bez kódu;
+
+:Dispečer opíše adresu odesílatele;
+
+:Dispečer opíše adresu adresáta;
+
+:Systém se pokusí dohledat balík;
+
+if (Balík se podařilo najít?) then (Ano)
+  :Vytiskne se štítek a pokračujeme
+  jako na předchozím obrázku.;
+else (Ne)
+  :Dispečer přesune balík
+  do 'Chybové fronty';
+endif
+
+stop
+
+@enduml
