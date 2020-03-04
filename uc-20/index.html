@@ -280,6 +280,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="#UC-24" title="UC-24" class="md-nav__link">
+      UC-24
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="#UC-25" title="UC-25" class="md-nav__link">
+      UC-25
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -355,42 +379,42 @@
       
         <li class="md-nav__item">
   <a href="#uc-20-prijeti-baliku" class="md-nav__link">
-    UC-20 - Přijetí balíku
+    UC-20 - Přijetí balíků
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#uc-21-zpracovani-prijatych-baliku" class="md-nav__link">
-    UC-21 - Zpracování přijatých balíku
+    UC-21 - Zpracování přijatých balíků
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-22-zpracovani-cekajicich-baliku" class="md-nav__link">
-    UC-22 - Zpracování čekajících balíků
+  <a href="#uc-22-zpracovani-baliku-v-cekaci-fronte" class="md-nav__link">
+    UC-22 - Zpracování balíků v 'čekací frontě'
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-23-predani-baliku-koncovemu-dopravci" class="md-nav__link">
-    UC-23 - Předání balíků koncovému dopravci
+  <a href="#uc-23-zpracovani-baliku-k-doruceni" class="md-nav__link">
+    UC-23 - Zpracování balíků 'k doručení'
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-24-zpracovani-baliku-k-doruceni" class="md-nav__link">
-    UC-24 - Zpracování balíků 'k doručení'
+  <a href="#uc-24-zpracovani-baliku-v-chybove-fronte" class="md-nav__link">
+    UC-24 - Zpracování balíků v 'chybové' frontě
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-25-zpracovani-baliku-v-chybove-fronte" class="md-nav__link">
-    UC-25 - Zpracování balíků v chybové frontě
+  <a href="#uc-25-predani-baliku-dopravci" class="md-nav__link">
+    UC-25 - Předání balíků dopravci
   </a>
   
 </li>
@@ -419,45 +443,44 @@
 <li>Přijímací fronta - Zde jsou balíky čekající na zpracování v UC-21.</li>
 <li>Čekací fronta - Zde balíky čekají, až zákazník zaplatí za přepravu.</li>
 <li>K doručení - Balíky z této fronty se rozdělí dopravcům.</li>
-<li>Chybová fronta - zde budou balíky, které nelze dohledat v systému, nemají kód. Nebo hrubě neodpovídají rozměrama.</li>
+<li>Chybová fronta - zde budou chybové balíky. Které napríklad nelze dohledat v systému, nemají kód nebo hrubě neodpovídají rozměrama.</li>
 <li>Fronty pro přepravce, napřiklad fronta pro předání DPD k finálnímu doručení adresátovi.</li>
 </ul>
-<h2 id="uc-20-prijeti-baliku"><a name="UC-20"></a>UC-20 - Přijetí balíku</h2>
+<h2 id="uc-20-prijeti-baliku"><a name="UC-20"></a>UC-20 - Přijetí balíků</h2>
 <p>Dispecer přijme balíky od dopravce a dá je do přijímací fronty k dalšímu zpracování. </p>
 <p>Dispečer potvrdí převzetí balíku podepsáním protokolu dopravce.</p>
-<h2 id="uc-21-zpracovani-prijatych-baliku"><a name="UC-21"></a>UC-21 - Zpracování přijatých balíku</h2>
+<h2 id="uc-21-zpracovani-prijatych-baliku"><a name="UC-21"></a>UC-21 - Zpracování přijatých balíků</h2>
 <p>Přijate balíky je třeba vložit do systému. Dispečer bude frontu balíků zpracovávat následovně: </p>
-<p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity1.png" title="Proces zpracování přijatých balíků" /></p>
+<p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity-1.png" title="Proces zpracování přijatých balíků" /></p>
 <p>Zpracovaní jednoho balíku je pro srozumitelnost na samostatném obrázku:</p>
-<p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity.png" title="Proces zpracování přijatých balíků" /></p>
+<p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity-2.png" title="Proces zpracování přijatých balíků" /></p>
 <p>Dispečer na balík tiskne <a href="../templates/#T-06">interní štítek</a>. Je třeba na balík v procesu nalepit interní štítek co nejdřív. V případě chyby to usnadní pozdější práci s balíkem a jeho sníží možnost omylu.</p>
 <p>To jestli naměřené rozměry odpovídají zadaným zjistíme tak, že seřadíme všechny hodnoty podle velikosti a pak porovnáme s těmi hodnotami, co zadal dispečer stejně seřazenými. Jednotlivé hodnoty porovnáme tak, že pokud se budou lišit o méně než 5 cm, pak je budem považovat za shodné. Pokud se dále nebudou odlišovat o více než 10%, pak je budem považovat za shodné. Váha se bude porovnávat s tolerancí 10%.</p>
-<hr />
-<p>Pokud balik nema stitek pak, pak se zkontroluje adresa odesilatele, podarilo se zparovat jednoznacne? Pokud ano, pak se zkontroluje dorucovaci a pokud sedi, pak se vytiskne stitek.</p>
-<p>Pokud nesedi zpatecni adresa, pak chybova fronta. Prepise adresu do systemu a chybova fronty.</p>
-<p><strong>TODO 1 - dispecer se pokusi dohledat zakaznika podle odesilaci adresy, pokud se povede, tak sje dal, pokud nepovede, pak se presunu do chybove fronty. Potvrdit si.</strong></p>
-<p><strong>TODO Chybove stavy</strong></p>
+<p>V případě, že balík nemá na sobě kód, pak se zkontroluje adresa odesílatele a příjemce a pokud systém vyhodnotí, že to lze, vytiskne se štítek.</p>
+<p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity-3.png" title="Proces zpracování přijatých balíků" /></p>
+<p>Pokud jsou adresy shodné, tak se štítek tisknou nemusí, protože odesílatel může posílat dva různé balíky jednomu adresátovi. </p>
 <p><strong>TODO Obrazovky</strong></p>
-<h2 id="uc-22-zpracovani-cekajicich-baliku"><a name="UC-22"></a>UC-22 - Zpracování čekajících balíků</h2>
+<h2 id="uc-22-zpracovani-baliku-v-cekaci-fronte"><a name="UC-22"></a>UC-22 - Zpracování balíků v 'čekací frontě'</h2>
 <p>Dispečer v systému otevře stránku pro zpracování fronty ‘čekajících balíků’ a bere po jednom začne balíky zpracovávat.</p>
 <p><img alt="Proces zpracování čekajících balíků" src="../diagrams/out/uc-22-activity.png" title="Proces zpracování čekajících balíků" /></p>
 <p>Do chybové fronty se balík přesune například, když zákazním nezaplatí déle než definovanou dobu a supportu se jestě nepodařilo se zákazníkem domluvit co s balíckem dál dělat.</p>
 <p>Do fronty k doručení se balík přesune, v případě že zákazník zruší objednávku a budem balík budem posílat zákazníkovi zpět.</p>
 <p>Dispečer se může kdykoliv během zpracovávání fronty rozhodnout činnost přerušit.</p>
-<h2 id="uc-23-predani-baliku-koncovemu-dopravci"><a name="UC-23"></a>UC-23 - Předání balíků koncovému dopravci</h2>
+<h2 id="uc-23-zpracovani-baliku-k-doruceni"><a name="UC-23"></a>UC-23 - Zpracování balíků 'k doručení'</h2>
+<p>Dispečer v systému otevře stránku pro zpracování fronty 'k doručení' a bere po jednom začne balíky zpracovávat.</p>
+<p>Čtečkou čárových kódů načte z interního štítku kód balíčku. Systém řekne k jakému dopravci je balíček určen, tedy do jaké fronty dopravce má balíček vložit. Dispečer vloží balíček do dané fronty, potvrdí to v systému a pokračuje na další balíček.</p>
+<p><img alt="Proces zpracování balíků 'k doručení'" src="../diagrams/out/uc-23-activity.png" title="Proces zpracování balíků 'k doručení'" /></p>
+<p>Po vážení se aktuální váha balíku porovná s hodnotou naměřenou po nalepení interního štítku na balík. To by mělo snížit pravděpodobnost, že dojde k záměně balíků, nebo jiné chybě.</p>
+<p>Musí existovat fronta pro Českou poštu. V případě chyby potřebujem poslat balík zpět zákazníkovy.</p>
+<p>Dispečer se může rozhodnout, že činnost přerusí i za situace, když je fronta k doručení zpracovaná jen částečně.</p>
+<h2 id="uc-24-zpracovani-baliku-v-chybove-fronte"><a name="UC-24"></a>UC-24 - Zpracování balíků v 'chybové' frontě</h2>
+<p>Tady budou balíky s interním štítkem i bez něho. Dispečer balíky projde a spojí s podporou a společně se pokusí balíky identitfikovat a domluvit se na dalším postupu.</p>
+<p>O každém chybovém balíku je záznam v systému, tedy support o každém balíku ví a může je řešit. </p>
+<h2 id="uc-25-predani-baliku-dopravci"><a name="UC-25`"></a>UC-25 - Předání balíků dopravci</h2>
 <p>Před tím než dispečer předá balíky z příslušné fronty dopravci, musí připravit předávací protokol. Dispečer v systému najde příslušnou frontu dopravce a stiskne na ní, že jí chce ukončit. na to mu systém vygeneruje předávací protokol, případně jeho kopii.</p>
 <p>Když pro balíky osobně přijde dopravce, dispečer mu předá balíky a si nechá v protokolu potvrdit předání balíků.</p>
 <p>Zde budeme muset zohlednit různé chování dopravců při předávce balíků.</p>
 <p><strong>Zohlednit, pripad, ze dopravce prinesl nedorucitelne nebo odmitnute baliky.</strong>  </p>
-<h2 id="uc-24-zpracovani-baliku-k-doruceni"><a name="UC-24"></a>UC-24 - Zpracování balíků 'k doručení'</h2>
-<p>Dispečer v systému otevře stránku pro zpracování fronty 'k doručení' a bere po jednom začne balíky zpracovávat.</p>
-<p>Čtečkou čárových kódů načte z interního štítku kód balíčku. Systém řekne k jakému dopravci je balíček určen, tedy do jaké fronty dopravce má balíček vložit. Dispečer vloží balíček do dané fronty, potvrdí to v systému a pokračuje na další balíček.</p>
-<p><img alt="Proces zpracování balíků 'k doručení'" src="../diagrams/out/uc-24-activity.png" title="Proces zpracování balíků 'k doručení'" /></p>
-<p>Po vážení se aktuální váha balíku porovná s hodnotou naměřenou po nalepení interního štítku na balík. To by mělo snížit pravděpodobnost, že dojde k záměně balíků, nebo jiné chybě.</p>
-<p>Musí existovat fronta pro Českou poštu. V případě chyby potřebujem poslat balík zpět zákazníkovy.</p>
-<p>Dispečer se může rozhodnout, že činnost přerusí i za situace, když je fronta k doručení zpracovaná jen částečně.</p>
-<h2 id="uc-25-zpracovani-baliku-v-chybove-fronte"><a name="UC-25"></a>UC-25 - Zpracování balíků v chybové frontě</h2>
-<p>Tady budou balíky s interním štítkem i bez něho. Dispečer balíky projde a spojí s podporou a společně se pokusí balíky identitfikovat a domluvit se na dalším postupu.  </p>
                 
                   
                 
