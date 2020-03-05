@@ -1,6 +1,4 @@
 # Analýza
-
-
 ## Role
 
 Mame tyto role:
@@ -68,13 +66,18 @@ Pracovnik nasi dorucovaci sluzby. Je odpovdny za hladky provoz sluzby. Vyrizuje 
 
 ![Co může delat Support](./diagrams/out/ucs-support.png "UCS for Support")
 
-Support může být fyzicky na centrále. Je odpovědný za:
+Support může být fyzicky na centrále. Pracovník podpory je odpovědný za:
 
-* Podpora uzivatelu
-    * UC-31 Zmena/obnova hesla 
-    * UC-32 Zapomenuté přihlašovací jméno
-* UC-33 - Kontrola bankovního účtu.
-* UC-34 - párování s objednávkami. Určení koncového dopravce. 
+* UC-31 - [Změna/obnova hesla](../uc-30/#UC-31 "Změna/obnova hesla")
+* UC-32 - [Zapomenuté přihlašovací jméno](../uc-30/#UC-32 "Zapomenuté přihlašovací jméno")
+* UC-33 - [Kontrola bankovního účtu](../uc-30/#UC-33 "Kontrola bankovního účtu").
+* UC-34 - [Párování plateb](../uc-30/#UC-34 "Párování plateb"). 
+* UC-35 - [Řešení chybové fronty](../uc-30/#UC-35 "Řešení chybové fronty"). 
+* UC-36 - [Storno objednávky](../uc-30/#UC-36 "Storno objednávky"). 
+* UC-37 - [Urgence zaplacení balíků](../uc-30/#UC-37 "Urgence zaplacení balíků"). 
+
+
+* UC-40 - Kontrola chybové fronty s dispečerem. Budou si volat?
 * UC-35 - Vyhledaní balíku podle kódu, adresy, příjemnce a odesílatele.
 * UC-36 - Zobrazení detailů balíku.
 * UC-37 - Vystaveni dobropisu - na základě emailu nebo telefonátu.
@@ -82,10 +85,6 @@ Support může být fyzicky na centrále. Je odpovědný za:
 * UC-39 - Reklamace, oncall/email. musime se napojit na last mile prepravce informace o zasilce.
 * UC-40 - Kontrola chybové fronty s dispečerem. Budou si volat?
 * UC-41 - Rozhodnutí o předaní dopravci. Musí být možnost kdykoliv z jakékoliv fronty balík přesunout do fronty ke konkrétnímu dopravci. Je to pro reklamace a storna objednávek.
-
-Nechem delat dobropisy, radeji volat.
-z chybbove fronty musime obvolavat.  3 krat zadat o zaplaceni + tyden cekani na platbu.
-Z fronty ceka na zaplaceni.
 
 ### eShop
 

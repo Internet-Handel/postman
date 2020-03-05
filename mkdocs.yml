@@ -14,9 +14,13 @@ nav:
         - UC-23: uc-20/#UC-23
         - UC-24: uc-20/#UC-24
         - UC-25: uc-20/#UC-25
+        - UC-31: uc-30/#UC-31
+        - UC-32: uc-30/#UC-32
     - Stavy: states.md
     - Šablony: templates.md
+    - Obrazovky: screens.md
     - Poznámky: notes.md
+    - Změny: changelog.md
     - Jak přispět: how-to-contribute.md
 theme:
   name: material

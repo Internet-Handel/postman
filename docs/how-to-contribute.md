@@ -1,8 +1,8 @@
-# Jak dal rozsirovat tuto dokumentaci
+# Jak dal rozšiřovat tuto dokumentaci
 
-Navod jsem zkousel pouze na Apple.
+Návod jsem zkoušel pouze na Apple.
 
-## Zakladni informace
+## Základni informace
 
 Struktura projektu vyuziva strukturu [MkDocs	](https://www.mkdocs.org) projektu a vypada takto:
 ```
@@ -13,80 +13,45 @@ Struktura projektu vyuziva strukturu [MkDocs	](https://www.mkdocs.org) projektu 
     │   └── src
     └── imgs
 ```
-Jednotlive adresare obsahuji dokumenty pro ruzne technologie. Proces generovani dokumentace vyuziva funkci mavenu. Detaily jsou v oubory ``mkdocs.yml``. 
+Jednotlive adresare obsahují dokumenty pro různe technologie. Proces generovaní dokumentace využívá funkci MkDocs. Detaily jsou v oubory ``mkdocs.yml``. 
 
-
-## Predpoklady
+## Předpoklady
 
 Aby jste mohli texty upravovat a publikovat zmeny, pak budete potrebovat:
  
-* Nainstalovany git
-* Nainstalovanou javu, pouzivam verzi OpenJDK 11.
-* Nainstalovany maven.
-* Stahnuty projekt [github.com/jajir/postman](https://github.com/jajir/postman).
+* Nainstalovaný git
+* Nainstalovaný python
+* Nainstalovaný MkDocs
+* Stáhnutý projekt [github.com/jajir/postman](https://github.com/jajir/postman).
 
 ## Jak upravovat texty
 
-Texty jsou v adresari ``src/site/markdown``. Pro upravu staci znat jednoduchou strukuru markdownu a zacit upravovat. Markdown je popsany napriklad [zde](https://daringfireball.net/projects/markdown/syntax). Az budete s upravami hotovi, spustte:
+Texty jsou v adresari ``docs/src``. Pro upravu stači znát jednoduchou strukuru markdownu a začít upravovat. Markdown je popsaný například [zde](https://daringfireball.net/projects/markdown/syntax). Až budete s úpravami hotovi, spustte:
 
 ```
-mvn site
+mkdocs serve
 ```
-v adresari ``target/site/index.html`` uvidite pregenerovanou a upraven	ou dokumentaci.
+V prohlížeči na adrese ``http://127.0.0.1:8080/`` najdete aktuální verze dokumenatce. Když nějaký dokument upravíte, v prohlížeči se stránka sama aktualizuje.
 
 
-## Jak pridat novou stranku.
+## Jak přidat novou stránku.
 
-Pokud nechcete, aby se nova stranka objevila v levem menu, pak staci vytvorit prislusny .md soubor a zacit na nej odkazovat. Tim je hotovo. Pokud chcete, aby se odkaz na novy soubor objevil v levem menu, pak musite odkaz pridat do ``src/site/site.xml``. Jak odkaz pridat by melo byt zjevne. Pro pregenerovani dokumentace nakonec spustit:
-```
-mvn clean site-deploy
-```
-A tim by se mel novy odkaz objevit v levem menu.
+Pokud nechcete, aby se nová stránka objevila v levám menu, pak staci vytvorit příslušny .md soubor a zacit na nej odkazovat. Tím je hotovo. Pokud chcete, aby se odkaz na nový soubor objevil v levém menu, pak musite odkaz pridat do ``mkdocs.yml``. Jak odkaz pridat by melo byt zjevné.
 
-## Jak upravovat obrazky
+## Jak upravovat obrázky
 
-### Obrazky UCs nebo sequece diagramu
+### Obrázky s diagramy, UCs, activity disgrams ...
 
-Obrazky jsou generovat pomoci plant uml ze souboru ulozenych v ``src/site/plantuml``. Opet staci pridat nebo upravit soubor a po spusteni:
-```
-mvn site-deploy
-```
-se novy nebo upraveny obrazek vygeneruje. Je pohodlne obrazky upravovat a vytvaret v nejakem on-	line editoru, napriklad [www.planttext.com](https://www.planttext.com). Popis formatu zapisu obrazku je na [https://plantuml.com](https://plantuml.com "PlantUML home")
+Obrázky jsou generované pomoci PlantUML ze souboru ulozenych v ``doc/diagrams/src``. Opět stačí přidat nebo upravit soubor a nový nebo upraveny obrázek se sám vygeneruje. Je pohodlne obrazky upravovat a vytvářet v nějakém on-line editoru, například [www.planttext.com](https://www.planttext.com). Popis formatu zápisu obrázku je na [https://plantuml.com](https://plantuml.com "PlantUML home")
 
+### Obrázky s návrhy obrazovek
 
+V adresáři ``balsamiq`` jsou uloženy návrhy obrazovek. Jsou upravitelné v [balsamiq.com](https://balsamiq.com). Obrázky exportujte do adresáře ``docs/imgs/``.
 ## Jak publikovat upravy na [jajir.github.io/postman/](https://jajir.github.io/postman/)
 
-### Postup
-- V souboru ~/m2/settings.xml by melo byt:
+Pushněte změny na gitgub. Pak na konzoli spustte:
 
 ```
-	...
-	<servers>
-		<server>
-			<id>github</id>
-			<username>___jmeno___</username>
-			<password>___heslo___</password>
-		</server>
-	</servers>
-	...
+mkdocs gh-deploy
 ```
 
-Stim, ze misto  ``___jmeno___`` bude vase jmeno a misto ``___heslo___`` bude vase heslo na githubu.
-
-- Na konzoli spustte:
-
-```
-mvn site-deploy
-```
-
-nasledne treba i po nekolika	 minutach by se mel upraveny dokument objevit na [jajir.github.io/postman/](https://jajir.github.io/postman/). Pok vse dobre dopadne na konzoli se objevi neco jako:
-```
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.034 s
-[INFO] Finished at: 2020-02-25T23:17:31+01:00
-[INFO] ------------------------------------------------------------------------
-```
-
-- Hotovo.
