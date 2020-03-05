@@ -1,15 +1,38 @@
 @startuml
+hide empty description
 
-(*) --> "Čeká na doručení do depa" as cekaNaDoruceniDoDepa
+state "Na cestě" as naCeste
+naCeste:Balík je na cestě do depa
 
-cekaNaDoruceniDoDepa --> "Přijat" as prijat
+state "Přijat" as prijat
+prijat:Balík jsme přijali od dopravce
 
-prijat --> "Čeká na zaplacení" as cekaNaZaplceni
+state "Chyba" as chyba
+chyba:Například chybí kód a nesedí adresa
 
-cekaNaZaplceni --> "Čeká na roztřízení" as cekaNaRoztrizeni
+state "Čeká na zaplacení" as cekaNaZaplaceni
+cekaNaZaplaceni:Čeká na zaplacení
 
-cekaNaRoztrizeni --> "Čeká na předaní dopravci" as cekaNaPredani
+state "K odeslání" as kOdeslani
+kOdeslani: Balík připraven na vložení do fronty dopravce
 
-cekaNaPredani --> (*)
+state "Ve frontě dopravce" as cekaNaDopravce
+cekaNaDopravce:Balík čeká, až si ho dopravce vyzvedne
+
+state "Doručeno" as doruceno
+doruceno: Asi bychom měli rozlišit komu
+  
+[*] --> naCeste
+naCeste --> prijat
+naCeste --> doruceno
+prijat --> kOdeslani
+prijat --> chyba
+prijat --> cekaNaZaplaceni
+cekaNaZaplaceni --> kOdeslani
+cekaNaZaplaceni --> chyba
+kOdeslani --> cekaNaDopravce
+cekaNaDopravce --> naCeste
+chyba --> cekaNaDopravce
+doruceno --> [*]
 
 @enduml

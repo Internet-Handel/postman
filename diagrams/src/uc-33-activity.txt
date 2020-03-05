@@ -1,0 +1,26 @@
+@startuml
+
+start
+
+:Pracovník ote vřero stránku pro zadávání plateb;
+
+-> Systém je připraven pro práci;
+
+repeat
+
+  :Pracovník přepíše informace o platbě;
+ note left
+  Pracovník přepíše:
+   * Číslo odchozího účtu
+   * Kód transakce
+   * Datum odeslání
+   * Částku
+   * Popis platby
+   * Variabilni symbol
+end note
+repeat while (Další platba?) is (Ano)
+->Ne;
+
+stop
+
+@enduml

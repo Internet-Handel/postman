@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://jajir.github.io/postman/states/">
+        <link rel="canonical" href="https://jajir.github.io/postman/uc-30/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Stavy - Postman</title>
+        <title>Podpora - Postman</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#stavy" tabindex="0" class="md-skip">
+      <a href="#podpora" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Stavy
+                Podpora
               
             </span>
           
@@ -310,7 +310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-30/#UC-31" title="UC-31" class="md-nav__link">
+    <a href="#UC-31" title="UC-31" class="md-nav__link">
       UC-31
     </a>
   </li>
@@ -322,7 +322,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-30/#UC-32" title="UC-32" class="md-nav__link">
+    <a href="#UC-32" title="UC-32" class="md-nav__link">
       UC-32
     </a>
   </li>
@@ -337,56 +337,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Stavy
-      </label>
-    
-    <a href="./" title="Stavy" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../states/" title="Stavy" class="md-nav__link">
       Stavy
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#stavy-objednavek" class="md-nav__link">
-    Stavy objednávek
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stavy-jednotlivych-baliku" class="md-nav__link">
-    Stavy jednotlivých balíků
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -471,15 +426,70 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#stavy-objednavek" class="md-nav__link">
-    Stavy objednávek
+  <a href="#uc-31-zmenaobnova-hesla" class="md-nav__link">
+    UC-31 - Změna/obnova hesla
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stavy-jednotlivych-baliku" class="md-nav__link">
-    Stavy jednotlivých balíků
+  <a href="#uc-32-zapomenute-prihlasovaci-jmeno" class="md-nav__link">
+    UC-32 - Zapomenuté přihlašovací jméno
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-33-kontrola-bankovniho-uctu" class="md-nav__link">
+    UC-33 - Kontrola bankovního účtu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-34-parovani-plateb" class="md-nav__link">
+    UC-34 - Párování plateb
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chyby-ktere-v-parovani-mohou-nastat" class="md-nav__link">
+    Chyby, které v párování mohou nastat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-35-reseni-chybove-fronty" class="md-nav__link">
+    UC-35 - Řešení chybové fronty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-36-storno-objednavky" class="md-nav__link">
+    UC-36 - Storno objednávky
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-37-urgence-zaplaceni-baliku" class="md-nav__link">
+    UC-37 - Urgence zaplacení balíků
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-40-vyhledani-baliku-nebo-objednavky" class="md-nav__link">
+    UC-40 - Vyhledání balíku nebo objednávky
   </a>
   
 </li>
@@ -501,16 +511,54 @@
               
                 
                 
-                <h1 id="stavy">Stavy</h1>
-<p>Objednávky a balíky během vyřizování procházejí několika stavama. V první verzi, kde budeme mít právě jeden balík na objednávky, bude možné následující stavy spojit v jeden.</p>
-<h2 id="stavy-objednavek">Stavy objednávek</h2>
-<p>Objednávka prochází následujícími stavy:</p>
-<p><img alt="Stavy objednávky" src="../diagrams/out/states-order.png" title="Stavy objednávky" /></p>
-<h2 id="stavy-jednotlivych-baliku">Stavy jednotlivých balíků</h2>
-<p>Balíky během doručování procházejí následujícími stavy:</p>
-<p><img alt="Stavy balíků" src="../diagrams/out/states-package.png" title="Stavy balíků" /></p>
-<p>Balík bude ve stavu "Na cestě" aspoň dvakrát jednou od zákazníka do depa a podruhé z depa k adresátovi. Ze stavu "Na cestě" se může balík dostat do stavu "Přijat" a pak do stavu "Chyba". To se stane v případě, že zákazník odmítne balík převzít, nebo se ho nějakého jiného důvodu nepodaří doručit.</p>
-<p>U balíčků je třeba znát historii všech stavů. To je potřeba pro reklamace a evidenci, poohybu balíku. To lze později využít pro optimalizaci procesů. </p>
+                <h1 id="podpora">Podpora</h1>
+<p>Nechem delat dobropisy, radeji volat.
+z chybbove fronty musime obvolavat.  3 krat zadat o zaplaceni + tyden cekani na platbu.
+Z fronty ceka na zaplaceni.</p>
+<h2 id="uc-31-zmenaobnova-hesla"><a name="UC-31"></a>UC-31 - Změna/obnova hesla</h2>
+<p>Uživatel zavolá nebo napíše na podporu. Pracovník podpory oveří jeho odentitu zavoláním zpět a pokud sedí, pak změní heslo, keré sdělí zákazníkovi nebo pošle emailem.</p>
+<p><strong>Toto je poměrně nebezpečné, ale jednoduché.</strong> </p>
+<h2 id="uc-32-zapomenute-prihlasovaci-jmeno"><a name="UC-32"></a>UC-32 - Zapomenuté přihlašovací jméno</h2>
+<p>Uživatel zavolá nebo napíše na podporu. Pracovník podpory dohledá přihlašovací jméno, například pdle jména uživatele a sdělí je uživateli. </p>
+<p><strong>Toto je poměrně nebezpečné, ale jednoduché.</strong> </p>
+<h2 id="uc-33-kontrola-bankovniho-uctu"><a name="UC-33"></a>UC-33 - Kontrola bankovního účtu</h2>
+<p>Pracovník podpory otevře na jedné straně bankovnictví a v našem systému obrazovku <a href="../screens/#S-06">S-06 platby</a>. Z bankovního sytému začne přepisovat zaplacené částky do našeho systému.</p>
+<p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-33-activity.png" title="Proces zpracování přijatých balíků" /></p>
+<p>Samotná platba se bude vkládat pomocí <a href="../screens/#S-07">obrazovky S-07 pro vložení platby</a>
+Při zadáváne nebudem párovat zaplacené částky s objednávkama. Pouze přepíšem příchozí platby. To umožní řešit chyby jako je částečná platba za objednávku. Pokud tato činnost zůstane samostatná půjde jí později snadno automatizovat.</p>
+<p>Kód transakce z bankovnictví potřebujem, protože to je unikátní identifikátor platby. Ten nám pomůže jako obrana, před opakovaným vložením jedné platby.</p>
+<p>Pokud bude více příchozích účtů, pak každý bude mít svojí vlastní stránku na zadávání.</p>
+<h2 id="uc-34-parovani-plateb"><a name="UC-34"></a>UC-34 - Párování plateb</h2>
+<p>S systému bude odkaz na párování plateb. Párování plateb se zapne tlačitkem. Po spárování se ukáže seznam chybových událostí. Variabiln symbol je číslo objednávky.</p>
+<p>Spárování napojí platby na objednávky. Pokud byl balík v čekací frontě na zaplacení, pak se při dalším zpracování fronty presune do fronty příslušného dopravce.</p>
+<h3 id="chyby-ktere-v-parovani-mohou-nastat">Chyby, které v párování mohou nastat</h3>
+<ul>
+<li>U platby chybí variabilní symbol</li>
+<li>U platby je částka menší než na objednávce</li>
+<li>U platby je částka větší než na objednávce</li>
+<li>U platby je variabilní symbol, který neexistuje</li>
+<li>U platby je variabilní symbol, který patří balíku, co jsme již doručili.</li>
+<li>Na platbu navázaný balík je v chybové frontě, například chybí adresát.</li>
+</ul>
+<p>Některé z chyb půjde později dobře řeit automatizací. V tuto chvíli umožníme pracovníkovi podpory s pokusit ručně problem vyřešit.</p>
+<h2 id="uc-35-reseni-chybove-fronty"><a name="UC-35"></a>UC-35 - Řešení chybové fronty</h2>
+<p>Balíky v chybové frontě jsou neuspořádané. Některé mají nalepný interní kód některé ne. O každém balíku v chybové frontě je v systému záznam. Zde se pracovník podpory bude snažit najít pro balíky nějaké řešení.</p>
+<p>Některé druhy chyb půjde později řešit automatickym, například:</p>
+<ul>
+<li>Chybějící odresa odesílatele.</li>
+</ul>
+<p>Pracovník podpory se po telefonu spojí s espečerem a společně jeden balík po druhém projdou.</p>
+<p><strong>Reseni baliku po telefonu je hodne divne, ale nevim, jak vyreseit, ze neketer baliky nemaji interni stitek. tady by pomohlo, kdyby kazdy balik, co prijmem dostal interni stitek.</strong></p>
+<p><strong>Detailní řešení jednotlivých chyb těď nebudem řešit.</strong></p>
+<h2 id="uc-36-storno-objednavky"><a name="UC-36"></a>UC-36 - Storno objednávky</h2>
+<p>Zákazník může napsat nebo zavolat a pokusit se zrušit objednávku. V tomto případě pracovník podpory vyhledá objednávku v systému a pokud to je možné, tak provede storno objednávky. Balík se vrátí na  adresu odesilatele. Po stisku storna objednávky se automaticky pošle <a href="../templates/#T-04">T-04 dobropis</a> na emailovou adresu odesilatele. Pracovník podpory pak musí jít a ručně poslat zákazníkovi příslušný obnos. Objednávku lze zrušit pokud balík není na cestě k adresátovi.</p>
+<h2 id="uc-37-urgence-zaplaceni-baliku"><a name="UC-37"></a>UC-37 - Urgence zaplacení balíků</h2>
+<ul>
+<li><strong>Nabízí se, aby systém automaticky generoval upomínky k zaplacení. Z časových důvodů navrhuji implementovat později.</strong> </li>
+<li><strong>Neřešíme urgenci zaplacení objednávek, ke kterým nedorazili balíky</strong></li>
+</ul>
+<p>Pracovník podpory otevře část pro zobrazení fronty balíků čekajících pro zaplacení. Zobrazí se stránka se seznamem balíků. Klikne na zobrazení detailů objednávky, záložku s komunikační historiíí, zkontroluje poznámky, jestli tam není už jiný problém. Podle úvahy pošle email nebo zákazníkovi zavolá. O tom, co udělal pořídí záznam do komunikační hstorie.</p>
+<h2 id="uc-40-vyhledani-baliku-nebo-objednavky"><a name="UC-40"></a>UC-40 - Vyhledání balíku nebo objednávky</h2>
                 
                   
                 
@@ -528,41 +576,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../uc-06/" title="UC-06" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                UC-06
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../templates/" title="Šablony" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Šablony
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
