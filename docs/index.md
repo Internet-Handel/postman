@@ -2,7 +2,7 @@
 
 Služba pro zasílání balílků po světě.
 
-V [poznámkách](./notes.html) je, co jsem si odnesl z našeho povídání. Zbytek je v [analyze](./analyza.html).
+V [poznámkách](./notes/) je, co jsem si odnesl z našeho povídání. Zbytek je v [analyze](./analyza/).
 
 ## Priority projektu
 
