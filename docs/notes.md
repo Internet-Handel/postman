@@ -1,6 +1,6 @@
 # Poznámky
 
-## Otevrene otazky
+## Otevřené otázky
 
 * Jak se lisi predpravce od dopravce?
 * Budem podporovat odlozene doruceni? Naprikald nekdo bude chtit dorucit az za tyden? Je to realny scenar?

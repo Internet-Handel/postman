@@ -18,6 +18,8 @@ repeat
    * Popis platby
    * Variabilni symbol
 end note
+:Systém se pokusí napárovat objednávku
+podle variabilního symbolu;
 repeat while (Další platba?) is (Ano)
 ->Ne;
 

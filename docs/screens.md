@@ -40,9 +40,25 @@ Do pole hledat, pujde zadat část libovolné adresy, kód balíku, telefon zák
 
 ![Platby](./imgs/s-06-payments.png "Platby")
 
+V psledním sloupci bude vidět, jestli se platbu podařilo spárovat s objednávkou. Pokud ano, pak zde bude odkaz na detail objednávky.
+
+Checkbox "Zobrazit pouze nespárované" platby umožní omezit pohled jen na nespárované.
+
+Pokud je nějaké číslo odchozího účtu zvýrazněné jako odkaz, pak to znamená, ze z toho účtu nám přišlo víc platek a kliknutím na odkaz si lze tyto platby vyfiltrovat - [S-08 seznam plateb vyfiltrovaný podle odchozího účtu](./#S-08).
+
 ## <a name="S-07"></a>S-07 - Přidání platby
 
 ![Přidání platby](./imgs/s-07-insert-payments.png "Přidání platby")
+
+## <a name="S-08"></a>S-08 - Seznam plateb vyfiltrovaný podle odchozího účtu 
+
+![Seznam plateb vyfiltrovaný podle příchozího účtu](./imgs/s-08-payments-from.png "Seznam plateb vyfiltrovaný podle příchozího účtu")
+
+## <a name="S-09"></a>S-09 - Spárovat platbu s objednávkou 
+
+![Spárovat platbu s objednávkou](./imgs/s-09-link.png "Spárovat platbu s objednávkou")
+
+Po potvrzení "Spárovat" nebo "Cancel" se uživatel vrací na stránku v výpisem plateb.
 
 **Doplnit validace na jednotliva pole, chceme ciselnik bank?**
 
