@@ -22,19 +22,21 @@ Sekci "Pracovník podpory" uvidí pouze pracovník podpory, stejně se chová se
 
 ![odhlášení](./imgs/s-02-logout.png "Odhlášení")
 
-## <a name="S-03"></a>S-03 - Hledání
+## <a name="S-03"></a>S-03 - Hledání balíků
 
-![Hledání](./imgs/s-03-search.png "Hledání")
+![Hledání balíků](./imgs/s-03-search.png "Hledání balíků")
 
 Do pole hledat, pujde zadat část libovolné adresy, kód balíku, telefon zákazníka, čast jména, prostě cokoliv. 
 
-**Budeme ve výsledcích mixovat balíky a objednávky?**
-
-
 ## <a name="S-04"></a>S-04 - Detail objednávky
 
+![Detail objednávky](./imgs/s-04-order-details.png "Detail objednávky")
 
 ## <a name="S-05"></a>S-05 - Detail balíku
+
+![Detail balíku](./imgs/s5-package-detail.png "Detail balíku")
+
+Může být součástí stránky [S-04 Detail objednávky](./#S-04)
 
 ## <a name="S-06"></a>S-06 - Seznam plateb
 
@@ -44,7 +46,7 @@ V psledním sloupci bude vidět, jestli se platbu podařilo spárovat s objedná
 
 Checkbox "Zobrazit pouze nespárované" platby umožní omezit pohled jen na nespárované.
 
-Pokud je nějaké číslo odchozího účtu zvýrazněné jako odkaz, pak to znamená, ze z toho účtu nám přišlo víc platek a kliknutím na odkaz si lze tyto platby vyfiltrovat - [S-08 seznam plateb vyfiltrovaný podle odchozího účtu](./#S-08).
+Pokud je nějaké číslo odchozího účtu zvýrazněné jako odkaz, pak to znamená, ze z toho účtu nám přišlo víc platek a kliknutím na odkaz si lze tyto platby vyfiltrovat - [S-08 seznam plateb vyfiltrovaný podle odchozího účtu](./#S-08).	
 
 ## <a name="S-07"></a>S-07 - Přidání platby
 
@@ -60,6 +62,23 @@ Pokud je nějaké číslo odchozího účtu zvýrazněné jako odkaz, pak to zna
 
 Po potvrzení "Spárovat" nebo "Cancel" se uživatel vrací na stránku v výpisem plateb.
 
-**Doplnit validace na jednotliva pole, chceme ciselnik bank?**
+## <a name="S-10"></a>S-10 - Hledání objednávek 
+
+![Hledání objednávek](./imgs/s-10-order-search.png "Hledání objednávek")
+
+Objednávky lze filtrovat podle:
+
+* textu v adresách
+* minimální a maximální ceny objednávky
+* nezaplacených objednávek
+
+## <a name="S-11"></a>S-11 - Spárovat objednávku s platbou
+
+Po stisknutí "Spárovat" na S-10 se zobrazí obrazovka:
+
+![Napojení platby na objednávky](./imgs/s-11-order-pair-with-payment.png "Napojení platby na objednávky")
+
+**TODO Nebude lepsi hledat pouze ty, kde neseni prijate platby na vysi objednavky. Co s preplatkama?**
+**TODO Doplnit validace na jednotliva pole, chceme ciselnik bank?**
 
 
