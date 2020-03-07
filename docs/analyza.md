@@ -22,11 +22,11 @@ UC-01 a UC-02 ted nebudem resit, stejně tak s tím spojené UC.
 
 ### Zákazník
 
-Zakaznik nasi dorucovaci sluzby. Muze to byt fyzicka osoba nebo spolecnost.
+Zákazník naší doručovací služby. Může to být fyzická osoba nebo společnost.
 
 ![Co muze delat Zakaznik](./diagrams/out/ucs-zakaznik.png "UCS for Zakaznik")
 
-Zákaznik muze:
+Zákaznik můze:
 
 * UC-04 [Registrovat balik](../uc-04/)
 * UC-05 Dorucit balik do depa. Pouze zakaznikovi nabidnem moznost poslat libovolnou postou nebo fyzicky prinest na sberne misto.
@@ -60,9 +60,9 @@ Dispecer musí být v depu. Depo bude umístěné tak, aby bylo v dobrém dosahu
 * UC-24 - [Zpracování balíků v 'chybové' frontě](../uc-20/#UC-24 "Zpracování balíků v 'chybové' frontě").
 * UC-25 - [Předání balíků dopravci](../uc-20/#UC-25 "Předání balíků dopravci").
 
-### Support
+### Pracovník podpory
 
-Pracovnik nasi dorucovaci sluzby. Je odpovdny za hladky provoz sluzby. Vyrizuje reklamace, nesparovan baliky a pomoha s procesem doruceni baliku.
+Pracovník naší doručovací služby. Vyřizuje reklamace, nespárované balíky a pomáhá s procesem doručení balíku.
 
 ![Co může delat Support](./diagrams/out/ucs-support.png "UCS for Support")
 
@@ -74,17 +74,14 @@ Support může být fyzicky na centrále. Pracovník podpory je odpovědný za:
 * UC-34 - [Párování plateb](../uc-30/#UC-34 "Párování plateb"). 
 * UC-35 - [Řešení chybové fronty](../uc-30/#UC-35 "Řešení chybové fronty"). 
 * UC-36 - [Storno objednávky](../uc-30/#UC-36 "Storno objednávky"). 
-* UC-37 - [Urgence zaplacení balíků](../uc-30/#UC-37 "Urgence zaplacení balíků"). 
+* UC-37 - [Urgence zaplacení](../uc-30/#UC-37 "Urgence zaplacení"). 
+* UC-38 - [Řešení přeplacených objednávek](../uc-30/#UC-38 "Řešení přeplacených objednávek").
+* UC-39 - [Zobrazení detailů objednávky a balíku](../uc-30/#UC-34 "Zobrazení detailů objednávky a balíku").
+* UC-40 - [Vystaveni dobropisu](../uc-30/#UC-34 "Vystaveni dobropisu").
+* UC-41 - [TBD](../uc-30/#UC-41 "Urgovani zaplacení").
+* UC-42 - [Reklamace](../uc-30/#UC-34 "v").
 
-
-* UC-40 - Kontrola chybové fronty s dispečerem. Budou si volat?
-* UC-35 - Vyhledaní balíku podle kódu, adresy, příjemnce a odesílatele.
-* UC-36 - Zobrazení detailů balíku.
-* UC-37 - Vystaveni dobropisu - na základě emailu nebo telefonátu.
-* UC-38 - Urgovani zaplacení, po ??? dnech od doruceni do depa nebo podaní objednávky.
-* UC-39 - Reklamace, oncall/email. musime se napojit na last mile prepravce informace o zasilce.
-* UC-40 - Kontrola chybové fronty s dispečerem. Budou si volat?
-* UC-41 - Rozhodnutí o předaní dopravci. Musí být možnost kdykoliv z jakékoliv fronty balík přesunout do fronty ke konkrétnímu dopravci. Je to pro reklamace a storna objednávek.
+**Doplnit k UC přechody mezi stavy.**
 
 ### eShop
 
