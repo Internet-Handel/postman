@@ -1,9 +1,10 @@
 @startuml
+left to right direction
 
 actor :eShop: as eShop
 
-(Hromadna registrace baliku) as (registration2)
+(UC-60 Hromadná registrace balíků) as (UC-60)
 
-eShop --> (registration2)
+eShop -up-> (UC-60)
 
 @enduml

@@ -77,9 +77,9 @@ Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.
 
 ![Co muze delat Admin](./diagrams/out/ucs-admin.png "UCS for Admin")
 
-UC admina nebudem v první fázi řešit.
+Co může dělat admin:
 
-**TODO aspon si v bodech sepsat,co by tu mělo být**
+* UC-50 - Zkontrolovat objednávky
 
 ### eShop
 

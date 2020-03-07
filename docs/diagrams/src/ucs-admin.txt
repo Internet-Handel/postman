@@ -1,9 +1,10 @@
 @startuml
+left to right direction
 
 actor :Admin: as admin
 
-(Zkontrolovat objednavky) as (check_orders)
+(UC-50 Zkontrolovat objednávky) as (UC-50)
 
-admin --> (check_orders)
+admin -up-> (UC-50)
 
 @enduml
