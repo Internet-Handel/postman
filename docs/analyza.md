@@ -88,9 +88,9 @@ Support může být fyzicky na centrále. Pracovník podpory je odpovědný za:
 
 ### eShop
 
-Zakaznik, ktery ma moznost zadavat hromadne posilani.
+Zákazník, který má možnost zadávát hromadná posílaní balíků.
 
-![Co muze delat eShop](./diagrams/out/ucs-eshop.png "UCS for eShop")
+![Co může dělat eShop](./diagrams/out/ucs-eshop.png "UCS for eShop")
  
 Zákazním může:
 
