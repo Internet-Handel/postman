@@ -1,16 +1,17 @@
 @startuml
+left to right direction
 
 actor :Uzivatel: as user
 
-(Přihlásit se pomocí\njména a hesla) as (login)
-(Zapomenute heslo) as (forgotten_password)
-(Zapomenuty login) as (forgotten_login)
-(Odhlášeni ze systému) as (logout)
+(UC-10 Přihlásit se pomocí\njména a hesla) as (UC-10)
+(UC-11 Zapomenute heslo) as (UC-11)
+(UC-12 Zapomenuty login) as (UC-12)
+(UC-13 Odhlášeni ze systému) as (UC-13)
 
-user --> (login)
-user --> (forgotten_password)
-user --> (forgotten_login)
-user --> (logout)
+user -up-> (UC-10)
+user -up-> (UC-11)
+user --> (UC-12)
+user --> (UC-13)
 
 
 @enduml

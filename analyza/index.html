@@ -194,13 +194,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uzivatel" class="md-nav__link">
-    Uživatel
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#zakaznik" class="md-nav__link">
     Zákazník
   </a>
@@ -208,8 +201,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#admin" class="md-nav__link">
-    Admin
+  <a href="#uzivatel" class="md-nav__link">
+    Uživatel
   </a>
   
 </li>
@@ -224,6 +217,13 @@
           <li class="md-nav__item">
   <a href="#pracovnik-podpory" class="md-nav__link">
     Pracovník podpory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    Admin
   </a>
   
 </li>
@@ -276,8 +276,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-00/" title="UC-00 - UC-03" class="md-nav__link">
-      UC-00 - UC-03
+    <a href="../uc-00/" title="UC-04 - UC-07" class="md-nav__link">
+      UC-04 - UC-07
     </a>
   </li>
 
@@ -288,20 +288,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-04/" title="UC-04" class="md-nav__link">
-      UC-04
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../uc-06/" title="UC-06" class="md-nav__link">
-      UC-06
+    <a href="../uc-10/" title="UC-10 - UC-13" class="md-nav__link">
+      UC-10 - UC-13
     </a>
   </li>
 
@@ -436,13 +424,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uzivatel" class="md-nav__link">
-    Uživatel
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#zakaznik" class="md-nav__link">
     Zákazník
   </a>
@@ -450,8 +431,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#admin" class="md-nav__link">
-    Admin
+  <a href="#uzivatel" class="md-nav__link">
+    Uživatel
   </a>
   
 </li>
@@ -466,6 +447,13 @@
           <li class="md-nav__item">
   <a href="#pracovnik-podpory" class="md-nav__link">
     Pracovník podpory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    Admin
   </a>
   
 </li>
@@ -503,33 +491,27 @@
 <h2 id="role">Role</h2>
 <p>Mame tyto role:</p>
 <p><img alt="Actors" src="../diagrams/out/actors.png" title="Role" /></p>
-<h3 id="uzivatel">Uživatel</h3>
-<p>Predstavuje nekoho, kdo ma pristup do systemu. Podle jeho dalsi specializace ma dalsi moznosti.</p>
-<p><img alt="Co muze delat Uzivatel" src="../diagrams/out/ucs-uzivatel.png" title="UCS for Uzivatel" /></p>
-<p>Uzivatel muze:</p>
-<ul>
-<li>UC-00 - <a href="../uc-00/#uc-00" title="Přihlásit se pomocí jména a hesla">Přihlásit se pomocí jména a hesla</a>.</li>
-<li>UC-01 - Zapomenute heslo.</li>
-<li>UC-02 - Zapomenuty login.</li>
-<li>UC-03 - <a href="../uc-00/#uc-03" title="Odhlášeni ze systému">Odhlášeni ze systému</a>.</li>
-</ul>
-<p>UC-01 a UC-02 ted nebudem resit, stejně tak s tím spojené UC.</p>
 <h3 id="zakaznik">Zákazník</h3>
 <p>Zákazník naší doručovací služby. Může to být fyzická osoba nebo společnost.</p>
 <p><img alt="Co muze delat Zakaznik" src="../diagrams/out/ucs-zakaznik.png" title="UCS for Zakaznik" /></p>
 <p>Zákaznik můze:</p>
 <ul>
-<li>UC-04 <a href="../uc-04/">Registrovat balik</a></li>
-<li>UC-05 Dorucit balik do depa. Pouze zakaznikovi nabidnem moznost poslat libovolnou postou nebo fyzicky prinest na sberne misto.</li>
-<li>UC-06 <a href="../uc-06/" title="Sledovaní balíku">Sledovaní balíku</a>. Zákazník musí mít možnost sledovat zásilku. Kde je a co se s ni deje.</li>
-<li>UC-07 Zaplatit za doručeni. Posledni krok UC-04.</li>
+<li>UC-04 <a href="../uc-00/#uc-04">Registrovat balik</a>.</li>
+<li>UC-05 <a href="../uc-00/#uc-05">Doručit balík do depa</a>.</li>
+<li>UC-06 <a href="../uc-00/#uc-06">Sledovaní balíku</a>. </li>
+<li>UC-07 <a href="../uc-00/#uc-07">Zaplatit za doručeni</a>.</li>
 </ul>
-<p><strong>TODO negativni scenare</strong></p>
-<h3 id="admin">Admin</h3>
-<p>Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.</p>
-<p><img alt="Co muze delat Admin" src="../diagrams/out/ucs-admin.png" title="UCS for Admin" /></p>
-<p>UC admina nebudem v první fázi řešit.</p>
-<p><strong>TODO aspon si v bodech sepsat,co by tu mělo být</strong></p>
+<h3 id="uzivatel">Uživatel</h3>
+<p>Představuje někoho, kdo má přístup do systému. Podle jeho dalši specializace má další možnosti.</p>
+<p><img alt="Co muze delat Uzivatel" src="../diagrams/out/ucs-uzivatel.png" title="UCS for Uzivatel" /></p>
+<p>Uživatel můze:</p>
+<ul>
+<li>UC-10 - <a href="../uc-10/#uc-10">Přihlásit se pomocí jména a hesla</a>.</li>
+<li>UC-11 - <a href="../uc-10/#uc-11">Zapomenuté heslo</a>.</li>
+<li>UC-12 - <a href="../uc-10/#uc-12">Zapomenutý login</a>.</li>
+<li>UC-13 - <a href="../uc-10/#uc-13">Odhlášeni ze systému</a>.</li>
+</ul>
+<p>UC-11 a UC-12 ted nebudem řešit, stejně tak s tím spojené UC.</p>
 <h3 id="dispecer">Dispečer</h3>
 <p>Dispečet je pracovnik doručovací sluzby, odpovědný za činnosti s balíkem od převzetí balíku od dopravce až po předání dalšímu dopravci.</p>
 <p><img alt="Co muze delat Despecer" src="../diagrams/out/ucs-dispecer.png" title="UCS for Dispecer" /></p>
@@ -561,6 +543,11 @@
 <li>UC-42 - <a href="../uc-30/#UC-34" title="v">Reklamace</a>.</li>
 </ul>
 <p><strong>Doplnit k UC přechody mezi stavy.</strong></p>
+<h3 id="admin">Admin</h3>
+<p>Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.</p>
+<p><img alt="Co muze delat Admin" src="../diagrams/out/ucs-admin.png" title="UCS for Admin" /></p>
+<p>UC admina nebudem v první fázi řešit.</p>
+<p><strong>TODO aspon si v bodech sepsat,co by tu mělo být</strong></p>
 <h3 id="eshop">eShop</h3>
 <p>Zákazník, který má možnost zadávát hromadná posílaní balíků.</p>
 <p><img alt="Co může dělat eShop" src="../diagrams/out/ucs-eshop.png" title="UCS for eShop" /></p>
@@ -604,13 +591,13 @@
           </a>
         
         
-          <a href="../uc-00/" title="UC-00 - UC-03" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../uc-00/" title="UC-04 - UC-07" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                UC-00 - UC-03
+                UC-04 - UC-07
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
