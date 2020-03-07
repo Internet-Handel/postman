@@ -1,19 +1,20 @@
 @startuml
+left to right direction
 
 actor :Dispecer: as dispecer
 
-(Přijetí balíku) as (accept_packages)
-(Zpracování přijatých balíků) as (dispatch_packages)
-(Zpracování balíků v 'čekací frontě') as (waiting_packages)
-(Zpracování balíků 'k doručení') as (todelivery_packages)
-(Zpracování balíků v 'chybové' frontě) as (error_packages)
-(Předání balíků dopravci) as (send_packages)
+(UC-20 Přijetí balíku) as (UC-20)
+(UC-21 Zpracování\npřijatých balíků) as (UC-21)
+(UC-22 Zpracování balíků v\n'čekací frontě') as (UC-22)
+(UC-23 Zpracování balíků\n'k doručení') as (UC-23)
+(UC-24 Zpracování balíků v\n'chybové' frontě) as (UC-24)
+(UC-25 Předání\nbalíků dopravci) as (UC-25)
 
-dispecer -up-> (accept_packages)
-dispecer -up-> (dispatch_packages)
-dispecer -up-> (waiting_packages)
-dispecer --> (todelivery_packages)
-dispecer --> (error_packages)
-dispecer --> (send_packages)
+dispecer -up-> (UC-20)
+dispecer -up-> (UC-21)
+dispecer -up-> (UC-22)
+dispecer --> (UC-23)
+dispecer --> (UC-24)
+dispecer --> (UC-25)
 
 @enduml
