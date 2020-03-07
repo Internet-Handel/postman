@@ -5,21 +5,6 @@ Mame tyto role:
 
 ![Actors](./diagrams/out/actors.png "Role")
 
-### Uživatel
-
-Predstavuje nekoho, kdo ma pristup do systemu. Podle jeho dalsi specializace ma dalsi moznosti.
-
-![Co muze delat Uzivatel](./diagrams/out/ucs-uzivatel.png "UCS for Uzivatel")
-
-Uzivatel muze:
-
-* UC-00 - [Přihlásit se pomocí jména a hesla](../uc-00/#uc-00 "Přihlásit se pomocí jména a hesla").
-* UC-01 - Zapomenute heslo.
-* UC-02 - Zapomenuty login.
-* UC-03 - [Odhlášeni ze systému](../uc-00/#uc-03 "Odhlášeni ze systému").
-
-UC-01 a UC-02 ted nebudem resit, stejně tak s tím spojené UC.
-
 ### Zákazník
 
 Zákazník naší doručovací služby. Může to být fyzická osoba nebo společnost.
@@ -28,22 +13,25 @@ Zákazník naší doručovací služby. Může to být fyzická osoba nebo spole
 
 Zákaznik můze:
 
-* UC-04 [Registrovat balik](../uc-04/)
-* UC-05 Dorucit balik do depa. Pouze zakaznikovi nabidnem moznost poslat libovolnou postou nebo fyzicky prinest na sberne misto.
-* UC-06 [Sledovaní balíku](../uc-06/ "Sledovaní balíku"). Zákazník musí mít možnost sledovat zásilku. Kde je a co se s ni deje.
-* UC-07 Zaplatit za doručeni. Posledni krok UC-04.
+* UC-04 [Registrovat balik](../uc-00/#uc-04).
+* UC-05 [Doručit balík do depa](../uc-00/#uc-05).
+* UC-06 [Sledovaní balíku](../uc-00/#uc-06). 
+* UC-07 [Zaplatit za doručeni](../uc-00/#uc-07).
 
-**TODO negativni scenare**
+### Uživatel
 
-### Admin
+Představuje někoho, kdo má přístup do systému. Podle jeho dalši specializace má další možnosti.
 
-Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.
+![Co muze delat Uzivatel](./diagrams/out/ucs-uzivatel.png "UCS for Uzivatel")
 
-![Co muze delat Admin](./diagrams/out/ucs-admin.png "UCS for Admin")
+Uživatel můze:
 
-UC admina nebudem v první fázi řešit.
+* UC-10 - [Přihlásit se pomocí jména a hesla](../uc-10/#uc-10).
+* UC-11 - [Zapomenuté heslo](../uc-10/#uc-11).
+* UC-12 - [Zapomenutý login](../uc-10/#uc-12).
+* UC-13 - [Odhlášeni ze systému](../uc-10/#uc-13).
 
-**TODO aspon si v bodech sepsat,co by tu mělo být**
+UC-11 a UC-12 ted nebudem řešit, stejně tak s tím spojené UC.
 
 ### Dispečer
 
@@ -82,6 +70,16 @@ Support může být fyzicky na centrále. Pracovník podpory je odpovědný za:
 * UC-42 - [Reklamace](../uc-30/#UC-34 "v").
 
 **Doplnit k UC přechody mezi stavy.**
+
+### Admin
+
+Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.
+
+![Co muze delat Admin](./diagrams/out/ucs-admin.png "UCS for Admin")
+
+UC admina nebudem v první fázi řešit.
+
+**TODO aspon si v bodech sepsat,co by tu mělo být**
 
 ### eShop
 

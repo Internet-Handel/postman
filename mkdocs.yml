@@ -4,9 +4,8 @@ nav:
     - Home: index.md
     - Analyza: analyza.md
     - 'Usecases':
-        - UC-00 - UC-03: uc-00.md
-        - UC-04: uc-04.md
-        - UC-06: uc-06.md
+        - UC-04 - UC-07: uc-00.md
+        - UC-10 - UC-13: uc-10.md
         - UC-20 - UC-25: uc-20.md
         - UC-31 - UC-40: uc-30.md
     - Stavy: states.md
