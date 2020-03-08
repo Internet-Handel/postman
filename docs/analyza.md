@@ -1,7 +1,7 @@
 # Analýza
 ## Role
 
-Mame tyto role:
+Máme tyto role:
 
 ![Actors](./diagrams/out/actors.png "Role")
 
@@ -30,8 +30,6 @@ Uživatel můze:
 * UC-11 - [Zapomenuté heslo](../uc-10/#uc-11).
 * UC-12 - [Zapomenutý login](../uc-10/#uc-12).
 * UC-13 - [Odhlášeni ze systému](../uc-10/#uc-13).
-
-UC-11 a UC-12 ted nebudem řešit, stejně tak s tím spojené UC.
 
 ### Dispečer
 
@@ -68,18 +66,16 @@ Support může být fyzicky na centrále. Pracovník podpory je odpovědný za:
 
 ![UCs pro pracovníka podpory](./diagrams/out/ucs-support.png "UCs pro pracovníka podpory")
 
-* UC-40 - [Kontrola bankovního účtu](../uc-30/#UC-40 "Kontrola bankovního účtu").
-* UC-41 - [Párování plateb](../uc-30/#UC-41 "Párování plateb").
-* UC-42 - [Řešení chybové fronty](../uc-30/#UC-42 "Řešení chybové fronty").
-* UC-43 - [Storno objednávky](../uc-30/#UC-43 "Storno objednávky").
-* UC-44 - [Urgence zaplacení](../uc-30/#UC-44 "Urgence zaplacení").
-* UC-45 - [Řešení přeplacených objednávek](../uc-30/#UC-45 "Řešení přeplacených objednávek").
-* UC-46 - [Zobrazení detailů objednávky a balíku](../uc-30/#UC-46 "Zobrazení detailů objednávky a balíku").
-* UC-47 - [Vystaveni dobropisu](../uc-30/#UC-47 "Vystaveni dobropisu").
-* UC-48 - [TBD](../uc-30/#UC-48 "Urgovani zaplacení").
-* UC-49 - [Reklamace](../uc-30/#UC-49).
-
-**Doplnit k UC přechody mezi stavy.**
+* UC-40 - [Kontrola bankovního účtu](../uc-40/#UC-40 "Kontrola bankovního účtu").
+* UC-41 - [Párování plateb](../uc-40/#UC-41 "Párování plateb").
+* UC-42 - [Řešení chybové fronty](../uc-40/#UC-42 "Řešení chybové fronty").
+* UC-43 - [Storno objednávky](../uc-40/#UC-43 "Storno objednávky").
+* UC-44 - [Urgence zaplacení](../uc-40/#UC-44 "Urgence zaplacení").
+* UC-45 - [Řešení přeplacených objednávek](../uc-40/#UC-45 "Řešení přeplacených objednávek").
+* UC-46 - [Zobrazení detailů objednávky a balíku](../uc-40/#UC-46 "Zobrazení detailů objednávky a balíku").
+* UC-47 - [Vystaveni dobropisu](../uc-40/#UC-47 "Vystaveni dobropisu").
+* UC-48 - [TBD](../uc-40/#UC-48 "Urgovani zaplacení").
+* UC-49 - [Reklamace](../uc-40/#UC-49).
 
 ### Admin
 

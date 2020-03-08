@@ -106,3 +106,4 @@ Poslední uživatel Milan Strnad není aktivní a nebude se moc přihlásit do s
 
 ![Nastavit heslo uživatele](./imgs/s-15.png "Nastavit heslo uživatele")
 
+## <a name="S-200"></a>S-200 - Dispečer

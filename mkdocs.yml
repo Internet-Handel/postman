@@ -2,7 +2,7 @@ site_name: Postman
 site_url: https://jajir.github.io/postman/
 nav:
     - Home: index.md
-    - Analyza: analyza.md
+    - Analýza: analyza.md
     - 'Usecases':
         - UC-04 - UC-07: uc-00.md
         - UC-10 - UC-13: uc-10.md
