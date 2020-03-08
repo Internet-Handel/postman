@@ -2,13 +2,13 @@
 
 'left to right direction
 
-actor :Uzivatel: as uzivatel
-actor :Zakaznik: as zakaznik
+actor :Uživatel: as uzivatel
+actor :Zákazník: as zakaznik
 actor :eShop: as eShop
 actor :Admin: as admin
-actor :Dispecer: as dispecer
-actor :Support: as support
-actor :Prepravce: as prepravce
+actor :Dispečer: as dispecer
+actor :Podpora: as support
+actor :Dopravce: as dopravce
 
 
 support --> uzivatel
