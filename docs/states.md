@@ -8,6 +8,8 @@ Objednávka prochází následujícími stavy:
 
 ![Stavy objednávky](./diagrams/out/states-order.png "Stavy objednávky")
 
+Podle všeho u objednávky nebudem potřebovat evidovat stavy.
+
 ## Stavy jednotlivých balíků
 
 Balíky během doručování procházejí následujícími stavy:

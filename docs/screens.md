@@ -2,6 +2,14 @@
 
 Zde jsou schematicky popsané obrazovky systému.
 
+## <a name="S-000"></a>S-000 - Info box
+
+V některých případech systém potvrzuje, že operace dopadla dobře, nebo že neco není možné udělat a zárověn to nemá povahu validace pole. V těchto a podobných případech budem ukazovat oznámení:
+
+![Info box](./imgs/s-000.png "Info box")
+
+Ve výsledku to může vypadat odlišně.
+
 ## <a name="S-00"></a>S-00 - Přihlašovací obrazovka
 
 Přihlašovací obrazovka
@@ -16,7 +24,7 @@ Chyba ve formuláři se zobarazí následovně:
 
 ![Uvítací obrazovka](./imgs/s-01.png "Uvítací obrazovka")
 
-Sekci "Pracovník podpory" uvidí pouze pracovník podpory, stejně se chová sekce "Dispečer".
+Sekci "Pracovník podpory" uvidí pouze pracovník podpory, stejně se chová sekce "Dispečer". Detaily toho, kdo co vidí jsou vidět za analýzy.
 
 ## <a name="S-02"></a>S-02 - Odhlášení
 
@@ -78,7 +86,23 @@ Po stisknutí "Spárovat" na S-10 se zobrazí obrazovka:
 
 ![Napojení platby na objednávky](./imgs/s-11-order-pair-with-payment.png "Napojení platby na objednávky")
 
-**TODO Nebude lepsi hledat pouze ty, kde neseni prijate platby na vysi objednavky. Co s preplatkama?**
-**TODO Doplnit validace na jednotliva pole, chceme ciselnik bank?**
+## <a name="S-12"></a>S-12 - Seznam uživatelů
 
+Odkaz na tuto stránku povede přímo z hlavního rozcestníku [S-01](./#S-01).
+
+![Seznam uživatelů](./imgs/s-12.png "Seznam uživatelů")
+
+Poslední uživatel Milan Strnad není aktivní a nebude se moc přihlásit do systému.
+
+## <a name="S-13"></a>S-13 - Přidat uživatele
+
+![Přidat uživatele](./imgs/s-13.png "Přidat uživatele")
+
+## <a name="S-14"></a>S-14 - Upravit uživatele
+
+![Upravit uživatele](./imgs/s-14.png "Upravit uživatele")
+
+## <a name="S-15"></a>S-15 - Nastavit heslo uživatele
+
+![Nastavit heslo uživatele](./imgs/s-15.png "Nastavit heslo uživatele")
 

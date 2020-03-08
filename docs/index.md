@@ -6,26 +6,26 @@ V [poznámkách](./notes/) je, co jsem si odnesl z našeho povídání. Zbytek j
 
 ## Priority projektu
 
-serazene podle vyznamu jsou:
+Seřazené podle významu jsou:
  
-1. Sluzbu uvest na trh co nejrychleji.
+1. Uvést službu na trh co nejrychleji.
 
-1. Behem navrhu a vyvoje vse dokumenatovat, aby bylo mozne vybudovat zastupitelnost.
+1. Během návrhu a vývoje vše dokumenatovat, aby bylo možné vybudovat zastupitelnost.
 
-1. V technickem navrhu prihlizet k rozsiritenosti sluzby do budoucna.
+1. V technickem návrhu přihlížet k rozšiřitenosti služby do budoucna.
 
 ## Jak to bude fungovat
 
 ![Zakladni princip](./diagrams/out/princip.png "Zakladni princip")
 
-Se zakaznikem budem komunikovat:
+Se zákazníkem budem komunikovat:
 
 * email
 * telefon
 
-## Busines otazky ##
+## Busines otázky ##
 
-* Jak to bude s odvadenim DPH.
-* Pojisteni musime baliky pojistovat?, lze pojisteni nabizet klientovi?
-* Nebezpecne a nelegalni zasilky.
+* Jak to bude s odváděním DPH.
+* Musíme baliky pojišťovat? Lze pojištění nabízet klientovi?
+* Jakou nesem odpovědnost za nebezpecné a nelegální zásilky?
 

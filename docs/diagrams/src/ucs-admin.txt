@@ -3,8 +3,8 @@ left to right direction
 
 actor :Admin: as admin
 
-(UC-50 Zkontrolovat objednávky) as (UC-50)
+(UC-70 Zkontrolovat objednávky) as (UC-70)
 
-admin -up-> (UC-50)
+admin -up-> (UC-70)
 
 @enduml

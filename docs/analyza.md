@@ -15,7 +15,7 @@ Zákaznik můze:
 
 * UC-04 [Registrovat balik](../uc-00/#uc-04).
 * UC-05 [Doručit balík do depa](../uc-00/#uc-05).
-* UC-06 [Sledovaní balíku](../uc-00/#uc-06). 
+* UC-06 [Sledovaní balíku](../uc-00/#uc-06).
 * UC-07 [Zaplatit za doručeni](../uc-00/#uc-07).
 
 ### Uživatel
@@ -35,11 +35,11 @@ UC-11 a UC-12 ted nebudem řešit, stejně tak s tím spojené UC.
 
 ### Dispečer
 
-Dispečet je pracovnik doručovací sluzby, odpovědný za činnosti s balíkem od převzetí balíku od dopravce až po předání dalšímu dopravci.
+Dispečer je pracovník doručovací služby, odpovědný za činnosti s balíkem od převzetí balíku od dopravce až po předání dalšímu dopravci.
 
 ![Co muze delat Despecer](./diagrams/out/ucs-dispecer.png "UCS for Dispecer")
 
-Dispecer musí být v depu. Depo bude umístěné tak, aby bylo v dobrém dosahu přepravců. Co dispečer dělá:
+Dispečer je v depu. Depo bude umístěné tak, aby bylo v dobrém dosahu dopravců. Co dispečer dělá:
 
 * UC-20 - [Přijetí balíku](../uc-20/#UC-20 "Přijetí balíku").
 * UC-21 - [Zpracování přijatých balíků](../uc-20/#UC-21 "Zpracování přijatých balíků").
@@ -52,44 +52,51 @@ Dispecer musí být v depu. Depo bude umístěné tak, aby bylo v dobrém dosahu
 
 Pracovník naší doručovací služby. Vyřizuje reklamace, nespárované balíky a pomáhá s procesem doručení balíku.
 
-![Co může delat Support](./diagrams/out/ucs-support.png "UCS for Support")
-
 Support může být fyzicky na centrále. Pracovník podpory je odpovědný za:
+
+#### Správa uživatelů
+![Správa uživatelů pro pracovníka podpory](./diagrams/out/ucs-support-users.png "Správa uživatelů pro pracovníka podpory")
 
 * UC-31 - [Změna/obnova hesla](../uc-30/#UC-31 "Změna/obnova hesla")
 * UC-32 - [Zapomenuté přihlašovací jméno](../uc-30/#UC-32 "Zapomenuté přihlašovací jméno")
-* UC-33 - [Kontrola bankovního účtu](../uc-30/#UC-33 "Kontrola bankovního účtu").
-* UC-34 - [Párování plateb](../uc-30/#UC-34 "Párování plateb"). 
-* UC-35 - [Řešení chybové fronty](../uc-30/#UC-35 "Řešení chybové fronty"). 
-* UC-36 - [Storno objednávky](../uc-30/#UC-36 "Storno objednávky"). 
-* UC-37 - [Urgence zaplacení](../uc-30/#UC-37 "Urgence zaplacení"). 
-* UC-38 - [Řešení přeplacených objednávek](../uc-30/#UC-38 "Řešení přeplacených objednávek").
-* UC-39 - [Zobrazení detailů objednávky a balíku](../uc-30/#UC-34 "Zobrazení detailů objednávky a balíku").
-* UC-40 - [Vystaveni dobropisu](../uc-30/#UC-34 "Vystaveni dobropisu").
-* UC-41 - [TBD](../uc-30/#UC-41 "Urgovani zaplacení").
-* UC-42 - [Reklamace](../uc-30/#UC-34 "v").
+* UC-33 - [Přidat uživatele](../uc-30/#UC-33)
+* UC-34 - [Zablokovat uživatele](../uc-30/#UC-34)
+* UC-35 - [Změna role](../uc-30/#UC-35)
+* UC-36 - [Upravit uživatele](../uc-30/#UC-36)
+
+#### Správa objednávek a balíků
+
+![UCs pro pracovníka podpory](./diagrams/out/ucs-support.png "UCs pro pracovníka podpory")
+
+* UC-40 - [Kontrola bankovního účtu](../uc-30/#UC-40 "Kontrola bankovního účtu").
+* UC-41 - [Párování plateb](../uc-30/#UC-41 "Párování plateb").
+* UC-42 - [Řešení chybové fronty](../uc-30/#UC-42 "Řešení chybové fronty").
+* UC-43 - [Storno objednávky](../uc-30/#UC-43 "Storno objednávky").
+* UC-44 - [Urgence zaplacení](../uc-30/#UC-44 "Urgence zaplacení").
+* UC-45 - [Řešení přeplacených objednávek](../uc-30/#UC-45 "Řešení přeplacených objednávek").
+* UC-46 - [Zobrazení detailů objednávky a balíku](../uc-30/#UC-46 "Zobrazení detailů objednávky a balíku").
+* UC-47 - [Vystaveni dobropisu](../uc-30/#UC-47 "Vystaveni dobropisu").
+* UC-48 - [TBD](../uc-30/#UC-48 "Urgovani zaplacení").
+* UC-49 - [Reklamace](../uc-30/#UC-49).
 
 **Doplnit k UC přechody mezi stavy.**
 
 ### Admin
 
-Pracovnik dorucovaci sluzby, ktery dohlizi na fungovani systemu.
+Pracovník doručovací služby, který dohlíží na fungovaní systému.
 
-![Co muze delat Admin](./diagrams/out/ucs-admin.png "UCS for Admin")
+![Co může dělat admin](./diagrams/out/ucs-admin.png "UCS for Admin")
 
 Co může dělat admin:
 
-* UC-50 - Zkontrolovat objednávky
+* UC-70 - Zkontrolovat objednávky
 
 ### eShop
 
 Zákazník, který má možnost zadávát hromadná posílaní balíků.
 
 ![Co může dělat eShop](./diagrams/out/ucs-eshop.png "UCS for eShop")
- 
+
 Zákazním může:
 
-* UC-60 - Hromadná registrace balíků
-
-
-
+* UC-90 - Hromadná registrace balíků

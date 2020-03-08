@@ -3,8 +3,8 @@ left to right direction
 
 actor :eShop: as eShop
 
-(UC-60 Hromadná registrace balíků) as (UC-60)
+(UC-90 Hromadná registrace balíků) as (UC-90)
 
-eShop -up-> (UC-60)
+eShop -up-> (UC-90)
 
 @enduml

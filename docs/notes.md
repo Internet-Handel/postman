@@ -2,14 +2,15 @@
 
 ## Otevřené otázky
 
-* Jak se lisi predpravce od dopravce?
-* Budem podporovat odlozene doruceni? Naprikald nekdo bude chtit dorucit az za tyden? Je to realny scenar?
-* Nejaky konkretni priklad koncoveho dopravce. Chci se podivat na API a sluzby co nabizi.
-* Validace adresy, to znamena, ze ji poslem koncovemu dopravci? Pokud ji schroupne tak valide je OK?
+## 07.03.2020
+
+* Prošli jsme všechny UC.
+* Nebudem podporovat odložené poslaní balíků.
+* Přepravce a dopravce není to samé. Postman má blíž k činnosti dopravce. DPD a česká posta jsou dopravci.
 
 ## 02.03.2020
 
-* Prosli jsme procesy objednavky a baliku
+* Prosli jsme procesy objednavky a balíků
 
 ## 29.02.2020
 
@@ -20,7 +21,7 @@
 ## 28.02.2020
 
 * Omezíme pouze na Německo.
-* Resili jsme UC-04.
+* Řešili jsme UC-04.
 
 ## 24.02.2020
 

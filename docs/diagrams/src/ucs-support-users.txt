@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+actor :Podpora: as support
+
+(UC-31 Změna a\nobnova hesla) as (UC-31)
+(UC-32 Zapomenuté\npřihlašovací jméno) as (UC-32)
+(UC-33 Přidat uživatele) as (UC-33)
+(UC-34 Zablokovat uživatele) as (UC-34)
+(UC-35 Změna role) as (UC-35)
+(UC-36 Upravit uživatele) as (UC-36)
+
+support -up-> (UC-31)
+support -up-> (UC-32)
+support -up-> (UC-33)
+support -down-> (UC-34)
+support -down-> (UC-35)
+support -down-> (UC-36)
+
+@enduml

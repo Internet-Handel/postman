@@ -1,18 +1,7 @@
 @startuml
 
-(*) --> "Objednávka vytvořena" as nova
+state "Čeká na doručení" as cekaNaDoruceni
 
-nova --> "Čeká na zaplacení" as cekaNaZaplaceni
-nova --> "Zrušená" as zrusena
-
-cekaNaZaplaceni --> "Čeká na doručení" as cekaNaDoruceni
-cekaNaZaplaceni --> zrusena
-
-cekaNaDoruceni --> "Úspěšně doručeno" as uspesneDoruceno
-cekaNaDoruceni --> zrusena
-
-uspesneDoruceno --> (*)
-zrusena --> (*)
-
-
+[*] --> cekaNaDoruceni : Zákazník založí objednávku
+cekaNaDoruceni --> [*] : Doručená nebo zrušená
 @enduml
