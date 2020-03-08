@@ -57,11 +57,11 @@ Support může být fyzicky na centrále. Pracovník podpory je odpovědný za:
 #### Správa uživatelů
 ![Správa uživatelů pro pracovníka podpory](./diagrams/out/ucs-support-users.png "Správa uživatelů pro pracovníka podpory")
 
-* UC-31 - [Změna/obnova hesla](../uc-30/#UC-31 "Změna/obnova hesla")
-* UC-32 - [Zapomenuté přihlašovací jméno](../uc-30/#UC-32 "Zapomenuté přihlašovací jméno")
-* UC-33 - [Přidat uživatele](../uc-30/#UC-33)
-* UC-34 - [Zablokovat uživatele](../uc-30/#UC-34)
-* UC-35 - [Změna role](../uc-30/#UC-35)
+* UC-31 - [Filtrování uživatelů](../uc-30/#UC-31)
+* UC-32 - [Změna/obnova hesla](../uc-30/#UC-32)
+* UC-33 - [Zapomenuté přihlašovací jméno](../uc-30/#UC-33)
+* UC-34 - [Přidat uživatele](../uc-30/#UC-34)
+* UC-35 - [Zablokovat uživatele](../uc-30/#UC-35)
 * UC-36 - [Upravit uživatele](../uc-30/#UC-36)
 
 #### Správa objednávek a balíků
