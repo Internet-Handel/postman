@@ -39,12 +39,12 @@ Dispečer je pracovník doručovací služby, odpovědný za činnosti s balíke
 
 Dispečer je v depu. Depo bude umístěné tak, aby bylo v dobrém dosahu dopravců. Co dispečer dělá:
 
-* UC-20 - [Přijetí balíku](../uc-20/#UC-20 "Přijetí balíku").
-* UC-21 - [Zpracování přijatých balíků](../uc-20/#UC-21 "Zpracování přijatých balíků").
-* UC-22 - [Zpracování balíků v 'čekací frontě'](../uc-20/#UC-22 "Zpracování balíků v 'čekací frontě'").
-* UC-23 - [Zpracování balíků 'k doručení'](../uc-20/#UC-23 "Zpracování balíků 'k doručení'").
-* UC-24 - [Zpracování balíků v 'chybové' frontě](../uc-20/#UC-24 "Zpracování balíků v 'chybové' frontě").
-* UC-25 - [Předání balíků dopravci](../uc-20/#UC-25 "Předání balíků dopravci").
+* UC-20 - [Přijetí balíku](../uc-20/#UC-20).
+* UC-21 - [Zpracování přijatých balíků](../uc-20/#UC-21).
+* UC-22 - [Zpracování balíků v 'čekací frontě'](../uc-20/#UC-22).
+* UC-23 - [Zpracování balíků ve frontě dopravce](../uc-20/#UC-23).
+* UC-24 - [Zpracování balíků v 'chybové' frontě](../uc-20/#UC-24).
+* UC-25 - [Předání balíků dopravci](../uc-20/#UC-25).
 
 ### Pracovník podpory
 
