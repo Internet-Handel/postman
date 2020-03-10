@@ -35,7 +35,7 @@ Uživatel můze:
 
 Dispečer je pracovník doručovací služby, odpovědný za činnosti s balíkem od převzetí balíku od dopravce až po předání dalšímu dopravci.
 
-![Co muze delat Despecer](./diagrams/out/ucs-dispecer.png "UCS for Dispecer")
+![Co muze delat Dispečer](./diagrams/out/ucs-dispecer.png "UCS for Dispečer")
 
 Dispečer je v depu. Depo bude umístěné tak, aby bylo v dobrém dosahu dopravců. Co dispečer dělá:
 

@@ -2,37 +2,50 @@
 
 start
 
-  if (Má balík na sobě kód?) then (Ano)
+if (Má balík na sobě kód?) then (Ano)
     :Přepíše kód balíku do systému;
+else (Ne)
+endif
+:Systém oznámí, že tiskne interní
+štítek na balík, dispečer ho nalepí
+a potvrdí systému nalepení;
+if (Systém dohledal balík podle kódu) then (Ano)
     -> zobrazí se stránka na\npotvrzení adresy;
-    :Dispečer zkontroluje, že zpáteční adresa\n
+    :Dispečer zkontroluje, že zpáteční adresa
     odesílatele je stejná jako je na monitoru;
+
     if (Jsou adresy shodé?) then (Ano, jsou shodné)
-      :Systém oznámí, že tiskne interní
-      štítek na balík, dispečer ho nalepí\n
-      a potvrdí to systému, nalepení;
-      -> Stránka na zadávání\nrozměrů a váhy;
-      :Zadá rozměry a váhu balíčku a
-      stiskne tlačítko pokračovat;
-      if (Odpovídají rozměry a váha?) then (Ano)
-        if (Systém zkontroluje,\nje balík zaplacen?) then (Ano)
-          :Systém požádá o přesun do
-          fronty 'K doručení';
-        else (ne)
-          :Dispečer přesune balík
-          do 'čekací fronty';
-        endif
-      else (Ne)
-          :Dispečer přesune balík
-          do 'Chybové fronty';
-      endif
     else (Nejsou shodné)
-      :Dispečer přesune balík
-      do 'Chybové fronty';
+        :Požádáme dispečera o zadání
+        zpáteční adresy z balíku.;
     endif
-  else (Ne)
-    :Chyba 1;
-  endif
+
+    -> Stránka na zadávání\nrozměrů a váhy;
+    :Zadá rozměry a váhu balíčku a
+    stiskne tlačítko pokračovat;
+
+    if (Odpovídají rozměry a váha?) then (Ano)
+        if (Systém zkontroluje,\nje balík zaplacen?) then (Ano)
+            :Systém požádá o vložení balíku do
+            fronty konkrétního dopravce;
+        else (ne)
+            :Dispečer přesune balík
+            do 'čekací fronty';
+        endif
+    else (Ne)
+        :Dispečer přesune balík
+        do 'Chybové fronty';
+    endif
+
+else (Ne)
+    :Požádáme dispečera o zadání
+    zpáteční adresy z balíku.;
+    -> Stránka na zadávání\nrozměrů a váhy;
+    :Zadá rozměry a váhu balíčku a
+    stiskne tlačítko pokračovat;
+    :Dispečer přesune balík
+    do 'Chybové fronty';
+endif
 
 stop
 

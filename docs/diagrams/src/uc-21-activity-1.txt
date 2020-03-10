@@ -7,9 +7,9 @@ start
 -> Systém je připraven pro práci;
 
 repeat
-  :Dispečer připraví balík za zadání;
+
   :Dispečer zpracuje balík;
- 
+
 repeat while (Další balík k zpracování?) is (Ano)
 ->Ne;
 
