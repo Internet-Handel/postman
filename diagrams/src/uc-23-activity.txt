@@ -2,25 +2,24 @@
 
 start
 
-:Dispečer vybere odkaz na třídění balíků k odeslání;
+:Dispečer vybere odkaz na zpracování fronty konkrétního dopravce.;
 
 -> Systém je připraven pro práci;
 
 repeat
 
-  :Dispečer naskenuj čárový kód;
- 
-  :Dispečer zváží balík;
+    :Dispečer naskenuje čárový kód;
+    -> Systém vyzve ke zvážení;
+    :Dispečer zváží balík;
 
-  if (Odpovídá váha balíku?) then (Ano)
-    :Systém zobrazí jméno fronty dopravce
-    a vyskne průvodní štítek dopravce;
-    :Dispečer nalepí štítek dopravce a
-    vloží balík do fronty dopravce;
-  else (Ne)
-    :Systém požádá o vložení do chybové fronty;
-    :Dispečer vloží balík do chybové dopravce;
-  endif
+    if (Odpovídá váha balíku?) then (Ano)
+        :Systém vyskne průvodní štítek dopravce;
+        :Dispečer nalepí štítek dopravce a
+        vloží balík do fronty na předání dopravci;
+    else (Ne)
+        :Systém požádá o vložení do chybové fronty;
+        :Dispečer vloží balík do chybové fronty;
+    endif
 
 repeat while (Další balík k zpracování?) is (Ano)
 ->Ne;
