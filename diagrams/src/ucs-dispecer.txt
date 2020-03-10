@@ -6,7 +6,7 @@ actor :Dispecer: as dispecer
 (UC-20 Přijetí balíku) as (UC-20)
 (UC-21 Zpracování\npřijatých balíků) as (UC-21)
 (UC-22 Zpracování balíků v\n'čekací frontě') as (UC-22)
-(UC-23 Zpracování balíků\n'k doručení') as (UC-23)
+(UC-23 Zpracování balíků ve\nfrontě dopravce') as (UC-23)
 (UC-24 Zpracování balíků v\n'chybové' frontě) as (UC-24)
 (UC-25 Předání\nbalíků dopravci) as (UC-25)
 
