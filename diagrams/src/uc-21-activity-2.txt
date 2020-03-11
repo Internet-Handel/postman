@@ -5,10 +5,24 @@ start
 if (Má balík na sobě kód?) then (Ano)
     :Přepíše kód balíku do systému;
 else (Ne)
+    :Dispečer to do systému stiskem tlačitka potvrdí;
 endif
 :Systém oznámí, že tiskne interní
-štítek na balík, dispečer ho nalepí
+štítek na balík;
+if (Je balík poškozen?) then (Ano)
+    :Dispečer poškozený balík vyfotí a fotky nahraje;
+    :Tisk štítku;
+    :Chybová fronta;
+else (Ne)
+endif
+if (Potřebuje balík přebalit?) then (Ano)
+    :Dispečer balík s poškozeným obalem vyfotí a fotky nahraje;
+    :Dispečer balík přebalí a do systému popíše spotřebu obalů;
+else (Ne)
+endif
+:Dispečer nalepí interní štítek
 a potvrdí systému nalepení;
+
 if (Systém dohledal balík podle kódu) then (Ano)
     -> zobrazí se stránka na\npotvrzení adresy;
     :Dispečer zkontroluje, že zpáteční adresa
