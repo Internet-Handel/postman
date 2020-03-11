@@ -1,0 +1,17 @@
+@startuml
+
+start
+if (Má balík interní štítek?) then (Ano)
+    :Poškozený balík, přebalíme;
+else (ne)
+    :Zkusíme nějak identifikovat.;
+endif
+
+:Zadá rozměry a váhu balíčku a
+stiskne tlačítko pokračovat;
+
+:Rozdělíme do chybove fronty nebo fronty dopravce.;
+
+stop
+
+@enduml

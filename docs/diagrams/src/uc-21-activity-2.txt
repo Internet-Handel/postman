@@ -4,61 +4,43 @@ start
 
 if (Má balík na sobě kód?) then (Ano)
     :Přepíše kód balíku do systému;
-else (Ne)
-    :Dispečer to do systému stiskem tlačitka potvrdí;
-endif
-:Systém oznámí, že tiskne interní
-štítek na balík;
-if (Je balík poškozen?) then (Ano)
-    :Dispečer poškozený balík vyfotí a fotky nahraje;
-    :Tisk štítku;
-    :Chybová fronta;
-else (Ne)
-endif
-if (Potřebuje balík přebalit?) then (Ano)
-    :Dispečer balík s poškozeným obalem vyfotí a fotky nahraje;
-    :Dispečer balík přebalí a do systému popíše spotřebu obalů;
-else (Ne)
-endif
-:Dispečer nalepí interní štítek
-a potvrdí systému nalepení;
-
-if (Systém dohledal balík podle kódu) then (Ano)
-    -> zobrazí se stránka na\npotvrzení adresy;
-    :Dispečer zkontroluje, že zpáteční adresa
-    odesílatele je stejná jako je na monitoru;
-
-    if (Jsou adresy shodé?) then (Ano, jsou shodné)
-    else (Nejsou shodné)
+    if (Našel systém objednávku ke kódu?) then (Ano)
+        -> zobrazí se stránka na\npotvrzení adresy;
+        :Dispečer zkontroluje, že zpáteční adresa
+        odesílatele je stejná jako je na monitoru;
+        if (Jsou adresy shodé?) then (Ano, jsou shodné)
+        else (Nejsou shodné)
+            :Požádáme dispečera o zadání
+            zpáteční adresy z balíku.;
+        endif
+    else (Ne)
         :Požádáme dispečera o zadání
         zpáteční adresy z balíku.;
     endif
-
-    -> Stránka na zadávání\nrozměrů a váhy;
-    :Zadá rozměry a váhu balíčku a
-    stiskne tlačítko pokračovat;
-
-    if (Odpovídají rozměry a váha?) then (Ano)
-        if (Systém zkontroluje,\nje balík zaplacen?) then (Ano)
-            :Systém požádá o vložení balíku do
-            fronty konkrétního dopravce;
-        else (ne)
-            :Dispečer přesune balík
-            do 'čekací fronty';
-        endif
-    else (Ne)
-        :Dispečer přesune balík
-        do 'Chybové fronty';
-    endif
-
 else (Ne)
+    :Dispečer to do systému stiskem tlačitka potvrdí;
     :Požádáme dispečera o zadání
     zpáteční adresy z balíku.;
-    -> Stránka na zadávání\nrozměrů a váhy;
-    :Zadá rozměry a váhu balíčku a
-    stiskne tlačítko pokračovat;
-    :Dispečer přesune balík
-    do 'Chybové fronty';
+endif
+
+if (Je balík poškozen?) then (Ano)
+    :Systém zobrazí stránku pro nahraní fotek,
+    dispečer poškozený balík vyfotí a fotky nahraje;
+    
+    if (Lze balík přebalit?) then (Ano)
+        :Dispečer přebalí poškozený balík;
+        :Tisk štítku;
+        :Zpracování balík s kódem;
+    else (Ne)
+        :Tisk štítku;
+        -> Stránka na zadávání\nrozměrů a váhy;
+        :Zadá rozměry a váhu balíčku a
+        stiskne tlačítko pokračovat;
+        :Balík jde do chybové fronty;
+    endif
+else (Ne)
+    :Tisk štítku;
+    :Zpracování balík s kódem;
 endif
 
 stop

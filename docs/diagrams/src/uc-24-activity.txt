@@ -1,0 +1,27 @@
+@startuml
+
+start
+
+:Dispečer vybere odkaz pro zpracovnání chybových balíků;
+
+-> Systém je připraven pro práci;
+
+repeat
+    -> Systém zobrazí stránku pro čtení kódu;
+    :Dispečer naskenuje kód balíku;
+    if (Je balík k odeslání?) then (Ano)
+        :Systém zobrazí frontu dopravce,
+        kam má balík přijít;
+    else (Ne)
+        if (Má se s balíkem stát něco jiného?) then (Ano)
+            :Systém napíše, co má Dispečer udělat.;
+            :Dispečer to udělá a potvrdí.;
+        else (Ne)
+        endif
+    endif
+repeat while (Další balík k zpracování?) is (Ano)
+->Ne;
+
+stop
+
+@enduml

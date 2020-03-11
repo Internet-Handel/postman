@@ -7,11 +7,7 @@ start
 -> Systém je připraven pro práci;
 
 repeat :Přijetí balíku;
-    if (Je balík poškozen?)then (Ano)
-        :Zpracovat poškozený balík;
-    else (Ne)
-        :Zpracovat balík;
-    endif
+    :Zpracování jednoho balíku;
 repeat while (Další balík k zpracování?) is (Ano)
 ->Ne;
 
