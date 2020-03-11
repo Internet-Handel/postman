@@ -1,0 +1,29 @@
+@startuml
+
+start
+-> Stránka na zadávání\nrozměrů a váhy;
+:Zadá rozměry a váhu balíčku a
+stiskne tlačítko pokračovat;
+
+if (Máme k balíku napárovnaou objednávku) then (Ano)
+
+    if (Odpovídají rozměry a váha?) then (Ano)
+        if (Systém zkontroluje,\nje balík zaplacen?) then (Ano)
+            :Systém požádá o vložení balíku do
+            fronty konkrétního dopravce;
+        else (ne)
+            :Dispečer přesune balík
+            do 'čekací fronty';
+        endif
+    else (Ne)
+        :Dispečer přesune balík
+        do 'Chybové fronty';
+    endif
+else (Ne)
+    :Dispečer přesune balík
+    do 'Chybové fronty';
+endif
+
+stop
+
+@enduml
