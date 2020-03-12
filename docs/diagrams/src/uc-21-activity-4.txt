@@ -2,26 +2,32 @@
 
 start
 -> Stránka na zadávání\nrozměrů a váhy;
-:Zadá rozměry a váhu balíčku a
+
+#CDDDFF: Systém zobrazí S-207 pro
+zadání rozměrů a váhy.;
+:Dispečer zadá rozměry a váhu balíčku a
 stiskne tlačítko pokračovat;
 
 if (Máme k balíku napárovnaou objednávku) then (Ano)
-
     if (Odpovídají rozměry a váha?) then (Ano)
         if (Systém zkontroluje,\nje balík zaplacen?) then (Ano)
-            :Systém požádá o vložení balíku do
-            fronty konkrétního dopravce;
+            #CDDDFF: Systém zobrazí S-208 s jménem
+            fronty doprace, kam má balík přijít.;
+            :Dispečer uloží balík a potvrdí to.;
         else (ne)
-            :Dispečer přesune balík
-            do 'čekací fronty';
+            #CDDDFF: Systém zobrazí S-208, balík má jít
+            do 'čekací fronty'.;
+            :Dispečer uloží balík a potvrdí to.;
         endif
     else (Ne)
-        :Dispečer přesune balík
-        do 'Chybové fronty';
+        #CDDDFF: Systém zobrazí S-208, balík má jít
+        do 'chybové fronty'.;
+        :Dispečer uloží balík a potvrdí to.;
     endif
 else (Ne)
-    :Dispečer přesune balík
-    do 'Chybové fronty';
+    #CDDDFF: Systém zobrazí S-208, balík má jít
+    do 'chybové fronty'.;
+    :Dispečer uloží balík a potvrdí to.;
 endif
 
 stop

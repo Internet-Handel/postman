@@ -2,23 +2,33 @@
 
 start
 
+#CDDDFF: Systém zobrazí S-203 pro potvrzení poškození.;
+
 if (Je balík poškozen?) then (Ano)
-    :Systém zobrazí stránku pro nahraní fotek,
-    dispečer poškozený balík vyfotí a fotky nahraje;
-    
+    #CDDDFF: Systém zobrazí S-204 pro
+    nahraní fotek a popis poškození;
+    :Dispečer poškozený balík vyfotí a fotky nahraje;
     if (Lze balík přebalit?) then (Ano)
-        :Dispečer přebalí poškozený balík;
-        :Tisk štítku;
+        #CDDDFF: Systém zobrazí S-206 pro 
+        zadání spotřeby obalového materiálnu.;
+        :Dispečer přebalí poškozený balík,
+        zapíše spotřebu materiálu a potvrdí;
+        #CDDDFF: Systém zobrazí S-205 tisk interního štítku.;
+        :Dispečer nalepí štítek a potvrdí.;
         :Zpracování balík s kódem;
     else (Ne)
-        :Tisk štítku;
+        #CDDDFF: Systém zobrazí S-205 tisk interního štítku.;
+        :Dispečer nalepí štítek a potvrdí.;
         -> Stránka na zadávání\nrozměrů a váhy;
         :Zadá rozměry a váhu balíčku a
         stiskne tlačítko pokračovat;
-        :Balík jde do chybové fronty;
+        #CDDDFF: Systém zobrazí S-208, balík má jít
+        do 'chybové fronty'.;
+        :Dispečer uloží balík a potvrdí to.;
     endif
 else (Ne)
-    :Tisk štítku;
+    #CDDDFF: Systém zobrazí S-205 tisk interního štítku.;
+    :Dispečer nalepí štítek a potvrdí.;
     :Zpracování balík s kódem;
 endif
 
