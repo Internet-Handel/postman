@@ -1,26 +1,34 @@
 @startuml
 
 start
-
+#CDDDFF: Systém zobrazí S-200 pro zadání kódu.;
 if (Má balík na sobě kód?) then (Ano)
-    :Přepíše kód balíku do systému;
+    :Přepíše kód balíku do systému a potvrdí;
     if (Našel systém objednávku ke kódu?) then (Ano)
         -> zobrazí se stránka na\npotvrzení adresy;
+        #CDDDFF: Systém zobrazí S-202 pro
+        ověření adresy odesílatele.;
         :Dispečer zkontroluje, že zpáteční adresa
         odesílatele je stejná jako je na monitoru;
         if (Jsou adresy shodé?) then (Ano, jsou shodné)
         else (Nejsou shodné)
-            :Požádáme dispečera o zadání
-            zpáteční adresy z balíku.;
+            #CDDDFF: Systém zobrazí S-201 pro
+            zadání zpáteční adresy ;
+            :Dispečer zadá zpáteční adresu
+            odesílatele a potvrdí.;
         endif
     else (Ne)
-        :Požádáme dispečera o zadání
-        zpáteční adresy z balíku.;
+        #CDDDFF: Systém zobrazí S-201 pro
+        zadání zpáteční adresy ;
+        :Dispečer zadá zpáteční adresu
+        odesílatele a potvrdí.;
     endif
 else (Ne)
     :Dispečer to do systému stiskem tlačitka potvrdí;
-    :Požádáme dispečera o zadání
-    zpáteční adresy z balíku.;
+    #CDDDFF: Systém zobrazí S-201 pro
+    zadání zpáteční adresy ;
+    :Dispečer zadá zpáteční adresu
+    odesílatele a potvrdí.;
 endif
 
 stop
