@@ -23,26 +23,6 @@ else (Ne)
     zpáteční adresy z balíku.;
 endif
 
-if (Je balík poškozen?) then (Ano)
-    :Systém zobrazí stránku pro nahraní fotek,
-    dispečer poškozený balík vyfotí a fotky nahraje;
-    
-    if (Lze balík přebalit?) then (Ano)
-        :Dispečer přebalí poškozený balík;
-        :Tisk štítku;
-        :Zpracování balík s kódem;
-    else (Ne)
-        :Tisk štítku;
-        -> Stránka na zadávání\nrozměrů a váhy;
-        :Zadá rozměry a váhu balíčku a
-        stiskne tlačítko pokračovat;
-        :Balík jde do chybové fronty;
-    endif
-else (Ne)
-    :Tisk štítku;
-    :Zpracování balík s kódem;
-endif
-
 stop
 
 @enduml

@@ -1,27 +1,25 @@
 @startuml
 
 start
--> Stránka na zadávání\nrozměrů a váhy;
-:Zadá rozměry a váhu balíčku a
-stiskne tlačítko pokračovat;
 
-if (Máme k balíku napárovnaou objednávku) then (Ano)
-
-    if (Odpovídají rozměry a váha?) then (Ano)
-        if (Systém zkontroluje,\nje balík zaplacen?) then (Ano)
-            :Systém požádá o vložení balíku do
-            fronty konkrétního dopravce;
-        else (ne)
-            :Dispečer přesune balík
-            do 'čekací fronty';
-        endif
+if (Je balík poškozen?) then (Ano)
+    :Systém zobrazí stránku pro nahraní fotek,
+    dispečer poškozený balík vyfotí a fotky nahraje;
+    
+    if (Lze balík přebalit?) then (Ano)
+        :Dispečer přebalí poškozený balík;
+        :Tisk štítku;
+        :Zpracování balík s kódem;
     else (Ne)
-        :Dispečer přesune balík
-        do 'Chybové fronty';
+        :Tisk štítku;
+        -> Stránka na zadávání\nrozměrů a váhy;
+        :Zadá rozměry a váhu balíčku a
+        stiskne tlačítko pokračovat;
+        :Balík jde do chybové fronty;
     endif
 else (Ne)
-    :Dispečer přesune balík
-    do 'Chybové fronty';
+    :Tisk štítku;
+    :Zpracování balík s kódem;
 endif
 
 stop

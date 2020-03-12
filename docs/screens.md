@@ -129,3 +129,17 @@ Poslední uživatel Milan Strnad není aktivní a nebude se moc přihlásit do s
 ## <a name="S-205"></a>S-205 - Tisk interního štítku 🖨
 
 ![Tisk interního štítku 🖨](./imgs/s-205.png "Tisk interního štítku 🖨")
+
+## <a name="S-206"></a>S-206 - Zadání spotřeby obalového materiálu
+
+![Zadání spotřeby obalového materiálu](./imgs/s-206.png "Zadání spotřeby obalového materiálu")
+
+## <a name="S-207"></a>S-207 - Měření a vážení
+
+![Měření a vážení](./imgs/s-207.png "Měření a vážení")
+
+Všechna pole jsou povinná a musí obsahovat číselné hodnoty.
+
+## <a name="S-208"></a>S-208 - Fronta kam má být balík vložen
+
+![Fronta kam má být balík vložen](./imgs/s-208.png "Fronta kam má být balík vložen")
