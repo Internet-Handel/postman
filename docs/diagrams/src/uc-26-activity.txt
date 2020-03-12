@@ -2,15 +2,30 @@
 
 start
 if (Má balík interní štítek?) then (Ano)
-    :Poškozený balík, přebalíme;
+    :Štítek čtečkou načtem.;
+    :Případné zpracování poškozeného balíčku.;
+    :Zadá rozměry a váhu balíčku a
+    stiskne tlačítko pokračovat;
+    :Rozdělíme do chybové fronty nebo fronty dopravce.;
 else (ne)
-    :Zkusíme nějak identifikovat.;
+    :Zkusíme najít informace ze štítku pro dopravce.;
+    if (Podařilo se balíček dohledat?) then (Ano)
+        :Tisk interního štítku;
+    else (ne)
+        :Zkusí najít kód balíčku a zadat do systému;
+        if (Podařilo se kód balíčku dohledat?) then (Ano)
+            :Tisk interního štítku;
+        else (ne)
+            :Tisk interního štítku;
+        endif
+    endif
+    :Případné zpracování poškozeného balíčku.;
+    :Dispečer interní štítek nalepí;
+    :Zadá rozměry a váhu balíčku a
+    stiskne tlačítko pokračovat;
+    :Rozdělíme do chybové fronty nebo fronty dopravce.;
 endif
 
-:Zadá rozměry a váhu balíčku a
-stiskne tlačítko pokračovat;
-
-:Rozdělíme do chybove fronty nebo fronty dopravce.;
 
 stop
 

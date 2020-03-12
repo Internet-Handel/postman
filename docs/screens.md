@@ -106,4 +106,26 @@ Poslední uživatel Milan Strnad není aktivní a nebude se moc přihlásit do s
 
 ![Nastavit heslo uživatele](./imgs/s-15.png "Nastavit heslo uživatele")
 
-## <a name="S-200"></a>S-200 - Dispečer
+## <a name="S-200"></a>S-200 - Zadání kódu balíku
+
+![Zadání kódu balíku](./imgs/s-200.png "Zadání kódu balíku")
+
+## <a name="S-201"></a>S-201 - Zadání zpáteční adresy
+
+![Zadání zpáteční adresy](./imgs/s-201.png "Zadání zpáteční adresy")
+
+## <a name="S-202"></a>S-202 - Kontrola zpáteční adresy
+
+![Kontrola zpáteční adresy](./imgs/s-202.png "Kontrola zpáteční adresy")
+
+## <a name="S-203"></a>S-203 - Je balík poškozen?
+
+![Je balík poškozen?](./imgs/s-203.png "Je balík poškozen?")
+
+## <a name="S-204"></a>S-204 - Poškození balíku
+
+![Poškození balíku](./imgs/s-204.png "Poškození balíku")
+
+## <a name="S-205"></a>S-205 - Tisk interního štítku 🖨
+
+![Tisk interního štítku 🖨](./imgs/s-205.png "Tisk interního štítku 🖨")
