@@ -1,18 +1,6 @@
 @startuml
-!$col2 = "#CDDDFF"
-!$col4 = "#4053AF"
+!include color_def.txt
 
-skinparam activity {
-    BorderColor $col4
-    ArrowColor $col4
-    FontName Roboto
-}
-
-skinparam activityDiamond {
-    BorderColor $col4
-    ArrowColor $col4
-    FontName Roboto
-}
 start
 
 :Dispečer vybere odkaz pro zpracovnání chybových balíků;
