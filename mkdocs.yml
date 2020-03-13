@@ -27,4 +27,5 @@ plugins:
         diagram_root: "docs/diagrams" # should reside under docs_dir
         output_folder: "out"
         input_folder: "src"
+        theme_enabled: true
 dev_addr: 127.0.0.1:8080

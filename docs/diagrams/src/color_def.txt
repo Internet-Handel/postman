@@ -1,0 +1,26 @@
+!$col2 = "#CDDDFF"
+!$col4 = "#4053AF"
+
+skinparam activity {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
+skinparam activityDiamond {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
+skinparam actor {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
+skinparam useCase {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
