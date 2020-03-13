@@ -143,3 +143,22 @@ Všechna pole jsou povinná a musí obsahovat číselné hodnoty.
 ## <a name="S-208"></a>S-208 - Fronta kam má být balík vložen
 
 ![Fronta kam má být balík vložen](./imgs/s-208.png "Fronta kam má být balík vložen")
+
+## <a name="S-209"></a>S-209 - Načtení interního štítku
+
+Stránka pro načítání interního štítku se načte tak, ze focus je v poli pro kód interního štítku. To umožní dispečerovi čtečkou načít čárový kód bez dalšího klikání. Stejně tak by stránka měla poznat, že kód byl načten a přejít na další stránku bez potvrzování tlačítkem "pokračovat".
+
+Na stránce by měla být validace, že kód interního štítku existuje a balík je ve správném stavu. To co je správný stav zavisí na použitém UC.
+
+![Načtení interního štítku](./imgs/s-209.png "Načtení interního štítku")
+
+## <a name="S-210"></a>S-210 - Co dál s chybovým balíkem
+
+![Co dál s chybovým balíkem](./imgs/s-210.png "Co dál s chybovým balíkem")
+
+## <a name="S-211"></a>S-211 - Načtení interního štítku 2
+
+Stejná stránka jako je S-209 s tím, že na obrazovce je možnost zadat, že balík nemá interní štítek.
+
+![Načtení interního štítku](./imgs/s-211.png "Načtení interního štítku")
+

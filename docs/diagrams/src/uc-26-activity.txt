@@ -1,12 +1,31 @@
 @startuml
 
+!$col2 = "#CDDDFF"
+!$col4 = "#4053AF"
+
+skinparam activity {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
+skinparam activityDiamond {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
 start
+
+$col2: Systém zobrazí S-211 pro
+načtení interního štítku.;
+:Dispečer načte čárový kód, nebo zadá, že balík interní štítek nemá;
+
 if (Má balík interní štítek?) then (Ano)
-    :Štítek čtečkou načtem.;
-    :Případné zpracování poškozeného balíčku.;
-    :Zadá rozměry a váhu balíčku a
-    stiskne tlačítko pokračovat;
-    :Rozdělíme do chybové fronty nebo fronty dopravce.;
+    :Rozdělení do fronty dopravce,
+    nebo do chybové fronty.;
+    :Zpracování balíku jako v S-21;
+    
 else (ne)
     :Zkusíme najít informace ze štítku pro dopravce.;
     if (Podařilo se balíček dohledat?) then (Ano)
