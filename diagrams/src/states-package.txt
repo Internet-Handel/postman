@@ -1,20 +1,29 @@
 @startuml
 hide empty description
 
+!$col2 = "#CDDDFF"
+!$col4 = "#4053AF"
+
+skinparam state {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
+skinparam activityDiamond {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
 state "Na cestě" as naCeste
 naCeste:Balík je na cestě do depa
-
-state "Přijat" as prijat
-prijat:Balík jsme přijali od dopravce
 
 state "Chyba" as chyba
 chyba:Například chybí kód a nesedí adresa
 
 state "Čeká na zaplacení" as cekaNaZaplaceni
 cekaNaZaplaceni:Čeká na zaplacení
-
-state "K odeslání" as kOdeslani
-kOdeslani: Balík připraven na vložení do fronty dopravce
 
 state "Ve frontě dopravce" as cekaNaDopravce
 cekaNaDopravce:Balík čeká, až si ho dopravce vyzvedne
@@ -23,16 +32,16 @@ state "Doručeno" as doruceno
 doruceno: Asi bychom měli rozlišit komu
   
 [*] --> naCeste
-naCeste --> prijat
 naCeste --> doruceno
-prijat --> kOdeslani
-prijat --> chyba
-prijat --> cekaNaZaplaceni
-cekaNaZaplaceni --> kOdeslani
+naCeste --> cekaNaDopravce
+naCeste --> chyba
+naCeste --> cekaNaZaplaceni
+
+cekaNaZaplaceni --> cekaNaDopravce
 cekaNaZaplaceni --> chyba
-kOdeslani --> cekaNaDopravce
 cekaNaDopravce --> naCeste
 chyba --> cekaNaDopravce
+chyba --> [*]
 doruceno --> [*]
 
 @enduml

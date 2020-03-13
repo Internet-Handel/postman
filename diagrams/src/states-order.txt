@@ -1,7 +1,28 @@
 @startuml
 
-state "Čeká na doručení" as cekaNaDoruceni
+!$col2 = "#CDDDFF"
+!$col4 = "#4053AF"
+
+skinparam state {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
+skinparam activityDiamond {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
+state "Doručovaná" as cekaNaDoruceni
+cekaNaDoruceni: Aspoň jeden z balíků se doručuje.
+
+state "Ukončená" as closed
+closed: Všechny balíky jsou doručené.
 
 [*] --> cekaNaDoruceni : Zákazník založí objednávku
-cekaNaDoruceni --> [*] : Doručená nebo zrušená
+cekaNaDoruceni --> closed : Doručená nebo zrušená
+closed --> [*]
+
 @enduml

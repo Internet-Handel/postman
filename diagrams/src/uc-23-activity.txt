@@ -1,5 +1,20 @@
 @startuml
 
+!$col2 = "#CDDDFF"
+!$col4 = "#4053AF"
+
+skinparam activity {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
+skinparam activityDiamond {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
 start
 
 :Dispečer vybere odkaz na zpracování fronty konkrétního dopravce.;
@@ -8,17 +23,23 @@ start
 
 repeat
 
-    :Dispečer naskenuje čárový kód;
-    -> Systém vyzve ke zvážení;
-    :Dispečer zváží balík;
+    $col2: Systém zobrazí S-209 pro
+    načtení interního štítku.;
+    :Dispečer načte čárový kód;
+
+    $col2: Systém zobrazí S-207 pro
+    zadání rozměrů a váhy.;
+    :Dispečer zadá rozměry a váhu balíčku a
+    stiskne tlačítko pokračovat;
 
     if (Odpovídá váha balíku?) then (Ano)
-        :Systém vyskne průvodní štítek dopravce;
-        :Dispečer nalepí štítek dopravce a
-        vloží balík do fronty na předání dopravci;
+        $col2: Systém zobrazí S-208 s jménem
+        fronty doprace, kam má balík přijít.;
+        :Dispečer uloží balík a potvrdí.;
     else (Ne)
-        :Systém požádá o vložení do chybové fronty;
-        :Dispečer vloží balík do chybové fronty;
+        $col2: Systém zobrazí S-208, balík má jít
+        do 'chybové fronty'.;
+        :Dispečer uloží balík a potvrdí.;
     endif
 
 repeat while (Další balík k zpracování?) is (Ano)

@@ -1,22 +1,42 @@
 @startuml
+
+!$col2 = "#CDDDFF"
+!$col4 = "#4053AF"
+
+skinparam activity {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
+skinparam activityDiamond {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
 start
 
 :Dispečer v systému vybere zpracování čekajících balíků;
 repeat
-  :Dispečer načte čárový kód;
-
-  if (Systém se rozhodne,\nje balík zaplacen?) then (Ano)
-    :Zobrazí se pokyn k vložení
-    do fronty 'K doručení';
-  else (Ne)
-    if(Je s balíkem nějaký další problém?) then (Ano)
-      :Zobrazí se pokyn k 
-      vložení do chybové fronty;
+    $col2: Systém zobrazí S-209 pro
+    načtení interního štítku.;
+    :Dispečer načte čárový kód;
+    if (Systém se rozhodne,\nje balík zaplacen?) then (Ano)
+        #CDDDFF: Systém zobrazí S-208 s jménem
+        fronty doprace, kam má balík přijít.;
+        :Dispečer uloží balík a potvrdí.;
     else (Ne)
-      :Zobrazí se pokyn k vložení
-      do čekací fronty;
+        if(Je s balíkem nějaký další problém?) then (Ano)
+            #CDDDFF: Systém zobrazí S-208, balík má jít
+            do 'chybové fronty'.;
+            :Dispečer uloží balík a potvrdí.;
+        else (Ne)
+            #CDDDFF: Systém zobrazí S-208, balík má zůstat
+            v 'čekací frontě'.;
+            :Dispečer potvrdí.;
+        endif
     endif
-  endif
 repeat while (Další balík k zpracování?) is (Ano)
 ->Ne;
 
