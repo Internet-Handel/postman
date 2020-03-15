@@ -1,20 +1,7 @@
 @startuml
+!include color_def.txt
+
 hide empty description
-
-!$col2 = "#CDDDFF"
-!$col4 = "#4053AF"
-
-skinparam state {
-    BorderColor $col4
-    ArrowColor $col4
-    FontName Roboto
-}
-
-skinparam activityDiamond {
-    BorderColor $col4
-    ArrowColor $col4
-    FontName Roboto
-}
 
 state "Na cestě" as naCeste
 naCeste:Balík je na cestě do depa

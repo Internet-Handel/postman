@@ -1,4 +1,8 @@
+'barva pozadí aktivit, které děla systém
+'například, aktivita, že se zobrazí stránka S-203
 !$col2 = "#CDDDFF"
+
+'barva okraje prvků a šipek
 !$col4 = "#4053AF"
 
 skinparam activity {
@@ -24,3 +28,10 @@ skinparam useCase {
     ArrowColor $col4
     FontName Roboto
 }
+
+skinparam state {
+    BorderColor $col4
+    ArrowColor $col4
+    FontName Roboto
+}
+
