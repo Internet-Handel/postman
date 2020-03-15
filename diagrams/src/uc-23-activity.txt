@@ -18,7 +18,7 @@ repeat
     :Dispečer zadá rozměry a váhu balíčku a
     stiskne tlačítko pokračovat;
 
-    if (Odpovídá váha balíku?) then (Ano)
+    if (Odpovídají rozměry a váha balíku?) then (Ano)
         $col2: Systém zobrazí S-208 s jménem
         fronty doprace, kam má balík přijít.;
         :Dispečer uloží balík a potvrdí.;

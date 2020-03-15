@@ -2,15 +2,15 @@
 !include color_def.txt
 left to right direction
 
-actor :Uzivatel: as user
+actor :Uživatel: as user
 
 (UC-10 Přihlásit se pomocí\njména a hesla) as (UC-10)
-(UC-11 Zapomenute heslo) as (UC-11)
-(UC-12 Zapomenuty login) as (UC-12)
-(UC-13 Odhlášeni ze systému) as (UC-13)
+(UC-11 Zapomenuté heslo) as (UC-11)
+(UC-12 Zapomenutý login) as (UC-12)
+(UC-13 Odhlášení ze systému) as (UC-13)
 
-user -up-> (UC-10)
 user -up-> (UC-11)
+user -up-> (UC-10)
 user --> (UC-12)
 user --> (UC-13)
 

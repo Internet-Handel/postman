@@ -21,7 +21,8 @@ if (Má balík interní štítek?) then (Ano)
     endif
 else (ne)
     :Zkusíme najít informace ze štítku pro dopravce.;
-    :Zkusíme najít bílík podle původního kódu balíku.;
+    :Zkusíme najít balík podle původního kódu balíku.;
+    :Případné řešení poškozeného balíku;
     :Tisk interního štítku;
     :Vážení a měření;
     :Rozdělíme do chybové fronty nebo fronty dopravce.;

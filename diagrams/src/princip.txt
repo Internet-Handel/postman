@@ -3,22 +3,22 @@
 
 hide footbox
 
-actor "Zakaznik\nodesilatel" as zakaznik1
+actor "Zákaznik\nodesílatel" as zakaznik1
 participant "Web" as web
-actor "Ceska Posta\n" as prepravce1
-actor "Dispecer\n" as dispecer
+actor "Česka pošta\n" as prepravce1
+actor "Dispečer\n" as dispecer
 actor "DPD\n" as prepravce2
-actor "Zakaznik\nprijemnce" as zakaznik2
+actor "Zákazník\nadresát" as zakaznik2
 
 |||
 
-zakaznik1 -> web: Registruje balik
-web --> zakaznik1: kod baliku
-zakaznik1 -> prepravce1: Posle balik
-prepravce1 -> dispecer: Preda baliky dispecerovi
-dispecer <-> web: Zkontroluje a roztridi baliky
-dispecer -> prepravce2: Preda baliky k doruceni
-prepravce2 -> zakaznik2: Finalane doruci balik
+zakaznik1 -> web: Registruje balík
+web --> zakaznik1: kód balíku
+zakaznik1 -> prepravce1: Pošle balík
+prepravce1 -> dispecer: Předá balíky dispečerovi
+dispecer <-> web: Zkontroluje a roztřídí balíky
+dispecer -> prepravce2: Předá balíky k doručení
+prepravce2 -> zakaznik2: Finálně doručí balík
 
 
 @enduml

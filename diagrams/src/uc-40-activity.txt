@@ -1,0 +1,29 @@
+@startuml
+!include color_def.txt
+
+start
+
+:Pracovník otevře stránku pro zadávání plateb;
+
+-> Systém je připraven pro práci;
+
+repeat
+
+    :Pracovník přepíše informace o platbě;
+note left
+    Pracovník přepíše:
+    * Číslo odchozího účtu
+    * Kód transakce
+    * Datum odeslání
+    * Částku
+    * Popis platby
+    * Variabilni symbol
+end note
+:Systém se pokusí napárovat objednávku
+podle variabilního symbolu;
+repeat while (Další platba?) is (Ano)
+->Ne;
+
+stop
+
+@enduml

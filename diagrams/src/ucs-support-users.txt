@@ -11,9 +11,9 @@ actor :Podpora: as support
 (UC-35 Zablokovat uživatele) as (UC-35)
 (UC-36 Upravit uživatele) as (UC-36)
 
-support -up-> (UC-31)
-support -up-> (UC-32)
 support -up-> (UC-33)
+support -up-> (UC-32)
+support -up-> (UC-31)
 support -down-> (UC-34)
 support -down-> (UC-35)
 support -down-> (UC-36)

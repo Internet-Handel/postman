@@ -598,9 +598,10 @@
 <p><strong>TODO - Obecne pridat informace auditniho logu k dotcenym UC.</strong></p>
 <p><strong>TODO - Pokud mamem platby bez variabilniho symbolu a najdem jinou plabu ze stejneho uctu, pak muzem propojit se zakaznikem z prvni platby bez ptani.--&gt; unifikace???</strong></p>
 <p><strong>TODO - Asi bychom meli mit moznost zakaznikovy z objednavky poslat dodatecnou fakturu, napriklad  za likvidaci baliku, slozite prebalovani, .... Plyne z toho, ze zakaznika, potrebujem evidovat jako samostatnou entitu? Asi ano.</strong></p>
+<p>Každý balík má svůj kód. Kod je nezávislí na objednávce. Kód balíku je to, co zádáme zákaníka, aby napsal na balík. Pokud bude v objednávce víc balíků, pak každý balík bude mít svůj kůd.</p>
 <h2 id="uc-40-kontrola-bankovniho-uctu"><a name="UC-40"></a>UC-40 - Kontrola bankovního účtu</h2>
 <p>Pracovník podpory otevře na jedné straně bankovnictví a v našem systému obrazovku <a href="../screens/#S-06">S-06 platby</a>. Z bankovního sytému začne přepisovat zaplacené částky do našeho systému.</p>
-<p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-33-activity.png" title="Proces zpracování přijatých balíků" /></p>
+<p><img alt="Přepis plateb" src="../diagrams/out/uc-40-activity.png" title="Přepis plateb" /></p>
 <p>Samotná platba se bude vkládat pomocí <a href="../screens/#S-07">obrazovky S-07 pro vložení platby</a>
 Při zadáváne nebudem párovat zaplacené částky s objednávkama. Pouze přepíšem příchozí platby. To umožní řešit chyby jako je částečná platba za objednávku. Pokud tato činnost zůstane samostatná půjde jí později snadno automatizovat.</p>
 <p>Kód transakce z bankovnictví potřebujem, protože to je unikátní identifikátor platby. Ten nám pomůže jako obrana, před opakovaným vložením jedné platby.</p>

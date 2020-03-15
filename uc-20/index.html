@@ -558,13 +558,13 @@
                 
                 
                 <h1 id="dispecer">Dispečer</h1>
-<p>Dispečer je na depu. Depo je místo, kam se doručují balíky a s něho zase vydávají dalšímu doručování. Z depa se mohou balíky vydávat přepravní společnosti, nebo se mohou vydat k doručení do dalšího depa. V aktuální verzi s posílaním do dalšího depa nepočítáme. </p>
-<p>Balíky jsou rozděleny do takzvaných front. To jsou místa, kde jsou balíky umístěny do dalšího zpracování. Fronty budou tyto:</p>
+<p>Dispečer je na depu. Depo je místo, kam se doručují balíky a z něho zase vydávají dalšímu doručování. Z depa se balíky vydávají dopravci. Dopravce je doručí koncovému adresátovy, nebo se mohou doručit do dalšího depa. V aktuální verzi s posílaním do dalšího depa nepočítáme. </p>
+<p>Balíky jsou rozděleny do takzvaných front. Fyzicky to mohou být například regály. Fronty jsou místa, kde jsou balíky umístěny do dalšího zpracování. Fronty jsou tyto:</p>
 <ul>
 <li>Přijímací fronta - Zde jsou balíky čekající na zpracování v UC-21.</li>
 <li>Čekací fronta - Zde balíky čekají, až zákazník zaplatí za přepravu.</li>
 <li>Chybová fronta - Fronta pro chybové balíky. Které například nelze dohledat v systému, nemají kód nebo hrubě neodpovídají rozměry.</li>
-<li>Fronty pro dopravce - Každý dopravce bude mít svojí frontu, ze které mu budem balíky vydávat. Bude to například fronta pro předání DPD.</li>
+<li>Fronty pro dopravce - Každý dopravce bude mít svojí frontu, ze které mu budem balíky připravovat na vydání. Bude to například fronta pro DPD.</li>
 </ul>
 <h2 id="uc-20-prijeti-baliku"><a name="UC-20"></a>UC-20 - Přijetí balíků</h2>
 <p>Dispečer přijme balíky od dopravce a dá je do přijímací fronty k dalšímu zpracování. Dispečer potvrdí převzetí balíku podepsáním protokolu dopravce.</p>
@@ -572,8 +572,8 @@
 <p>Přijate balíky je třeba vložit do systému. Dispečer bude frontu balíků zpracovávat následovně: </p>
 <p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity-1.png" title="Proces zpracování přijatých balíků" /></p>
 <h3 id="proces-cteni-informaci-z-baliku">Proces čtení informací z balíku</h3>
-<p>Dispečer si na <a href="../screens/#S-01">S-01 základním rozcestníku</a> vybere odkaz pro zpracování přijatých balíků. Tím se mu zobrazí první stránka <a href="../screens/#S-200">S-200 pro zadání kódu balíku</a>. Dispečer zadá kód balíku, nebo stiskne tlačítko, že balík nemá kód. V případě, balík nemá kód se zobrazí <a href="../screens/#S-201">S-201 pro zadání adresy odesílatele</a>. V případě, že balík má kód, systém se pokusí napárovat objednávku. Pokud se to nepovede systém požádá dispečera o zadání adresy odesílate <a href="../screens/#S-201">S-201</a>. Pokud se balík spáruje s objednávkou podle kódu balíku systém požádá o <a href="../screens/#S-202">ověření adresy odesílatele na stránce S-202</a>.</p>
-<p>Pokud má balík kód pasující k balíku, který se podaří spojit s objednávkou a zároveň nesedí adresa odesílatele na balíku, pak balík spárujem s tímto balíkem sytém požádá dispečera o <a href="../screens/#S-201">zadání této odlišné adresy na S-201</a>. Balík dál zpracujem.</p>
+<p>Dispečer si na <a href="../screens/#S-01">S-01 základním rozcestníku</a> vybere odkaz pro zpracování přijatých balíků. Tím se mu zobrazí první stránka <a href="../screens/#S-200">S-200 pro zadání kódu balíku</a>. Dispečer zadá kód balíku, nebo stiskne tlačítko, že balík nemá kód. V případě, balík nemá kód se zobrazí stránka <a href="../screens/#S-201">S-201 pro zadání adresy odesílatele</a>. V případě, že balík má kód, systém se pokusí napojit balík na objednávku. Pokud se to nepovede systém požádá dispečera o zadání adresy odesílate <a href="../screens/#S-201">S-201</a>. Pokud se balík spáruje s objednávkou podle kódu balíku systém požádá o <a href="../screens/#S-202">ověření adresy odesílatele na stránce S-202</a>.</p>
+<p>Pokud má balík kód odpovídající nějaké objednávce a zároveň nesedí adresa odesílatele na balíku, pak balík spojí s touto objednávkou a sytém požádá dispečera o <a href="../screens/#S-201">zadání této odlišné adresy na S-201</a>. Balík dál zpracujem.</p>
 <p>Zpracovaní jednoho balíku je pro srozumitelnost na samostatném obrázku:</p>
 <p><img alt="Proces čtení informací z balíku" src="../diagrams/out/uc-21-activity-2.png" title="Proces čtení informací z balíku" /></p>
 <p>V tomto stavu máme všechny dostupné informace o balíku zaznamenané.</p>
@@ -582,7 +582,7 @@
 <p>Proces začíná na obrazovce <a href="../screens/#S-203">S-203</a>, kde dispečer musí rozhodnout, jestli je balík poškozen nebo ne. Jedná se o poškození obalu, nebo poškození celého balíku, které by ztížilo nebo znemožnilo další doručovaní.</p>
 <p>Pokud balík není poškozen, pak systém zobrazí <a href="../screens/#S-205">stránku S-205 pro tisk</a> <a href="../templates/#T-06">interního štítku</a>. Pokud je balík poškozen pak se zobrazí stránka <a href="../screens/#S-204">S-204 pro popsání míry poškození a několik fotek</a>. Na stránce se také dispečer musí rozhodnout, jestli lze balík přebalit a posunout dál do procesu doručení. Pokud balík nelze přebalit, pak se vytiskne interní štítek, dispečer zadá rozměry, váhu a balík putuje do chybové fronty. Pokud lze balík přebalit zobrazí se jednoduchá stránka  <a href="../screens/#S-206">S-206 pro zadání spotřeby obalového materiálu</a>. Pak se vytiskne interní štítek.</p>
 <p><img alt="Proces zpracování balíku" src="../diagrams/out/uc-21-activity-3.png" title="Proces zpracování balíku" /></p>
-<p>Pokud už balík nemáme v chybové frontě, můžem jít k poslednímu kroku. V další kapitole se je rozpracovaný krok "Zpracování balíku s kódem."</p>
+<p>Pokud balík nemáme v chybové frontě, můžem jít k poslednímu kroku. V další kapitole se je rozpracovaný krok "Zpracování balíku s kódem."</p>
 <h3 id="mereni-vazeni-a-trizeni-baliku-do-front">Měření, vážení a třízení balíku do front</h3>
 <p>V tomto kroku máme balík opatřený interním štítkem. Poslední krok začíná obrazovkou <a href="../screens/#S-207">S-207 pro vážení a měření</a>. Máme-li z předchozího procesu napárovanou objednávku na balík systém vyhodnotí jestli je balík zaplacen a k jakému dopravci má dál pokračovat a podel toho vybere frontu. Pokud nebyl balík spárován s objednávkou pak půjde do chybové fronty. Informace o další frontě bude na <a href="../screens/#S-208">obrazovce S-208</a>. Proces je detailně vidět z následujícího obrázku:</p>
 <p><img alt="Proces zpracování balíčku s kódem" src="../diagrams/out/uc-21-activity-4.png" title="Proces zpracování balíčku s kódem" /></p>
@@ -592,30 +592,30 @@
 <p>Dispečer v systému otevře stránku pro zpracování balíků čekajících na zaplacení. Pak začne zpracovávat balíky jeden po druhém v libovolném poředí.</p>
 <p>Proces začíná na obrazovce <a href="../screens/#S-209">S-209 pro načtení interního štítku</a>. Pak podle toho do jaké fronty má balík přijít systém informuje dispečera <a href="../screens/#S-208">obrazovkou S-208</a></p>
 <p><img alt="Proces zpracování čekajících balíků" src="../diagrams/out/uc-22-activity.png" title="Proces zpracování čekajících balíků" /></p>
-<p>Do chybové fronty se balík přesune například, když zákazním nezaplatí déle než definovanou dobu a pracovníkovi podpory se jestě nepodařilo se zákazníkem domluvit co s balíckem dál dělat.</p>
+<p>Do chybové fronty se balík přesune například, když zákazník nezaplatí déle než definovanou dobu a pracovníkovi podpory se jestě nepodařilo se zákazníkem domluvit co s balíckem dál dělat.</p>
 <p>Dispečer se může kdykoliv během zpracovávání fronty rozhodnout činnost přerušit.</p>
 <h2 id="uc-23-zpracovani-baliku-ve-fronte-dopravce"><a name="UC-23"></a>UC-23 - Zpracování balíků ve frontě dopravce</h2>
 <p>Dispečer v systému otevře stránku pro zpracování fronty konkrétního dopravce. Pak začne zpracovávat jeden balík po druhém v libovolném pořadí takto:</p>
 <p>Čtečkou čárových kódů načte z interního štítku kód balíčku. Systém požádá o zvážení balíku. Dispečer ho zváží. Po vážení se aktuální váha balíku porovná s hodnotou naměřenou po nalepení interního štítku na balík. To by mělo snížit pravděpodobnost, že dojde k záměně balíků, nebo jiné chybě. Pokud váha nesedí balík bude vložen do chybové fronty.</p>
 <p><img alt="Zpracování balíků ve frontě dopravce'" src="../diagrams/out/uc-23-activity.png" title="Zpracování balíků ve frontě dopravce" /></p>
-<p>Musí existovat fronta pro Českou poštu. V případě chyby potřebujem poslat balík zpět zákazníkovy.</p>
+<p>Pokud posíláe po ČR použijeme Českou poštu. Proto musí v depu existovat fronta pro Českou poštu. V případě chyby potřebujem poslat balík zpět zákazníkovy.</p>
 <p>Dispečer se může rozhodnout, že činnost přeruší i když je fronta k doručení zpracovaná jen částečně.</p>
 <h2 id="uc-24-zpracovani-baliku-v-chybove-fronte"><a name="UC-24"></a>UC-24 - Zpracování balíků v 'chybové' frontě</h2>
-<p>Dispečer všechny balíky pojednom projde. V případě problému se spojí s pracovníkem podpory a společně se pokusí domluvit se na dalším postupu. Práce začne tím, že si na hlavní stránce vybere odkaz pro zpracování chybových balíků. Systém vyhodnotí jestli je balík možné poslat dál, nebo má ještě počkat ve frontě. Případně pomocí <a href="../screens/#S-210">obrazovnky S-210</a> lze požádat dispečera o nějakou další akci s balíkem.v</p>
+<p>Dispečer v systému otevře stránku pro zpracování chybové fronty. Všechny balíky bude pojednom brát a zpracovávat. V případě problému se spojí s pracovníkem podpory a společně se pokusí domluvit se na dalším postupu. Po tom co dispečer naskenuje interní štítek na <a href="../screens/#S-209">obrazovce S-209 pro načtení interního štítku</a> systém vyhodnotí jestli je balík možné poslat dál, nebo má ještě počkat ve frontě. Případně pomocí <a href="../screens/#S-210">obrazovnky S-210</a> lze požádat dispečera o nějakou další akci s balíkem.</p>
 <p><img alt="Proces zpracování chybových balíků" src="../diagrams/out/uc-24-activity.png" title="Proces zpracování chybových balíků" /></p>
 <p>O každém chybovém balíku je záznam v systému, tedy support o každém balíku ví a může je řešit.</p>
-<p>Nelze předvídat, co vše bude třeba s chybovými balíky dělat. Pracovník podpory to může domluvit s odesílatelem a zde sdělit dispečerovi. Příklad může být vyhodit poškozený balík nebo rozdělit obsah zásilky do dvou balíků. </p>
+<p>Nelze předvídat, co vše bude třeba s chybovými balíky dělat. Pracovník podpory to může domluvit s odesílatelem a zde sdělit dispečerovi. Příklad může být, že zákazník chce poškozený balík vyhodit nebo požádal o rozdělení obsah zásilky do dvou balíků. </p>
 <h2 id="uc-25-predani-baliku-dopravci"><a name="UC-25"></a>UC-25 - Předání balíků dopravci</h2>
 <p>Před tím než dispečer předá balíky z příslušné fronty dopravci, musí připravit předávací protokol. Dispečer v systému najde příslušnou frontu dopravce a stiskne na ní, že jí chce ukončit. na to mu systém vygeneruje předávací protokol, případně jeho kopii.</p>
 <p>Když pro balíky osobně přijde dopravce, dispečer mu předá balíky a nechá si v protokolu potvrdit předání balíků.</p>
 <p>Zde budeme muset zohlednit různé chování dopravců při předávce balíků.</p>
 <h2 id="uc-26-prijem-nedorucenych-baliku-od-dopravce"><a name="UC-26"></a>UC-26 - Příjem nedoručených balíků od dopravce</h2>
-<p>Předpokládáme, že dopravce nepřendá interní štítek z jednoho balíku na druhý. Předpokládáme, že interní štítek se může z balíku ztratit nebo zničit.</p>
-<p>Stejný proces jako UC-21 s tím, že balík může mít interní štítek a může být poškozen. Protože neodesílamé než balík spojíme s objednávkou a je zaplacený, tak je jisté, že jsme ho spárovali s objednávkou.</p>
+<p>Předpokládáme, že dopravce nepřendá interní štítek z jednoho balíku na druhý. Předpokládáme, že interní štítek se může z balíku ztratit nebo se zničit.</p>
+<p>Stejný proces jako UC-21 s tím, že balík může mít interní štítek a může být poškozen. Balíky odesíláme pouze spojené s objednávkou a zaplacené, toho lze využít k omezení hledání balíku.</p>
 <p>To, že jsme balík už jednou předali dopraci znamená, že byl zaplacen. Tedy do čekací frnty nikdy nepůjde.</p>
 <p><img alt="Proces zpracování balíků od dopravce" src="../diagrams/out/uc-26-activity.png" title="Proces zpracování balíků od dopravce" /></p>
 <p>Některé kroky jsou zaznamené bez detailních obrazovek, protože jsou už popsane výše. Hledání balíku podle štítku dopravce není popsané, protože bude záviset na detailech, které budem vědět o štítku konkrétního dopravce.</p>
-<p>Při přijímaní baličku od dopravce ve všech případech zajistíme, ze interní štítek bude nalepený a změříme a zvážíme balíček.</p>
+<p>Při přijímaní balíku od dopravce ve všech případech zajistíme, ze interní štítek bude nalepený a změříme a zvážíme balíček.</p>
 <h2 id="uc-27-ztraceny-interni-stitek"><a name="UC-27"></a>UC-27 - Ztracený interní štítek</h2>
 <p>Identifikace balíku se ztraceným nebo zničeným interním štítkem. Na <a href="../screens/#S-01">hlavním rozcestníku S-01</a> bude odkaz "Poškozený interní štítek". Za ním bude obrazovka na hledání balíku. Dispečer omezí hledání na fronty, nebo stavu, ve kterém balíček našel. Případně podle kódu balíčku, nebo dalších informací na balíku. Po nalezení klikne na "tisk interního štítku" a štítek se mu znovvu vytiskne. Stejně tak se zobrazí roozměry, váha a adresa odeslílatele pro kontrolu.</p>
 <p>To, že balík nemá štítek se může stát v libovolné frontě při jakékoliv manipulaci s balíkem.</p>
