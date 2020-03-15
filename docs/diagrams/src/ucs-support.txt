@@ -15,10 +15,10 @@ actor :Podpora: as support
 (UC-48 TBD) as (UC-48)
 (UC-49 Reklamace) as (UC-49)
 
-support -up-> (UC-40)
-support -up-> (UC-41)
-support -up-> (UC-42)
 support -up-> (UC-43)
+support -up-> (UC-42)
+support -up-> (UC-41)
+support -up-> (UC-40)
 support -right-> (UC-44)
 support -down-> (UC-45)
 support -down-> (UC-46)

@@ -112,6 +112,8 @@ Poslední uživatel Milan Strnad není aktivní a nebude se moc přihlásit do s
 
 ## <a name="S-201"></a>S-201 - Zadání zpáteční adresy
 
+Stránka slouží pro opsání adresy odesílatele z balíku. Protože adresa můze být poškozená nebo nemusí být uvedená vůbec, jsou jednotlivá pole nepoviná. Pouze by zde měla být validace na maxímální délku. 
+
 ![Zadání zpáteční adresy](./imgs/s-201.png "Zadání zpáteční adresy")
 
 ## <a name="S-202"></a>S-202 - Kontrola zpáteční adresy

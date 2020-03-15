@@ -3,13 +3,13 @@
 left to right direction
 actor :Zakaznik: as customer
 
-(UC-04 Registrovat balik) as (UC-04)
+(UC-04 Registrovat balík) as (UC-04)
 (UC-05 Doručit balík) as (UC-05)
-(UC-06 Zkontrolovat stav) as (UC-06)
-(UC-07 Zaplatit za doručeni) as (UC-07)
+(UC-06 Sledovaní balíku) as (UC-06)
+(UC-07 Zaplatit za doručení) as (UC-07)
 
-customer -up-> (UC-04)
 customer -up-> (UC-05)
+customer -up-> (UC-04)
 customer --> (UC-06)
 customer --> (UC-07)
 

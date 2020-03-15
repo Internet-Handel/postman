@@ -15,6 +15,8 @@ skinparam activity {
     ArrowColor $col4
     FontName Roboto
     BackgroundColor $col1
+    StartColor $col4
+    EndColor $col4
 }
 
 skinparam activityDiamond {
@@ -48,5 +50,10 @@ skinparam state {
 skinparam sequence {
     ParticipantBorderColor $col4
     ParticipantBackgroundColor $col1
+}
+
+skinparam note {
+    BorderColor $col4
+    BackgroundColor $col1
 }
 
