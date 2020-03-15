@@ -1,5 +1,10 @@
+
+'výchozí barva pozadí prvků
+'například pozadí aktivity, kerou dělá dispečer
+!$col1 = "#F7F7F7"
+
 'barva pozadí aktivit, které děla systém
-'například, aktivita, že se zobrazí stránka S-203
+'například aktivita, že se zobrazí stránka S-203
 !$col2 = "#CDDDFF"
 
 'barva okraje prvků a šipek
@@ -9,29 +14,39 @@ skinparam activity {
     BorderColor $col4
     ArrowColor $col4
     FontName Roboto
+    BackgroundColor $col1
 }
 
 skinparam activityDiamond {
     BorderColor $col4
     ArrowColor $col4
     FontName Roboto
+    BackgroundColor $col1
 }
 
 skinparam actor {
     BorderColor $col4
     ArrowColor $col4
     FontName Roboto
+    BackgroundColor $col1
 }
 
 skinparam useCase {
     BorderColor $col4
     ArrowColor $col4
     FontName Roboto
+    BackgroundColor $col1
 }
 
 skinparam state {
     BorderColor $col4
     ArrowColor $col4
     FontName Roboto
+    BackgroundColor $col1
+}
+
+skinparam sequence {
+    ParticipantBorderColor $col4
+    ParticipantBackgroundColor $col1
 }
 
