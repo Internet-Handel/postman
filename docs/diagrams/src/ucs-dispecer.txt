@@ -1,21 +1,26 @@
 @startuml
 !include color_def.txt
+
 left to right direction
 
 actor :Dispecer: as dispecer
 
 (UC-20 Přijetí balíku) as (UC-20)
 (UC-21 Zpracování\npřijatých balíků) as (UC-21)
-(UC-22 Zpracování balíků v\n'čekací frontě') as (UC-22)
+(UC-22 Zpracování balíků\nčekajících na zaplacení) as (UC-22)
 (UC-23 Zpracování balíků ve\nfrontě dopravce') as (UC-23)
 (UC-24 Zpracování balíků v\n'chybové' frontě) as (UC-24)
 (UC-25 Předání\nbalíků dopravci) as (UC-25)
+(UC-26 Příjem nedoručených\nbalíků od dopravce) as (UC-26)
+(UC-27 Ztracený interní štítek) as (UC-27)
 
 dispecer -up-> (UC-20)
 dispecer -up-> (UC-21)
 dispecer -up-> (UC-22)
-dispecer --> (UC-23)
+dispecer -up-> (UC-23)
 dispecer --> (UC-24)
 dispecer --> (UC-25)
+dispecer --> (UC-26)
+dispecer --> (UC-27)
 
 @enduml

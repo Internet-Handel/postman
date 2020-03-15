@@ -8,26 +8,22 @@ načtení interního štítku.;
 :Dispečer načte čárový kód, nebo zadá, že balík interní štítek nemá;
 
 if (Má balík interní štítek?) then (Ano)
-    :Rozdělení do fronty dopravce,
-    nebo do chybové fronty.;
-    :Zpracování balíku jako v S-21;
-    
+    :Řešení poškozeného balíku,
+    včetně přebalení.;
+    if (Je s balíkem nějaká chyba?) then (Ano)
+        $col2: Systém zobrazí S-208, balík má jít
+        do 'chybové fronty'.;
+        :Dispečer uloží balík a potvrdí to.;
+    else (Ne)
+       $col2: Systém zobrazí S-208 s jménem
+       fronty doprace, kam má balík přijít.;
+       :Dispečer uloží balík a potvrdí.;
+    endif
 else (ne)
     :Zkusíme najít informace ze štítku pro dopravce.;
-    if (Podařilo se balíček dohledat?) then (Ano)
-        :Tisk interního štítku;
-    else (ne)
-        :Zkusí najít kód balíčku a zadat do systému;
-        if (Podařilo se kód balíčku dohledat?) then (Ano)
-            :Tisk interního štítku;
-        else (ne)
-            :Tisk interního štítku;
-        endif
-    endif
-    :Případné zpracování poškozeného balíčku.;
-    :Dispečer interní štítek nalepí;
-    :Zadá rozměry a váhu balíčku a
-    stiskne tlačítko pokračovat;
+    :Zkusíme najít bílík podle původního kódu balíku.;
+    :Tisk interního štítku;
+    :Vážení a měření;
     :Rozdělíme do chybové fronty nebo fronty dopravce.;
 endif
 

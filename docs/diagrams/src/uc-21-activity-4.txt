@@ -4,7 +4,7 @@
 start
 -> Stránka na zadávání\nrozměrů a váhy;
 
-#CDDDFF: Systém zobrazí S-207 pro
+$col2: Systém zobrazí S-207 pro
 zadání rozměrů a váhy.;
 :Dispečer zadá rozměry a váhu balíčku a
 stiskne tlačítko pokračovat;
@@ -12,21 +12,21 @@ stiskne tlačítko pokračovat;
 if (Máme k balíku napárovnaou objednávku) then (Ano)
     if (Odpovídají rozměry a váha?) then (Ano)
         if (Systém zkontroluje,\nje balík zaplacen?) then (Ano)
-            #CDDDFF: Systém zobrazí S-208 s jménem
+            $col2: Systém zobrazí S-208 s jménem
             fronty doprace, kam má balík přijít.;
             :Dispečer uloží balík a potvrdí to.;
         else (ne)
-            #CDDDFF: Systém zobrazí S-208, balík má jít
+            $col2: Systém zobrazí S-208, balík má jít
             do 'čekací fronty'.;
             :Dispečer uloží balík a potvrdí to.;
         endif
     else (Ne)
-        #CDDDFF: Systém zobrazí S-208, balík má jít
+        $col2: Systém zobrazí S-208, balík má jít
         do 'chybové fronty'.;
         :Dispečer uloží balík a potvrdí to.;
     endif
 else (Ne)
-    #CDDDFF: Systém zobrazí S-208, balík má jít
+    $col2: Systém zobrazí S-208, balík má jít
     do 'chybové fronty'.;
     :Dispečer uloží balík a potvrdí to.;
 endif
