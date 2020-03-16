@@ -325,6 +325,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-28-balik-ve-spatne-fronte" class="md-nav__link">
+    UC-28 - Balík ve špatné frontě
+  </a>
+  
+</li>
+      
       
       
       
@@ -540,6 +547,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-28-balik-ve-spatne-fronte" class="md-nav__link">
+    UC-28 - Balík ve špatné frontě
+  </a>
+  
+</li>
+      
       
       
       
@@ -596,9 +610,9 @@
 <p>Dispečer se může kdykoliv během zpracovávání fronty rozhodnout činnost přerušit.</p>
 <h2 id="uc-23-zpracovani-baliku-ve-fronte-dopravce"><a name="UC-23"></a>UC-23 - Zpracování balíků ve frontě dopravce</h2>
 <p>Dispečer v systému otevře stránku pro zpracování fronty konkrétního dopravce. Pak začne zpracovávat jeden balík po druhém v libovolném pořadí takto:</p>
-<p>Čtečkou čárových kódů načte z interního štítku kód balíčku. Systém požádá o zvážení balíku. Dispečer ho zváží. Po vážení se aktuální váha balíku porovná s hodnotou naměřenou po nalepení interního štítku na balík. To by mělo snížit pravděpodobnost, že dojde k záměně balíků, nebo jiné chybě. Pokud váha nesedí balík bude vložen do chybové fronty.</p>
+<p>Čtečkou čárových kódů načte z interního štítku kód balíčku. Systém požádá o zvážení balíku. Dispečer ho zváží. Po vážení se aktuální váha balíku porovná s hodnotou naměřenou po nalepení interního štítku na balík. To by mělo snížit pravděpodobnost, že dojde k záměně balíků, nebo jiné chybě. Pokud váha nesedí balík bude vložen do chybové fronty. Pokud váha odpovídá, systém zobrazí <a href="../screens/#S-212">stránku S-212 pro tisk štítku dopravce</a>.</p>
 <p><img alt="Zpracování balíků ve frontě dopravce'" src="../diagrams/out/uc-23-activity.png" title="Zpracování balíků ve frontě dopravce" /></p>
-<p>Pokud posíláe po ČR použijeme Českou poštu. Proto musí v depu existovat fronta pro Českou poštu. V případě chyby potřebujem poslat balík zpět zákazníkovy.</p>
+<p>Pokud se balík posílá po ČR použijeme Českou poštu. Proto musí v depu existovat fronta pro Českou poštu. V případě chyby potřebujeme poslat balík zpět zákazníkovy.</p>
 <p>Dispečer se může rozhodnout, že činnost přeruší i když je fronta k doručení zpracovaná jen částečně.</p>
 <h2 id="uc-24-zpracovani-baliku-v-chybove-fronte"><a name="UC-24"></a>UC-24 - Zpracování balíků v 'chybové' frontě</h2>
 <p>Dispečer v systému otevře stránku pro zpracování chybové fronty. Všechny balíky bude pojednom brát a zpracovávat. V případě problému se spojí s pracovníkem podpory a společně se pokusí domluvit se na dalším postupu. Po tom co dispečer naskenuje interní štítek na <a href="../screens/#S-209">obrazovce S-209 pro načtení interního štítku</a> systém vyhodnotí jestli je balík možné poslat dál, nebo má ještě počkat ve frontě. Případně pomocí <a href="../screens/#S-210">obrazovnky S-210</a> lze požádat dispečera o nějakou další akci s balíkem.</p>
@@ -619,6 +633,10 @@
 <h2 id="uc-27-ztraceny-interni-stitek"><a name="UC-27"></a>UC-27 - Ztracený interní štítek</h2>
 <p>Identifikace balíku se ztraceným nebo zničeným interním štítkem. Na <a href="../screens/#S-01">hlavním rozcestníku S-01</a> bude odkaz "Poškozený interní štítek". Za ním bude obrazovka na hledání balíku. Dispečer omezí hledání na fronty, nebo stavu, ve kterém balíček našel. Případně podle kódu balíčku, nebo dalších informací na balíku. Po nalezení klikne na "tisk interního štítku" a štítek se mu znovvu vytiskne. Stejně tak se zobrazí roozměry, váha a adresa odeslílatele pro kontrolu.</p>
 <p>To, že balík nemá štítek se může stát v libovolné frontě při jakékoliv manipulaci s balíkem.</p>
+<h2 id="uc-28-balik-ve-spatne-fronte"><a name="UC-28"></a>UC-28 - Balík ve špatné frontě</h2>
+<p>Kdykoliv v nějakém UC dispečer načte interní štítek a zároveň pokud se podaří balík spojit s objednávkou, pak systém ví v jaké má být balík frontě. Systém také ví, jaký UC dispečer vykonává. Když dojde ke stavu, že balík má být v jiné frontě, pak systém zobrazí chybovou obrazovku a řekne dispečerovi, kam má balík dát. Proběhnout by to mělo takto:</p>
+<p><img alt="Balík ve špatné frontě" src="../diagrams/out/uc-28-activity.png" title="Balík ve špatné frontě" /></p>
+<p>Tento UC se provede, kdykoliv v jiném UC dispečer načítá interní štítek.</p>
                 
                   
                 

@@ -13,14 +13,16 @@ actor :Dispečer: as dispecer
 (UC-25 Předání\nbalíků dopravci) as (UC-25)
 (UC-26 Příjem nedoručených\nbalíků od dopravce) as (UC-26)
 (UC-27 Ztracený interní štítek) as (UC-27)
+(UC-28 Balík ve špatné frontě) as (UC-28)
 
 dispecer -up-> (UC-23)
 dispecer -up-> (UC-22)
 dispecer -up-> (UC-21)
 dispecer -up-> (UC-20)
-dispecer --> (UC-24)
+dispecer -left-> (UC-24)
 dispecer --> (UC-25)
 dispecer --> (UC-26)
 dispecer --> (UC-27)
+dispecer -right-> (UC-28)
 
 @enduml
