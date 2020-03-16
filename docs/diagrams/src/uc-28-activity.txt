@@ -1,0 +1,25 @@
+@startuml
+!include color_def.txt
+
+start
+
+$col2: Systém zobrazí S-211 pro
+načtení interního štítku.;
+:Dispečer načte čárový kód, nebo zadá, že balík interní štítek nemá;
+
+if (Podařilo se balík napárovat?) then (Ano)
+    if (Je balík ve správné frontě?) then (Ano)
+    else (Ne)
+        $col2: Systém zobrazí S-208 s jménem
+        správné fronty, kam má balík být.;
+        :Dispečer uloží balík a potvrdí.;
+    endif
+else (Ne)
+    $col2: Systém zobrazí S-208, balík má jít
+    do 'chybové fronty'.;
+    :Dispečer uloží balík a potvrdí.;
+endif
+
+stop
+
+@enduml

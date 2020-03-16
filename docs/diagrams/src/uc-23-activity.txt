@@ -19,9 +19,10 @@ repeat
     stiskne tlačítko pokračovat;
 
     if (Odpovídají rozměry a váha balíku?) then (Ano)
-        $col2: Systém zobrazí S-208 s jménem
-        fronty doprace, kam má balík přijít.;
-        :Dispečer uloží balík a potvrdí.;
+        $col2: Systém zobrazí S-212 a 
+        vytiskne štítek pro dopravce.;
+        :Dispečer nalepí štítek dopravce a 
+        balík dá na výdej dopravci.;
     else (Ne)
         $col2: Systém zobrazí S-208, balík má jít
         do 'chybové fronty'.;

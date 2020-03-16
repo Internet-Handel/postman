@@ -164,3 +164,8 @@ Stejná stránka jako je S-209 s tím, že na obrazovce je možnost zadat, že b
 
 ![Načtení interního štítku](./imgs/s-211.png "Načtení interního štítku")
 
+## <a name="S-212"></a>S-212 - Tisk štítku dopravce
+
+Zároveň se zobrazením této obrazovky se vytiskne štítek dopravce.
+
+![Tisk štítku dopravce](./imgs/s-212.png "Tisk štítku dopravce")

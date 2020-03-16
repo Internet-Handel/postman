@@ -2,7 +2,7 @@
 
 ## <a name="T-01"></a>T-01 potvrzení o přijetí objednávky
 
-Tento email budem odesílat jako potvrzení přijetí objednávky. Šablona emailu bude vypadat následovně:
+Tento email budeme odesílat jako potvrzení přijetí objednávky. Šablona emailu bude vypadat následovně:
 
 ![Šablona potvrzení přijetí objednávky](./imgs/template-01.png "Šablona potvrzení přijetí objednávky")
 

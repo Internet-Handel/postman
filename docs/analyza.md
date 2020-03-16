@@ -47,6 +47,7 @@ Dispečer je v depu. Depo bude umístěné tak, aby bylo v dobrém dosahu doprav
 * UC-25 - [Předání balíků dopravci](../uc-20/#UC-25).
 * UC-26 - [Příjem nedoručených balíků od dopravce](../uc-20/#UC-26).
 * UC-27 - [Ztracený interní štítek](../uc-20/#UC-27).
+* UC-28 - [Balík ve špatné frontě](../uc-20/#UC-28).
 
 ### Pracovník podpory
 
