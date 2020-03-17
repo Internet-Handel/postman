@@ -1,0 +1,20 @@
+@startuml
+!include color_def.txt
+
+object "Objednávka" as order
+object order {
+    id
+    code
+}
+
+
+object "Položka objednávky" as orderItem
+object orderItem {
+    KKKK
+    code
+}
+
+order "1" o-- "1..n" orderItem
+
+
+@enduml
