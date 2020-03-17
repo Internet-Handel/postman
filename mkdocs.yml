@@ -12,6 +12,7 @@ nav:
     - Stavy: states.md
     - Šablony: templates.md
     - Obrazovky: screens.md
+    - Architektura: architecture.md
     - Poznámky: notes.md
     - Změny: changelog.md
     - Jak přispět: how-to-contribute.md

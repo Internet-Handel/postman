@@ -57,3 +57,8 @@ skinparam note {
     BackgroundColor $col1
 }
 
+skinparam object {
+    BorderColor $col4
+    BackgroundColor $col1
+}
+

@@ -1,6 +1,68 @@
-# Navrh systemu
+# Architektura
 
-Kód balíku musí být takový, aby záměna jedné hodnoty neznamenala ztracení celého balíku. Kód budeme genrovat náseldovně.
+Technický návrh systému.
 
-kód se bude skládat ze tří pomlčka oddělených částí po čtyřech znacích.:
-XXXX-XXXX-XXXX. 
+Nebude možné zde popsat všechny aspekty řešení. Prot jsou zde popsáný pouze části, které mají dopad na UC.
+
+## Kód balíku
+
+Kód balíku musí splňovat několik vlastností:
+
+* I po lidské chybě, jako je záměna dvou znaků, nebo překlep jednoho znaku musíme být schopní balíček dohledat.
+* Kód se musí pohodlně číst a opisovat.
+* Nesmí obsahovat znaky, v které se často zaměňují jako jsou:
+    * nula a velké O
+    * malé L a jedna.
+
+Jedno z možných řešení je, že se kód kód bude skládat ze tří pomlčkou oddělených částí po čtyřech znacích: ```XXXX-XXXX-XXXX```. Jednotlivé znaky budem náhodně generovat z těchto skupin:
+
+* Souhlásky - ```b, c, d, f, g, h, j, k, m, n, p, r, s, t, v, x, z```
+* Samohlásky a číslice - ```a, e, u, 2, 3, 4, 5, 6, 7, 8, 9```
+
+Každá čtveřice bude vygenerovaná tak, že se budou střídat náhodné znaky z obou skupin. Střídat můžem i pořadí skupin. Například:
+
+* ```K3GE-DAM8-ERUS```
+* ```AT3K-8P3D-B4M6```
+
+To nám dává ```34 969 = 17 * 17 * 13 * 13``` kódů v jedné čtveřici, celkem ```1,5 x 10^18``` možností.;
+
+Pro každý balík, bude tento kód balíku vygenerovaný a uložený. Když operátor zadá kód balíku, pomocí nějakého algoritmu pro zjištění podobnosti dvou řetězců najdeme ten, který v nějaké toleranci odpovídá. Jako inspirace lze použít 	Levenshteinovu vzdálenost.
+
+Je potřeba kontrolovat, jestli už v minulosti nebyl vygenerovaný kód balíku použitý?
+
+## Kód interního štítku balíku
+
+Jedná se o náhodné XXX místné číslo. Toto číslo se přiděluje balíku při přijetí. Významem nemůže být spjaté s objednávkou nebo zákazníkem, protože při přijetí balíku se nemusí podařit dohledat objednávku nebo zákazníka. Kód na interním štítku balíku bude vytištěn jako čárový kód i jako čísla.
+
+Kód interního štítku balíku bude náhodné číslo. Náhodné, abychom je mohli dobře odlišit. Je možné, že budem implementovat hledání podle poškozené části. V aktuálním něvrhu to není.
+
+## Číslo faktury
+
+Variabilní symbol pro zaplacení objednávky, číslo objednávky a číslo faktury budou jedna hodnota. Bude to desetimístné náhodně vygenerované číslo. Formát variabilního symbol je, že to je libovolné desetimístné číslo.
+
+## Unifikace zákazníků
+
+V některých případech by bylo dobré mít samostatnou entity zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Lze to řešit tak, že se vezmou záznamy, které identifikují zákazníka. Například Jméno, příjmení, telefonní číslo, email: Při založení objednávky se projdou již existující zákazníci a zkusí se, jestli se s nějakou tolerancí nejedná o stejný záznam. Pro porovnání lze u něktrých polí Levenshteinovu zvdálenenost. Případně lze shodu porovnávat pouze podle emailu nebo telefonního čísla.
+**Toto teď nebudem implementovat. Zákazníka poznáme podle emailu.**
+## Entitní model
+
+### Objednávka
+
+![Objednávka](./diagrams/out/arch-01.png "Objednávka")
+
+V zásadě se jedná o informace posbírané od zákazníka, pouze uložené.
+
+### Pouze příklad diagramů, pro připomenutí
+![Test](./diagrams/out/arch-05.png "Test")
+
+## Návrh architektury applikace
+
+Z počátku nepotřebujem nic speciálního. Pouze při realizací dávat pozor, že finální UC se mohou lišit od návrhů. Například implementace napojení na konkrétního dopravce může ovlivnost způsob zpracování fronty dopravce. Například požadavek na validaci adresy ze strany dopravce může vést k tomu, že při přijetí balíku a po jeho spárování s objednávkou se musí přidat validace adresy.
+
+## Zajímavé odkazy
+Další informace jsou na:
+
+* Wikipedia, Kontrolní číslo - [https://en.wikipedia.org/wiki/Check_digit](https://en.wikipedia.org/wiki/Check_digit)
+* Wikipedia, Levenshteinova vzdálenost - [https://en.wikipedia.org/wiki/Levenshtein_distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
+* Wikipedia, Variabilní symbol - [https://cs.wikipedia.org/wiki/Variabilní_symbol](https://cs.wikipedia.org/wiki/Variabiln%C3%AD_symbol)
+* Wikipedia, Čárový kód - [https://cs.wikipedia.org/wiki/Čárový_kód](https://cs.wikipedia.org/wiki/Čárový_kód)
