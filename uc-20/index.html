@@ -648,6 +648,7 @@
 <h2 id="uc-28-balik-ve-spatne-fronte"><a name="UC-28"></a>UC-28 - Balík ve špatné frontě</h2>
 <p>Kdykoliv v nějakém UC dispečer načte interní štítek a zároveň pokud se podaří balík spojit s objednávkou, pak systém ví v jaké má být balík frontě. Systém také ví, jaký UC dispečer vykonává. Když dojde ke stavu, že balík má být v jiné frontě, pak systém zobrazí chybovou obrazovku a řekne dispečerovi, kam má balík dát. Proběhnout by to mělo takto:</p>
 <p><img alt="Balík ve špatné frontě" src="../diagrams/out/uc-28-activity.png" title="Balík ve špatné frontě" /></p>
+<p>V tomto UC je řešeno zrušení objednávky. Pokud nastane zrušení objednávky, pak se balík posílá na odresu odesílatele nebo zníčí.</p>
 <p>Tento UC se provede, kdykoliv v jiném UC dispečer načítá interní štítek.</p>
                 
                   

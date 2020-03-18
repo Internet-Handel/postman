@@ -3,18 +3,127 @@
 
 object "Objednávka" as order
 object order {
-    id
-    code
+    variabilní symbol: string(10)
+    datum založení: date
+    cena: numeric()
+    dph: numeric()
+    cenasDPH: numeric()
+    položka objednávky
+    stav: Stav objednávky
 }
 
+object "Stav objednávky" as orderState
+object orderState {
+    jméno: string
+    datum vzniku: date
+    autor: Zaměstnanec
+}
+
+object "Typ stavu objednávky" as orderStateType
+object orderStateType {
+    jméno: string
+}
 
 object "Položka objednávky" as orderItem
 object orderItem {
-    KKKK
-    code
+    kód balíku: string(14)
+    výška: numeric(6,2)
+    šířka: numeric(6,2)
+    hloubka: numeric(6,2)
+    váha: numeric(6,2)
+    doručovací adresa
+}
+
+object "Platba" as payment
+object payment {
+    datum založení do systému: date
+    jméno: string
+    číslo odchozího účtu: string
+    číslo příchozího účtu: string
+    kód transakce: string
+    datum odeslání: string
+    částka: string(10,3)
+    popis platby: string
+    variabilni symbol: string
+}
+
+object "Bankovní účet" as bankAccount
+object bankAccount {
+    číslo účtu: string
+    platnost: boolean
+}
+
+object "Země" as country
+object country {
+    dorucujem: boolean
+    jméno: string
+}
+
+object "Adresa" as address
+object address {
+    země: země
+    společnost: string(60)
+    jméno: string(60)
+    ulice: string(60)
+    město: string(60)
+    zip: string(10)
+    telefon: string(20)
+    jméno: string
+}
+
+
+object "Role" as role
+object role {
+    jméno: string
+}
+
+object "Zaměstnanec" as emplyee
+object emplyee {
+    role: Role
+    jméno: string
+    příjmení: string
+    login: string
+    heslo: string
+    telefon: string
+    email: string
+}
+
+object "Interní štítek" as internalLabel
+object internalLabel {
+    datum založení: date
+    kód interního štítku: number
+}
+
+object "Měření" as measures
+object measures {
+    výška: numeric(6,2)
+    šířka: numeric(6,2)
+    hloubka: numeric(6,2)
+    váha: numeric(6,2)
+}
+
+object "Balík" as pckg
+object pckg {
+    kód interního štítku
+    aktualni stav: pckgState
+}
+
+object "Stav balíku" as pckgState
+object pckgState {
+    datum začátku: date
+    datum konce: date
 }
 
 order "1" o-- "1..n" orderItem
-
+orderItem --> "2" address : Adresa odesílatele a příjemce
+order o--> orderState : Pouze jeden stav\nje aktuální
+orderState --> orderStateType
+orderState --> emplyee
+address --> country
+pckg --> orderItem
+pckg o--> pckgState
+pckg --> internalLabel
+emplyee --> role
+payment --> "0..1" order
 
 @enduml
