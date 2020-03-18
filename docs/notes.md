@@ -2,6 +2,8 @@
 
 ## Otevřené otázky
 
+* Jaký čárový kód tisknem na balíky? Je to EAN-13?
+
 ## 07.03.2020
 
 * Prošli jsme všechny UC.

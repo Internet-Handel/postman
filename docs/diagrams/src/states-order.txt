@@ -1,13 +1,17 @@
 @startuml
 !include color_def.txt
 
+state "Nazaplacená" as nezaplacená
+nezaplacená: Čeká na zaplacení
+
 state "Doručovaná" as cekaNaDoruceni
 cekaNaDoruceni: Aspoň jeden z balíků se doručuje.
 
 state "Ukončená" as closed
 closed: Všechny balíky jsou doručené.
 
-[*] --> cekaNaDoruceni : Zákazník založí objednávku
+[*] --> nezaplacená : Zákazník založí objednávku
+nezaplacená --> cekaNaDoruceni : Zákazník zaplatí
 cekaNaDoruceni --> closed : Doručená nebo zrušená
 closed --> [*]
 

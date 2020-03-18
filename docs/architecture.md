@@ -24,7 +24,7 @@ Každá čtveřice bude vygenerovaná tak, že se budou střídat náhodné znak
 * ```K3GE-DAM8-ERUS```
 * ```AT3K-8P3D-B4M6```
 
-To nám dává ```34 969 = 17 * 17 * 13 * 13``` kódů v jedné čtveřici, celkem ```1,5 x 10^18``` možností.;
+To nám dává ```34 969 = 17 * 17 * 13 * 13``` kódů v jedné čtveřici, celkem ```1,16 x 10^14``` možností.;
 
 Pro každý balík, bude tento kód balíku vygenerovaný a uložený. Když operátor zadá kód balíku, pomocí nějakého algoritmu pro zjištění podobnosti dvou řetězců najdeme ten, který v nějaké toleranci odpovídá. Jako inspirace lze použít 	Levenshteinovu vzdálenost.
 
@@ -50,7 +50,7 @@ V některých případech by bylo dobré mít samostatnou entity zákazníka a k
 
 ![Objednávka](./diagrams/out/arch-01.png "Objednávka")
 
-V zásadě se jedná o informace posbírané od zákazníka, pouze uložené.
+Potřebujeme mít někde uloženou objednávku, tak jak jí zadal zákazník?
 
 ### Pouze příklad diagramů, pro připomenutí
 ![Test](./diagrams/out/arch-05.png "Test")

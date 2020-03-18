@@ -4,7 +4,8 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |-----------------|
-| 17.03.2020 |Popsaný kó zákazníka.|
+| 18.03.2020 |Rozšiřování objektového diagramu.|
+| 17.03.2020 |Entita objednávky a balíku.|
 | 16.03.2020 |UC Dispečera přibyl UC-28, oprava překlepů.|
 | 13.03.2020 |UC Dispečera mají doplněné obrazovky, přibyl UC-27.|
 | 11.03.2020 |Část obrazovek pro dispečera. UC-21 dokončen včetně detailního procesu a obrazovek.|
