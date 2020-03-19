@@ -4,6 +4,7 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |-----------------|
+| 19.03.2020 |Review platebních UC.|
 | 18.03.2020 |Rozšiřování objektového diagramu.|
 | 17.03.2020 |Entita objednávky a balíku.|
 | 16.03.2020 |UC Dispečera přibyl UC-28, oprava překlepů.|
