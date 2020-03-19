@@ -86,6 +86,7 @@ object emplyee {
     heslo: string
     telefon: string
     email: string
+    aktivní: boolean
 }
 
 object "Interní štítek" as internalLabel

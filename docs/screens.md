@@ -40,17 +40,23 @@ Do pole hledat, pujde zadat část libovolné adresy, kód balíku, telefon zák
 
 ![Detail objednávky](./imgs/s-04-order-details.png "Detail objednávky")
 
+## <a name="S-041"></a>S-041 - Potvrzení odpárování platby
+
+Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-order-details.png "Detail objednávky") stiskne odpárovat, tak se mu zobrazí potvrzovací dialog:
+
+![Potvrzení odpárování platby](./imgs/s-04-order-details-confirm.png "Potvrzení odpárování platby")
+
 ## <a name="S-05"></a>S-05 - Detail balíku
 
 ![Detail balíku](./imgs/s5-package-detail.png "Detail balíku")
 
 Může být součástí stránky [S-04 Detail objednávky](./#S-04)
 
-## <a name="S-06"></a>S-06 - Seznam plateb
+## <a name="S-06"></a>S-06 - Přehled plateb
 
 ![Platby](./imgs/s-06-payments.png "Platby")
 
-V psledním sloupci bude vidět, jestli se platbu podařilo spárovat s objednávkou. Pokud ano, pak zde bude odkaz na detail objednávky.
+V posledním sloupci bude vidět, jestli je platba spárovaná s objednávkou. Pokud ano, pak zde bude odkaz na detail objednávky.
 
 Checkbox "Zobrazit pouze nespárované" platby umožní omezit pohled jen na nespárované.
 
@@ -76,9 +82,9 @@ Po potvrzení "Spárovat" nebo "Cancel" se uživatel vrací na stránku v výpis
 
 Objednávky lze filtrovat podle:
 
-* textu v adresách
-* minimální a maximální ceny objednávky
-* nezaplacených objednávek
+* Textu v adresách
+* Minimální a maximální ceny objednávky
+* Stavu objednávky -  zde půjde hledat pouze nezaplacené objednávky. Ve seznamu stavů bude možnost hledat objednávky v libovolném stavu.
 
 ## <a name="S-11"></a>S-11 - Spárovat objednávku s platbou
 
