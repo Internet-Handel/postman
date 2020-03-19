@@ -654,13 +654,16 @@
                 
                 
                 <h1 id="podpora-prace-s-objednavkou-a-balikem">Podpora - práce s objednávkou a balíkem</h1>
-<p><strong>TODO - Platba musi jit odparovat, pro pripad chyby.</strong></p>
 <p><strong>TODO - Finance dat do zamostatne sekvence 400, baliky 500 ...</strong></p>
 <p><strong>TODO - Obecne pridat informace auditniho logu k dotcenym UC.</strong></p>
-<p><strong>TODO - Pokud mamem platby bez variabilniho symbolu a najdem jinou plabu ze stejneho uctu, pak muzem propojit se zakaznikem z prvni platby bez ptani.--&gt; unifikace???</strong></p>
 <p><strong>TODO - Asi bychom meli mit moznost zakaznikovy z objednavky poslat dodatecnou fakturu, napriklad  za likvidaci baliku, slozite prebalovani, .... Plyne z toho, ze zakaznika, potrebujem evidovat jako samostatnou entitu? Asi ano.</strong></p>
-<p><strong>TODO návrh neřeší, že nekdo pošle platbu na objednávku, která už je uzavřená. Asi na to udělat nějaký filtr.</strong></p>
-<p><strong>TODO Párování plateb. Když přijde platba, co nemá variabilní symbol, tak zkusím vyhledat platby ze příchozího účtu, pak se u těchto plateb podívám na zákaníka. Protože zákazníky neunifikujem, tak budu muset hledat fulltextem. To přinese hledání naví a může to přinést chyby (špatně spojená platba a objednávka).</strong></p>
+<p><strong>TODO UC-44 jak zaznamenat, že zákazník chce vrátit balík?</strong></p>
+<p><strong>TODO UC-44 jak zaznamenat, že zákazník chce zlikvidovat balík?</strong></p>
+<p><strong>TODO - toto asi smazat - Když přijde platba, která nemá variabilní symbol, tak pracovník zkusí vyhledat jiné platby z účtu odesílatele platby. Pokud se nějaké najdou, tak se u těchto plateb pracovník podívá na zákazníka. Protože zákazníky neunifikujem budeme mít pro kažnou objednávku jednoho zákazníka. Mezi nimi bude třeba hledat fulltextem. To je krok navíc a může to přinést chyby (kdy pracovník podpory ztotožní plátce se špatnou objednávkou). Toto riziko lze zmenšit tím, že se snažíme objednávky napojit na entitu zákazníka. To může přinést další obtíže a pracnost.</strong></p>
+<p><strong>TODO - nevadí to? - Návrh neřeší situaci, kdy zákazník pošle platbu na objednávku, kterou už máme uzavřenou. Máme na to myslet?</strong></p>
+<p><strong>TODO - muze pracovnik podpory pri vystaveni dobropisu upravit castku? Napriklad cast penez u nas zadrzet. Treba za dopravu.</strong></p>
+<p><strong>TODO - je povinnost posilat dobropis, v pripade, ze zakaznik zrusi objenavku, ale jeste neposlal penize.</strong></p>
+<p><strong>TODO - Zahrnout pripad, kdy zakaznik zrusi objednavku, ale mi nevime, ze poslal penize, protoze jsou na ceste.</strong></p>
 <p>Každý balík má svůj kód. Kod je nezávislí na objednávce. Kód balíku je to, co zádáme zákaníka, aby napsal na balík. Pokud bude v objednávce víc balíků, pak každý balík bude mít svůj kůd.</p>
 <h2 id="uc-40-kontrola-bankovniho-uctu"><a name="UC-40"></a>UC-40 - Kontrola bankovního účtu</h2>
 <p>Pracovník podpory otevře na jedné straně bankovnictví a v našem systému obrazovku <a href="../screens/#S-06">S-06 přehled plateb</a>. Z bankovního sytému začne přepisovat zaplacené částky do našeho systému.</p>
@@ -689,11 +692,19 @@ Tento UC by měl zůstat samostatný, protože ho půjde snadno automatizovat.</
 <p>Pokud předchozí kroky neposkytli možnost spárovat platbu s účtem, tak pracovník může zkusit obvolat nezaplacené objednávky. Zde bude třeba nastavit nějou rozumnou lhůtu od zadání objednávky. Pokud někdo zadal obednávku včera    je možné, že platba je na cestě. Podobný případ budou nezaplacené objednávky starší než nekolik měsíců.</p>
 <p>Některé z uvedených postupů půjde později dobře řešit automatizací. V tuto chvíli umožníme pracovníkovi podpory pouze ruční řešení.</p>
 <h2 id="uc-42-odparovani-platby"><a name="UC-42"></a>UC-42 - Odpárování platby</h2>
-<p>Pokud pracovník podpory na detailu objednávky na obrazovce <a href="../screens/#S-11">S-04</a> stiskne u konkrétní platby "Odpoárovat", tak se zobrazí potvrzoví dialodg <a href="../screens/#S-041">S-041</a>. Pokud pracovník potvrdí odpárování, pak se platba odpáruje.</p>
+<p>Pokud pracovník podpory na detailu objednávky na obrazovce <a href="../screens/#S-04">S-04</a> stiskne u konkrétní platby "Odpárovat", tak se zobrazí potvrzovací dialog <a href="../screens/#S-041">S-041</a>. Pokud pracovník potvrdí odpárování, pak se platba odpáruje. Pracovník se vrací na stránku <a href="../screens/#S-04">S-04</a> </p>
 <h2 id="uc-44-urgence-zaplaceni"><a name="UC-44"></a>UC-44 - Urgence zaplacení</h2>
-<p>V tomto návrhu neřešíme urgenci zaplacení objednávek, ke kterým nedorazili balíky. Je to zdůvodů optimalizace nákladů na kontakt se zákazníkem.</p>
-<p>Nabízí se, aby systém automaticky generoval upomínky k zaplacení. Vygenroval tři upomínky a pak teprve požádal pracovníka podpory, co dál. V této verzi nebudem implementovat.</p>
-<p>Pracovník podpory otevře část pro zobrazení fronty balíků čekajících pro zaplacení. Zobrazí se stránka se seznamem balíků. Klikne na zobrazení detailů objednávky, záložku s komunikační historiíí, zkontroluje poznámky, jestli tam není už jiný problém. Podle úvahy pošle email nebo zákazníkovi zavolá. O tom, co udělal pořídí záznam do komunikační hstorie.</p>
+<p>V tomto návrhu neřešíme urgenci zaplacení objednávek, ke kterým nedorazili balíky. Je to z důvodu optimalizace nákladů na kontakt se zákazníkem.</p>
+<p>Nabízí se, aby systém automaticky generoval několik upomínek k zaplacení sám. Teprve poté žádal pracovníka podpory, co dál. V této verzi nebudem implementovat.</p>
+<p>Pracovník podpory otevře stránku <a href="../screens/#S-10">S-10 pro hledání objednávek</a>. Zde hledání omezí následovně:</p>
+<ul>
+<li>Zaškrtne pole "Vybrat pouze objednávky, kde platba ...". Do následujícího pole napíše 10.</li>
+<li>Zaškrtne pole "Vybrat objednávky, ke kterým dorazil aspoň jeden balík".</li>
+<li>V poli stav objenávky vybere hodnotu "Nezaplacená".</li>
+<li>Stiskne tlačítko "Hledat"</li>
+</ul>
+<p>Tím se mu zobrazí více než 10 dní nezaplacené objednávky, ke kterým dorazil balík. Pracovník podpory bude po jedné procházet nalezené objednávky. Po kliknutí na kód objednávky se zobrazí stránka <a href="../screens/#S-04">S-04 s detaily objednávky</a>. Zde se podívá do komunikační historie se zákazníkem. Pak podle úvahy nebo připraveného scénáře osloví zákazníka a domluví s ním řešení nezaplacené služby.</p>
+<p>Toto řešení je jednoduché na výrobu, ale při větším množství nezaplacených balíků bude příliš pracné a nepřehledné. U vyhledaných objednávek nebude na první pohled zřejmé, v jakém stavu je komunkace. Toto se obvykle řeší samostatným procesem.</p>
 <h2 id="uc-45-reseni-preplacenych-objednavek"><a name="UC-45"></a>UC-45 - Řešení přeplacených objednávek</h2>
 <p><strong>TODO</strong></p>
 <h2 id="uc-45-reseni-zaplacenych-objednavek-ke-ketrym-nedorazil-balik"><a name="UC-45"></a>UC-45 - Řešení zaplacených objednávek, ke ketrým nedorazil balík</h2>
@@ -701,6 +712,7 @@ Tento UC by měl zůstat samostatný, protože ho půjde snadno automatizovat.</
 <h2 id="uc-43-storno-objednavky"><a name="UC-43"></a>UC-43 - Storno objednávky</h2>
 <p>Zákazník může napsat nebo zavolat a pokusit se zrušit objednávku. V tomto případě pracovník podpory vyhledá objednávku v systému a pokud to je možné, tak provede storno objednávky. Balík se vrátí na  adresu odesilatele. Po stisku storna objednávky se automaticky pošle <a href="../templates/#T-04">T-04 dobropis</a> na emailovou adresu odesilatele. Pracovník podpory pak musí jít a ručně poslat zákazníkovi příslušný obnos. Objednávku lze zrušit pokud balík není na cestě k adresátovi.</p>
 <h2 id="uc-47-vystaveni-dobropisu"><a name="UC-47"></a>UC-47 - Vystaveni dobropisu</h2>
+<p>V něktrých případech bude pořeba zákazníkovi "vrátit" peníze, které nám předtím poslal. Například, pokud se zákazník rozhodne od slouvy odstoupit. V těchto případech mu musíme vystavit dobropis provézt platbu zpět. Pracovník podpory vyhledá objednávky a zobrazí si <a href="..screens/#S-04">S-04 její detail</a>. Pak stiskne tlačítko vystavit dobropis.</p>
 <h2 id="uc-49-reklamace"><a name="UC-49"></a>UC-49 - Reklamace</h2>
 <h2 id="uc-50-reseni-chybove-fronty"><a name="UC-50"></a>UC-50 - Řešení chybové fronty</h2>
 <p>Balíky v chybové frontě jsou neuspořádané. Některé mají nalepný interní kód některé ne. O každém balíku v chybové frontě je v systému záznam. Zde se pracovník podpory bude snažit najít pro balíky nějaké řešení. Řešení něktrých druhů chyb:</p>
