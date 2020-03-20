@@ -38,6 +38,16 @@ Do pole hledat, pujde zadat část libovolné adresy, kód balíku, telefon zák
 
 ## <a name="S-04"></a>S-04 - Detail objednávky
 
+Obrazovka obsahuje několik samostatných sekcí:
+
+* Obecné infromace o objednávce
+* Platby
+* Kontaktní historie
+* Historie stavů
+* Daňové doklady
+
+Stránku může být rozdělená pomocí záložek na více.
+
 ![Detail objednávky](./imgs/s-04-order-details.png "Detail objednávky")
 
 ## <a name="S-041"></a>S-041 - Potvrzení odpárování platby
@@ -45,6 +55,10 @@ Do pole hledat, pujde zadat část libovolné adresy, kód balíku, telefon zák
 Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-order-details.png "Detail objednávky") stiskne odpárovat, tak se mu zobrazí potvrzovací dialog:
 
 ![Potvrzení odpárování platby](./imgs/s-04-order-details-confirm.png "Potvrzení odpárování platby")
+
+## <a name="S-045"></a>S-045 - Vystavení dobropisu
+
+![Vystavení dobropisu](./imgs/s-045.png "Vystavení dobropisu")
 
 ## <a name="S-05"></a>S-05 - Detail balíku
 
@@ -83,8 +97,17 @@ Po potvrzení "Spárovat" nebo "Cancel" se uživatel vrací na stránku v výpis
 Objednávky lze filtrovat podle:
 
 * Textu v adresách
+* V emailech
 * Minimální a maximální ceny objednávky
 * Stavu objednávky -  zde půjde hledat pouze nezaplacené objednávky. Ve seznamu stavů bude možnost hledat objednávky v libovolném stavu.
+
+## <a name="S-011"></a>S-011 - Hledání objednávek podle plateb
+
+Obrazovka pro hledání chybových stavů u plateb. Například:
+
+* Objednávek, kde zákazník po zaplacení poslal platbu podruhé.
+
+![Hledání objednávek podle plateb](./imgs/s-011.png "Hledání objednávek podle plateb")
 
 ## <a name="S-11"></a>S-11 - Spárovat objednávku s platbou
 
