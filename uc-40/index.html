@@ -336,8 +336,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-45-reseni-zaplacenych-objednavek-ke-ketrym-nedorazil-balik" class="md-nav__link">
-    UC-45 - Řešení zaplacených objednávek, ke ketrým nedorazil balík
+  <a href="#uc-45-reseni-zaplacenych-objednavek-ke-kterym-nedorazil-balik" class="md-nav__link">
+    UC-45 - Řešení zaplacených objednávek, ke kterým nedorazil balík
   </a>
   
 </li>
@@ -351,7 +351,7 @@
       
         <li class="md-nav__item">
   <a href="#uc-47-vystaveni-dobropisu" class="md-nav__link">
-    UC-47 - Vystaveni dobropisu
+    UC-47 - Vystavení dobropisu
   </a>
   
 </li>
@@ -581,8 +581,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-45-reseni-zaplacenych-objednavek-ke-ketrym-nedorazil-balik" class="md-nav__link">
-    UC-45 - Řešení zaplacených objednávek, ke ketrým nedorazil balík
+  <a href="#uc-45-reseni-zaplacenych-objednavek-ke-kterym-nedorazil-balik" class="md-nav__link">
+    UC-45 - Řešení zaplacených objednávek, ke kterým nedorazil balík
   </a>
   
 </li>
@@ -596,7 +596,7 @@
       
         <li class="md-nav__item">
   <a href="#uc-47-vystaveni-dobropisu" class="md-nav__link">
-    UC-47 - Vystaveni dobropisu
+    UC-47 - Vystavení dobropisu
   </a>
   
 </li>
@@ -654,6 +654,7 @@
                 
                 
                 <h1 id="podpora-prace-s-objednavkou-a-balikem">Podpora - práce s objednávkou a balíkem</h1>
+<p><strong>TODO - Posun objednavek mezi stavy.</strong></p>
 <p><strong>TODO - Finance dat do zamostatne sekvence 400, baliky 500 ...</strong></p>
 <p><strong>TODO - Obecne pridat informace auditniho logu k dotcenym UC.</strong></p>
 <p><strong>TODO - Asi bychom meli mit moznost zakaznikovy z objednavky poslat dodatecnou fakturu, napriklad  za likvidaci baliku, slozite prebalovani, .... Plyne z toho, ze zakaznika, potrebujem evidovat jako samostatnou entitu? Asi ano.</strong></p>
@@ -706,13 +707,29 @@ Tento UC by měl zůstat samostatný, protože ho půjde snadno automatizovat.</
 <p>Tím se mu zobrazí více než 10 dní nezaplacené objednávky, ke kterým dorazil balík. Pracovník podpory bude po jedné procházet nalezené objednávky. Po kliknutí na kód objednávky se zobrazí stránka <a href="../screens/#S-04">S-04 s detaily objednávky</a>. Zde se podívá do komunikační historie se zákazníkem. Pak podle úvahy nebo připraveného scénáře osloví zákazníka a domluví s ním řešení nezaplacené služby.</p>
 <p>Toto řešení je jednoduché na výrobu, ale při větším množství nezaplacených balíků bude příliš pracné a nepřehledné. U vyhledaných objednávek nebude na první pohled zřejmé, v jakém stavu je komunkace. Toto se obvykle řeší samostatným procesem.</p>
 <h2 id="uc-45-reseni-preplacenych-objednavek"><a name="UC-45"></a>UC-45 - Řešení přeplacených objednávek</h2>
-<p><strong>TODO</strong></p>
-<h2 id="uc-45-reseni-zaplacenych-objednavek-ke-ketrym-nedorazil-balik"><a name="UC-45"></a>UC-45 - Řešení zaplacených objednávek, ke ketrým nedorazil balík</h2>
-<p><strong>TODO</strong></p>
+<p>Pracovník potřebuje vyhledat: </p>
+<ul>
+<li>Objednávky, ke kterým přišla platba ve zvoleném období.</li>
+<li>Platba přišla po tom, co byla objednávka naposledy posunuta do stavu "Doručovaná". Tedy jsme už žádnou platbu nečekali.</li>
+</ul>
+<p>Pracovník si z hlavní obrazovky otevře stránku <a href="../screens/#S-011">S-011 hledání objednávky podle platby</a>. Zde vybere potřebná omezení a stiskne "Hledat". Případné nalezené objednávky musí pracovník podpory jednu po druhé otevírat a domluvou se zákazníkem řešit dál. Například vystavením dobropisu.</p>
+<p>Protože budou v systému zadané i odchozí platby na účet zákazníka pracovník ze uvidí i stav, kdy odeslal zákazníkovi platbu zpět po tom, co byla objednávka zaplacená.</p>
+<h2 id="uc-45-reseni-zaplacenych-objednavek-ke-kterym-nedorazil-balik"><a name="UC-45"></a>UC-45 - Řešení zaplacených objednávek, ke kterým nedorazil balík</h2>
+<p>Pracovník podpory bude postupovat následovně:</p>
+<ul>
+<li>Z hlavního rozcestníku otevře <a href="../screens/#S-10">S-10 stránku pro hledání objednávek</a>. </li>
+<li>Zde ověří, že je odšktnuté pole "Vybrat objednávky, ke kterým dorazil aspoň jeden balík."</li>
+<li>Nastaví stav objednávky na "Doručovaná"</li>
+<li>Stiskne "vyhledat".</li>
+</ul>
+<p>Pracovník začne otevírat detaily jednotlivých objednávek. Zkontroluje kontaktní historii. Pokud zde není záznám o tom, že jsme zákazníka v této věci kontaktovali, pak napíše email s dotazem, jak má postupovat. Pokud už nějaká komunikace proběhla, pak musí postupovat podle úvahy.</p>
 <h2 id="uc-43-storno-objednavky"><a name="UC-43"></a>UC-43 - Storno objednávky</h2>
 <p>Zákazník může napsat nebo zavolat a pokusit se zrušit objednávku. V tomto případě pracovník podpory vyhledá objednávku v systému a pokud to je možné, tak provede storno objednávky. Balík se vrátí na  adresu odesilatele. Po stisku storna objednávky se automaticky pošle <a href="../templates/#T-04">T-04 dobropis</a> na emailovou adresu odesilatele. Pracovník podpory pak musí jít a ručně poslat zákazníkovi příslušný obnos. Objednávku lze zrušit pokud balík není na cestě k adresátovi.</p>
-<h2 id="uc-47-vystaveni-dobropisu"><a name="UC-47"></a>UC-47 - Vystaveni dobropisu</h2>
-<p>V něktrých případech bude pořeba zákazníkovi "vrátit" peníze, které nám předtím poslal. Například, pokud se zákazník rozhodne od slouvy odstoupit. V těchto případech mu musíme vystavit dobropis provézt platbu zpět. Pracovník podpory vyhledá objednávky a zobrazí si <a href="..screens/#S-04">S-04 její detail</a>. Pak stiskne tlačítko vystavit dobropis.</p>
+<p><strong>TODO co s balikem - poslat zpet, znicit, dobropis, </strong> </p>
+<h2 id="uc-47-vystaveni-dobropisu"><a name="UC-47"></a>UC-47 - Vystavení dobropisu</h2>
+<p>V něktrých případech bude pořeba zákazníkovi "vrátit" peníze, které nám předtím poslal. Například, pokud se zákazník rozhodne od slouvy odstoupit musíme vystavit dobropis a provézt platbu zpět. To se provede následovně:</p>
+<p>Pracovník podpory vyhledá objednávku a zobrazí si <a href="../screens/#S-04">S-04 její detail</a>. Stiskne tlačítko vystavit dobropis a zobrazí se mu stránka <a href="../screens/#S-045">S-045 pro vystavení dobropisu</a>. Po vyplnění částky, a potvrzení formuláře se dobropis vytvoří a uloží mezi daňové dokumenty objednávky. Zároveň se opět zobrazí stránka s detailem objednávky <a href="../screens/#S-04">S-04</a>, kde už bude dobropis připravený.</p>
+<p>Dobropis se automaticky zákazníkovi neodesílá. Pracovník musí napsat průvodní email, stáhnout dobropis přiložit ho k emailu. Poté jít do internetového bankovnictví a peníze zákazníkovi poslat. </p>
 <h2 id="uc-49-reklamace"><a name="UC-49"></a>UC-49 - Reklamace</h2>
 <h2 id="uc-50-reseni-chybove-fronty"><a name="UC-50"></a>UC-50 - Řešení chybové fronty</h2>
 <p>Balíky v chybové frontě jsou neuspořádané. Některé mají nalepný interní kód některé ne. O každém balíku v chybové frontě je v systému záznam. Zde se pracovník podpory bude snažit najít pro balíky nějaké řešení. Řešení něktrých druhů chyb:</p>
