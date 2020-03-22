@@ -238,8 +238,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-40/" title="UC-40 - UC-59" class="md-nav__link">
-      UC-40 - UC-59
+    <a href="../uc-40/" title="UC-40 - UC-49" class="md-nav__link">
+      UC-40 - UC-49
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uc-50/" title="UC-50 - UC-59" class="md-nav__link">
+      UC-50 - UC-59
     </a>
   </li>
 
@@ -375,6 +387,13 @@
         <li class="md-nav__item">
   <a href="#navrh-architektury-applikace" class="md-nav__link">
     Návrh architektury applikace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditni-log" class="md-nav__link">
+    Auditní log
   </a>
   
 </li>
@@ -516,6 +535,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#auditni-log" class="md-nav__link">
+    Auditní log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#zajimave-odkazy" class="md-nav__link">
     Zajímavé odkazy
   </a>
@@ -542,6 +568,11 @@
                 <h1 id="architektura">Architektura</h1>
 <p>Technický návrh systému.</p>
 <p>Nebude možné zde popsat všechny aspekty řešení. Prot jsou zde popsáný pouze části, které mají dopad na UC.</p>
+<p>Několik pravidel:</p>
+<ul>
+<li>Při založení objednávky musí vzniknout instance balíku. Na ní je uložen kód balíku.</li>
+<li>Balík, který se při přijetí nepodaří spojit s objednávkou, nemusí mít kód balíku.</li>
+</ul>
 <h2 id="kod-baliku">Kód balíku</h2>
 <p>Kód balíku musí splňovat několik vlastností:</p>
 <ul>
@@ -582,6 +613,18 @@
 <p><img alt="Test" src="../diagrams/out/arch-05.png" title="Test" /></p>
 <h2 id="navrh-architektury-applikace">Návrh architektury applikace</h2>
 <p>Z počátku nepotřebujem nic speciálního. Pouze při realizací dávat pozor, že finální UC se mohou lišit od návrhů. Například implementace napojení na konkrétního dopravce může ovlivnost způsob zpracování fronty dopravce. Například požadavek na validaci adresy ze strany dopravce může vést k tomu, že při přijetí balíku a po jeho spárování s objednávkou se musí přidat validace adresy.</p>
+<h2 id="auditni-log">Auditní log</h2>
+<p>Systém nebude bezpečný. Bude možné vystavit fakturu zákazníkovy, změnit doručovací adaresu a podobné bez obvyklých kontrol. Z těchto důvodů budou změny ukládány do speciálního auditního logu. Log nebude systémem dále využíván. Pro kontrolu by nad ním měl být vybudovaný nějaký jednoduchý BI systém. Auditní log by měl být textový soubor, kde jednotlivé řádky budou představovat jednotlivé události. Událost se bude skládat z několika vhodně oddělenými poli v následujícím poředí:</p>
+<ul>
+<li>Datum a čas vzniku události.</li>
+<li>Kdo událost vyvolal. Zde bude systém, nebo jméno konkrétního uživatele.</li>
+<li>V jakém UC byla událost vyvolaná.</li>
+<li>O jaký druh entity se jedná.</li>
+<li>Identifikace měněné entity.</li>
+<li>Popis změny. Například když pracovník změní doručovací adresu, pak by zde měla být nová adresa.</li>
+<li>Jakékoliv další informace, které později můžou pomoct.</li>
+</ul>
+<p>Auditní log by se měl z bezpečnostních důvodů uládat jinam než provozní logy.</p>
 <h2 id="zajimave-odkazy">Zajímavé odkazy</h2>
 <p>Další informace jsou na:</p>
 <ul>
