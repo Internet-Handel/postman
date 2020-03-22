@@ -3,6 +3,8 @@
 ## Otevřené otázky
 
 * Jaký čárový kód tisknem na balíky? Je to EAN-13?
+* Je povinnost posílat dobropis, v případě, že zákazník zruší objednávku, ale ještě neposlal penize?
+
 
 ## 07.03.2020
 

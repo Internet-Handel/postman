@@ -101,6 +101,7 @@ object measures {
     šířka: numeric(6,2)
     hloubka: numeric(6,2)
     váha: numeric(6,2)
+    čas měření: date
 }
 
 object "Balík" as pckg
@@ -126,5 +127,6 @@ pckg o--> pckgState
 pckg --> internalLabel
 emplyee --> role
 payment --> "0..1" order
+measures o--> pckg
 
 @enduml

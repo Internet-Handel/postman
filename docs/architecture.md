@@ -4,6 +4,11 @@ Technický návrh systému.
 
 Nebude možné zde popsat všechny aspekty řešení. Prot jsou zde popsáný pouze části, které mají dopad na UC.
 
+Několik pravidel:
+
+* Při založení objednávky musí vzniknout instance balíku. Na ní je uložen kód balíku.
+* Balík, který se při přijetí nepodaří spojit s objednávkou, nemusí mít kód balíku.
+
 ## Kód balíku
 
 Kód balíku musí splňovat několik vlastností:
@@ -56,8 +61,20 @@ Potřebujeme mít někde uloženou objednávku, tak jak jí zadal zákazník?
 ![Test](./diagrams/out/arch-05.png "Test")
 
 ## Návrh architektury applikace
-
 Z počátku nepotřebujem nic speciálního. Pouze při realizací dávat pozor, že finální UC se mohou lišit od návrhů. Například implementace napojení na konkrétního dopravce může ovlivnost způsob zpracování fronty dopravce. Například požadavek na validaci adresy ze strany dopravce může vést k tomu, že při přijetí balíku a po jeho spárování s objednávkou se musí přidat validace adresy.
+
+## Auditní log
+Systém nebude bezpečný. Bude možné vystavit fakturu zákazníkovy, změnit doručovací adaresu a podobné bez obvyklých kontrol. Z těchto důvodů budou změny ukládány do speciálního auditního logu. Log nebude systémem dále využíván. Pro kontrolu by nad ním měl být vybudovaný nějaký jednoduchý BI systém. Auditní log by měl být textový soubor, kde jednotlivé řádky budou představovat jednotlivé události. Událost se bude skládat z několika vhodně oddělenými poli v následujícím poředí:
+
+* Datum a čas vzniku události.
+* Kdo událost vyvolal. Zde bude systém, nebo jméno konkrétního uživatele.
+* V jakém UC byla událost vyvolaná.
+* O jaký druh entity se jedná.
+* Identifikace měněné entity.
+* Popis změny. Například když pracovník změní doručovací adresu, pak by zde měla být nová adresa.
+* Jakékoliv další informace, které později můžou pomoct.
+
+Auditní log by se měl z bezpečnostních důvodů uládat jinam než provozní logy.
 
 ## Zajímavé odkazy
 Další informace jsou na:

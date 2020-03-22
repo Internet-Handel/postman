@@ -46,9 +46,11 @@ Obrazovka obsahuje několik samostatných sekcí:
 * Historie stavů
 * Daňové doklady
 
-Stránku může být rozdělená pomocí záložek na více.
+Stránku může být rozdělená pomocí záložek na více. Pokud odkaz na detail balíku není aktivní znamená to, že balík fyzicky nemáme a ani jsme neměli.
 
 ![Detail objednávky](./imgs/s-04-order-details.png "Detail objednávky")
+
+Detaily záznamů kontaktní historie na této stránce nejsou vidět. Pro ně by měla vzniknout nová stránka s jejich seznamem a zde pribýt odkaz na ní.
 
 ## <a name="S-041"></a>S-041 - Potvrzení odpárování platby
 
@@ -56,13 +58,21 @@ Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-orde
 
 ![Potvrzení odpárování platby](./imgs/s-04-order-details-confirm.png "Potvrzení odpárování platby")
 
-## <a name="S-045"></a>S-045 - Vystavení dobropisu
+## <a name="S-045"></a>S-045 - Vystavit dobropis
 
-![Vystavení dobropisu](./imgs/s-045.png "Vystavení dobropisu")
+![Vystavit dobropis](./imgs/s-045.png "Vystavit dobropis")
+
+## <a name="S-046"></a>S-046 - Vystavit fakturu
+
+![Vystavit fakturu](./imgs/s-046.png "Vystavit fakturu")
+
+## <a name="S-047"></a>S-047 - Vytvořit záznam do komunikační historie
+
+![Vytvořit záznam do komunikační historie](./imgs/s-047.png "Vytvořit záznam do komunikační historie")
 
 ## <a name="S-05"></a>S-05 - Detail balíku
 
-![Detail balíku](./imgs/s5-package-detail.png "Detail balíku")
+![Detail balíku](./imgs/s05-package-detail.png "Detail balíku")
 
 Může být součástí stránky [S-04 Detail objednávky](./#S-04)
 
