@@ -4,6 +4,7 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |-----------------|
+| 23.03.2020 |Doplněn UC změna doručovací adresy.|
 | 22.03.2020 |UC pracovníka podpory jsou rozděleny na logické celky. Pro teď jsou platební UC všechny. UC správně očíslovány. Přidán auditní log do architektury.|
 | 20.03.2020 |Dokončen UC na vystavení dobropisu, řešení storna a přeplacených objednávek.|
 | 19.03.2020 |Review platebních UC. Vylepšení UC pro urgování nezaplacených objednávek.|

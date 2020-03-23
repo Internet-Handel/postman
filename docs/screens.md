@@ -76,6 +76,12 @@ Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-orde
 
 Může být součástí stránky [S-04 Detail objednávky](./#S-04)
 
+## <a name="S-051"></a>S-051 - Změna doručovací adresy
+
+![Změna doručovací adresy](./imgs/s-051.png "Změna doručovací adresy")
+
+Může být součástí stránky [S-04 Detail objednávky](./#S-04)
+
 ## <a name="S-06"></a>S-06 - Přehled plateb
 
 ![Platby](./imgs/s-06-payments.png "Platby")
