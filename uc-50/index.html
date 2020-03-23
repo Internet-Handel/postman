@@ -341,6 +341,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-59-overeni-identity-zakaznika" class="md-nav__link">
+    UC-59 - Ověření identity zákazníka
+  </a>
+  
+</li>
+      
       
       
       
@@ -524,6 +531,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-59-overeni-identity-zakaznika" class="md-nav__link">
+    UC-59 - Ověření identity zákazníka
+  </a>
+  
+</li>
+      
       
       
       
@@ -544,16 +558,14 @@
                 <h1 id="podpora-prace-s-objednavkou-a-balikem">Podpora - práce s objednávkou a balíkem</h1>
 <p><strong>TODO - Nesedi číslování UC, nakonci upravit.</strong></p>
 <p><strong>TODO - Posun objednavek mezi stavy.</strong></p>
-<p><strong>TODO - Obecne pridat informace auditniho logu k dotcenym UC.</strong></p>
-<p><strong>TODO - Asi bychom meli mit moznost zakaznikovy z objednavky poslat dodatecnou fakturu, napriklad  za likvidaci baliku, slozite prebalovani, .... Plyne z toho, ze zakaznika, potrebujem evidovat jako samostatnou entitu? Asi ano.</strong></p>
 <p><strong>TODO UC-44 jak zaznamenat, že zákazník chce vrátit balík?</strong></p>
 <p><strong>TODO UC-44 jak zaznamenat, že zákazník chce zlikvidovat balík?</strong></p>
 <p><strong>TODO UC-44 Přidat scénař odeslat na libovolnou adresu. Klient to může chtít?</strong></p>
-<p><strong>TODO - nevadí to? - Návrh neřeší situaci, kdy zákazník pošle platbu na objednávku, kterou už máme uzavřenou. Máme na to myslet?</strong></p>
 <p><strong>TODO - Zahrnout pripad, kdy zakaznik zrusi objednavku, ale mi nevime, ze poslal penize, protoze jsou na ceste.</strong></p>
 <p>Každý balík má svůj kód. Kod je nezávislí na objednávce. Kód balíku je to, co zádáme zákaníka, aby napsal na balík. Pokud bude v objednávce víc balíků, pak každý balík bude mít svůj kůd.</p>
 <p>V komunikační historii nebude možné záznamy mazat ani upravovat. Záznamy půjde pouze přidávat. Z historie stavů objednávky a balíku bude možné zrekonstruovat celý proces zpracování objednávky a balíku.</p>
 <p>Komunikační historie je pouhý textový záznam, informace není nijak strukturovaná.</p>
+<p>Při komunika se zákazníkem, musíme ověřit, že se skutečně bavíme s konkrétním zákazníkem. V případě emailové komunikace musí sedět odchozí adresa email s tou, která je na objednávce. V případě telefonické komunikace se můžem optat na kód balíku.</p>
 <h2 id="uc-50-storno-objednavky"><a name="UC-50"></a>UC-50 - Storno objednávky</h2>
 <p>Zákazník může napsat nebo zavolat a pokusit se zrušit objednávku. V tomto případě pracovník podpory postupuje následovně:</p>
 <ol>
@@ -563,7 +575,7 @@
 <li>Zde zvolí "Odeslat na zpáteční adresu". Po tom systém změní doručování na doručování zpět. V tomto případě se nekontroluje jestli byla objednávka zaplacena. Balík půjde do fronty dopravce.</li>
 <li>Pracovník podpory se pomocí odkazu "Detail objednávky" vrátí na <a href="../screens/#S-04">S-04</a>.</li>
 <li>Pokud již byla částka za dopravu uhrazena, byla zaplaceno, pak musí pracovník <a href="../uc-40/#UC-46">vystavit dobropis a poslat peníze zpět UC-46</a>.</li>
-<li>Nakonec o všem pořídí záznam do komunikační historie <a href="../uc-50/#UC-58">UC-58</a>. </li>
+<li>Nakonec o všem pořídí záznam do kontaktní historie <a href="../uc-50/#UC-58">UC-58</a>. </li>
 </ol>
 <p>Pokud tlačítko "Odeslat na zpáteční adresu" nebude dostupné, pak to znamená, že balík nelze 
 Tlačítko Objednávku lze zrušit pokud balík není na cestě k adresátovi. </p>
@@ -572,8 +584,20 @@ Tlačítko Objednávku lze zrušit pokud balík není na cestě k adresátovi. <
 <p>Nakonec je potřeba zrušit balík. Pracovník z obrazovky <a href="../screens/#S-04">S-04 s detail objednávky</a>
 otevře odkaz na detail balíku. Pokud je balík ve stavu, že to je možné je dostupné tlačítko "Odeslat na zpáteční adresu". Po jesho stisknutí se bulík posune k odeslání na zpáteční adresu.</p>
 <h2 id="uc-51-zmena-dorucovaci-adresy"><a name="UC-51"></a>UC-51 - Změna doručovací adresy</h2>
-<p>V některých situacích bude třeba změnit doručovací adresu. </p>
-<p><strong> TODO - Nejsnažší je upravit doručovací adresu. Přidat její editaci.</strong></p>
+<p>Zákazník kontaktuje pracovníka podpory se žádostí o změnu doručovací adresy. Pracovník bude postupovat následovně:</p>
+<ol>
+<li>Pracovník ověří identitu zákazníka <a href="../uc-50/#UC-59">UC-59</a>.</li>
+<li>V systému vyhledá a zobrazí <a href="../screens/#S-04">detail hledané objednávky S-04</a>.</li>
+<li>Pokud je objednávka ve stavu "Ukončená", pak nelze adresu měnit.</li>
+<li>Na detailu objednávky pracovník vybere "Detail balíku" a přejde na <a href="../screens/#S-05">S-05</a>.</li>
+<li>Pokud je balík ve stavu nebo "Doručeno", pak nelze zmenu adresy provést. Pokud je ve stavu "Na cestě" pak je třeba ověřit, jestli je možné doručovací adresu měnit. To muže znamenat nahlédnutí do systému dopravce nebo telefonické ověření.</li>
+<li>Na detailu balíku zvolí "Upravit doručovací adresu" a zobrazí se mu stránka <a href="../screens/#S-051">S-051 na změnu doručovací adresy</a>. Ve formuláři bude vyplněná stávající doručovací adresa.</li>
+<li>Pracovník podpory provede vlastní úpravu a stiskne tlačítko "Uložit". Systém zobrazí <a href="../screens/#S-05">detail balíku S-05</a>, kde již bude upravená doručovací adresa.</li>
+<li>Pokud při úpravě došlo ke změně ceny dopravy, pak pracovník musí znovu vystavit fakturu.</li>
+<li>Pokud již byla objednávka zaplacená, pak pracovník musí zakázku přesunout do stavu nezaplacená. </li>
+<li>O události pořídí záznam do kontaktní historie <a href="../uc-50/#UC-58">UC-58</a>.</li>
+</ol>
+<p><strong>TODO - Změna doručovací adresy může znamenat změnu fronty, kde se to stane?</strong> </p>
 <h2 id="uc-52-sparovani-dvou-baliku"><a name="UC-52"></a>UC-52 - Spárování dvou balíků</h2>
 <p>V případě, že zákazník neuvede kód balíku nebo se při dopravě kód poškodí a nepodaří se napárovat balík na objednávku, pak bude třeba toto párování provézt ručně.</p>
 <h2 id="uc-53-oznaceni-objednavky-za-zaplacenou"><a name="UC-53"></a>UC-53 - Označení objednávky za zaplacenou</h2>
@@ -610,6 +634,8 @@ otevře odkaz na detail balíku. Pokud je balík ve stavu, že to je možné je 
 <li>Potvrdí tlačítkem "Vytvořit záznam" a systém pracovníka vrátí na stránku s detailem objednávky.</li>
 </ol>
 <p>V kontaktní histori je nově přidaný záznam. Jako autor je uvedený přihlášený uživatel.</p>
+<h2 id="uc-59-overeni-identity-zakaznika"><a name="UC-59"></a>UC-59 - Ověření identity zákazníka</h2>
+<p>Zákazník kontaktuje pracovníka podpory. Může použít email nebo zavolat na telefonní číslo podpory. </p>
                 
                   
                 
