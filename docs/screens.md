@@ -82,6 +82,14 @@ Může být součástí stránky [S-04 Detail objednávky](./#S-04)
 
 Může být součástí stránky [S-04 Detail objednávky](./#S-04)
 
+## <a name="S-052"></a>S-052 - Připojit balík
+
+![Připojit balík](./imgs/s-052.png "Připojit balík")
+
+## <a name="S-053"></a>S-053 - Poškození balíku
+
+![Poškození balíku](./imgs/s-053.png "Poškození balíku")
+
 ## <a name="S-06"></a>S-06 - Přehled plateb
 
 ![Platby](./imgs/s-06-payments.png "Platby")

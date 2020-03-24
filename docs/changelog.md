@@ -4,6 +4,7 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |-----------------|
+| 24.03.2020 |Doplněno párování balíků a začátek řešení poškozených balíků.|
 | 23.03.2020 |Doplněn UC změna doručovací adresy.|
 | 22.03.2020 |UC pracovníka podpory jsou rozděleny na logické celky. Pro teď jsou platební UC všechny. UC správně očíslovány. Přidán auditní log do architektury.|
 | 20.03.2020 |Dokončen UC na vystavení dobropisu, řešení storna a přeplacených objednávek.|
@@ -17,6 +18,6 @@ Tady budem evidovat změny v dokumentaci
 | 08.03.2020 |Doplněny UC pro správu uživatelů. Seznam hlavních změn, co je třaba udělat je na začátky všech kapitol.|
 | 07.03.2020 |Přidaný detail objednávky a detail balíku|
 | 06.03.2020 |Pokračování v UC-34 - Párování plateb a s tím spojených obrazovek|
-| 05.03.2020 | Usecases pro pracovníka supportu. Updatnutý popis jak přispívat do dokumentace. Přidaná sekce obrazovky. Přidané obrazovky |
-| 04.03.2020 | Process zpracování balíku |
+| 05.03.2020 |Usecases pro pracovníka supportu. Updatnutý popis jak přispívat do dokumentace. Přidaná sekce obrazovky. Přidané obrazovky |
+| 04.03.2020 |Process zpracování balíku |
 
