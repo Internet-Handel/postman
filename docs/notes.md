@@ -5,8 +5,9 @@
 * Jaký čárový kód tisknem na balíky? Je to EAN-13?
 * Je povinnost posílat dobropis, v případě, že zákazník zruší objednávku, ale ještě neposlal penize?
 * Pro oveření identity volajícího zákazníka se můžem optat na kód balíku. Nebo tačí spoléhat na telefonní číslo na objednávce? UC-59.
-* Zrusime tisknuti dorucivaci adresy na interni? V UC-51 se adresa muze zmenit a v pripade nesparovaneho baliku ji nemusime znat.
+* Zrušíme tisknuti doručoivací adresy na interni štítek? V UC-51 se adresa muze zmenit a v pripade nesparovaneho baliku ji nemusime znat.
 * Budem uchovávat původní hodnoty z objednávky? (Cena za dopravu, dorucovaci adresa, adresa odesilatele, ....)
+* Pokud se nepodaří ověřit identitu volajícího zákazníka nebo příchozího emailu. Pak nechávám na domluvě, jak takovou událost pracovník podpory zaznamená k dalšímu posouzení. Řešení by mohla být kontaktní historie nenavázaná na zákazníka.
 
 ## 07.03.2020
 
