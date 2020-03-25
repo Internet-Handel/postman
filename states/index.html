@@ -305,6 +305,39 @@
     Stavy jednotlivých balíků
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stav-ceka-na-zaplaceni" class="md-nav__link">
+    Stav "Čeká na zaplacení"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stav-chyba" class="md-nav__link">
+    Stav "Chyba"
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stav-poskozeny-balik" class="md-nav__link">
+    Stav "Poškozený balík"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -422,6 +455,39 @@
     Stavy jednotlivých balíků
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stav-ceka-na-zaplaceni" class="md-nav__link">
+    Stav "Čeká na zaplacení"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stav-chyba" class="md-nav__link">
+    Stav "Chyba"
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stav-poskozeny-balik" class="md-nav__link">
+    Stav "Poškozený balík"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -449,11 +515,20 @@
 <p><img alt="Stavy objednávky" src="../diagrams/out/states-order.png" title="Stavy objednávky" /></p>
 <p>Podle všeho u objednávky nebudem potřebovat evidovat stavy.</p>
 <h2 id="stavy-jednotlivych-baliku">Stavy jednotlivých balíků</h2>
+<p>U balíků je třeba znát historii všech stavů. To je potřeba pro reklamace a evidenci pohybu balíku. Historii stavů lze později využít pro optimalizaci procesů.</p>
 <p>Balíky během doručování procházejí následujícími stavy:</p>
 <p><img alt="Stavy balíků" src="../diagrams/out/states-package.png" title="Stavy balíků" /></p>
 <p>Balík bude ve stavu "Na cestě" aspoň dvakrát jednou od zákazníka do depa a podruhé z depa k adresátovi. Ze stavu "Na cestě" se může balík dostat do stavu "čeká na zaplacení" a pak do stavu "Chyba". To se stane v případě, že zákazník odmítne balík převzít, nebo se ho nějakého jiného důvodu nepodaří doručit.</p>
-<p>Stavy bude možné rekonstrovat z jiných záznamů. V některých případech to bude nemožné, například to jestli je zaplaceno nelze udělat jako součet přijatých plateb.</p>
-<p>U balíčků je třeba znát historii všech stavů. To je potřeba pro reklamace a evidenci pohybu balíku. Historii stavů lze později využít pro optimalizaci procesů. </p>
+<h3 id="stav-ceka-na-zaplaceni">Stav "Čeká na zaplacení"</h3>
+<p>To, jestli zákazník zaplatil by mohlo byt hodnoceno automaticky. Třeba porovnáním součtu částek daňových dokladů a součtu plateb. Bohužel to takto zjednodušit nelze. Některé daňové doklady nemusí být uhrazeny nebo proplaceny a je to tak v pořádku, stejně tak součet cástek na daňových dokladech nemusí být stejný jako součet plateb a také to může být v pořádku. </p>
+<h3 id="stav-chyba">Stav "Chyba"</h3>
+<p>Je stav, kdy se nastane další problém, na jehož pracování nemáme připravený proces. Například, dopravce vrátí balík jako nedoručitelný.</p>
+<h4 id="stav-poskozeny-balik">Stav "Poškozený balík"</h4>
+<p>Není to samostatný stav, ale případ chybového stavu. Je to druh chyby, kdy dispečer zjistí, že balík je poškozený a je třeba se zákazníkum domluvit další postup.</p>
+<p>Stav, kdy je bal9k ve frontě, může znamenat některou z následujících událostí.</p>
+<p><img alt="Stavy balíků" src="../diagrams/out/states-package-2.png" title="Stavy balíků" /></p>
+<p><strong>TODO - Domalovat koncove stavy - doruceno, likvidace ....</strong></p>
+<p><strong>TODO - Doplnit, jak se řeši měření, budu potřebovat záznam o přijetí? Tisk štítku. je sakce.</strong></p>
                 
                   
                 

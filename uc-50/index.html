@@ -328,8 +328,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-57-reseni-nasparovaneho-baliku" class="md-nav__link">
-    UC-57 - Řešení naspárovaného balíku
+  <a href="#uc-57-nic" class="md-nav__link">
+    UC-57 - Nic
   </a>
   
 </li>
@@ -525,8 +525,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-57-reseni-nasparovaneho-baliku" class="md-nav__link">
-    UC-57 - Řešení naspárovaného balíku
+  <a href="#uc-57-nic" class="md-nav__link">
+    UC-57 - Nic
   </a>
   
 </li>
@@ -572,14 +572,11 @@
                 <h1 id="podpora-prace-s-objednavkou-a-balikem">Podpora - práce s objednávkou a balíkem</h1>
 <p><strong>TODO - Nesedi číslování UC, nakonci upravit.</strong></p>
 <p><strong>TODO - Posun objednavek mezi stavy.</strong></p>
-<p><strong>TODO UC-44 jak zaznamenat, že zákazník chce vrátit balík?</strong></p>
-<p><strong>TODO UC-44 jak zaznamenat, že zákazník chce zlikvidovat balík?</strong></p>
-<p><strong>TODO UC-44 Přidat scénař odeslat na libovolnou adresu. Klient to může chtít?</strong></p>
 <p><strong>TODO - Zahrnout pripad, kdy zakaznik zrusi objednavku, ale mi nevime, ze poslal penize, protoze jsou na ceste.</strong></p>
-<p>Každý balík má svůj kód. Kod je nezávislí na objednávce. Kód balíku je to, co zádáme zákaníka, aby napsal na balík. Pokud bude v objednávce víc balíků, pak každý balík bude mít svůj kůd.</p>
+<p>Každý balík má svůj kód. Kod je nezávislý na objednávce. Zákazníka žádáme, aby ho napsal na balík. Pokud bude v objednávce víc balíků, pak každý balík bude mít svůj kód.</p>
 <p>V komunikační historii nebude možné záznamy mazat ani upravovat. Záznamy půjde pouze přidávat. Z historie stavů objednávky a balíku bude možné zrekonstruovat celý proces zpracování objednávky a balíku.</p>
 <p>Komunikační historie je pouhý textový záznam, informace není nijak strukturovaná.</p>
-<p>Při komunika se zákazníkem, musíme ověřit, že se skutečně bavíme s konkrétním zákazníkem. V případě emailové komunikace musí sedět odchozí adresa email s tou, která je na objednávce. V případě telefonické komunikace se můžem optat na kód balíku.</p>
+<p>Při komunikaci se zákazníkem, musíme ověřit, že se skutečně bavíme s konkrétním zákazníkem. V případě emailové komunikace musí sedět odchozí adresa email s tou, která je na objednávce. V případě telefonické komunikace se zkontrolujem příchozí telefonní číslo. V obou případech můžem zákazníka požádat o kód balíku.</p>
 <h2 id="uc-50-storno-objednavky"><a name="UC-50"></a>UC-50 - Storno objednávky</h2>
 <p>Zákazník může napsat nebo zavolat a pokusit se zrušit objednávku. V tomto případě pracovník podpory postupuje následovně:</p>
 <ol>
@@ -651,11 +648,18 @@
 <li>V ostatních případech pracovník podpory zavolá zákazníkovy a společně se domluví na řešení. O dohodě uloží záznam do historie k objednávce.</li>
 </ul>
 <p>Po tom, co se podaří na řešení co s balíkem domluvit se zákazníkem pracovník podpory se spojí s dispečerem a balík z chybové fronty pošlou dál.</p>
-<p><strong>Reseni baliku po telefonu je hodne divne, ale nevim, jak vyreseit, ze neketer baliky nemaji interni stitek. tady by pomohlo, kdyby kazdy balik, co prijmem dostal interni stitek.</strong></p>
 <p><strong>Detailní řešení jednotlivých chyb těď nebudem řešit.</strong></p>
 <h2 id="uc-56-reseni-poskozeneho-baliku"><a name="UC-56"></a>UC-56 - Řešení poškozeného balíku</h2>
-<h2 id="uc-57-reseni-nasparovaneho-baliku"><a name="UC-57"></a>UC-57 - Řešení naspárovaného balíku</h2>
-<p>na základě emailu nebo telefonátu.</p>
+<p>Pracovník podpory má otevřenou stránku <a href="../screens/#S-05">detailu balíku S-05</a>. V seznamu zázkamu o poškození bude jeden nezpracovaný. Balík je v chybové frontě. Pracovník bude postupovat následovně:</p>
+<ol>
+<li>Klikne na detail záznamu poškození a zobrazí se mu <a href="../screens/#S-053">S-053</a>.</li>
+<li>Pracovník podle fotek a popisu posoudí míru poškození.</li>
+<li>Pokud uzná za vhodné kontaktuje zákazníka a domluví s ním další postup.</li>
+<li>Když pracovník ví jak postupovat, další postup popíše do pole na stránce <a href="../screens/#S-053">S-053</a>.</li>
+<li>Nakonec nastaví stav odpovídající stav u balíku a odešle.</li>
+</ol>
+<p><strong>TODO není poškození stav balíku.</strong></p>
+<h2 id="uc-57-nic"><a name="UC-57"></a>UC-57 - Nic</h2>
 <h2 id="uc-58-pridat-zaznam-do-kontaktni-historie"><a name="UC-58"></a>UC-58 - Přidat záznam do kontaktní historie</h2>
 <p>Předpokládáme, že pracovník podpory je na stránce <a href="../screens/#S-04">S-04 detail objednávky</a>. Pro přidání záznamu do komunikační historie bude postupovat následovně:</p>
 <ol>
@@ -665,9 +669,33 @@
 </ol>
 <p>V kontaktní histori je nově přidaný záznam. Jako autor je uvedený přihlášený uživatel.</p>
 <h2 id="uc-59-overeni-identity-zakaznika"><a name="UC-59"></a>UC-59 - Ověření identity zákazníka</h2>
-<p>Zákazník kontaktuje pracovníka podpory. Může použít email nebo zavolat na telefonní číslo podpory. </p>
+<p>Zákazník kontaktuje pracovníka podpory. Může použít email nebo zavolat na telefonní číslo podpory. V případě telefonického rozhovoru ověří:</p>
+<ol>
+<li>Zákazník uvede kód balíku. Pracovník dohledá, objednávku podle kódu balíku.</li>
+<li>Pokud zákazník nezná kód objednávky, pak zkusíme obědnávku dohledat podle telefonního čísla volajícího.</li>
+<li>Pokud se nepodaří dohledat obědnávku ani jedním způsobem. Pak pracovník na domluvené místo napíše detaily hovoru a s čím potřebuje zákazním pomoct. Později se pokusí dohledat volajícího identitu podle dalších informací z hovoru. V tomto případě neprovede žádné aktivní operace.</li>
+<li>Pracovník na obědnávce ověří, že odpovídá jméno a příjmení. Pokud jedno z toho neodpovídá informacím na objednávce obojí uvede do kontaktní historie.</li>
+<li>Pracovník ověří volající telefonní čílo, pokud neodpovídá telefonímu číslu uvedenému na objednávce, pak telefonní číslo zaznamená do kontaktní historie.</li>
+</ol>
+<p>V tuto chvíl bychom měli mít s jistou mírou pravděpodobnosti ověřeno s kým pracovník podpory mluví. Případě, že zákazník pošle email, postupuje pracovník podobně jako v případě telefonického hovoru, s tím, ze místo telefonního čísla hledá a ověří odchozí emailovou adresu.</p>
+<p>Speciálně v případě emailu není složité identitu podvrhnout.</p>
 <h2 id="uc-60-likvidace-baliku"><a name="UC-60"></a>UC-60 - Likvidace balíku</h2>
-<p>Zákazník kontaktuje pracovníka podpory. Může použít email nebo zavolat na telefonní číslo podpory. </p>
+<p>V několika případech může nastat stav, kdy he třeba balík zlikvidovat. Například v těchto případech:</p>
+<ul>
+<li>Po dohodě se zákazníkem z důvodu poškození nebo rozkladu balíku.</li>
+<li>Po dohodě se zákazníkem z důvodu nezaplacení.</li>
+<li>Po dohodě se zákazníkem po tom, co ho adresát odmítl převzít.</li>
+</ul>
+<p>Při likvidaci bude pracovník podpory postupovat následovně:</p>
+<ol>
+<li>Vyhledá objednávku v systému pomocí <a href="../screens/#S-10">hledání objednávek S-10</a>.</li>
+<li>Zobrazí si <a href="../screens/#S-04">detail hledané objednávky S-04</a>.</li>
+<li>Na detailu objednávky pracovník zvolí "Detail balíku" a přejde na <a href="../screens/#S-05">S-05</a>.</li>
+<li>Se zákazníkem si potvrdí likvidaci balíku, pokud se tak už nestalo a o dohodě udělá záznam do komunikační historie <a href="../uc-50/#UC-58">UC-58</a>. </li>
+<li>Na stránce <a href="../screens/#S-05">detailu balíku S-05</a> stiskne "Zlikvidoat balík".</li>
+<li>Systém převede balík do příslušného stavu a zobrazí stránku s detailem balíku, kde bude vidět změněný stav.</li>
+</ol>
+<p>Až dispečer na balík ve frontě narazí, tak dostane informaci, že balík je určený k likvidaci. Tím je hotovo.</p>
                 
                   
                 

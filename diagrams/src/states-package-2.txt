@@ -1,0 +1,40 @@
+@startuml
+!include color_def.txt
+hide empty description
+
+object "Ve Frontě" as queue
+object queue {
+    jméno: string
+}
+object "Chyba" as error
+object error {
+    jméno: string
+}
+
+object "Poškozený balík" as damage
+object damage {
+    jméno: string
+}
+
+object "Nedoručitelné" as undeliverable
+object undeliverable {
+    jméno: string
+}
+
+object "Čeká na zaplacení" as payment
+object payment {
+    jméno: string
+}
+
+object "Ve frontě dopravce" as waitingForShipping
+object waitingForShipping {
+    jméno: string
+}
+
+queue <|-- error
+error <|-- damage
+error <|-- undeliverable
+queue <|-- payment
+queue <|-- waitingForShipping
+
+@enduml
