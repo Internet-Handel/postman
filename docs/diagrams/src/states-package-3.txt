@@ -1,0 +1,44 @@
+@startuml
+!include color_def.txt
+hide empty description
+
+object "Balík" as pckg
+object pckg {
+    kód interního štítku
+    aktualni stav: pckgState
+}
+
+object "Událost" as event
+object event {
+    datum události: date
+}
+
+object "Měření" as measurement
+object measurement {
+    výška: numeric(6,2)
+    šířka: numeric(6,2)
+    hloubka: numeric(6,2)
+    váha: numeric(6,2)
+}
+
+object "Přebalení" as wrapping
+object wrapping {
+    jak balík vypadal: fotky
+    popis: string
+}
+
+object "Stav balíku" as pckgState
+object pckgState {
+    datum začátku: date
+    datum konce: date
+}
+
+pckg o--> "1..*" pckgState
+
+pckg o--  "1..*" event
+event <|-- measurement
+event <|-- wrapping
+
+
+
+@enduml

@@ -34,7 +34,10 @@ Stav, kdy je bal9k ve frontě, může znamenat některou z následujících udá
 
 ![Stavy balíků](./diagrams/out/states-package-2.png "Stavy balíků")
 
+
 **TODO - Domalovat koncove stavy - doruceno, likvidace ....**
 
 **TODO - Doplnit, jak se řeši měření, budu potřebovat záznam o přijetí? Tisk štítku. je sakce.**
+
+![Stavy balíků](./diagrams/out/states-package-3.png "Stavy balíků")
 
