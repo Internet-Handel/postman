@@ -2,35 +2,66 @@
 !include color_def.txt
 hide empty description
 
+object "Stav balíku" as state
+object state {
+    datum kdy nastal: date
+}
+
+object "Na cestě" as delivering
+object delivering {
+    dopravce : Dopravce
+}
+
+object "Uzavřeno" as closed
+object closed {
+}
+
+object "Doručeno" as delivered
+object delivered {
+}
+
+object "Likvidace" as disposed
+object disposed {
+    kdo má řešit: Oddělení
+}
+
 object "Ve Frontě" as queue
 object queue {
-    jméno: string
+    kde balík je: Fronta
 }
+
 object "Chyba" as error
 object error {
-    jméno: string
+    detailní popis: string
 }
 
 object "Poškozený balík" as damage
 object damage {
-    jméno: string
+    poškození : Poškození
+    kdo má řešit: Oddělení
 }
 
 object "Nedoručitelné" as undeliverable
 object undeliverable {
-    jméno: string
+    kdo má řešit: Oddělení
 }
 
 object "Čeká na zaplacení" as payment
 object payment {
-    jméno: string
 }
 
 object "Ve frontě dopravce" as waitingForShipping
 object waitingForShipping {
-    jméno: string
+    dopravce : Dopravce
 }
 
+state <|-- closed
+closed <|-- delivered
+closed <|-- disposed
+
+state <|-- delivering
+
+state <|-- queue
 queue <|-- error
 error <|-- damage
 error <|-- undeliverable
