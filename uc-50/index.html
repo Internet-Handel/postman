@@ -346,6 +346,26 @@
     UC-59 - Ověření identity zákazníka
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zakaznik-napsal-email" class="md-nav__link">
+    Zákazník napsal email
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zakaznik-zavolal" class="md-nav__link">
+    Zákazník zavolal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -356,15 +376,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-61-zmena-zpatecni-adresy" class="md-nav__link">
-    UC-61 - Změna zpáteční adresy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uc-61-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
-    UC-61 - Rozdělení jednoho balíku na víc
+  <a href="#uc-61-zmena-adresy-odesilatele" class="md-nav__link">
+    UC-61 - Změna adresy odesílatele
   </a>
   
 </li>
@@ -393,6 +406,13 @@
         <li class="md-nav__item">
   <a href="#uc-65-poslat-baliku-na-zpatecni-adresu" class="md-nav__link">
     UC-65 - Poslat balíku na zpáteční adresu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-66-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
+    UC-66 - Rozdělení jednoho balíku na víc
   </a>
   
 </li>
@@ -585,6 +605,26 @@
     UC-59 - Ověření identity zákazníka
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zakaznik-napsal-email" class="md-nav__link">
+    Zákazník napsal email
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zakaznik-zavolal" class="md-nav__link">
+    Zákazník zavolal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -595,15 +635,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-61-zmena-zpatecni-adresy" class="md-nav__link">
-    UC-61 - Změna zpáteční adresy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uc-61-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
-    UC-61 - Rozdělení jednoho balíku na víc
+  <a href="#uc-61-zmena-adresy-odesilatele" class="md-nav__link">
+    UC-61 - Změna adresy odesílatele
   </a>
   
 </li>
@@ -636,6 +669,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-66-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
+    UC-66 - Rozdělení jednoho balíku na víc
+  </a>
+  
+</li>
+      
       
       
       
@@ -654,6 +694,8 @@
                 
                 
                 <h1 id="podpora-prace-s-objednavkou-a-balikem">Podpora - práce s objednávkou a balíkem</h1>
+<p><strong>TODO - Zmeny adresy odesilaci a dorucovani zmenit na jednu,</strong></p>
+<p><strong>TODO - Pridat editaci zbyvajicich udaju na objednevce - telefonu, emailu, ....</strong></p>
 <p><strong>TODO - Nesedi číslování UC, nakonci upravit.</strong></p>
 <p><strong>TODO - Posun objednavek mezi stavy.</strong></p>
 <p><strong>TODO - Zahrnout pripad, kdy zakaznik zrusi objednavku, ale mi nevime, ze poslal penize, protoze jsou na ceste.</strong></p>
@@ -835,16 +877,53 @@
 <li>Hotovo</li>
 </ol>
 <h2 id="uc-59-overeni-identity-zakaznika"><a name="UC-59"></a>UC-59 - Ověření identity zákazníka</h2>
-<p>Zákazník kontaktuje pracovníka podpory. Může použít email nebo zavolat na telefonní číslo podpory. V případě telefonického rozhovoru ověří:</p>
+<p>Zákazník kontaktuje pracovníka podpory. Může použít email nebo zavolat na telefonní číslo podpory. Případné selhání v ověření zákazníka může vést k finančním škodám.</p>
+<h3 id="zakaznik-napsal-email">Zákazník napsal email</h3>
+<p>Předpoklady:</p>
+<ul>
+<li>
+<p>Zákazník napsal email.</p>
+</li>
+<li>
+<p>Pracovník zkusí pomocí <a href="../uc-50#UC-63">UC-63</a> dohledat objednávku zákazníka. použije informace z emailu:</p>
+<ul>
+<li>Email odesílatele.</li>
+<li>Jméno a příjmení.</li>
+<li>Uvedený kód balíku.</li>
+</ul>
+</li>
+<li>Pracovník si zobrazí <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
+<li>Pracovník ověří aspoň jednu další informaci podle informací z emailu, například:<ul>
+<li>číslo zakázky.</li>
+<li>Jak byl balík zhruba velký.</li>
+</ul>
+</li>
+<li>V tuto chvíl bychom měli mít s jistou mírou pravděpodobnosti ověřeno s kým si pracovník podpory dopisuje.</li>
+</ul>
+<p>Pokud se nepodaří dohledat objednávku ani jedním způsobem. Pak pracovník na domluvené místo napíše detaily a problém eskaluje k nadřízenému.</p>
+<p>V tomto případě je jednoduché podvrhnout email.</p>
+<h3 id="zakaznik-zavolal">Zákazník zavolal</h3>
+<p>Předpoklady:</p>
+<ul>
+<li>Zákazník zavolal.</li>
+</ul>
+<p>Kroky:</p>
 <ol>
-<li>Zákazník uvede kód balíku. Pracovník dohledá, objednávku podle kódu balíku.</li>
-<li>Pokud zákazník nezná kód objednávky, pak zkusíme obědnávku dohledat podle telefonního čísla volajícího.</li>
-<li>Pokud se nepodaří dohledat obědnávku ani jedním způsobem. Pak pracovník na domluvené místo napíše detaily hovoru a s čím potřebuje zákazním pomoct. Později se pokusí dohledat volajícího identitu podle dalších informací z hovoru. V tomto případě neprovede žádné aktivní operace.</li>
-<li>Pracovník na obědnávce ověří, že odpovídá jméno a příjmení. Pokud jedno z toho neodpovídá informacím na objednávce obojí uvede do kontaktní historie.</li>
-<li>Pracovník ověří volající telefonní čílo, pokud neodpovídá telefonímu číslu uvedenému na objednávce, pak telefonní číslo zaznamená do kontaktní historie.</li>
+<li>Pracovník zkusí pomocí <a href="../uc-50#UC-63">UC-63</a> dohledat objednávku volajícího zákazníka. Může se optat na:<ul>
+<li>Jméno a příjmení.</li>
+<li>Telefoní číslo volajícího.</li>
+<li>Kód nějakého balíku.</li>
+</ul>
+</li>
+<li>Pracovník si zobrazí <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
+<li>Pracovník ověří aspoň jednu další informaci se zákazníkem, například:<ul>
+<li>Kdy zakázku podal.</li>
+<li>Jak byl balík zhruba velký.</li>
+</ul>
+</li>
+<li>V tuto chvíl bychom měli mít s jistou mírou pravděpodobnosti ověřeno s kým pracovník podpory mluví.</li>
 </ol>
-<p>V tuto chvíl bychom měli mít s jistou mírou pravděpodobnosti ověřeno s kým pracovník podpory mluví. Případě, že zákazník pošle email, postupuje pracovník podobně jako v případě telefonického hovoru, s tím, ze místo telefonního čísla hledá a ověří odchozí emailovou adresu.</p>
-<p>Speciálně v případě emailu není složité identitu podvrhnout.</p>
+<p>Pokud se nepodaří dohledat objednávku ani jedním způsobem. Pak pracovník na domluvené místo napíše detaily hovoru a s čím potřebuje zákazním pomoct. Později se pokusí dohledat identitu volajícího podle dalších informací z hovoru. Pokud se ani to nepovede, problém eskaluje k nadřízenému. </p>
 <h2 id="uc-60-likvidace-baliku"><a name="UC-60"></a>UC-60 - Likvidace balíku</h2>
 <p>V několika případech může nastat stav, kdy he třeba balík zlikvidovat. Například v těchto případech:</p>
 <ul>
@@ -852,34 +931,34 @@
 <li>Po dohodě se zákazníkem z důvodu nezaplacení.</li>
 <li>Po dohodě se zákazníkem po tom, co ho adresát odmítl převzít.</li>
 </ul>
-<p>Při likvidaci bude pracovník podpory postupovat následovně:</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory má zobrazený <a href="../screens/#S-05">detail balíku S-05</a>.</li>
+</ul>
+<p>Kroky:</p>
 <ol>
-<li>Vyhledá objednávku v systému pomocí <a href="../screens/#S-10">hledání objednávek S-10</a>.</li>
-<li>Zobrazí si <a href="../screens/#S-04">detail hledané objednávky S-04</a>.</li>
-<li>Na detailu objednávky pracovník zvolí "Detail balíku" a přejde na <a href="../screens/#S-05">S-05</a>.</li>
-<li>Se zákazníkem si potvrdí likvidaci balíku, pokud se tak už nestalo a o dohodě udělá záznam do komunikační historie <a href="../uc-50/#UC-58">UC-58</a>. </li>
 <li>Na stránce <a href="../screens/#S-05">detailu balíku S-05</a> stiskne "Zlikvidoat balík".</li>
-<li>Systém převede balík do příslušného stavu a zobrazí stránku s detailem balíku, kde bude vidět změněný stav.</li>
+<li>Systém převede balík do příslušného stavu a zobrazí stránku s detailem balíku.</li>
+<li>Stav balíku bude <code>Likvidace</code>.</li>
+<li>V historii bude záznam o přechodu do stavu <code>Likvidace</code>.</li>
+<li>Hotovo.</li>
 </ol>
-<p>Až dispečer na balík ve frontě narazí, tak dostane informaci, že balík je určený k likvidaci. Tím je hotovo.</p>
-<h2 id="uc-61-zmena-zpatecni-adresy"><a name="UC-61"></a>UC-61 - Změna zpáteční adresy</h2>
-<p><strong>TODO - Dokončit, zaznamenat předpoklady, výchozí stav. </strong></p>
-<p>Zákazník kontaktuje pracovníka podpory se žádostí o změnu doručovací adresy. Pracovník bude postupovat následovně:</p>
+<p>Až dispečer na balík ve frontě narazí, tak dostane informaci, že balík je určený k likvidaci. Dispečer balík zlikviduje.</p>
+<h2 id="uc-61-zmena-adresy-odesilatele"><a name="UC-61"></a>UC-61 - Změna adresy odesílatele</h2>
+<p>Předpoklady:</p>
+<ul>
+<li>Balík není v nějakém konečném stavu.</li>
+<li>Pokud je ve stavu <code>Na cestě</code> pak lze adresu odesílatele upravovat.</li>
+<li>Objednávka není ve stavu <code>Ukončená</code>.</li>
+<li>Pracovník podpory má zobrazen <a href="../screens/#S-05">detail balíku S-05</a>.</li>
+</ul>
+<p>Kroky:</p>
 <ol>
-<li>Pracovník ověří identitu zákazníka <a href="../uc-50/#UC-59">UC-59</a>.</li>
-<li>V systému vyhledá a zobrazí <a href="../screens/#S-04">detail hledané objednávky S-04</a>.</li>
-<li>Pokud je objednávka ve stavu "Ukončená", pak nelze adresu měnit.</li>
-<li>Na detailu objednávky pracovník vybere "Detail balíku" a přejde na <a href="../screens/#S-05">S-05</a>.</li>
-<li>Pokud je balík ve stavu nebo "Doručeno", pak nelze zmenu adresy provést. Pokud je ve stavu "Na cestě" pak je třeba ověřit, jestli je možné doručovací adresu měnit. To muže znamenat nahlédnutí do systému dopravce nebo telefonické ověření.</li>
-<li>Na detailu balíku zvolí "Upravit doručovací adresu" a zobrazí se mu stránka <a href="../screens/#S-051">S-051 na změnu doručovací adresy</a>. Ve formuláři bude vyplněná stávající doručovací adresa.</li>
-<li>Pracovník podpory provede vlastní úpravu a stiskne tlačítko "Uložit". Systém zobrazí <a href="../screens/#S-05">detail balíku S-05</a>, kde již bude upravená doručovací adresa.</li>
-<li>Pokud při úpravě došlo ke změně ceny dopravy, pak pracovník musí znovu vystavit fakturu.</li>
-<li>Pokud již byla objednávka zaplacená, pak pracovník musí zakázku přesunout do stavu nezaplacená. </li>
-<li>O události pořídí záznam do kontaktní historie <a href="../uc-50/#UC-58">UC-58</a>.</li>
+<li>Na detailu balíku zvolí "Upravit doručovací adresu" a zobrazí se mu stránka na změnu adresy odesílatele. Ve formuláři bude vyplněná  stávající adresa odesílatele.</li>
+<li>Pracovník podpory provede vlastní úpravu a stiskne tlačítko "Uložit".</li>
+<li>Systém zobrazí <a href="../screens/#S-05">detail balíku S-05</a>, kde již bude upravená adresa odesílatele.</li>
 </ol>
 <p>Pokud při změně adresy dojde ke změně fronty, pak se balík ocitá ve špatné frontě. Dispečer na to přijde při dalším průchodu frontou, kdy mu systém řekne správnou frontu.</p>
-<h2 id="uc-61-rozdeleni-jednoho-baliku-na-vic"><a name="UC-61"></a>UC-61 - Rozdělení jednoho balíku na víc</h2>
-<p><strong>TODO - Jak to fyzicky zaznamenat do systému, jak to provede dispečer.</strong></p>
 <h2 id="uc-62-prijeti-emailu-nebo-telefonu-od-zakaznika"><a name="UC-62"></a>UC-62 - Přijetí emailu nebo telefonu od zákazníka</h2>
 <p>Pokud přijde email od zákazníka, pak pracovník podpory provede:</p>
 <ol>
@@ -917,6 +996,8 @@
 <li>Komentéře ke stavům.</li>
 <li>Popis poškození</li>
 <li>Kontaktní historie.</li>
+<li>Číslo objednávky</li>
+<li>Kód balíků.</li>
 </ul>
 </li>
 <li>Zvolí horní nebo dolní hranici ceny za objednávku s DPH.</li>
@@ -943,7 +1024,7 @@
 <p>Pracovník podpory změní doručovací adresu balíku.</p>
 <p>Předpoklady:</p>
 <ul>
-<li>Pracovník podpory má zobrazený <a href="../screens/#S-05">Detail balíku S-05</a>.</li>
+<li>Pracovník podpory má zobrazený <a href="../screens/#S-05">detail balíku S-05</a>.</li>
 <li>Objednávka není ve stavu "Ukončená".</li>
 <li>Balík není ve stavu "Doručeno"</li>
 </ul>
@@ -953,6 +1034,19 @@
 <li>Zvolí "Odeslat na zpáteční adresu". Po tom systém změní doručování na doručování zpět. V tomto případě se nekontroluje jestli byla objednávka zaplacena. Balík půjde do fronty dopravce.</li>
 <li>Hotovo</li>
 </ol>
+<h2 id="uc-66-rozdeleni-jednoho-baliku-na-vic"><a name="UC-66"></a>UC-66 - Rozdělení jednoho balíku na víc</h2>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory má zobrazený <a href="../screens/#S-05">detail balíku S-05</a>, který bude rozdělen do více balíků.</li>
+</ul>
+<p>Kroky:</p>
+<ol>
+<li>Pracovník klikne na tlačítko rozdělit.</li>
+<li>Systém vytvoří nový balík, v historii o tom vznikne záznam s odkazem na nový balík.</li>
+<li>Nový balík nebude mít interní štítek, kód balíku ani rozměry. Stejně tak v historii bude jedinný zaznam o tom, že balík byl vytvořen rozdělením z balíku a odkaz na původní balík.</li>
+<li>Hotovo.</li>
+</ol>
+<p>Pracovník může od původního balíku vytvořit více balíků.</p>
                 
                   
                 
