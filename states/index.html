@@ -298,26 +298,60 @@
     Stavy objednávek
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stav-nezaplacena" class="md-nav__link">
+    Stav "Nezaplacená"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stav-dorucovana" class="md-nav__link">
+    Stav "Doručovaná"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stav-ukoncena" class="md-nav__link">
+    Stav "Ukončená"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#stavy-jednotlivych-baliku" class="md-nav__link">
-    Stavy jednotlivých balíků
+  <a href="#stavy-baliku" class="md-nav__link">
+    Stavy balíku
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stav-ceka-na-zaplaceni" class="md-nav__link">
-    Stav "Čeká na zaplacení"
+  <a href="#stav-na-ceste" class="md-nav__link">
+    Stav "Na cestě"
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stav-chyba" class="md-nav__link">
-    Stav "Chyba"
+  <a href="#stav-ve-fronte" class="md-nav__link">
+    Stav "Ve frontě"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stav-uzavreno" class="md-nav__link">
+    Stav "Uzavřeno"
   </a>
   
     <nav class="md-nav">
@@ -448,26 +482,60 @@
     Stavy objednávek
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stav-nezaplacena" class="md-nav__link">
+    Stav "Nezaplacená"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stav-dorucovana" class="md-nav__link">
+    Stav "Doručovaná"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stav-ukoncena" class="md-nav__link">
+    Stav "Ukončená"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#stavy-jednotlivych-baliku" class="md-nav__link">
-    Stavy jednotlivých balíků
+  <a href="#stavy-baliku" class="md-nav__link">
+    Stavy balíku
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stav-ceka-na-zaplaceni" class="md-nav__link">
-    Stav "Čeká na zaplacení"
+  <a href="#stav-na-ceste" class="md-nav__link">
+    Stav "Na cestě"
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stav-chyba" class="md-nav__link">
-    Stav "Chyba"
+  <a href="#stav-ve-fronte" class="md-nav__link">
+    Stav "Ve frontě"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stav-uzavreno" class="md-nav__link">
+    Stav "Uzavřeno"
   </a>
   
     <nav class="md-nav">
@@ -508,28 +576,30 @@
                 
                 
                 <h1 id="stavy">Stavy</h1>
-<p><strong>Doplnit k UC přechody mezi stavy.</strong></p>
 <p>Objednávky a balíky během vyřizování procházejí několika stavama. V první verzi, kde budeme mít právě jeden balík na objednávky, bude možné následující stavy spojit v jeden.</p>
 <h2 id="stavy-objednavek">Stavy objednávek</h2>
 <p>Objednávka prochází následujícími stavy:</p>
 <p><img alt="Stavy objednávky" src="../diagrams/out/states-order.png" title="Stavy objednávky" /></p>
-<p>Podle všeho u objednávky nebudem potřebovat evidovat stavy.</p>
-<h2 id="stavy-jednotlivych-baliku">Stavy jednotlivých balíků</h2>
-<p>U balíků je třeba znát historii všech stavů. To je potřeba pro reklamace a evidenci pohybu balíku. Historii stavů lze později využít pro optimalizaci procesů.</p>
-<p>Balíky během doručování procházejí následujícími stavy:</p>
-<p><img alt="Stavy balíků" src="../diagrams/out/states-package.png" title="Stavy balíků" /></p>
-<p>Balík bude ve stavu "Na cestě" aspoň dvakrát jednou od zákazníka do depa a podruhé z depa k adresátovi. Ze stavu "Na cestě" se může balík dostat do stavu "čeká na zaplacení" a pak do stavu "Chyba". To se stane v případě, že zákazník odmítne balík převzít, nebo se ho nějakého jiného důvodu nepodaří doručit.</p>
-<h3 id="stav-ceka-na-zaplaceni">Stav "Čeká na zaplacení"</h3>
-<p>To, jestli zákazník zaplatil by mohlo byt hodnoceno automaticky. Třeba porovnáním součtu částek daňových dokladů a součtu plateb. Bohužel to takto zjednodušit nelze. Některé daňové doklady nemusí být uhrazeny nebo proplaceny a je to tak v pořádku, stejně tak součet cástek na daňových dokladech nemusí být stejný jako součet plateb a také to může být v pořádku. </p>
-<h3 id="stav-chyba">Stav "Chyba"</h3>
+<h3 id="stav-nezaplacena">Stav "Nezaplacená"</h3>
+<p>To, jestli zákazník zaplatil by mohlo byt hodnoceno automaticky. Třeba porovnáním součtu částek daňových dokladů a součtu plateb. Bohužel to takto zjednodušit nelze. Některé daňové doklady nemusí být uhrazeny nebo proplaceny a je to tak v pořádku, stejně tak součet částek na daňových dokladech nemusí být stejný jako součet plateb a také to může být v pořádku. </p>
+<p>Přechod mezí stavy "Nezaplacená" a "Doručovaná" se provede ve chvíli, kdy zákazník zaplatí. V některých případech k zaplacení nedojde, zákazník může zrušit objednávku.</p>
+<h3 id="stav-dorucovana">Stav "Doručovaná"</h3>
+<p>O objednávce v tomto stavu víme, že s balíkem se ještě nějak pracuje a je třeba sledovat jestli doručovací proces běží. </p>
+<h3 id="stav-ukoncena">Stav "Ukončená"</h3>
+<p>V tomto stavu máme objednávku kompletně ukončenou, všechny doručované balíky jsou také ukončeny a finance vypořádány.</p>
+<h2 id="stavy-baliku">Stavy balíku</h2>
+<p>U balíku je třeba znát historii stavů. To je potřeba pro reklamace a evidenci pohybu balíku. Historii stavů lze později využít pro optimalizaci procesů.</p>
+<p>Balík během doručování prochází následujícími stavy:</p>
+<p><img alt="Stavy balíku" src="../diagrams/out/states-package.png" title="Stavy balíku" /></p>
+<h3 id="stav-na-ceste">Stav "Na cestě"</h3>
+<p>Balík bude ve stavu "Na cestě" aspoň dvakrát jednou od zákazníka do depa a podruhé z depa k adresátovi. Ze stavu "Na cestě" může balík přet do fonty, kde čeká na zaplacení. V případě, že se balík vrátí od dopravce jako nedoručitelný, pak půjde do chybové fronty.</p>
+<h3 id="stav-ve-fronte">Stav "Ve frontě"</h3>
 <p>Je stav, kdy se nastane další problém, na jehož pracování nemáme připravený proces. Například, dopravce vrátí balík jako nedoručitelný.</p>
-<h4 id="stav-poskozeny-balik">Stav "Poškozený balík"</h4>
-<p>Není to samostatný stav, ale případ chybového stavu. Je to druh chyby, kdy dispečer zjistí, že balík je poškozený a je třeba se zákazníkum domluvit další postup.</p>
-<p>Stav, kdy je bal9k ve frontě, může znamenat některou z následujících událostí.</p>
+<h3 id="stav-uzavreno">Stav "Uzavřeno"</h3>
+<p>Přehled stavů balíku:</p>
 <p><img alt="Stavy balíků" src="../diagrams/out/states-package-2.png" title="Stavy balíků" /></p>
-<p><strong>TODO - Domalovat koncove stavy - doruceno, likvidace ....</strong></p>
-<p><strong>TODO - Doplnit, jak se řeši měření, budu potřebovat záznam o přijetí? Tisk štítku. je sakce.</strong></p>
-<p><img alt="Stavy balíků" src="../diagrams/out/states-package-3.png" title="Stavy balíků" /></p>
+<h4 id="stav-poskozeny-balik">Stav "Poškozený balík"</h4>
+<p>Není to samostatný stav, ale případ chybového stavu. Je to druh chyby, kdy dispečer zjistí, že balík je poškozený a je třeba se zákazníkum domluvit další postup. V tomto stavu lze další krok přiřadit na dispečera nebo pracovníka podpory. Například když balík vyžaduje nějakou informaci od dispečera. Nebo dispečer dostane pokyn k rozdělení balíku na několik samostatných. </p>
                 
                   
                 

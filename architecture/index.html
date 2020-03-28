@@ -373,9 +373,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pouze-priklad-diagramu-pro-pripomenuti" class="md-nav__link">
-    Pouze příklad diagramů, pro připomenutí
+  <a href="#balik" class="md-nav__link">
+    Balík
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stavy-baliku" class="md-nav__link">
+    Stavy balíku
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -516,9 +529,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pouze-priklad-diagramu-pro-pripomenuti" class="md-nav__link">
-    Pouze příklad diagramů, pro připomenutí
+  <a href="#balik" class="md-nav__link">
+    Balík
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stavy-baliku" class="md-nav__link">
+    Stavy balíku
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -606,11 +632,20 @@
 <p>V některých případech by bylo dobré mít samostatnou entity zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Lze to řešit tak, že se vezmou záznamy, které identifikují zákazníka. Například Jméno, příjmení, telefonní číslo, email: Při založení objednávky se projdou již existující zákazníci a zkusí se, jestli se s nějakou tolerancí nejedná o stejný záznam. Pro porovnání lze u něktrých polí Levenshteinovu zvdálenenost. Případně lze shodu porovnávat pouze podle emailu nebo telefonního čísla.
 <strong>Toto teď nebudem implementovat. Zákazníka poznáme podle emailu.</strong></p>
 <h2 id="entitni-model">Entitní model</h2>
+<p>Zde budou popsány vztajy mezi objekty a základní set attributů.</p>
+<p>Vztahy mezi základními objekty budou vypadat takto:
+<img alt="Přehled" src="../diagrams/out/arch-01.png" title="Přehled" /></p>
 <h3 id="objednavka">Objednávka</h3>
-<p><img alt="Objednávka" src="../diagrams/out/arch-01.png" title="Objednávka" /></p>
-<p>Potřebujeme mít někde uloženou objednávku, tak jak jí zadal zákazník?</p>
-<h3 id="pouze-priklad-diagramu-pro-pripomenuti">Pouze příklad diagramů, pro připomenutí</h3>
-<p><img alt="Test" src="../diagrams/out/arch-05.png" title="Test" /></p>
+<h3 id="balik">Balík</h3>
+<p>U balíku se uchovává:</p>
+<ul>
+<li>Stav balíku - ze stavů je možné vyčíst, co se dějě a řídit, co se má stát.</li>
+<li>Událost - jednorázová událost, která nemění stav balku. Například měření a vážení.</li>
+</ul>
+<p><img alt="Události balíku" src="../diagrams/out/arch-02.png" title="Události balíku" /></p>
+<h4 id="stavy-baliku">Stavy balíku</h4>
+<p>U balíku je třeba evidovat několik různých stavů. Jednotlivé stavy se od sebe mohou lišit počtem atributů a způsobem práce s nimi. Například stav "Poškozený balík" může být přiřazen na dispečera nebo pracovníka podpory. Ostatní stavy jsou vždy přiřazeny na jednu roli. Například pokud je balík ve frontě, kde čeka na zaplacení, tak pouze pracovník podpory může říct, že je balík zaplacen a přesunout ho do fronty konkrétního doporavce.</p>
+<p><img alt="Stavy balíků" src="../diagrams/out/states-package-2.png" title="Stavy balíků" /></p>
 <h2 id="navrh-architektury-applikace">Návrh architektury applikace</h2>
 <p>Z počátku nepotřebujem nic speciálního. Pouze při realizací dávat pozor, že finální UC se mohou lišit od návrhů. Například implementace napojení na konkrétního dopravce může ovlivnost způsob zpracování fronty dopravce. Například požadavek na validaci adresy ze strany dopravce může vést k tomu, že při přijetí balíku a po jeho spárování s objednávkou se musí přidat validace adresy.</p>
 <h2 id="auditni-log">Auditní log</h2>

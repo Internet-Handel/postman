@@ -328,8 +328,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-57-nic" class="md-nav__link">
-    UC-57 - Nic
+  <a href="#uc-57-zaznamenani-doruceni-baliku" class="md-nav__link">
+    UC-57 - Zaznamenání doručení balíku
   </a>
   
 </li>
@@ -351,6 +351,48 @@
         <li class="md-nav__item">
   <a href="#uc-60-likvidace-baliku" class="md-nav__link">
     UC-60 - Likvidace balíku
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-61-zmena-zpatecni-adresy" class="md-nav__link">
+    UC-61 - Změna zpáteční adresy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-61-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
+    UC-61 - Rozdělení jednoho balíku na víc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-62-prijeti-emailu-nebo-telefonu-od-zakaznika" class="md-nav__link">
+    UC-62 - Přijetí emailu nebo telefonu od zákazníka
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-63-vyhledani-objednavky" class="md-nav__link">
+    UC-63 - Vyhledání objednávky
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-64-vyhledani-baliku-podle-objednavky" class="md-nav__link">
+    UC-64 - Vyhledání balíku podle objednávky
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-65-poslat-baliku-na-zpatecni-adresu" class="md-nav__link">
+    UC-65 - Poslat balíku na zpáteční adresu
   </a>
   
 </li>
@@ -525,8 +567,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-57-nic" class="md-nav__link">
-    UC-57 - Nic
+  <a href="#uc-57-zaznamenani-doruceni-baliku" class="md-nav__link">
+    UC-57 - Zaznamenání doručení balíku
   </a>
   
 </li>
@@ -552,6 +594,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-61-zmena-zpatecni-adresy" class="md-nav__link">
+    UC-61 - Změna zpáteční adresy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-61-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
+    UC-61 - Rozdělení jednoho balíku na víc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-62-prijeti-emailu-nebo-telefonu-od-zakaznika" class="md-nav__link">
+    UC-62 - Přijetí emailu nebo telefonu od zákazníka
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-63-vyhledani-objednavky" class="md-nav__link">
+    UC-63 - Vyhledání objednávky
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-64-vyhledani-baliku-podle-objednavky" class="md-nav__link">
+    UC-64 - Vyhledání balíku podle objednávky
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-65-poslat-baliku-na-zpatecni-adresu" class="md-nav__link">
+    UC-65 - Poslat balíku na zpáteční adresu
+  </a>
+  
+</li>
+      
       
       
       
@@ -573,101 +657,183 @@
 <p><strong>TODO - Nesedi číslování UC, nakonci upravit.</strong></p>
 <p><strong>TODO - Posun objednavek mezi stavy.</strong></p>
 <p><strong>TODO - Zahrnout pripad, kdy zakaznik zrusi objednavku, ale mi nevime, ze poslal penize, protoze jsou na ceste.</strong></p>
-<p>Každý balík má svůj kód. Kod je nezávislý na objednávce. Zákazníka žádáme, aby ho napsal na balík. Pokud bude v objednávce víc balíků, pak každý balík bude mít svůj kód.</p>
+<p><strong>TODO - Zpracovat, jak rozdělit jeden balík na několik menších. Proto te třeba podporovat více balíků na objednávku už teď</strong></p>
+<p>Každý balík má svůj kód. Kod je nezávislý na objednávce. Zákazníka žádáme, aby ho napsal na balík. Pokud bude v objednávce víc balíků, pak každý balík bude mít svůj vlastní kód balíku kód. Ne každý balík musí mít kód balíku.</p>
 <p>V komunikační historii nebude možné záznamy mazat ani upravovat. Záznamy půjde pouze přidávat. Z historie stavů objednávky a balíku bude možné zrekonstruovat celý proces zpracování objednávky a balíku.</p>
 <p>Komunikační historie je pouhý textový záznam, informace není nijak strukturovaná.</p>
-<p>Při komunikaci se zákazníkem, musíme ověřit, že se skutečně bavíme s konkrétním zákazníkem. V případě emailové komunikace musí sedět odchozí adresa email s tou, která je na objednávce. V případě telefonické komunikace se zkontrolujem příchozí telefonní číslo. V obou případech můžem zákazníka požádat o kód balíku.</p>
 <h2 id="uc-50-storno-objednavky"><a name="UC-50"></a>UC-50 - Storno objednávky</h2>
-<p>Zákazník může napsat nebo zavolat a pokusit se zrušit objednávku. V tomto případě pracovník podpory postupuje následovně:</p>
+<p>Pracovník podpory provede storno objednávky.</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník má zobrazený <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
+<li>Objednávka není ve stavu "Ukončená".</li>
+</ul>
+<p>Kroky:</p>
 <ol>
-<li>Vyhledá objednávku v systému pomocí <a href="../screens/#S-10">hledání objednávek S-10</a>.</li>
-<li>Zobrazí si <a href="../screens/#S-04">detail hledané objednávky S-04</a>.</li>
 <li>Na detailu objednávky pracovník zvolí "Detail balíku" a přejde na <a href="../screens/#S-05">S-05</a>.</li>
-<li>Zde podle dohody se zákazníkem zvolí jeden ze způsobů jak s balíkem naložit:<ol>
-<li>Zvolí "Odeslat na zpáteční adresu". Po tom systém změní doručování na doručování zpět. V tomto případě se nekontroluje jestli byla objednávka zaplacena. Balík půjde do fronty dopravce.</li>
+<li>Pracovník zvolí jeden ze způsobů jak s balíkem naložit:<ol>
+<li>Pracovník odešle balík na adresu odesílatele.</li>
 <li>Pomocí <a href="../uc-50/#UC-51">UC-51 změní doručovací adresu</a>.</li>
 <li>Rozhodne o <a href="../uc-50/#UC-60">likvidaci balíku UC-60</a>.</li>
 </ol>
 </li>
 <li>Pracovník podpory se pomocí odkazu "Detail objednávky" vrátí na <a href="../screens/#S-04">S-04</a>.</li>
 <li>Pokud již byla částka za dopravu uhrazena, pak musí pracovník <a href="../uc-40/#UC-46">vystavit dobropis a poslat peníze zpět UC-46</a>.</li>
-<li>Nakonec o všem pořídí záznam do kontaktní historie <a href="../uc-50/#UC-58">UC-58</a>. </li>
+<li>Nakonec o všem pořídí záznam do kontaktní historie <a href="../uc-50/#UC-58">UC-58</a>.</li>
+<li>Hotovo</li>
 </ol>
-<p>Nebudem dělat omezující pravidla na rušení objednávky. Například, že nejde zrušit objednávku, když je balík předaný dopravci, protože teď nevím jaké jsou možnosti dopravců.</p>
+<p>Nebudem dělat omezující pravidla na rušení objednávky. Například, že nejde zrušit objednávku, když je balík předaný dopravci, protože teď nevíme, jaké jsou možnosti dopravců.</p>
 <h2 id="uc-51-zmena-dorucovaci-adresy"><a name="UC-51"></a>UC-51 - Změna doručovací adresy</h2>
-<p>Zákazník kontaktuje pracovníka podpory se žádostí o změnu doručovací adresy. Pracovník bude postupovat následovně:</p>
+<p>Pracovník podpory změní doručovací adresu balíku.</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory má zobrazený <a href="../screens/#S-05">Detail balíku S-05</a>.</li>
+<li>Objednávka není ve stavu "Ukončená".</li>
+<li>Balík není ve stavu "Doručeno". </li>
+</ul>
+<p>Kroky:</p>
 <ol>
-<li>Pracovník ověří identitu zákazníka <a href="../uc-50/#UC-59">UC-59</a>.</li>
-<li>V systému vyhledá a zobrazí <a href="../screens/#S-04">detail hledané objednávky S-04</a>.</li>
-<li>Pokud je objednávka ve stavu "Ukončená", pak nelze adresu měnit.</li>
-<li>Na detailu objednávky pracovník vybere "Detail balíku" a přejde na <a href="../screens/#S-05">S-05</a>.</li>
-<li>Pokud je balík ve stavu nebo "Doručeno", pak nelze zmenu adresy provést. Pokud je ve stavu "Na cestě" pak je třeba ověřit, jestli je možné doručovací adresu měnit. To muže znamenat nahlédnutí do systému dopravce nebo telefonické ověření.</li>
+<li>Pokud je ve stavu "Na cestě" pak je třeba ověřit, jestli je možné doručovací adresu měnit. To může znamenat nahlédnutí do systému dopravce nebo telefonické ověření stavu u dopravce.</li>
 <li>Na detailu balíku zvolí "Upravit doručovací adresu" a zobrazí se mu stránka <a href="../screens/#S-051">S-051 na změnu doručovací adresy</a>. Ve formuláři bude vyplněná stávající doručovací adresa.</li>
 <li>Pracovník podpory provede vlastní úpravu a stiskne tlačítko "Uložit". Systém zobrazí <a href="../screens/#S-05">detail balíku S-05</a>, kde již bude upravená doručovací adresa.</li>
-<li>Pokud při úpravě došlo ke změně ceny dopravy, pak pracovník musí znovu vystavit fakturu.</li>
-<li>Pokud již byla objednávka zaplacená, pak pracovník musí zakázku přesunout do stavu nezaplacená. </li>
+<li>Pokud při úpravě došlo ke změně ceny dopravy, pak pracovník může znovu vystavit fakturu.</li>
+<li>Pokud již byla objednávka zaplacená, pak pracovník může zakázku přesunout do stavu nezaplacená. </li>
 <li>O události pořídí záznam do kontaktní historie <a href="../uc-50/#UC-58">UC-58</a>.</li>
+<li>Hotovo</li>
 </ol>
 <p>Pokud při změně adresy dojde ke změně fronty, pak se balík ocitá ve špatné frontě. Dispečer na to přijde při dalším průchodu frontou, kdy mu systém řekne správnou frontu.</p>
 <h2 id="uc-52-sparovani-dvou-baliku"><a name="UC-52"></a>UC-52 - Spárování dvou balíků</h2>
 <p>V případě, že zákazník neuvede kód balíku nebo se při dopravě kód poškodí a nepodaří se napárovat balík na objednávku, pak bude třeba toto párování provézt ručně.</p>
-<p>V tomto případě napojím balík na balík z konkrétní objednávky následovně:</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory má zobrazený <a href="../screens/#S-05">Detail prvního balíku S-05</a> ke kterému chci napárovat druhý.</li>
+<li>Od druhého balíku zná kód interního štítku nebo kód balíku.</li>
+</ul>
+<p>V tomto případě napojí druhý balík na první balík následovně:</p>
 <ol>
-<li>Pracovník podpory zjistí kód interního štítku nespárovaného balíku nebo jeho kód balíku.</li>
-<li>V systému vyhledá a zobrazí <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
-<li>V detailu objednávky si zobrazí <a href="../screens/#S-05">detail balíku S-05</a>, ke kterému chce balík připojit.</li>
-<li>Na detailu balíku zvolí "Připojit další balík" a zobrazí se stránka <a href="../screens/#S-052">S-52 pro připojení balíku</a>.</li>
-<li>Pracovník zadá kód interního štítku nebo kód nespárovaného balíku a formulář potvrdí tlačítkem "Spárovat".</li>
+<li>Na detailu prvního balíku zvolí "Připojit další balík" a zobrazí se stránka <a href="../screens/#S-052">S-52 pro připojení balíku</a>.</li>
+<li>Pracovník zvolí jestli chce, aby interní štítek druhého připojovaného balíku přepsal interní štítek prvního balíku.</li>
+<li>Pracovník zadá kód interního štítku nebo kód druhého nespárovaného balíku a formulář potvrdí tlačítkem "Spárovat".</li>
 <li>Systém provede:<ol>
 <li>Spáruje oba balíky.</li>
 <li>Od této chvíle nebude napojený balík možné upravovat.</li>
-<li>Interní štítek napojeného balíku se stane interním štítkem druhého balíku.</li>
-<li>Zobrazí se stránka s detailem balíku na který pracovník napojoval druhý.</li>
+<li>Zobrazí se stránka s detailem prvního balíku.</li>
 </ol>
 </li>
-<li>V seznamu připojených balíku přibyl záznam.</li>
+<li>V seznamu připojených balíku přibyl záznam o připojení.</li>
+<li>Pokud to tak pracovník požadoval, pak interní štítek prvního balíku je přepsán interním štítkem druhého balíku.</li>
+<li>Hotovo</li>
 </ol>
-<h2 id="uc-53-oznaceni-objednavky-za-zaplacenou"><a name="UC-53"></a>UC-53 - Označení objednávky za zaplacenou</h2>
-<p>Po tom, co pracovník zadá nové platby bude třeba zkontrolovat, jaké objednávky jsou nově zaplaceny. V tomto scénáři je třeba vyhledat objednávky, které jsou splacené, nebo přeplacené a platba přišla v jednom konkrétním dni. Pracovník podpory bude podtupovat takto:</p>
+<p>Možnost přepsat interní štítek pokrývá případy:</p>
 <ul>
-<li>Z hlavního rozcestníku otevře <a href="../screens/#S-011">S-011 stránku pro hledání objednávek podel plateb</a>. </li>
+<li>První balík ještě nepřišel do depa nemá interní štítek. Druhý párovaný balík se při přijetí od dopravce nepodařilo spojit s objednávkou.</li>
+<li>Druhý balík přišel, ale při přijetí se nepodařilo balík napojit na objednávku. Proces přijetí někdo omylem zopakoval a tentokrát už na objednávku úspěšně napojil.</li>
+</ul>
+<h2 id="uc-53-oznaceni-objednavky-za-zaplacenou"><a name="UC-53"></a>UC-53 - Označení objednávky za zaplacenou</h2>
+<p>Po tom, co pracovník zadá nové platby bude třeba zkontrolovat, jaké objednávky jsou nově zaplaceny. V tomto scénáři je třeba vyhledat objednávky, ke kterým platba přišla v jednom konkrétním dni a zárověň jsou podle stavu nezaplacené.</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovní podpory zná datum nebo období, kdy zadal platbu za dopravu.</li>
+</ul>
+<p>Kroky:</p>
+<ol>
+<li>Z hlavního rozcestníku otevře <a href="../screens/#S-011">S-011 stránku pro hledání objednávek podle plateb</a>. </li>
 <li>Uživatel zaškrtne volbu "Vybrat objednávky ve stavu <code>Nezaplacená</code>". </li>
 <li>Potom v zašktne volbu "Vybrat objednávky, kde poslední platba přišla po" a zvolit časový interval.</li>
-<li>Stiskne tlačítko "Hledat"</li>
-</ul>
-<p>Systém najde, všechny nezaplacené objednávky, ke kterým v dané období dorazila platba. Pracovník u každého záznamu otevře <a href="../screens/#S-04">S-04 detail objednávky</a> a zkontroluje, jestli celková zaplacená částka odpovídá fakturované částce. Pokud ano, pracovník potvrdí zaplacení a stiskne tlačítko "Zaplaceno". Objednávka se přesune do stavu doručovaná a v historii stavů se objeví, že daný pracovník podpory pořesunul stav objednávky z nezaplaceno do doručovaná. Pokud je balík k objednávce ve frontě balíků čekajících na zaplacení, pak se při další kontrole přesune k dalšímu doručování.</p>
-<p>Pokud je objednávka přeplacená, pak lze po dohodě se zákazníkem vystavit dobropis.</p>
-<h2 id="uc-54-reklamace"><a name="UC-54"></a>UC-54 - Reklamace</h2>
-<h2 id="uc-55-reseni-chybove-fronty"><a name="UC-55"></a>UC-55 - Řešení chybové fronty</h2>
-<p>Balíky v chybové frontě jsou neuspořádané. Některé mají nalepný interní kód některé ne. O každém balíku v chybové frontě je v systému záznam. Zde se pracovník podpory bude snažit najít pro balíky nějaké řešení. Řešení něktrých druhů chyb:</p>
-<ul>
-<li>Chybějící odresa odesílatele.<ul>
-<li>Pracovník podpory se pokusí podle čísla účtu platby dohledat jiné objednávky a podle nich doplnit účet.</li>
+<li>Stiskne tlačítko "Hledat".</li>
+<li>Systém najde, a zobrazí všechny nezaplacené objednávky, ke kterým v dané období dorazila platba.</li>
+<li>Pracovník u každého záznamu otevře <a href="../screens/#S-04">S-04 detail objednávky</a> a zkontroluje, jestli jak zaplacená částka odpovídá fakturované:<ol>
+<li>Pokud jsou s nějakou tolerancí shodné, pak:<ul>
+<li>Pracovník potvrdí zaplacení a stiskne tlačítko "Zaplaceno".</li>
+<li>Objednávka se přesune do stavu doručovaná a v historii stavů se objeví, že daný pracovník podpory pořesunul stav objednávky z nezaplaceno do doručovaná.</li>
+<li>Pokud je balík na objednávce ve frontě balíků čekajících na zaplacení, pak se při další kontrole přesune k dalšímu doručování.</li>
 </ul>
 </li>
-<li>V ostatních případech pracovník podpory zavolá zákazníkovy a společně se domluví na řešení. O dohodě uloží záznam do historie k objednávce.</li>
+<li>Zákazník fakturovano částku přeplatil. Pak je třeba:<ul>
+<li>Kontaktovat zákazníka a domluvit s ním řešení.</li>
+<li>Pokud o to zákazník stojí vystavit dobropis.</li>
 </ul>
-<p>Po tom, co se podaří na řešení co s balíkem domluvit se zákazníkem pracovník podpory se spojí s dispečerem a balík z chybové fronty pošlou dál.</p>
-<p><strong>Detailní řešení jednotlivých chyb těď nebudem řešit.</strong></p>
+</li>
+</ol>
+</li>
+<li>Hotovo.</li>
+</ol>
+<h2 id="uc-54-reklamace"><a name="UC-54"></a>UC-54 - Reklamace</h2>
+<p>Jednotlivé reklamace se budou řešit jednotlivě a nebudem k tomu zatím připravovat speciální proces.</p>
+<h2 id="uc-55-reseni-chybove-fronty"><a name="UC-55"></a>UC-55 - Řešení chybové fronty</h2>
+<p>Balíky v chybové frontě jsou neuspořádané. Každý balík má interní štítek. O každém balíku v chybové frontě je v systému záznam. Zde se pracovník podpory bude snažit najít pro balíky nějaké řešení.</p>
+<p>Kroky:</p>
+<ol>
+<li>Pracovník si z hlavního rozcestníku zobrazí balíky v chybové frontě.</li>
+<li>U každého balíku se podívá na detaily problému a pokusí se ho vyřešit.</li>
+<li>Hotovo. </li>
+</ol>
+<p>Řešení některých druhů chyb:</p>
+<ul>
+<li>Nespárovaný balík.<ul>
+<li>Balík nemá kód balíku ani správně napsanou adresu odesílate.</li>
+<li>Pracovník se pokusí dohledat odpovídající objednávku třeba podle části adresy odesílatele, nebo porovnat se seznamem zaplacených objednávek bez balíků, nebo porovnat rozměry na objednávce a u nalezeného balíku.</li>
+<li>Pokud to je možné balík napáruje na objednávku.</li>
+</ul>
+</li>
+<li>Nedoručitelný balík:<ul>
+<li>Pracovník zkusí kontaktovat zákazníka a domluví další postup.</li>
+</ul>
+</li>
+<li>Poškozený balík:<ul>
+<li>Pracovník zkusí kontaktovat zákazníka a domluví další postup.</li>
+</ul>
+</li>
+<li>Jiná chyba<ul>
+<li>Pracovník podpory se může spojit s dispečerem nebo zákazníkem.</li>
+</ul>
+</li>
+</ul>
+<p>Počítáme s tím, že ne všechny chyby lze zde podchytit.</p>
 <h2 id="uc-56-reseni-poskozeneho-baliku"><a name="UC-56"></a>UC-56 - Řešení poškozeného balíku</h2>
-<p>Pracovník podpory má otevřenou stránku <a href="../screens/#S-05">detailu balíku S-05</a>. V seznamu zázkamu o poškození bude jeden nezpracovaný. Balík je v chybové frontě. Pracovník bude postupovat následovně:</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory má otevřenou stránku <a href="../screens/#S-05">detailu balíku S-05</a>.</li>
+<li>V seznamu zázkamu o poškození bude jeden nezpracovaný.</li>
+<li>Balík je ve frontě chyba ve stavu <code>Poškozený balík</code>.</li>
+</ul>
+<p>Kroky:</p>
 <ol>
 <li>Klikne na detail záznamu poškození a zobrazí se mu <a href="../screens/#S-053">S-053</a>.</li>
 <li>Pracovník podle fotek a popisu posoudí míru poškození.</li>
-<li>Pokud uzná za vhodné kontaktuje zákazníka a domluví s ním další postup.</li>
+<li>Pokud uzná za vhodné kontaktuje zákazníka a domluví s ním další postup a výsledek zaznamená do kontaktní historie.</li>
 <li>Když pracovník ví jak postupovat, další postup popíše do pole na stránce <a href="../screens/#S-053">S-053</a>.</li>
-<li>Nakonec nastaví stav odpovídající stav u balíku a odešle.</li>
+<li>Nakonec nastaví stav řešení poškození a odešle.</li>
+<li>Pokud tak bylo domluveno, pracovník provede likvidaci balíku.</li>
 </ol>
-<p><strong>TODO není poškození stav balíku.</strong></p>
-<h2 id="uc-57-nic"><a name="UC-57"></a>UC-57 - Nic</h2>
+<p>Pokud pracovním nedokáže posoudit, jak dál s poškozeným balíkem pokračovat, je třeba kontaktovat nadřízené.</p>
+<h2 id="uc-57-zaznamenani-doruceni-baliku"><a name="UC-57"></a>UC-57 - Zaznamenání doručení balíku</h2>
+<p>Od každého dopravce musíme přijímat informace o stavu doručování balíku. Může se dít automaticky, případně ručně. Zde je popsaný ruční postup.</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory má otevřenou stránku <a href="../screens/#S-05">detailu balíku S-05</a>.</li>
+<li>Balík je reálně doručen na adresu odesílatele, nebo na doručovací adresu.</li>
+</ul>
+<p>Kroky:</p>
+<ol>
+<li>Pracovník stiskne tlačítko doručeno.</li>
+<li>V historii stavů, se objevý záznam o přesunu do stavu "Uzavřeno" s uvedenou informací, že balík byl úspěšně doručen.</li>
+<li>Pokud jsou všechny balíky na objednávce ve stavu "Uzavřeno", pak se objednávka přesune do stavu "Ukončená".</li>
+<li>Hotovo</li>
+</ol>
 <h2 id="uc-58-pridat-zaznam-do-kontaktni-historie"><a name="UC-58"></a>UC-58 - Přidat záznam do kontaktní historie</h2>
-<p>Předpokládáme, že pracovník podpory je na stránce <a href="../screens/#S-04">S-04 detail objednávky</a>. Pro přidání záznamu do komunikační historie bude postupovat následovně:</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory je na stránce <a href="../screens/#S-04">S-04 detail objednávky</a>.</li>
+</ul>
+<p>Kroky:</p>
 <ol>
 <li>Klikne na "Přidat záznam" a přesune se mu obrazovaku <a href="../screens/#S-047">S-047</a>.</li>
 <li>Detailně popíše událost.</li>
 <li>Potvrdí tlačítkem "Vytvořit záznam" a systém pracovníka vrátí na stránku s detailem objednávky.</li>
+<li>V kontaktní histori je nově přidaný záznam. Jako autor je uvedený přihlášený uživatel.</li>
+<li>Hotovo</li>
 </ol>
-<p>V kontaktní histori je nově přidaný záznam. Jako autor je uvedený přihlášený uživatel.</p>
 <h2 id="uc-59-overeni-identity-zakaznika"><a name="UC-59"></a>UC-59 - Ověření identity zákazníka</h2>
 <p>Zákazník kontaktuje pracovníka podpory. Může použít email nebo zavolat na telefonní číslo podpory. V případě telefonického rozhovoru ověří:</p>
 <ol>
@@ -696,6 +862,97 @@
 <li>Systém převede balík do příslušného stavu a zobrazí stránku s detailem balíku, kde bude vidět změněný stav.</li>
 </ol>
 <p>Až dispečer na balík ve frontě narazí, tak dostane informaci, že balík je určený k likvidaci. Tím je hotovo.</p>
+<h2 id="uc-61-zmena-zpatecni-adresy"><a name="UC-61"></a>UC-61 - Změna zpáteční adresy</h2>
+<p><strong>TODO - Dokončit, zaznamenat předpoklady, výchozí stav. </strong></p>
+<p>Zákazník kontaktuje pracovníka podpory se žádostí o změnu doručovací adresy. Pracovník bude postupovat následovně:</p>
+<ol>
+<li>Pracovník ověří identitu zákazníka <a href="../uc-50/#UC-59">UC-59</a>.</li>
+<li>V systému vyhledá a zobrazí <a href="../screens/#S-04">detail hledané objednávky S-04</a>.</li>
+<li>Pokud je objednávka ve stavu "Ukončená", pak nelze adresu měnit.</li>
+<li>Na detailu objednávky pracovník vybere "Detail balíku" a přejde na <a href="../screens/#S-05">S-05</a>.</li>
+<li>Pokud je balík ve stavu nebo "Doručeno", pak nelze zmenu adresy provést. Pokud je ve stavu "Na cestě" pak je třeba ověřit, jestli je možné doručovací adresu měnit. To muže znamenat nahlédnutí do systému dopravce nebo telefonické ověření.</li>
+<li>Na detailu balíku zvolí "Upravit doručovací adresu" a zobrazí se mu stránka <a href="../screens/#S-051">S-051 na změnu doručovací adresy</a>. Ve formuláři bude vyplněná stávající doručovací adresa.</li>
+<li>Pracovník podpory provede vlastní úpravu a stiskne tlačítko "Uložit". Systém zobrazí <a href="../screens/#S-05">detail balíku S-05</a>, kde již bude upravená doručovací adresa.</li>
+<li>Pokud při úpravě došlo ke změně ceny dopravy, pak pracovník musí znovu vystavit fakturu.</li>
+<li>Pokud již byla objednávka zaplacená, pak pracovník musí zakázku přesunout do stavu nezaplacená. </li>
+<li>O události pořídí záznam do kontaktní historie <a href="../uc-50/#UC-58">UC-58</a>.</li>
+</ol>
+<p>Pokud při změně adresy dojde ke změně fronty, pak se balík ocitá ve špatné frontě. Dispečer na to přijde při dalším průchodu frontou, kdy mu systém řekne správnou frontu.</p>
+<h2 id="uc-61-rozdeleni-jednoho-baliku-na-vic"><a name="UC-61"></a>UC-61 - Rozdělení jednoho balíku na víc</h2>
+<p><strong>TODO - Jak to fyzicky zaznamenat do systému, jak to provede dispečer.</strong></p>
+<h2 id="uc-62-prijeti-emailu-nebo-telefonu-od-zakaznika"><a name="UC-62"></a>UC-62 - Přijetí emailu nebo telefonu od zákazníka</h2>
+<p>Pokud přijde email od zákazníka, pak pracovník podpory provede:</p>
+<ol>
+<li>Oveří identity zákazníka.</li>
+<li>Vyhledá objednávku v systému pomocí <a href="../screens/#S-10">hledání objednávek S-10</a>.</li>
+<li>Zobrazí <a href="../screens/#S-04">detail hledané objednávky S-04</a>.<ul>
+<li>Pokud chtěl zákazník řešit detail balíku, pak si zobrazí detail příslušného balíku <a href="../screens/#S-05">S-05</a> a může vykonat některý z uvedených UC:<ul>
+<li>Změna doručovací adresy</li>
+<li>Změna adresy odesílatele</li>
+</ul>
+</li>
+<li>Pokud chtěl zákazník řešit něco na objednávce, pak může pracovník provézt některý z následujících UC:<ul>
+<li>Storno objednávky</li>
+<li>Reklamace</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Pracovník přidá záznam do kontaktní historie</li>
+<li>Hotovo</li>
+</ol>
+<h2 id="uc-63-vyhledani-objednavky"><a name="UC-63"></a>UC-63 - Vyhledání objednávky</h2>
+<p>Pracovník podpory vyhledá objednávku.</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory je přihlášený.</li>
+<li>Je na základním <a href="../screens/#S-01">rozcestníku S-01</a>.</li>
+</ul>
+<p>Kroky:</p>
+<ol>
+<li>Na detailu "Hledání objednávek" zobrazí se obrazovka pro <a href="../screens/#S-10">hledání objednávek S-10</a></li>
+<li>Pracovník omezí hledání podle několika podmínek. Vyhledané záznamy musí splňovat všechny zvolené podmínky zároveň. Jsou to:<ul>
+<li>Full-text hledaní v textu objednávky. Konkrétně v polích:<ul>
+<li>Doručovací a odesílací adresa a všechny kontaktní udaje.</li>
+<li>Komentéře ke stavům.</li>
+<li>Popis poškození</li>
+<li>Kontaktní historie.</li>
+</ul>
+</li>
+<li>Zvolí horní nebo dolní hranici ceny za objednávku s DPH.</li>
+<li>Podle stavu objednávky</li>
+<li>Omezení na objednávky, kde platba nepřišla více než zvolený počet dní. </li>
+<li>Omezení na objednávky, kde dorazil aspoň jeden balík.</li>
+</ul>
+</li>
+<li>Pracovník klikne na kód hledané objednávky a dostane se na <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
+<li>Hotovo</li>
+</ol>
+<h2 id="uc-64-vyhledani-baliku-podle-objednavky"><a name="UC-64"></a>UC-64 - Vyhledání balíku podle objednávky</h2>
+<p>Pracovník podpory vyhledá objednávku.</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory je na <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
+</ul>
+<p>Kroky:</p>
+<ol>
+<li>Pracovník vybere ze seznamu balíku tek, který hledá a klikne na "Detail". Pak se zobrazí <a href="../screens/#S-05">detail balíku S-05</a>.</li>
+<li>Hotovo</li>
+</ol>
+<h2 id="uc-65-poslat-baliku-na-zpatecni-adresu"><a name="UC-65"></a>UC-65 - Poslat balíku na zpáteční adresu</h2>
+<p>Pracovník podpory změní doručovací adresu balíku.</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Pracovník podpory má zobrazený <a href="../screens/#S-05">Detail balíku S-05</a>.</li>
+<li>Objednávka není ve stavu "Ukončená".</li>
+<li>Balík není ve stavu "Doručeno"</li>
+</ul>
+<p>Kroky:</p>
+<ol>
+<li>Pokud je balík ve stavu nebo "Doručeno", pak nelze zmenu adresy provést. Pokud je ve stavu "Na cestě" pak je třeba ověřit, jestli je možné doručovací adresu měnit. To muže znamenat nahlédnutí do systému dopravce nebo telefonické ověření.</li>
+<li>Zvolí "Odeslat na zpáteční adresu". Po tom systém změní doručování na doručování zpět. V tomto případě se nekontroluje jestli byla objednávka zaplacena. Balík půjde do fronty dopravce.</li>
+<li>Hotovo</li>
+</ol>
                 
                   
                 
