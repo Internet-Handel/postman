@@ -25,6 +25,11 @@ object disposed {
     kdo má řešit: Oddělení
 }
 
+object "Napárovný" as duplicated
+object duplicated {
+    na co je napárovaný: Balík
+}
+
 object "Ve Frontě" as queue
 object queue {
     kde balík je: Fronta
@@ -58,6 +63,7 @@ object waitingForShipping {
 state <|-- closed
 closed <|-- delivered
 closed <|-- disposed
+closed <|-- duplicated
 
 state <|-- delivering
 

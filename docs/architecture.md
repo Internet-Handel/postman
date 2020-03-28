@@ -50,15 +50,25 @@ Variabilní symbol pro zaplacení objednávky, číslo objednávky a číslo fak
 V některých případech by bylo dobré mít samostatnou entity zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Lze to řešit tak, že se vezmou záznamy, které identifikují zákazníka. Například Jméno, příjmení, telefonní číslo, email: Při založení objednávky se projdou již existující zákazníci a zkusí se, jestli se s nějakou tolerancí nejedná o stejný záznam. Pro porovnání lze u něktrých polí Levenshteinovu zvdálenenost. Případně lze shodu porovnávat pouze podle emailu nebo telefonního čísla.
 **Toto teď nebudem implementovat. Zákazníka poznáme podle emailu.**
 ## Entitní model
+Zde budou popsány vztajy mezi objekty a základní set attributů.
+
+Vztahy mezi základními objekty budou vypadat takto:
+![Přehled](./diagrams/out/arch-01.png "Přehled")
 
 ### Objednávka
 
-![Objednávka](./diagrams/out/arch-01.png "Objednávka")
+### Balík
+U balíku se uchovává:
 
-Potřebujeme mít někde uloženou objednávku, tak jak jí zadal zákazník?
+* Stav balíku - ze stavů je možné vyčíst, co se dějě a řídit, co se má stát.
+* Událost - jednorázová událost, která nemění stav balku. Například měření a vážení.
 
-### Pouze příklad diagramů, pro připomenutí
-![Test](./diagrams/out/arch-05.png "Test")
+![Události balíku](./diagrams/out/arch-02.png "Události balíku")
+
+#### Stavy balíku
+U balíku je třeba evidovat několik různých stavů. Jednotlivé stavy se od sebe mohou lišit počtem atributů a způsobem práce s nimi. Například stav "Poškozený balík" může být přiřazen na dispečera nebo pracovníka podpory. Ostatní stavy jsou vždy přiřazeny na jednu roli. Například pokud je balík ve frontě, kde čeka na zaplacení, tak pouze pracovník podpory může říct, že je balík zaplacen a přesunout ho do fronty konkrétního doporavce.
+
+![Stavy balíků](./diagrams/out/states-package-2.png "Stavy balíků")
 
 ## Návrh architektury applikace
 Z počátku nepotřebujem nic speciálního. Pouze při realizací dávat pozor, že finální UC se mohou lišit od návrhů. Například implementace napojení na konkrétního dopravce může ovlivnost způsob zpracování fronty dopravce. Například požadavek na validaci adresy ze strany dopravce může vést k tomu, že při přijetí balíku a po jeho spárování s objednávkou se musí přidat validace adresy.

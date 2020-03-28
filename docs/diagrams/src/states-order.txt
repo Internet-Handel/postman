@@ -12,7 +12,8 @@ closed: Všechny balíky jsou doručené.
 
 [*] --> nezaplacená : Zákazník založí objednávku
 nezaplacená --> cekaNaDoruceni : Zákazník zaplatí
-cekaNaDoruceni --> closed : Doručená nebo zrušená
+nezaplacená --> closed:  Objednávka je zrušená nebo nikdy\nnepřišel balík ani platba
+cekaNaDoruceni --> closed : Všechny balíky jsou doručeny\nnebo jinak ukončeny.
 closed --> [*]
 
 @enduml

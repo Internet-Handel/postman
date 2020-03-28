@@ -3,32 +3,22 @@
 
 hide empty description
 
-state "Na cestě" as naCeste
-naCeste:Balík je na cestě do depa
+state "Na cestě" as delivering
+delivering: Balík je na cestě do depa
 
-state "Chyba" as chyba
-chyba:Například chybí kód a nesedí adresa
+state "Ve frontě" as inQueue
+inQueue: čeká, až si ho dopravce vyzvedne
 
-state "Čeká na zaplacení" as cekaNaZaplaceni
-cekaNaZaplaceni:Čeká na zaplacení
-
-state "Ve frontě dopravce" as cekaNaDopravce
-cekaNaDopravce:Balík čeká, až si ho dopravce vyzvedne
-
-state "Doručeno" as doruceno
-doruceno: Asi bychom měli rozlišit komu
+state "Uzavřeno" as closed
+closed: Asi bychom měli rozlišit komu
   
-[*] --> naCeste
-naCeste --> doruceno
-naCeste --> cekaNaDopravce
-naCeste --> chyba
-naCeste --> cekaNaZaplaceni
+[*] --> delivering
+delivering --> inQueue
+inQueue --> delivering
 
-cekaNaZaplaceni --> cekaNaDopravce
-cekaNaZaplaceni --> chyba
-cekaNaDopravce --> naCeste
-chyba --> cekaNaDopravce
-chyba --> [*]
-doruceno --> [*]
+inQueue --> closed
+closed --> inQueue
+
+closed --> [*]
 
 @enduml

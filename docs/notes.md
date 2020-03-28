@@ -1,6 +1,6 @@
 # Poznámky
 
-## Otevřené otázky
+## Otevřené otázky, nápady
 
 * Jaký čárový kód tisknem na balíky? Je to EAN-13?
 * Je povinnost posílat dobropis, v případě, že zákazník zruší objednávku, ale ještě neposlal penize?
@@ -8,6 +8,10 @@
 * Zrušíme tisknuti doručoivací adresy na interni štítek? V UC-51 se adresa muze zmenit a v pripade nesparovaneho baliku ji nemusime znat.
 * Budem uchovávat původní hodnoty z objednávky? (Cena za dopravu, dorucovaci adresa, adresa odesilatele, ....)
 * Pokud se nepodaří ověřit identitu volajícího zákazníka nebo příchozího emailu. Pak nechávám na domluvě, jak takovou událost pracovník podpory zaznamená k dalšímu posouzení. Řešení by mohla být kontaktní historie nenavázaná na zákazníka.
+* Potřebujeme mít někde uloženou objednávku, tak jak jí zadal zákazník? Například pro porovnání. Určitě bude v auditním logu.
+* U stavů mít detailní obrázek se stavy a přechodů napsané UC.
+* Pracovník podpory si při řešení chybových stavů balíku nemůže objednat další focení nebo měření.
+* Když označují balík za doručený, zatím nezohlednuji, že existuje více než jedno depo.
 
 ## 07.03.2020
 

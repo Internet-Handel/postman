@@ -27,6 +27,11 @@ object wrapping {
     popis: string
 }
 
+object "Párování" as duplicity
+object duplicity {
+    napárovaný balík: Balík
+}
+
 object "Stav balíku" as pckgState
 object pckgState {
     datum začátku: date
@@ -38,7 +43,7 @@ pckg o--> "1..*" pckgState
 pckg o--  "1..*" event
 event <|-- measurement
 event <|-- wrapping
-
+event <|-- duplicity
 
 
 @enduml
