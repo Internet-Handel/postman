@@ -4,6 +4,8 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |-----------------|
+| 27.03.2020 |Dokončeno první kolo UC pro pracovníka podpory.|
+| 27.03.2020 |UC pro vyhledání balíku a objednávky. Dokončeny popis stavů objednávky a balíku.|
 | 26.03.2020 |Stavy balíků a události balíku, návrh detailů entit|
 | 25.03.2020 |Řešení poškozených balíků. První krok k řešení stavů a událostí na balíku.|
 | 24.03.2020 |Doplněno párování balíků a začátek řešení poškozených balíků.|

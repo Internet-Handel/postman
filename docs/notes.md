@@ -12,6 +12,7 @@
 * U stavů mít detailní obrázek se stavy a přechodů napsané UC.
 * Pracovník podpory si při řešení chybových stavů balíku nemůže objednat další focení nebo měření.
 * Když označují balík za doručený, zatím nezohlednuji, že existuje více než jedno depo.
+* Nebudem řešit stav, kdy fakturace proběhne na osobu na jedné adrese, ale zpáteční adresa balíku má být jiná.
 
 ## 07.03.2020
 
