@@ -74,6 +74,11 @@ Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-orde
 
 ![Detail balíku](./imgs/s05-package-detail.png "Detail balíku")
 
+Tlačítka pro fyzickou manipulaci s balíkem jsou dostupná pouze dispečerovi. Jedna se o:
+
+* Přidat záznam o poškození
+* Přidat měření
+
 Odkaz na detail je ze seznamu balíků na [S-04 Detail objednávky](./#S-04).
 
 ## <a name="S-051"></a>S-051 - Změna doručovací adresy
