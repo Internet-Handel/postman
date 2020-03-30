@@ -410,13 +410,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#uc-66-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
-    UC-66 - Rozdělení jednoho balíku na víc
-  </a>
-  
-</li>
-      
       
       
       
@@ -669,13 +662,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#uc-66-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
-    UC-66 - Rozdělení jednoho balíku na víc
-  </a>
-  
-</li>
-      
       
       
       
@@ -807,7 +793,10 @@
 <p>Kroky:</p>
 <ol>
 <li>Pracovník si z hlavního rozcestníku zobrazí balíky v chybové frontě.</li>
-<li>U každého balíku se podívá na detaily problému a pokusí se ho vyřešit.</li>
+<li>Zobrazí se stránka se seznamem balíků ve stavu <code>Chyba</code> a zároveň přiřazených na podpoře.</li>
+<li>Každý balík si pracovník otevře a pokusí se najít řešení.</li>
+<li>Pokud najde řešení, pak balík převede do nového stavu.</li>
+<li>Pokud má pouze doplňující dotaz, nebo je řešení složitější pak to popíše k detailu chyby a tu přiřadí k řešení na dispečera.</li>
 <li>Hotovo. </li>
 </ol>
 <p>Řešení některých druhů chyb:</p>
@@ -824,10 +813,6 @@
 </li>
 <li>Poškozený balík:<ul>
 <li>Pracovník zkusí kontaktovat zákazníka a domluví další postup.</li>
-</ul>
-</li>
-<li>Jiná chyba<ul>
-<li>Pracovník podpory se může spojit s dispečerem nebo zákazníkem.</li>
 </ul>
 </li>
 </ul>
@@ -1034,19 +1019,6 @@
 <li>Zvolí "Odeslat na zpáteční adresu". Po tom systém změní doručování na doručování zpět. V tomto případě se nekontroluje jestli byla objednávka zaplacena. Balík půjde do fronty dopravce.</li>
 <li>Hotovo</li>
 </ol>
-<h2 id="uc-66-rozdeleni-jednoho-baliku-na-vic"><a name="UC-66"></a>UC-66 - Rozdělení jednoho balíku na víc</h2>
-<p>Předpoklady:</p>
-<ul>
-<li>Pracovník podpory má zobrazený <a href="../screens/#S-05">detail balíku S-05</a>, který bude rozdělen do více balíků.</li>
-</ul>
-<p>Kroky:</p>
-<ol>
-<li>Pracovník klikne na tlačítko rozdělit.</li>
-<li>Systém vytvoří nový balík, v historii o tom vznikne záznam s odkazem na nový balík.</li>
-<li>Nový balík nebude mít interní štítek, kód balíku ani rozměry. Stejně tak v historii bude jedinný zaznam o tom, že balík byl vytvořen rozdělením z balíku a odkaz na původní balík.</li>
-<li>Hotovo.</li>
-</ol>
-<p>Pracovník může od původního balíku vytvořit více balíků.</p>
                 
                   
                 

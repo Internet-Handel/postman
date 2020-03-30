@@ -332,6 +332,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-29-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
+    UC-29 - Rozdělení jednoho balíku na víc
+  </a>
+  
+</li>
+      
       
       
       
@@ -578,6 +585,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-29-rozdeleni-jednoho-baliku-na-vic" class="md-nav__link">
+    UC-29 - Rozdělení jednoho balíku na víc
+  </a>
+  
+</li>
+      
       
       
       
@@ -662,6 +676,37 @@
 <p><img alt="Balík ve špatné frontě" src="../diagrams/out/uc-28-activity.png" title="Balík ve špatné frontě" /></p>
 <p>V tomto UC je řešeno zrušení objednávky. Pokud nastane zrušení objednávky, pak se balík posílá na odresu odesílatele nebo zníčí.</p>
 <p>Tento UC se provede, kdykoliv v jiném UC dispečer načítá interní štítek.</p>
+<h2 id="uc-29-rozdeleni-jednoho-baliku-na-vic"><a name="UC-29"></a>UC-29 - Rozdělení jednoho balíku na víc</h2>
+<p>Předpoklady:</p>
+<ul>
+<li>Dispečer má zobrazený <a href="../screens/#S-05">detail balíku S-05</a>, který bude rozdělen do více balíků.</li>
+</ul>
+<p>Kroky:</p>
+<ol>
+<li>Dispečer klikne na tlačítko rozdělit.</li>
+<li>Systém vytvoří nový balík, který bude mít následující vlastnosti:<ul>
+<li>V historii o tom vznikne záznam s odkazem na nový balík.</li>
+<li>Nebude mít interní štítek.</li>
+<li>Nebude mít kód balíku.</li>
+<li>V historii bude jedinný zaznam o tom, že balík byl vytvořen rozdělením z balíku a odkaz na původní balík.</li>
+<li>Zpáteční adresa bude kopie zpáteční adresy z původního balíku.</li>
+<li>Doručovací adresa bude kopie doručovací adresy z původního balíku.</li>
+<li>Balík bude napojen na stejnou objednávku jako původní balík.</li>
+<li>Stav bude odvozen ze stavu objednávky:<ul>
+<li>Pokud byla objednávka uhrazená, pak se nový balík vytvoří ve stavu <code>Ve frontě</code>, kde bude čekat na doručení na doručovací adresu.</li>
+<li>Pokud objednávka nebyla uhrazená pak se balík vytvoří ve stavu <code>Ve frontě</code>, kde bude čekat na zaplacení.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Systém zobrazí detail nového balíku.</li>
+<li>Dispečer zabalí nový balík.</li>
+<li>Dispečer přidá nový záznam o měření a vážení balíku.</li>
+<li>Dispečer vytvoří a nalepí interní štítek balíku.</li>
+<li>Dispečer může od původního balíku vytvořit více balíků.</li>
+<li>Dispečer se vrátí k původnímu balíku a </li>
+<li>Hotovo.</li>
+</ol>
                 
                   
                 
