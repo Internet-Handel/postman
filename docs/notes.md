@@ -13,6 +13,7 @@
 * Pracovník podpory si při řešení chybových stavů balíku nemůže objednat další focení nebo měření.
 * Když označují balík za doručený, zatím nezohlednuji, že existuje více než jedno depo.
 * Nebudem řešit stav, kdy fakturace proběhne na osobu na jedné adrese, ale zpáteční adresa balíku má být jiná.
+* Když dojde ke storno, vystavení dobropisu možné ne povinné. Má se dobropis vystavit i když nepřisli peníze?.
 
 ## 07.03.2020
 
