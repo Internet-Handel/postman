@@ -93,6 +93,10 @@ Může být součástí stránky [S-04 Detail objednávky](./#S-04)
 
 ## <a name="S-053"></a>S-053 - Poškození balíku
 
+Obrázky u osob nejsou nutné. Na nahrávání fotek osob není UC.
+
+Část napárované balíky popisuje stav, kdy přijde balík, který se nepodaří spojit s objednávkou, dispečer balík změří a zváží a opatří interním štítkem. Teprve dodatečně se přijde na to, k jaký to byl balík u jaké objednávky.
+
 ![Poškození balíku](./imgs/s-053.png "Poškození balíku")
 
 ## <a name="S-06"></a>S-06 - Přehled plateb
