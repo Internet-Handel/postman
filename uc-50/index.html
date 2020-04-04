@@ -38,7 +38,7 @@
     
     
       
-        <title>UC-50 - UC-59 - Postman</title>
+        <title>UC-50 - UC-65 - Postman</title>
       
     
     
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                UC-50 - UC-59
+                UC-50 - UC-65
               
             </span>
           
@@ -216,8 +216,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-20/" title="UC-20 - UC-25" class="md-nav__link">
-      UC-20 - UC-25
+    <a href="../uc-20/" title="UC-20 - UC-29" class="md-nav__link">
+      UC-20 - UC-29
     </a>
   </li>
 
@@ -228,8 +228,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-30/" title="UC-31 - UC-39" class="md-nav__link">
-      UC-31 - UC-39
+    <a href="../uc-30/" title="UC-31 - UC-36" class="md-nav__link">
+      UC-31 - UC-36
     </a>
   </li>
 
@@ -240,8 +240,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-40/" title="UC-40 - UC-49" class="md-nav__link">
-      UC-40 - UC-49
+    <a href="../uc-40/" title="UC-40 - UC-48" class="md-nav__link">
+      UC-40 - UC-48
     </a>
   </li>
 
@@ -261,11 +261,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        UC-50 - UC-59
+        UC-50 - UC-65
       </label>
     
-    <a href="./" title="UC-50 - UC-59" class="md-nav__link md-nav__link--active">
-      UC-50 - UC-59
+    <a href="./" title="UC-50 - UC-65" class="md-nav__link md-nav__link--active">
+      UC-50 - UC-65
     </a>
     
       
@@ -376,8 +376,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-61-zmena-adresy-odesilatele" class="md-nav__link">
-    UC-61 - Změna adresy odesílatele
+  <a href="#uc-61-odeslat-balik-na-zpatecni-adresu-zakaznika" class="md-nav__link">
+    UC-61 - Odeslat balík na zpáteční adresu zákazníka
   </a>
   
 </li>
@@ -628,8 +628,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uc-61-zmena-adresy-odesilatele" class="md-nav__link">
-    UC-61 - Změna adresy odesílatele
+  <a href="#uc-61-odeslat-balik-na-zpatecni-adresu-zakaznika" class="md-nav__link">
+    UC-61 - Odeslat balík na zpáteční adresu zákazníka
   </a>
   
 </li>
@@ -680,9 +680,6 @@
                 
                 
                 <h1 id="podpora-prace-s-objednavkou-a-balikem">Podpora - práce s objednávkou a balíkem</h1>
-<p><strong>TODO - Zmeny adresy odesilaci a dorucovani zmenit na jednu,</strong></p>
-<p><strong>TODO - Nesedi číslování UC, nakonci upravit.</strong></p>
-<p><strong>TODO - Posun objednavek mezi stavy.</strong></p>
 <p>Každý balík má svůj kód. Kod je nezávislý na objednávce. Zákazníka žádáme, aby ho napsal na balík. Pokud bude v objednávce víc balíků, pak každý balík bude mít svůj vlastní kód balíku kód. Ne každý balík musí mít kód balíku.</p>
 <p>V komunikační historii nebude možné záznamy mazat ani upravovat. Záznamy půjde pouze přidávat. Z historie stavů objednávky a balíku bude možné zrekonstruovat celý proces zpracování objednávky a balíku.</p>
 <p>Komunikační historie je pouhý textový záznam, informace není nijak strukturovaná.</p>
@@ -713,12 +710,12 @@
 <p>Předpoklady:</p>
 <ul>
 <li>Pracovník podpory má zobrazený <a href="../screens/#S-05">Detail balíku S-05</a>.</li>
-<li>Objednávka není ve stavu "Ukončená".</li>
-<li>Balík není ve stavu "Doručeno". </li>
+<li>Objednávka není ve stavu <code>Ukončená</code>.</li>
+<li>Balík není ve stavu <code>Doručeno</code>. </li>
 </ul>
 <p>Kroky:</p>
 <ol>
-<li>Pokud je ve stavu "Na cestě" pak je třeba ověřit, jestli je možné doručovací adresu měnit. To může znamenat nahlédnutí do systému dopravce nebo telefonické ověření stavu u dopravce.</li>
+<li>Pokud je ve stavu <code>Na cestě</code> pak je třeba ověřit, jestli je možné doručovací adresu měnit. To může znamenat nahlédnutí do systému dopravce nebo telefonické ověření stavu u dopravce.</li>
 <li>Na detailu balíku zvolí "Upravit doručovací adresu" a zobrazí se mu stránka <a href="../screens/#S-051">S-051 na změnu doručovací adresy</a>. Ve formuláři bude vyplněná stávající doručovací adresa.</li>
 <li>Pracovník podpory provede vlastní úpravu a stiskne tlačítko "Uložit". Systém zobrazí <a href="../screens/#S-05">detail balíku S-05</a>, kde již bude upravená doručovací adresa.</li>
 <li>Pokud při úpravě došlo ke změně ceny dopravy, pak pracovník může znovu vystavit fakturu.</li>
@@ -926,19 +923,25 @@
 <li>Hotovo.</li>
 </ol>
 <p>Až dispečer na balík ve frontě narazí, tak dostane informaci, že balík je určený k likvidaci. Dispečer balík zlikviduje.</p>
-<h2 id="uc-61-zmena-adresy-odesilatele"><a name="UC-61"></a>UC-61 - Změna adresy odesílatele</h2>
+<h2 id="uc-61-odeslat-balik-na-zpatecni-adresu-zakaznika"><a name="UC-61"></a>UC-61 - Odeslat balík na zpáteční adresu zákazníka</h2>
 <p>Předpoklady:</p>
 <ul>
 <li>Balík není v nějakém konečném stavu.</li>
-<li>Pokud je ve stavu <code>Na cestě</code> pak lze adresu odesílatele upravovat.</li>
+<li>Pokud není ve stavu <code>Na cestě</code>.</li>
 <li>Objednávka není ve stavu <code>Ukončená</code>.</li>
 <li>Pracovník podpory má zobrazen <a href="../screens/#S-05">detail balíku S-05</a>.</li>
 </ul>
 <p>Kroky:</p>
 <ol>
-<li>Na detailu balíku zvolí "Upravit doručovací adresu" a zobrazí se mu stránka na změnu adresy odesílatele. Ve formuláři bude vyplněná  stávající adresa odesílatele.</li>
-<li>Pracovník podpory provede vlastní úpravu a stiskne tlačítko "Uložit".</li>
-<li>Systém zobrazí <a href="../screens/#S-05">detail balíku S-05</a>, kde již bude upravená adresa odesílatele.</li>
+<li>Na detailu balíku zvolí "Odeslat na zpáteční adresu zákazníka".</li>
+<li>Systém provede:<ul>
+<li>Odesílací adresu zákazníka z objednávky zkopíruje do doručovací adresy balíku.</li>
+<li>Balík přesune do fronty vhodného dopravce pro doručení na zpáteční adresu.</li>
+<li>Balík bude ve stavu <code>Ve frontě</code>.</li>
+<li>Systém zobrazí <a href="../screens/#S-05">detail balíku S-05</a>.</li>
+</ul>
+</li>
+<li>Hotovo.</li>
 </ol>
 <p>Pokud při změně adresy dojde ke změně fronty, pak se balík ocitá ve špatné frontě. Dispečer na to přijde při dalším průchodu frontou, kdy mu systém řekne správnou frontu.</p>
 <h2 id="uc-62-prijeti-emailu-nebo-telefonu-od-zakaznika"><a name="UC-62"></a>UC-62 - Přijetí emailu nebo telefonu od zákazníka</h2>
@@ -1037,7 +1040,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../uc-40/" title="UC-40 - UC-49" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../uc-40/" title="UC-40 - UC-48" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1046,7 +1049,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                UC-40 - UC-49
+                UC-40 - UC-48
               </span>
             </div>
           </a>

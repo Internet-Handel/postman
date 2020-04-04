@@ -1,0 +1,27 @@
+@startuml
+!include color_def.txt
+left to right direction
+
+actor :Podpora: as support
+
+(UC-40 Kontrola\nbankovního účtu) as (UC-40)
+(UC-41 Párování\nplateb) as (UC-41)
+(UC-42 Odpárování platby) as (UC-42)
+(UC-43 Urgence zaplacení) as (UC-43)
+(UC-44 Řešení přeplacených objednávek) as (UC-44)
+(UC-45 Řešení zaplacených\nobjednávek, ke kterým nedorazil balík) as (UC-45)
+(UC-46 Vystavení dobropisu) as (UC-46)
+(UC-47 Vystavení upravené faktury) as (UC-47)
+(UC-48 Úprava objednávky) as (UC-48)
+
+support -up-> (UC-43)
+support -up-> (UC-42)
+support -up-> (UC-41)
+support -up-> (UC-40)
+support -right-> (UC-44)
+support -down-> (UC-45)
+support -down-> (UC-46)
+support -down-> (UC-47)
+support -left-> (UC-48)
+
+@enduml
