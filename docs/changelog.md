@@ -3,7 +3,8 @@
 Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
-| ---------- |-----------------|
+| ---------- |----------------
+| 04.04.2020 |Úprava UC pro odeslání na zpáteční adresu. Upraveno číslování balíků.|
 | 01.04.2020 |Úprava detailu balíku.|
 | 30.03.2020 |Řešení chyb u balíku.|
 | 27.03.2020 |Dokončeno první kolo UC pro pracovníka podpory.|

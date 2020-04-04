@@ -22,6 +22,7 @@ repeat
             toho, co má dispečer s balíkem udělat.;
             :Dispečer to udělá a potvrdí.;
         else (Ne)
+            $col2:  Obrazovka s\npopisem chyby;
         endif
     endif
 repeat while (Další balík k zpracování?) is (Ano)

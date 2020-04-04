@@ -72,6 +72,8 @@ Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-orde
 
 ## <a name="S-05"></a>S-05 - Detail balíku
 
+Doručovací odresa balíku nemusí být ta, kterou zadal na objednávce zákazník. Pokud doručujem do dalšího depa, pak zde bude adresa depa. Doručovací adresu, kterou zadal klient lze dohledat na objednávce.
+
 ![Detail balíku](./imgs/s05-package-detail.png "Detail balíku")
 
 Tlačítka pro fyzickou manipulaci s balíkem jsou dostupná pouze dispečerovi. Jedna se o:
@@ -80,6 +82,8 @@ Tlačítka pro fyzickou manipulaci s balíkem jsou dostupná pouze dispečerovi.
 * Přidat měření
 
 Odkaz na detail je ze seznamu balíků na [S-04 Detail objednávky](./#S-04).
+
+Část napárované balíky popisuje stav, kdy přijde balík, který se nepodaří spojit s objednávkou, dispečer balík změří a zváží a opatří interním štítkem. Teprve dodatečně se přijde na to, k jaký to byl balík u jaké objednávky.
 
 ## <a name="S-051"></a>S-051 - Změna doručovací adresy
 
@@ -95,9 +99,13 @@ Může být součástí stránky [S-04 Detail objednávky](./#S-04)
 
 Obrázky u osob nejsou nutné. Na nahrávání fotek osob není UC.
 
-Část napárované balíky popisuje stav, kdy přijde balík, který se nepodaří spojit s objednávkou, dispečer balík změří a zváží a opatří interním štítkem. Teprve dodatečně se přijde na to, k jaký to byl balík u jaké objednávky.
-
 ![Poškození balíku](./imgs/s-053.png "Poškození balíku")
+
+## <a name="S-054"></a>S-054 - Chyba při zpracování balíku
+
+Alternativou k předchozí obrazovce je obecná obrazovka pro chybu při zoracování balíku.
+
+![Chyba při zpracování balíku](./imgs/s-054.png "Chyba při zpracování balíku")
 
 ## <a name="S-06"></a>S-06 - Přehled plateb
 

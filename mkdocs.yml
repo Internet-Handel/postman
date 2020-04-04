@@ -6,10 +6,10 @@ nav:
     - 'Usecases':
         - UC-04 - UC-07: uc-00.md
         - UC-10 - UC-13: uc-10.md
-        - UC-20 - UC-25: uc-20.md
-        - UC-31 - UC-39: uc-30.md
-        - UC-40 - UC-49: uc-40.md
-        - UC-50 - UC-59: uc-50.md
+        - UC-20 - UC-29: uc-20.md
+        - UC-31 - UC-36: uc-30.md
+        - UC-40 - UC-48: uc-40.md
+        - UC-50 - UC-65: uc-50.md
     - Stavy: states.md
     - Šablony: templates.md
     - Obrazovky: screens.md
