@@ -52,6 +52,8 @@ Stránku může být rozdělená pomocí záložek na více. Pokud odkaz na deta
 
 Detaily záznamů kontaktní historie na této stránce nejsou vidět. Pro ně by měla vzniknout nová stránka s jejich seznamem a zde pribýt odkaz na ní.
 
+Číslo objednávky a variabilní symbol jsou stejné hodnoty.
+
 ## <a name="S-041"></a>S-041 - Potvrzení odpárování platby
 
 Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-order-details.png "Detail objednávky") stiskne odpárovat, tak se mu zobrazí potvrzovací dialog:
@@ -72,16 +74,20 @@ Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-orde
 
 ## <a name="S-05"></a>S-05 - Detail balíku
 
-Doručovací odresa balíku nemusí být ta, kterou zadal na objednávce zákazník. Pokud doručujem do dalšího depa, pak zde bude adresa depa. Doručovací adresu, kterou zadal klient lze dohledat na objednávce.
+Číslo balíku v nadpisu stránky bude kód balíku. Pokud balík kód balíku namá, pak zde bude kód interního štítku.
+
+Doručovací odresa balíku nemusí být ta, kterou zadal na objednávce zákazník. Pokud doručujeme do dalšího depa, pak zde bude adresa depa. Doručovací adresu, kterou zadal klient lze dohledat na objednávce.
 
 ![Detail balíku](./imgs/s05-package-detail.png "Detail balíku")
 
 Tlačítka pro fyzickou manipulaci s balíkem jsou dostupná pouze dispečerovi. Jedna se o:
 
 * Přidat záznam o poškození
+* Přidat záznam o přebalení
 * Přidat měření
+* Rozdělit balík
 
-Odkaz na detail je ze seznamu balíků na [S-04 Detail objednávky](./#S-04).
+Odkaz na detail je z [hledání balíků S-03](./#S-03) a z [detailu objednávky S-04](./#S-04).
 
 Část napárované balíky popisuje stav, kdy přijde balík, který se nepodaří spojit s objednávkou, dispečer balík změří a zváží a opatří interním štítkem. Teprve dodatečně se přijde na to, k jaký to byl balík u jaké objednávky.
 

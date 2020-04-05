@@ -1,13 +1,6 @@
 # Architektura
 
-Technický návrh systému.
-
-Nebude možné zde popsat všechny aspekty řešení. Prot jsou zde popsáný pouze části, které mají dopad na UC.
-
-Několik pravidel:
-
-* Při založení objednávky musí vzniknout instance balíku. Na ní je uložen kód balíku.
-* Balík, který se při přijetí nepodaří spojit s objednávkou, nemusí mít kód balíku.
+Technický návrh systému. Nebude možné zde popsat všechny aspekty řešení. Jsou zde popsané jen některé části.
 
 ## Kód balíku
 
@@ -15,40 +8,47 @@ Kód balíku musí splňovat několik vlastností:
 
 * I po lidské chybě, jako je záměna dvou znaků, nebo překlep jednoho znaku musíme být schopní balíček dohledat.
 * Kód se musí pohodlně číst a opisovat.
+* Nebude rozlišovat velká a malá písmena.
 * Nesmí obsahovat znaky, v které se často zaměňují jako jsou:
-    * nula a velké O
-    * malé L a jedna.
+    * nula a ```O```.
+    * jedna a ```L```.
 
 Jedno z možných řešení je, že se kód kód bude skládat ze tří pomlčkou oddělených částí po čtyřech znacích: ```XXXX-XXXX-XXXX```. Jednotlivé znaky budem náhodně generovat z těchto skupin:
 
 * Souhlásky - ```b, c, d, f, g, h, j, k, m, n, p, r, s, t, v, x, z```
-* Samohlásky a číslice - ```a, e, u, 2, 3, 4, 5, 6, 7, 8, 9```
+* Samohlásky a číslice - ```a, e, y, u, 2, 3, 4, 5, 6, 7, 8, 9```
 
 Každá čtveřice bude vygenerovaná tak, že se budou střídat náhodné znaky z obou skupin. Střídat můžem i pořadí skupin. Například:
 
 * ```K3GE-DAM8-ERUS```
 * ```AT3K-8P3D-B4M6```
 
-To nám dává ```34 969 = 17 * 17 * 13 * 13``` kódů v jedné čtveřici, celkem ```1,16 x 10^14``` možností.;
+Variant kódu balíku bude:
 
-Pro každý balík, bude tento kód balíku vygenerovaný a uložený. Když operátor zadá kód balíku, pomocí nějakého algoritmu pro zjištění podobnosti dvou řetězců najdeme ten, který v nějaké toleranci odpovídá. Jako inspirace lze použít 	Levenshteinovu vzdálenost.
+![Variant kódu balíku](./diagrams/out/arch-03.png "Variant kódu balíku")
 
-Je potřeba kontrolovat, jestli už v minulosti nebyl vygenerovaný kód balíku použitý?
+Pro každý balík, bude tento kód balíku vygenerovaný a uložený. Když operátor zadá kód balíku, pomocí nějakého algoritmu pro zjištění podobnosti dvou řetězců a najdeme ten, který v nějaké toleranci odpovídá. Jako inspirace lze použít Levenshteinovu vzdálenost. Pro hledání balíků podle kódu lze využít [SOLR](https://lucene.apache.org/solr/), kde již je Levenshteinova vzdálenost implementovaná.
+
+Kódů balíků by měl být unikátní. Pokud se při jeho generování stane, že se vygeneruje již existující, pak se zahodí a systém zkusí vygenerovat další, dokud se netrefí do nepoužitého kódu balíku.
 
 ## Kód interního štítku balíku
 
-Jedná se o náhodné XXX místné číslo. Toto číslo se přiděluje balíku při přijetí. Významem nemůže být spjaté s objednávkou nebo zákazníkem, protože při přijetí balíku se nemusí podařit dohledat objednávku nebo zákazníka. Kód na interním štítku balíku bude vytištěn jako čárový kód i jako čísla.
+**TODO TECH - Jak dlouhý bude? Podle specifikace čárového kódu?**
+
+Jedná se o náhodné XXX místné číslo. Toto číslo se přiděluje balíku při přijetí. Je bezvýznamové a  není spjato s objednávkou nebo zákazníkem. Není spjato, protože při přijetí balíku se nemusí podařit dohledat ani objednávka ani zákazník. Kód na interním štítku balíku bude vytištěn jako čárový kód i jako čísla.
 
 Kód interního štítku balíku bude náhodné číslo. Náhodné, abychom je mohli dobře odlišit. Je možné, že budem implementovat hledání podle poškozené části. V aktuálním něvrhu to není.
 
-## Číslo faktury
+## Variabilní symbol a číslo objednávky
+Variabilní symbol pro zaplacení objednávky a číslo objednávky budou jedna hodnota. Bude to unikátní desetimístné náhodně vygenerované číslo. To, že je to desetimístné číslo plyne z formátu variabilního symbolu.
 
-Variabilní symbol pro zaplacení objednávky, číslo objednávky a číslo faktury budou jedna hodnota. Bude to desetimístné náhodně vygenerované číslo. Formát variabilního symbol je, že to je libovolné desetimístné číslo.
+## Číslo daňového dokladu
+Daňové doklady jako jsou faktury a dobropisy musí být rozlišitelné podle jejich čísla. Pro všechny daňové doklady použijem 13 místné číslo složene z čísla objednávky doplněné pořadovým číslem daňového dokladu v objednávce. Například pro objednávku č.: ```9812563321``` bude mít faktura č.: ```9812563321001```.
 
-## Unifikace zákazníků
+## Entita zákazníka
 
-V některých případech by bylo dobré mít samostatnou entity zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Lze to řešit tak, že se vezmou záznamy, které identifikují zákazníka. Například Jméno, příjmení, telefonní číslo, email: Při založení objednávky se projdou již existující zákazníci a zkusí se, jestli se s nějakou tolerancí nejedná o stejný záznam. Pro porovnání lze u něktrých polí Levenshteinovu zvdálenenost. Případně lze shodu porovnávat pouze podle emailu nebo telefonního čísla.
-**Toto teď nebudem implementovat. Zákazníka poznáme podle emailu.**
+V některých případech by bylo dobré mít samostatnou entitu zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Toto teď nebudem implementovat.
+
 ## Entitní model
 Zde budou popsány vztajy mezi objekty a základní set attributů.
 
@@ -85,6 +85,13 @@ Systém nebude bezpečný. Bude možné vystavit fakturu zákazníkovy, změnit 
 * Jakékoliv další informace, které později můžou pomoct.
 
 Auditní log by se měl z bezpečnostních důvodů uládat jinam než provozní logy.
+
+##Poznámky
+Co by mělo platit:
+
+* Při založení objednávky musí vzniknout instance balíku. Na ní je uložen kód balíku.
+* Balík, který se při přijetí nepodaří spojit s objednávkou, nemusí mít kód balíku.
+
 
 ## Zajímavé odkazy
 Další informace jsou na:
