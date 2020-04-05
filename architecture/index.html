@@ -344,15 +344,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cislo-faktury" class="md-nav__link">
-    Číslo faktury
+  <a href="#variabilni-symbol-a-cislo-objednavky" class="md-nav__link">
+    Variabilní symbol a číslo objednávky
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unifikace-zakazniku" class="md-nav__link">
-    Unifikace zákazníků
+  <a href="#cislo-danoveho-dokladu" class="md-nav__link">
+    Číslo daňového dokladu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entita-zakaznika" class="md-nav__link">
+    Entita zákazníka
   </a>
   
 </li>
@@ -407,6 +414,13 @@
         <li class="md-nav__item">
   <a href="#auditni-log" class="md-nav__link">
     Auditní log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poznamky" class="md-nav__link">
+    Poznámky
   </a>
   
 </li>
@@ -500,15 +514,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cislo-faktury" class="md-nav__link">
-    Číslo faktury
+  <a href="#variabilni-symbol-a-cislo-objednavky" class="md-nav__link">
+    Variabilní symbol a číslo objednávky
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unifikace-zakazniku" class="md-nav__link">
-    Unifikace zákazníků
+  <a href="#cislo-danoveho-dokladu" class="md-nav__link">
+    Číslo daňového dokladu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entita-zakaznika" class="md-nav__link">
+    Entita zákazníka
   </a>
   
 </li>
@@ -568,6 +589,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#poznamky" class="md-nav__link">
+    Poznámky
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#zajimave-odkazy" class="md-nav__link">
     Zajímavé odkazy
   </a>
@@ -592,45 +620,43 @@
                 
                 
                 <h1 id="architektura">Architektura</h1>
-<p>Technický návrh systému.</p>
-<p>Nebude možné zde popsat všechny aspekty řešení. Prot jsou zde popsáný pouze části, které mají dopad na UC.</p>
-<p>Několik pravidel:</p>
-<ul>
-<li>Při založení objednávky musí vzniknout instance balíku. Na ní je uložen kód balíku.</li>
-<li>Balík, který se při přijetí nepodaří spojit s objednávkou, nemusí mít kód balíku.</li>
-</ul>
+<p>Technický návrh systému. Nebude možné zde popsat všechny aspekty řešení. Jsou zde popsané jen některé části.</p>
 <h2 id="kod-baliku">Kód balíku</h2>
 <p>Kód balíku musí splňovat několik vlastností:</p>
 <ul>
 <li>I po lidské chybě, jako je záměna dvou znaků, nebo překlep jednoho znaku musíme být schopní balíček dohledat.</li>
 <li>Kód se musí pohodlně číst a opisovat.</li>
+<li>Nebude rozlišovat velká a malá písmena.</li>
 <li>Nesmí obsahovat znaky, v které se často zaměňují jako jsou:<ul>
-<li>nula a velké O</li>
-<li>malé L a jedna.</li>
+<li>nula a <code>O</code>.</li>
+<li>jedna a <code>L</code>.</li>
 </ul>
 </li>
 </ul>
 <p>Jedno z možných řešení je, že se kód kód bude skládat ze tří pomlčkou oddělených částí po čtyřech znacích: <code>XXXX-XXXX-XXXX</code>. Jednotlivé znaky budem náhodně generovat z těchto skupin:</p>
 <ul>
 <li>Souhlásky - <code>b, c, d, f, g, h, j, k, m, n, p, r, s, t, v, x, z</code></li>
-<li>Samohlásky a číslice - <code>a, e, u, 2, 3, 4, 5, 6, 7, 8, 9</code></li>
+<li>Samohlásky a číslice - <code>a, e, y, u, 2, 3, 4, 5, 6, 7, 8, 9</code></li>
 </ul>
 <p>Každá čtveřice bude vygenerovaná tak, že se budou střídat náhodné znaky z obou skupin. Střídat můžem i pořadí skupin. Například:</p>
 <ul>
 <li><code>K3GE-DAM8-ERUS</code></li>
 <li><code>AT3K-8P3D-B4M6</code></li>
 </ul>
-<p>To nám dává <code>34 969 = 17 * 17 * 13 * 13</code> kódů v jedné čtveřici, celkem <code>1,16 x 10^14</code> možností.;</p>
-<p>Pro každý balík, bude tento kód balíku vygenerovaný a uložený. Když operátor zadá kód balíku, pomocí nějakého algoritmu pro zjištění podobnosti dvou řetězců najdeme ten, který v nějaké toleranci odpovídá. Jako inspirace lze použít  Levenshteinovu vzdálenost.</p>
-<p>Je potřeba kontrolovat, jestli už v minulosti nebyl vygenerovaný kód balíku použitý?</p>
+<p>Variant kódu balíku bude:</p>
+<p><img alt="Variant kódu balíku" src="../diagrams/out/arch-03.png" title="Variant kódu balíku" /></p>
+<p>Pro každý balík, bude tento kód balíku vygenerovaný a uložený. Když operátor zadá kód balíku, pomocí nějakého algoritmu pro zjištění podobnosti dvou řetězců a najdeme ten, který v nějaké toleranci odpovídá. Jako inspirace lze použít Levenshteinovu vzdálenost. Pro hledání balíků podle kódu lze využít <a href="https://lucene.apache.org/solr/">SOLR</a>, kde již je Levenshteinova vzdálenost implementovaná.</p>
+<p>Kódů balíků by měl být unikátní. Pokud se při jeho generování stane, že se vygeneruje již existující, pak se zahodí a systém zkusí vygenerovat další, dokud se netrefí do nepoužitého kódu balíku.</p>
 <h2 id="kod-interniho-stitku-baliku">Kód interního štítku balíku</h2>
-<p>Jedná se o náhodné XXX místné číslo. Toto číslo se přiděluje balíku při přijetí. Významem nemůže být spjaté s objednávkou nebo zákazníkem, protože při přijetí balíku se nemusí podařit dohledat objednávku nebo zákazníka. Kód na interním štítku balíku bude vytištěn jako čárový kód i jako čísla.</p>
+<p><strong>TODO TECH - Jak dlouhý bude? Podle specifikace čárového kódu?</strong></p>
+<p>Jedná se o náhodné XXX místné číslo. Toto číslo se přiděluje balíku při přijetí. Je bezvýznamové a  není spjato s objednávkou nebo zákazníkem. Není spjato, protože při přijetí balíku se nemusí podařit dohledat ani objednávka ani zákazník. Kód na interním štítku balíku bude vytištěn jako čárový kód i jako čísla.</p>
 <p>Kód interního štítku balíku bude náhodné číslo. Náhodné, abychom je mohli dobře odlišit. Je možné, že budem implementovat hledání podle poškozené části. V aktuálním něvrhu to není.</p>
-<h2 id="cislo-faktury">Číslo faktury</h2>
-<p>Variabilní symbol pro zaplacení objednávky, číslo objednávky a číslo faktury budou jedna hodnota. Bude to desetimístné náhodně vygenerované číslo. Formát variabilního symbol je, že to je libovolné desetimístné číslo.</p>
-<h2 id="unifikace-zakazniku">Unifikace zákazníků</h2>
-<p>V některých případech by bylo dobré mít samostatnou entity zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Lze to řešit tak, že se vezmou záznamy, které identifikují zákazníka. Například Jméno, příjmení, telefonní číslo, email: Při založení objednávky se projdou již existující zákazníci a zkusí se, jestli se s nějakou tolerancí nejedná o stejný záznam. Pro porovnání lze u něktrých polí Levenshteinovu zvdálenenost. Případně lze shodu porovnávat pouze podle emailu nebo telefonního čísla.
-<strong>Toto teď nebudem implementovat. Zákazníka poznáme podle emailu.</strong></p>
+<h2 id="variabilni-symbol-a-cislo-objednavky">Variabilní symbol a číslo objednávky</h2>
+<p>Variabilní symbol pro zaplacení objednávky a číslo objednávky budou jedna hodnota. Bude to unikátní desetimístné náhodně vygenerované číslo. To, že je to desetimístné číslo plyne z formátu variabilního symbolu.</p>
+<h2 id="cislo-danoveho-dokladu">Číslo daňového dokladu</h2>
+<p>Daňové doklady jako jsou faktury a dobropisy musí být rozlišitelné podle jejich čísla. Pro všechny daňové doklady použijem 13 místné číslo složene z čísla objednávky doplněné pořadovým číslem daňového dokladu v objednávce. Například pro objednávku č.: <code>9812563321</code> bude mít faktura č.: <code>9812563321001</code>.</p>
+<h2 id="entita-zakaznika">Entita zákazníka</h2>
+<p>V některých případech by bylo dobré mít samostatnou entitu zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Toto teď nebudem implementovat.</p>
 <h2 id="entitni-model">Entitní model</h2>
 <p>Zde budou popsány vztajy mezi objekty a základní set attributů.</p>
 <p>Vztahy mezi základními objekty budou vypadat takto:
@@ -660,6 +686,12 @@
 <li>Jakékoliv další informace, které později můžou pomoct.</li>
 </ul>
 <p>Auditní log by se měl z bezpečnostních důvodů uládat jinam než provozní logy.</p>
+<h2 id="poznamky">Poznámky</h2>
+<p>Co by mělo platit:</p>
+<ul>
+<li>Při založení objednávky musí vzniknout instance balíku. Na ní je uložen kód balíku.</li>
+<li>Balík, který se při přijetí nepodaří spojit s objednávkou, nemusí mít kód balíku.</li>
+</ul>
 <h2 id="zajimave-odkazy">Zajímavé odkazy</h2>
 <p>Další informace jsou na:</p>
 <ul>
