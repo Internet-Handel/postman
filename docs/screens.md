@@ -143,10 +143,14 @@ Po potvrzení "Spárovat" nebo "Cancel" se uživatel vrací na stránku v výpis
 
 Objednávky lze filtrovat podle:
 
-* Textu v adresách
-* V emailech
-* Minimální a maximální ceny objednávky
+* Textu - bude se hledat v polích:
+    * adresách
+    * emailech
+* Minimální a maximální ceny objednávky.
 * Stavu objednávky -  zde půjde hledat pouze nezaplacené objednávky. Ve seznamu stavů bude možnost hledat objednávky v libovolném stavu.
+* Počtu dní, které uplynuli od založení objednávky, kde nepřišla platba. - Pokud nakonec platba přišla,  pak se taková objednávka nevyhledá.
+* Vybrat objednávky, ke kterým dorazil aspoň jeden balík.
+* Vybrat objednávky, ke kterým nedorazil žádný balík.
 
 ## <a name="S-011"></a>S-011 - Hledání objednávek podle plateb
 

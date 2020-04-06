@@ -10,9 +10,9 @@ cekaNaDoruceni: Aspoň jeden z balíků se doručuje.
 state "Ukončená" as closed
 closed: Všechny balíky jsou doručené.
 
-[*] --> nezaplacená : Zákazník založí objednávku
-nezaplacená --> cekaNaDoruceni : Zákazník zaplatí
-nezaplacená --> closed:  Objednávka je zrušená nebo nikdy\nnepřišel balík ani platba
+[*] --> nezaplacená : Zákazník založí objednávku\nUC-04
+nezaplacená --> cekaNaDoruceni : Zákazník zaplatí\nUC-41, UC-53
+nezaplacená --> closed:  Objednávka je zrušená nebo nikdy\nnepřišel balík ani platba\nUC-49, UC-50
 cekaNaDoruceni --> closed : Všechny balíky jsou doručeny\nnebo jinak ukončeny.
 closed --> [*]
 

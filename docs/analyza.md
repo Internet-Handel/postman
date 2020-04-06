@@ -78,7 +78,8 @@ Pracovník podpory může být fyzicky na centrále. Pracovník podpory je odpov
 * UC-45 - [Řešení zaplacených objednávek, ke kterým nedorazil balík](../uc-40/#UC-45 "Řešení zaplacených objednávek, ke kterým nedorazil balík").
 * UC-46 - [Vystavení dobropisu](../uc-40/#UC-46 "Vystavení dobropisu").
 * UC-47 - [Vystavení upravené faktury](../uc-40/#UC-47 "Vystavení upravené faktury").
-* UC-48 - [Úprava objednávky](../uc-40/#UC-48 " Úprava objednávky").
+* UC-48 - [Úprava objednávky](../uc-40/#UC-48 "Úprava objednávky").
+* UC-49 - [Řešení nezaplacených objednávek, ke kterým nedorazil balík](../uc-40/#UC-49 "Řešení nezaplacených objednávek, ke kterým nedorazil balík").
 
 
 #### Správa objednávek a balíků

@@ -4,7 +4,8 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |----------------
-| 05.04.2020 |Doplnění archotektury o čísla daňových dokladů, upraven kód balíku.|
+| 06.04.2020 |Přechody mezi stavy objednávky. Nový UC-49 - Řešení nezaplacených objednávek, ke kterým nedorazil balík|
+| 05.04.2020 |Doplnění architektury o čísla daňových dokladů, upraven kód balíku.|
 | 04.04.2020 |Úprava UC pro odeslání na zpáteční adresu. Upraveno číslování balíků.|
 | 01.04.2020 |Úprava detailu balíku.|
 | 30.03.2020 |Řešení chyb u balíku.|

@@ -8,21 +8,30 @@ Objednávka prochází následujícími stavy:
 
 ![Stavy objednávky](./diagrams/out/states-order.png "Stavy objednávky")
 
-###Stav ```Nezaplacená```
-Právě založená objednávka bude ve stavu ```Nezaplacená```.
+###Stav `Nezaplacená`
+Právě založená objednávka bude ve stavu `Nezaplacená`.
 
 
-###Stav ```Doručovaná```
+###Stav `Doručovaná`
 O objednávce v tomto stavu víme, že je zaplacená, a s balíkem se ještě nějak pracuje a je třeba sledovat jestli a jak doručovací proces běží. 
 
-Přechod mezí stavy ```Nezaplacená``` a ```Doručovaná``` se provede ve chvíli, kdy zákazník zaplatí. V některých případech k zaplacení nedojde, například když zákazník zruší objednávku.
+Přechod mezí stavy `Nezaplacená` a `Doručovaná` se provede ve chvíli, kdy zákazník zaplatí. V některých případech k zaplacení nedojde, například když zákazník zruší objednávku.
 
 To, jestli zákazník zaplatil by mohlo byt hodnoceno automaticky. Třeba porovnáním součtu částek daňových dokladů a součtu plateb. Bohužel to takto zjednodušit nelze. Některé daňové doklady nemusí být uhrazeny nebo proplaceny a je to tak v pořádku, stejně tak součet částek na daňových dokladech nemusí být stejný jako součet plateb a také to může být v pořádku.
  
-###Stav ```Ukončená```
+###Stav `Ukončená`
 V tomto stavu máme objednávku kompletně ukončenou, všechny doručované balíky jsou také ukončeny a finance vypořádány.
 
-Přechod do tohoto stavu provede systém automaticky ve chvílí, kdy je poslední balík objednávky v koncovém stavu.
+Přechod do tohoto stavu provede systém automaticky ve chvílí, kdy je poslední balík objednávky v koncovém stavu. Toto musí fungovat i naopak, pokud se později ručním zásahem, nebo procesem nějaký balík přesune do jiného stavu než koncového, pak se musí i objednávka přesunout do stavu `Doručovaná`.
+
+###Další přechody zpět
+
+Pro zpětné manuální přechody:
+
+* `Ukončená` --> `Doručovaná`
+* `Doručovaná` --> `Nezaplacená`
+
+Budou na stránce [detailu objednávky S-04](../screens/#S-04) příslušná tlačítka. 
 
 ## Stavy balíku
 U balíku je třeba znát historii stavů. To je potřeba pro reklamace a evidenci pohybu balíku. Historii stavů lze později využít pro optimalizaci procesů.
