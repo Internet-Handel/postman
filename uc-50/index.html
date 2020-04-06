@@ -240,8 +240,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-40/" title="UC-40 - UC-48" class="md-nav__link">
-      UC-40 - UC-48
+    <a href="../uc-40/" title="UC-40 - UC-49" class="md-nav__link">
+      UC-40 - UC-49
     </a>
   </li>
 
@@ -701,10 +701,13 @@
 </li>
 <li>Pracovník podpory se pomocí odkazu "Detail objednávky" vrátí na <a href="../screens/#S-04">S-04</a>.</li>
 <li>Pokud již byla částka za dopravu uhrazena, pak musí pracovník <a href="../uc-40/#UC-46">vystavit dobropis a poslat peníze zpět UC-46</a>.</li>
-<li>Nakonec o všem pořídí záznam do kontaktní historie <a href="../uc-50/#UC-58">UC-58</a>.</li>
+<li>Pracovník stiskne tlačítko "Storno objednávky".</li>
+<li>Systém objednávku přesune do stavu <code>Ukončená</code> a zobrazí <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
+<li>Pracovník podpory pořídí záznam do kontaktní historie <a href="../uc-50/#UC-58">UC-58</a>.</li>
 <li>Hotovo</li>
 </ol>
-<p>Nebudem dělat omezující pravidla na rušení objednávky. Například, že nejde zrušit objednávku, když je balík předaný dopravci, protože teď nevíme, jaké jsou možnosti dopravců.</p>
+<p>Pokud bude existovat jeden nebo více balíků, které nejsou v nějakém koncovém stavu, pak se po stisknutí tlačítka "Storno objednávky" zobrazí jejich seznam s stav objednávky zůstane nezměněný. </p>
+<p>Nebudem dělat další omezující pravidla na rušení objednávky. Například, že nejde zrušit objednávku, když je balík předaný dopravci, protože teď nevíme, jaké jsou možnosti dopravců.</p>
 <h2 id="uc-51-zmena-dorucovaci-adresy"><a name="UC-51"></a>UC-51 - Změna doručovací adresy</h2>
 <p>Pracovník podpory změní doručovací adresu balíku.</p>
 <p>Předpoklady:</p>
@@ -766,8 +769,8 @@
 <li>Systém najde, a zobrazí všechny nezaplacené objednávky, ke kterým v dané období dorazila platba.</li>
 <li>Pracovník u každého záznamu otevře <a href="../screens/#S-04">S-04 detail objednávky</a> a zkontroluje, jestli jak zaplacená částka odpovídá fakturované:<ol>
 <li>Pokud jsou s nějakou tolerancí shodné, pak:<ul>
-<li>Pracovník potvrdí zaplacení a stiskne tlačítko "Zaplaceno".</li>
-<li>Objednávka se přesune do stavu doručovaná a v historii stavů se objeví, že daný pracovník podpory pořesunul stav objednávky z nezaplaceno do doručovaná.</li>
+<li>Pracovník potvrdí zaplacení a stiskne tlačítko "Potvrdit zaplacení".</li>
+<li>Objednávka se přesune do stavu <code>Doručovaná</code> a v historii stavů se objeví, že daný pracovník podpory pořesunul stav objednávky z <code>Nezaplacená</code> do <code>Doručovaná</code>.</li>
 <li>Pokud je balík na objednávce ve frontě balíků čekajících na zaplacení, pak se při další kontrole přesune k dalšímu doručování.</li>
 </ul>
 </li>
@@ -1040,7 +1043,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../uc-40/" title="UC-40 - UC-48" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../uc-40/" title="UC-40 - UC-49" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1049,7 +1052,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                UC-40 - UC-48
+                UC-40 - UC-49
               </span>
             </div>
           </a>

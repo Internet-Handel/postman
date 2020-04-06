@@ -38,7 +38,7 @@
     
     
       
-        <title>UC-40 - UC-48 - Postman</title>
+        <title>UC-40 - UC-49 - Postman</title>
       
     
     
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                UC-40 - UC-48
+                UC-40 - UC-49
               
             </span>
           
@@ -249,11 +249,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        UC-40 - UC-48
+        UC-40 - UC-49
       </label>
     
-    <a href="./" title="UC-40 - UC-48" class="md-nav__link md-nav__link--active">
-      UC-40 - UC-48
+    <a href="./" title="UC-40 - UC-49" class="md-nav__link md-nav__link--active">
+      UC-40 - UC-49
     </a>
     
       
@@ -359,6 +359,13 @@
         <li class="md-nav__item">
   <a href="#uc-48-uprava-objednavky" class="md-nav__link">
     UC-48 - Úprava objednávky
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-49-reseni-nezaplacenych-objednavek-ke-kterym-nedorazil-balik" class="md-nav__link">
+    UC-49 - Řešení nezaplacených objednávek, ke kterým nedorazil balík
   </a>
   
 </li>
@@ -592,6 +599,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-49-reseni-nezaplacenych-objednavek-ke-kterym-nedorazil-balik" class="md-nav__link">
+    UC-49 - Řešení nezaplacených objednávek, ke kterým nedorazil balík
+  </a>
+  
+</li>
+      
       
       
       
@@ -610,6 +624,7 @@
                 
                 
                 <h1 id="podpora-prace-s-platbou-a-danovym-dokladem">Podpora - práce s platbou a daňovým dokladem</h1>
+<p>Hledání v <a href="../uc-40/#UC-45">UC-45</a> a <a href="../uc-40/#UC-49">UC-49</a> je specifické. Při implementaci zvažme, jestli to nemají být samostatné stránky bez formuláře na hledání. Pouze dvě stránky s výpisy.</p>
 <p>Každý balík má svůj kód. Kod je nezávislí na objednávce. Kód balíku je to, co zádáme zákaníka, aby napsal na balík. Pokud bude v objednávce víc balíků, pak každý balík bude mít svůj kůd.</p>
 <h2 id="uc-40-kontrola-bankovniho-uctu"><a name="UC-40"></a>UC-40 - Kontrola bankovního účtu</h2>
 <p>Pracovník podpory otevře na jedné straně bankovnictví a v našem systému obrazovku <a href="../screens/#S-06">S-06 přehled plateb</a>. Z bankovního sytému začne přepisovat zaplacené částky do našeho systému.</p>
@@ -661,13 +676,19 @@ Tento UC by měl zůstat samostatný, protože ho půjde snadno automatizovat.</
 <p>Protože budou v systému zadané i odchozí platby na účet zákazníka pracovník ze uvidí i stav, kdy odeslal zákazníkovi platbu zpět po tom, co byla objednávka zaplacená.</p>
 <h2 id="uc-45-reseni-zaplacenych-objednavek-ke-kterym-nedorazil-balik"><a name="UC-45"></a>UC-45 - Řešení zaplacených objednávek, ke kterým nedorazil balík</h2>
 <p>Pracovník podpory bude postupovat následovně:</p>
-<ul>
+<ol>
 <li>Z hlavního rozcestníku otevře <a href="../screens/#S-10">S-10 stránku pro hledání objednávek</a>. </li>
 <li>Zde ověří, že je odšktnuté pole "Vybrat objednávky, ke kterým dorazil aspoň jeden balík."</li>
-<li>Nastaví stav objednávky na "Doručovaná"</li>
+<li>Zašktne pole "Vybrat objednávky, ke kterým nedorazil žádný balík".</li>
+<li>Nastaví stav hledaných objednávek na <code>Doručovaná</code>.</li>
 <li>Stiskne "vyhledat".</li>
-</ul>
-<p>Pracovník začne otevírat detaily jednotlivých objednávek. Zkontroluje kontaktní historii. Pokud zde není záznám o tom, že jsme zákazníka v této věci kontaktovali, pak napíše email s dotazem, jak má postupovat. Pokud už nějaká komunikace proběhla, pak musí postupovat podle úvahy.</p>
+<li>Pro každou nalezenou objednávku:<ol>
+<li>Pracovník otevře <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
+<li>Zkontroluje kontaktní historii. Pokud zde není záznám o tom, že jsme zákazníka v této věci kontaktovali, pak napíše email s dotazem, jak má postupovat. Pokud už nějaká komunikace proběhla, pak musí postupovat podle úvahy.</li>
+</ol>
+</li>
+<li>Hotovo.</li>
+</ol>
 <h2 id="uc-46-vystaveni-dobropisu"><a name="UC-46"></a>UC-46 - Vystavení dobropisu</h2>
 <p>V některých případech bude potřeba zákazníkovi "vrátit" peníze, které nám předtím poslal. Například, pokud se zákazník rozhodne od slouvy odstoupit musíme vystavit dobropis a provézt platbu zpět. To pracovní podpory provede následovně:</p>
 <ol>
@@ -710,6 +731,22 @@ Tento UC by měl zůstat samostatný, protože ho půjde snadno automatizovat.</
 <li>Na detailu objednávky upraví všechny potřebné informace.</li>
 <li>Stiskne tlačítko "Uložit".</li>
 <li>Po stisku tlačítka se zobrazí upravený <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
+<li>Hotovo.</li>
+</ol>
+<h2 id="uc-49-reseni-nezaplacenych-objednavek-ke-kterym-nedorazil-balik"><a name="UC-49"></a>UC-49 - Řešení nezaplacených objednávek, ke kterým nedorazil balík</h2>
+<p>Všechny nezaplacené objednávky, ke kterým daný počet dní nedorazil balík budou zrušeny. Pracovník podpory bude postupovat následovně:</p>
+<ol>
+<li>Z hlavního rozcestníku otevře <a href="../screens/#S-10">S-10 stránku pro hledání objednávek</a>. </li>
+<li>Nastaví stav hledaných objednávek na <code>Nezaplacená</code>.</li>
+<li>Do pole "Vybrat pouze objednávky, kde platba nepřišla X dní." zadá 30.</li>
+<li>Zde ověří, že je odšktnuté pole "Vybrat objednávky, ke kterým dorazil aspoň jeden balík."</li>
+<li>Zašktne pole "Vybrat objednávky, ke kterým nedorazil žádný balík".</li>
+<li>Stiskne "vyhledat".</li>
+<li>Pro každou nalezenou objednávku:<ol>
+<li>Pracovník otevře <a href="../screens/#S-04">detail objednávky S-04</a>.</li>
+<li>Stiskne tlačítko "Storno".</li>
+</ol>
+</li>
 <li>Hotovo.</li>
 </ol>
                 

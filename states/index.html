@@ -238,8 +238,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../uc-40/" title="UC-40 - UC-48" class="md-nav__link">
-      UC-40 - UC-48
+    <a href="../uc-40/" title="UC-40 - UC-49" class="md-nav__link">
+      UC-40 - UC-49
     </a>
   </li>
 
@@ -318,6 +318,13 @@
           <li class="md-nav__item">
   <a href="#stav-ukoncena" class="md-nav__link">
     Stav Ukončená
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dalsi-prechody-zpet" class="md-nav__link">
+    Další přechody zpět
   </a>
   
 </li>
@@ -507,6 +514,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#dalsi-prechody-zpet" class="md-nav__link">
+    Další přechody zpět
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -590,7 +604,14 @@
 <p>To, jestli zákazník zaplatil by mohlo byt hodnoceno automaticky. Třeba porovnáním součtu částek daňových dokladů a součtu plateb. Bohužel to takto zjednodušit nelze. Některé daňové doklady nemusí být uhrazeny nebo proplaceny a je to tak v pořádku, stejně tak součet částek na daňových dokladech nemusí být stejný jako součet plateb a také to může být v pořádku.</p>
 <h3 id="stav-ukoncena">Stav <code>Ukončená</code></h3>
 <p>V tomto stavu máme objednávku kompletně ukončenou, všechny doručované balíky jsou také ukončeny a finance vypořádány.</p>
-<p>Přechod do tohoto stavu provede systém automaticky ve chvílí, kdy je poslední balík objednávky v koncovém stavu.</p>
+<p>Přechod do tohoto stavu provede systém automaticky ve chvílí, kdy je poslední balík objednávky v koncovém stavu. Toto musí fungovat i naopak, pokud se později ručním zásahem, nebo procesem nějaký balík přesune do jiného stavu než koncového, pak se musí i objednávka přesunout do stavu <code>Doručovaná</code>.</p>
+<h3 id="dalsi-prechody-zpet">Další přechody zpět</h3>
+<p>Pro zpětné manuální přechody:</p>
+<ul>
+<li><code>Ukončená</code> --&gt; <code>Doručovaná</code></li>
+<li><code>Doručovaná</code> --&gt; <code>Nezaplacená</code></li>
+</ul>
+<p>Budou na stránce <a href="../screens/#S-04">detailu objednávky S-04</a> příslušná tlačítka. </p>
 <h2 id="stavy-baliku">Stavy balíku</h2>
 <p>U balíku je třeba znát historii stavů. To je potřeba pro reklamace a evidenci pohybu balíku. Historii stavů lze později využít pro optimalizaci procesů.</p>
 <p>Balík během doručování prochází následujícími stavy:</p>
