@@ -791,8 +791,14 @@
 <ol>
 <li>Pracovník si z hlavního rozcestníku zobrazí balíky v chybové frontě.</li>
 <li>Zobrazí se stránka se seznamem balíků ve stavu <code>Chyba</code> a zároveň přiřazených na podpoře.</li>
-<li>Každý balík si pracovník otevře a pokusí se najít řešení.</li>
-<li>Pokud najde řešení, pak balík převede do nového stavu.</li>
+<li>Každý záznam si pracovník otevře.</li>
+<li>Systém zobrazí příslušnou obrazovku podle druhu chyby:<ul>
+<li><a href="../screens/#S-053">Poškozený balík S-053</a>.</li>
+<li>Záznám o tom, že se balík nepodařilo doručit.</li>
+<li>Obecná chyba <a href="../screens/#S-054">při zpracování S-054</a>.</li>
+</ul>
+</li>
+<li>Pracovník podpory se pokusí se najít řešení. Pokud najde řešení, pak balík převede do nového stavu.</li>
 <li>Pokud má pouze doplňující dotaz, nebo je řešení složitější pak to popíše k detailu chyby a tu přiřadí k řešení na dispečera.</li>
 <li>Hotovo. </li>
 </ol>
@@ -801,7 +807,7 @@
 <li>Nespárovaný balík.<ul>
 <li>Balík nemá kód balíku ani správně napsanou adresu odesílate.</li>
 <li>Pracovník se pokusí dohledat odpovídající objednávku třeba podle části adresy odesílatele, nebo porovnat se seznamem zaplacených objednávek bez balíků, nebo porovnat rozměry na objednávce a u nalezeného balíku.</li>
-<li>Pokud to je možné balík napáruje na objednávku.</li>
+<li>Pokud to je možné balík <a href="./#UC-52">napáruje na objednávku UC-52</a>.</li>
 </ul>
 </li>
 <li>Nedoručitelný balík:<ul>
@@ -809,7 +815,7 @@
 </ul>
 </li>
 <li>Poškozený balík:<ul>
-<li>Pracovník zkusí kontaktovat zákazníka a domluví další postup.</li>
+<li>Pracovník zkusí <a href="./#UC-56">vyřešit poškozený balík UC-56</a>.</li>
 </ul>
 </li>
 </ul>
@@ -817,13 +823,11 @@
 <h2 id="uc-56-reseni-poskozeneho-baliku"><a name="UC-56"></a>UC-56 - Řešení poškozeného balíku</h2>
 <p>Předpoklady:</p>
 <ul>
-<li>Pracovník podpory má otevřenou stránku <a href="../screens/#S-05">detailu balíku S-05</a>.</li>
-<li>V seznamu zázkamu o poškození bude jeden nezpracovaný.</li>
+<li>Pracovník podpory má otevřenou stránku <a href="../screens/#S-053">záznamu poškození S-053</a>.</li>
 <li>Balík je ve frontě chyba ve stavu <code>Poškozený balík</code>.</li>
 </ul>
 <p>Kroky:</p>
 <ol>
-<li>Klikne na detail záznamu poškození a zobrazí se mu <a href="../screens/#S-053">S-053</a>.</li>
 <li>Pracovník podle fotek a popisu posoudí míru poškození.</li>
 <li>Pokud uzná za vhodné kontaktuje zákazníka a domluví s ním další postup a výsledek zaznamená do kontaktní historie.</li>
 <li>Když pracovník ví jak postupovat, další postup popíše do pole na stránce <a href="../screens/#S-053">S-053</a>.</li>

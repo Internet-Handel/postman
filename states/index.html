@@ -606,10 +606,10 @@
 <p>V tomto stavu máme objednávku kompletně ukončenou, všechny doručované balíky jsou také ukončeny a finance vypořádány.</p>
 <p>Přechod do tohoto stavu provede systém automaticky ve chvílí, kdy je poslední balík objednávky v koncovém stavu. Toto musí fungovat i naopak, pokud se později ručním zásahem, nebo procesem nějaký balík přesune do jiného stavu než koncového, pak se musí i objednávka přesunout do stavu <code>Doručovaná</code>.</p>
 <h3 id="dalsi-prechody-zpet">Další přechody zpět</h3>
-<p>Pro zpětné manuální přechody:</p>
+<p>Pro zpětné přechody:</p>
 <ul>
-<li><code>Ukončená</code> --&gt; <code>Doručovaná</code></li>
-<li><code>Doručovaná</code> --&gt; <code>Nezaplacená</code></li>
+<li><code>Ukončená</code> --&gt; <code>Doručovaná</code> - tento přechod se bude dít automaticky, na základě změny stavu balíku.</li>
+<li><code>Doručovaná</code> --&gt; <code>Nezaplacená</code> - pro tento přechod bude na stránce tlačítko.</li>
 </ul>
 <p>Budou na stránce <a href="../screens/#S-04">detailu objednávky S-04</a> příslušná tlačítka. </p>
 <h2 id="stavy-baliku">Stavy balíku</h2>
