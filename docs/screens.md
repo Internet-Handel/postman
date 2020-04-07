@@ -38,21 +38,20 @@ Do pole hledat, pujde zadat část libovolné adresy, kód balíku, telefon zák
 
 ## <a name="S-04"></a>S-04 - Detail objednávky
 
-Obrazovka obsahuje několik samostatných sekcí:
+Stránku může být rozdělená pomocí záložek na více. Pokud odkaz na detail balíku není aktivní znamená to, že balík fyzicky nemáme a ani jsme neměli. Obrazovka obsahuje několik samostatných sekcí:
 
 * Obecné infromace o objednávce
 * Platby
 * Kontaktní historie
 * Historie stavů
 * Daňové doklady
-
-Stránku může být rozdělená pomocí záložek na více. Pokud odkaz na detail balíku není aktivní znamená to, že balík fyzicky nemáme a ani jsme neměli.
+* Číslo objednávky a variabilní symbol jsou stejné hodnoty.
 
 ![Detail objednávky](./imgs/s-04-order-details.png "Detail objednávky")
 
-Detaily záznamů kontaktní historie na této stránce nejsou vidět. Pro ně by měla vzniknout nová stránka s jejich seznamem a zde pribýt odkaz na ní.
+Detaily záznamů kontaktní historie na této stránce nejsou vidět. Pro ně by měla vzniknout nová stránka s jejich seznamem a zde přibýt odkaz na ní.
 
-Číslo objednávky a variabilní symbol jsou stejné hodnoty.
+Tlačítka zde budou zobrazená podel aktuálních možností. Například tlačítko "Označit za nezaplacenou" nebude vidět ve stavu objednávky `Nezaplacená`.
 
 ## <a name="S-041"></a>S-041 - Potvrzení odpárování platby
 

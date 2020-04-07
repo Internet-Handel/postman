@@ -22,6 +22,7 @@ Se zákazníkem budeme komunikovat:
 
 * email
 * telefon
+* web
 
 ## Business otázky ##
 

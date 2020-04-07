@@ -9,7 +9,7 @@ Máme tyto role:
 
 Zákazník naší doručovací služby. Může to být fyzická osoba nebo společnost.
 
-![Co muze delat Zakaznik](./diagrams/out/ucs-zakaznik.png "UCS for Zakaznik")
+![Co může dělat Zákazník](./diagrams/out/ucs-zakaznik.png "UCS pro zákazníka")
 
 Zákaznik můze:
 

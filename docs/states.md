@@ -26,10 +26,10 @@ Přechod do tohoto stavu provede systém automaticky ve chvílí, kdy je posledn
 
 ###Další přechody zpět
 
-Pro zpětné manuální přechody:
+Pro zpětné přechody:
 
-* `Ukončená` --> `Doručovaná`
-* `Doručovaná` --> `Nezaplacená`
+* `Ukončená` --> `Doručovaná` - tento přechod se bude dít automaticky, na základě změny stavu balíku.
+* `Doručovaná` --> `Nezaplacená` - pro tento přechod bude na stránce tlačítko.
 
 Budou na stránce [detailu objednávky S-04](../screens/#S-04) příslušná tlačítka. 
 
