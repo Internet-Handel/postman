@@ -315,6 +315,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../meetings/" title="Schůzky" class="md-nav__link">
+      Schůzky
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../notes/" title="Poznámky" class="md-nav__link">
       Poznámky
     </a>
@@ -540,7 +552,7 @@
                 <h1 id="jak-dal-rozsirovat-tuto-dokumentaci">Jak dal rozšiřovat tuto dokumentaci</h1>
 <p>Návod jsem zkoušel pouze na Apple.</p>
 <h2 id="zakladni-informace">Základni informace</h2>
-<p>Struktura projektu vyuziva strukturu <a href="https://www.mkdocs.org">MkDocs    </a> projektu a vypada takto:</p>
+<p>Struktura projektu využívá strukturu <a href="https://www.mkdocs.org">MkDocs    </a> projektu a vypadá takto:</p>
 <pre><code>├── balsamiq
 └── docs
     ├── diagrams
@@ -549,9 +561,9 @@
     └── imgs
 </code></pre>
 
-<p>Jednotlive adresare obsahují dokumenty pro různe technologie. Proces generovaní dokumentace využívá funkci MkDocs. Detaily jsou v oubory <code>mkdocs.yml</code>. </p>
+<p>Jednotlive adresáře obsahují dokumenty pro různe technologie. Proces generovaní dokumentace využívá funkci MkDocs. Základní konfigurace projektu je v souboru <code>mkdocs.yml</code>. </p>
 <h2 id="predpoklady">Předpoklady</h2>
-<p>Aby jste mohli texty upravovat a publikovat zmeny, pak budete potrebovat:</p>
+<p>Aby jste mohli texty upravovat a publikovat změny, pak budete potřebovat:</p>
 <ul>
 <li>Nainstalovaný git</li>
 <li>Nainstalovaný python</li>
@@ -559,20 +571,20 @@
 <li>Stáhnutý projekt <a href="https://github.com/jajir/postman">github.com/jajir/postman</a>.</li>
 </ul>
 <h2 id="jak-upravovat-texty">Jak upravovat texty</h2>
-<p>Texty jsou v adresari <code>docs/src</code>. Pro upravu stači znát jednoduchou strukuru markdownu a začít upravovat. Markdown je popsaný například <a href="https://daringfireball.net/projects/markdown/syntax">zde</a>. Až budete s úpravami hotovi, spustte:</p>
+<p>Texty jsou v adresari <code>docs/src</code>. Pro úpravu stači znát jednoduchou strukuru markdownu a začít upravovat. Markdown je popsaný například <a href="https://daringfireball.net/projects/markdown/syntax">zde</a>. Až budete s úpravami hotovi, spusťte:</p>
 <pre><code>mkdocs serve
 </code></pre>
 
 <p>V prohlížeči na adrese <code>http://127.0.0.1:8080/</code> najdete aktuální verze dokumenatce. Když nějaký dokument upravíte, v prohlížeči se stránka sama aktualizuje.</p>
 <h2 id="jak-pridat-novou-stranku">Jak přidat novou stránku.</h2>
-<p>Pokud nechcete, aby se nová stránka objevila v levám menu, pak staci vytvorit příslušny .md soubor a zacit na nej odkazovat. Tím je hotovo. Pokud chcete, aby se odkaz na nový soubor objevil v levém menu, pak musite odkaz pridat do <code>mkdocs.yml</code>. Jak odkaz pridat by melo byt zjevné.</p>
+<p>Pokud nechcete, aby se nová stránka objevila v levém menu, pak stačí vytvorit příslušný .md soubor a začít na něj odkazovat. Tím je hotovo. Pokud chcete, aby se odkaz na nový soubor objevil v levém menu, pak musíte odkaz přidat do <code>mkdocs.yml</code>. Jak odkaz přidat by mělo být zjevné.</p>
 <h2 id="jak-upravovat-obrazky">Jak upravovat obrázky</h2>
 <h3 id="obrazky-s-diagramy-ucs-activity-disgrams">Obrázky s diagramy, UCs, activity disgrams ...</h3>
-<p>Obrázky jsou generované pomoci PlantUML ze souboru ulozenych v <code>doc/diagrams/src</code>. Opět stačí přidat nebo upravit soubor a nový nebo upraveny obrázek se sám vygeneruje. Je pohodlne obrazky upravovat a vytvářet v nějakém on-line editoru, například <a href="https://www.planttext.com">www.planttext.com</a>. Popis formatu zápisu obrázku je na <a href="https://plantuml.com" title="PlantUML home">https://plantuml.com</a></p>
+<p>Obrázky jsou generované pomoci PlantUML ze souborů uložených v <code>doc/diagrams/src</code>. Opět stačí přidat nebo upravit soubor a nový nebo upraveny obrázek se sám vygeneruje. Je pohodlné obrázky upravovat a vytvářet v nějakém on-line editoru, například <a href="https://www.planttext.com">www.planttext.com</a>. Popis formátu zápisu obrázku je na <a href="https://plantuml.com" title="PlantUML home">https://plantuml.com</a></p>
 <h3 id="obrazky-s-navrhy-obrazovek">Obrázky s návrhy obrazovek</h3>
 <p>V adresáři <code>balsamiq</code> jsou uloženy návrhy obrazovek. Jsou upravitelné v <a href="https://balsamiq.com">balsamiq.com</a>. Obrázky exportujte do adresáře <code>docs/imgs/</code>.</p>
 <h2 id="jak-publikovat-upravy-na-jajirgithubiopostman">Jak publikovat upravy na <a href="https://jajir.github.io/postman/">jajir.github.io/postman/</a></h2>
-<p>Pushněte změny na gitgub. Pak na konzoli spustte:</p>
+<p>Pushněte změny na gitgub. Pak na konzoli spusťte:</p>
 <pre><code>mkdocs gh-deploy
 </code></pre>
                 
