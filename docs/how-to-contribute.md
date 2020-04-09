@@ -1,4 +1,4 @@
-# Jak dal rozšiřovat tuto dokumentaci
+# Jak dál rozšiřovat tuto dokumentaci
 
 Návod jsem zkoušel pouze na Apple.
 

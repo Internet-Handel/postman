@@ -3,7 +3,8 @@
 Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
-| ---------- |----------------
+| ---------- |----------------|
+| 09.04.2020 |Zápis ze schůzky. Do poznámek jsem přidal kontakty.|
 | 06.04.2020 |Přechody mezi stavy objednávky. Nový UC-49 - Řešení nezaplacených objednávek, ke kterým nedorazil balík|
 | 05.04.2020 |Doplnění architektury o čísla daňových dokladů, upraven kód balíku.|
 | 04.04.2020 |Úprava UC pro odeslání na zpáteční adresu. Upraveno číslování balíků.|

@@ -15,6 +15,17 @@
 * Nebudem řešit stav, kdy fakturace proběhne na osobu na jedné adrese, ale zpáteční adresa balíku má být jiná.
 * Když dojde ke storno, vystavení dobropisu možné ne povinné. Má se dobropis vystavit i když nepřisli peníze?.
 
+## Kontakty na nás:
+
+| Kdo        | Email          | Github account |
+| ---------- |----------------|----------------|
+| Bivoj | [xbivoj@gmail.com](mailto:xbivoj@gmail.com)|
+| Viktor Friš | [viktorfris420@gmail.com](mailto:viktorfris420@gmail.com)|
+| Vojta Balák | [vojtech.balak@internet-handel.cz](mailto:vojtech.balak@internet-handel.cz)| remedan-ih |
+| Honza Jirout | [jirout@gmail.com](mailto:jirout@gmail.com)| jajir |
+
+# Zápisy ze starých schůzek
+
 ## 08.04.2020
 
 Na čem jsme se domluvili:
