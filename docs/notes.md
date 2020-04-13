@@ -22,6 +22,7 @@
 | Bivoj | [xbivoj@gmail.com](mailto:xbivoj@gmail.com)|
 | Viktor Friš | [viktorfris420@gmail.com](mailto:viktorfris420@gmail.com)|
 | Vojta Balák | [vojtech.balak@internet-handel.cz](mailto:vojtech.balak@internet-handel.cz)| remedan-ih |
+| David Ježek | [david@internet-handel.cz](mailto:david@internet-handel.cz)|DDejv|
 | Honza Jirout | [jirout@gmail.com](mailto:jirout@gmail.com)| jajir |
 
 # Zápisy ze starých schůzek
