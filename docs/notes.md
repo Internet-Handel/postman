@@ -26,6 +26,8 @@
 | Honza Jirout | [jirout@gmail.com](mailto:jirout@gmail.com)| jajir |
 | Jiří Matějka | [jirimatejka1@gmail.com](mailto:jirimatejka1@gmail.com)| jirimatejka1 |
 | Anton Loginov | [antonloginovih@gmail.com](mailto:antonloginovih@gmail.com)| antonloginovih@gmail.com |
+| Petr Hanišák | [petrhanisak.ih@gmail.com](mailto:petrhanisak.ih@gmail.com)|  |
+| Martin Jonák | [martinjonak.ih@gmail.com](mailto:martinjonak.ih@gmail.com)|  |
 
 
 # Zápisy ze starých schůzek
