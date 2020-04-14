@@ -24,6 +24,9 @@
 | Vojta Balák | [vojtech.balak@internet-handel.cz](mailto:vojtech.balak@internet-handel.cz)| remedan-ih |
 | David Ježek | [david@internet-handel.cz](mailto:david@internet-handel.cz)|DDejv|
 | Honza Jirout | [jirout@gmail.com](mailto:jirout@gmail.com)| jajir |
+| Jiří Matějka | [jirimatejka1@gmail.com](mailto:jirimatejka1@gmail.com)| jirimatejka1 |
+| Anton Loginov | [antonloginovih@gmail.com](mailto:antonloginovih@gmail.com)| antonloginovih@gmail.com |
+
 
 # Zápisy ze starých schůzek
 
