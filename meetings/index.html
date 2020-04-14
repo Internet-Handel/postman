@@ -342,6 +342,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#14042020" class="md-nav__link">
+    14.04.2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#10042020" class="md-nav__link">
     10.04.2020
   </a>
@@ -423,6 +430,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#14042020" class="md-nav__link">
+    14.04.2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#10042020" class="md-nav__link">
     10.04.2020
   </a>
@@ -455,6 +469,38 @@
                 
                 <h1 id="schuzky">Schůzky</h1>
 <p>Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.</p>
+<h2 id="14042020">14.04.2020</h2>
+<p>Na čem jsme se domluvili:</p>
+<ul>
+<li>Vyvinem to jako jednu applikaci.</li>
+<li>Domluvili jsme se na práci s gitem tak, že použijem větve:<ul>
+<li><code>master</code> - obraz produkce, odsud se odlamuje <code>feature</code> branch.</li>
+<li><code>feature</code> - bude jich víc, budou se mergovat do <code>dev</code> větve pomocí pull requestů.</li>
+<li><code>dev</code> - bude obsahovat další release. Odsud budem dělat merge to <code>master</code>  větve.</li>
+</ul>
+</li>
+<li>Fáze projektu:<ol>
+<li>Základní funkcionalitu v rozsahu tohoto dokumentu, případně něco neuděláme.</li>
+<li>Přidáme hromadné podání.</li>
+<li>Další funkcionalita jako jsou dobírky, výběr last mile dopravce, podpora vícero dep, ...</li>
+</ol>
+</li>
+<li>Rozdělíme dokumentaci na technickou u samotného kódu a analytickou zde, navzájem je prolinkujem.</li>
+<li>Jako issue management použijeme, to co nabízí bitbucket.</li>
+<li>O UX rozhoduje Bivoj.</li>
+</ul>
+<p>Co, kdo udělá:</p>
+<ul>
+<li>Kluci zkusí verzovat DB pomocí "migrace dat".</li>
+<li>Applikaci kluci připraví jako docker image.</li>
+<li>První ticket na otestování kostry applikace.</li>
+<li>Dev je kopie produ, každou noc přelijem data z produ na dev.</li>
+<li>Kluci mi pošlou pozvánku na slack a bitbucket.</li>
+<li>Honza - ozvu se Jirkovi, aby se mnou prošel applikaci.</li>
+<li>Honza - přepsat UC pro přijetí a zpracování balíků, tak aby se při happy day scénáři tiskl rovnou štítek dopravce. S tím, že ne pro každého dopravce to bude možné. Dopravce musí umožňovat generování štítků dřív, než mu předáme balík.</li>
+<li>Honza - Přidat UC na příchozí platbu na vícero objednávek.</li>
+<li>Honza - Až budu mít přístup k bitbucketu, založím tickety na zbylé úkoly a nalinkuju je sem.</li>
+</ul>
 <h2 id="10042020">10.04.2020</h2>
 <ul>
 <li>Jak si budeme říkat, že je nějaká funkcionalita vyvinutá.</li>
