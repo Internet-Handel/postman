@@ -25,8 +25,9 @@ Co, kdo udělá:
 * První ticket na otestování kostry applikace.
 * Dev je kopie produ, každou noc přelijem data z produ na dev.
 * Kluci mi pošlou pozvánku na slack a bitbucket.
-* Honza - ozvu se Jirkovi, aby se mnou prošel applikaci.
-* Honza - přepsat UC pro přijetí a zpracování balíků, tak aby se při happy day scénáři tiskl rovnou štítek dopravce. S tím, že ne pro každého dopravce to bude možné. Dopravce musí umožňovat generování štítků dřív, než mu předáme balík.
+* Honza - Další pozvanku pošlu na úterý.
+* Honza - Ozvu se Jirkovi, aby se mnou prošel applikaci.
+* Honza - Přepsat UC pro přijetí a zpracování balíků, tak aby se při happy day scénáři tiskl rovnou štítek dopravce. S tím, že ne pro každého dopravce to bude možné. Dopravce musí umožňovat generování štítků dřív, než mu předáme balík.
 * Honza - Přidat UC na příchozí platbu na vícero objednávek.
 * Honza - Až budu mít přístup k bitbucketu, založím tickety na zbylé úkoly a nalinkuju je sem.
 
