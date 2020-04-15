@@ -14,6 +14,7 @@ nav:
     - Šablony: templates.md
     - Obrazovky: screens.md
     - Architektura: architecture.md
+    - Implementace: implementation.md
     - Schůzky: meetings.md
     - Poznámky: notes.md
     - Změny: changelog.md
