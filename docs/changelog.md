@@ -4,6 +4,7 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |----------------|
+| 16.04.2020 |Přidán odkaz na dev server.|
 | 15.04.2020 |Přidána poznámka k instalaci mkdocs. Přidána sekce implementace.|
 | 09.04.2020 |Zápis ze schůzky. Do poznámek jsem přidal kontakty.|
 | 06.04.2020 |Přechody mezi stavy objednávky. Nový UC-49 - Řešení nezaplacených objednávek, ke kterým nedorazil balík|
