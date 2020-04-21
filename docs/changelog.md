@@ -4,6 +4,7 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |----------------|
+| 21.04.2020 |Upraven UC-21. Je třeba upravit u zbylých. Nahradit načítání interního štítku na načítání štítku.|
 | 16.04.2020 |Přidán odkaz na dev server.|
 | 15.04.2020 |Přidána poznámka k instalaci mkdocs. Přidána sekce implementace.|
 | 09.04.2020 |Zápis ze schůzky. Do poznámek jsem přidal kontakty.|
