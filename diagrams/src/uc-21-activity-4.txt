@@ -9,27 +9,25 @@ zadání rozměrů a váhy.;
 :Dispečer zadá rozměry a váhu balíčku a
 stiskne tlačítko pokračovat;
 
-if (Máme k balíku napárovnaou objednávku) then (Ano)
+if (Máme k balíku napárovanou objednávku) then (Ano)
     if (Odpovídají rozměry a váha?) then (Ano)
         if (Systém zkontroluje,\nje balík zaplacen?) then (Ano)
             $col2: Systém zobrazí S-208 s jménem
             fronty doprace, kam má balík přijít.;
-            :Dispečer uloží balík a potvrdí to.;
         else (ne)
-            $col2: Systém zobrazí S-208, balík má jít
-            do 'čekací fronty'.;
-            :Dispečer uloží balík a potvrdí to.;
+            $col2: Systém zobrazí S-208, balík
+            má jít do 'čekací fronty'.;
         endif
     else (Ne)
-        $col2: Systém zobrazí S-208, balík má jít
-        do 'chybové fronty'.;
-        :Dispečer uloží balík a potvrdí to.;
+        $col2: Systém zobrazí S-208, balík
+        má jít do 'chybové fronty'.;
     endif
 else (Ne)
-    $col2: Systém zobrazí S-208, balík má jít
-    do 'chybové fronty'.;
-    :Dispečer uloží balík a potvrdí to.;
+    $col2: Systém zobrazí S-208, balík
+    má jít do 'chybové fronty'.;
 endif
+
+:Dispečer uloží balík a potvrdí to.;
 
 stop
 

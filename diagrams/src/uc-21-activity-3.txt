@@ -3,34 +3,42 @@
 
 start
 
-#CDDDFF: Systém zobrazí S-203 pro potvrzení poškození.;
+$col2:Systém zobrazí S-203 pro potvrzení poškození.;
 
 if (Je balík poškozen?) then (Ano)
-    #CDDDFF: Systém zobrazí S-204 pro
+    $col2:Systém zobrazí S-204 pro
     nahraní fotek a popis poškození;
     :Dispečer poškozený balík vyfotí a fotky nahraje;
     if (Lze balík přebalit?) then (Ano)
-        #CDDDFF: Systém zobrazí S-206 pro 
+        $col2:Systém zobrazí S-206 pro 
         zadání spotřeby obalového materiálnu.;
         :Dispečer přebalí poškozený balík,
         zapíše spotřebu materiálu a potvrdí;
-        #CDDDFF: Systém zobrazí S-205 tisk interního štítku.;
+        $col2:Systém zobrazí S-205\ntisk interního štítku.;
         :Dispečer nalepí štítek a potvrdí.;
-        :Zpracování balík s kódem;
+        $col2:Systém pokračuje k dalším kroku
+        Měření, vážení a třízení balíku;
     else (Ne)
-        #CDDDFF: Systém zobrazí S-205 tisk interního štítku.;
+        $col2:Systém zobrazí S-205\ntisk interního štítku.;
         :Dispečer nalepí štítek a potvrdí.;
         -> Stránka na zadávání\nrozměrů a váhy;
         :Zadá rozměry a váhu balíčku a
         stiskne tlačítko pokračovat;
-        #CDDDFF: Systém zobrazí S-208, balík má jít
+        $col2:Systém zobrazí S-208, balík má jít
         do 'chybové fronty'.;
-        :Dispečer uloží balík a potvrdí to.;
+        :Dispečer dá balík do fronty
+        a potvrdí to.;
     endif
 else (Ne)
-    #CDDDFF: Systém zobrazí S-205 tisk interního štítku.;
+    if (Lze použít štítek dopravce?) then (Ano)
+        $col2:Systém zobrazí S-212\ntisk štítku dopravce.;
+    else (Ne)
+        $col2:Systém zobrazí S-205\ntisk interního štítku.;
+    endif
+    $col2:Systém zobrazí S-205\ntisk interního štítku.;
     :Dispečer nalepí štítek a potvrdí.;
-    :Zpracování balík s kódem;
+    $col2:Systém pokračuje k dalším kroku
+    Měření, vážení a třízení balíku;
 endif
 
 stop
