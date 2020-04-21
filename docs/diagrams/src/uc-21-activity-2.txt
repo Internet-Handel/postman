@@ -2,36 +2,37 @@
 !include color_def.txt
 
 start
-#CDDDFF: Systém zobrazí S-200 pro zadání kódu.;
+$col2:Systém zobrazí S-200 pro zadání kódu.;
 if (Má balík na sobě kód?) then (Ano)
     :Přepíše kód balíku do systému a potvrdí;
     if (Našel systém objednávku ke kódu?) then (Ano)
         -> zobrazí se stránka na\npotvrzení adresy;
-        #CDDDFF: Systém zobrazí S-202 pro
+        $col2:Systém zobrazí S-202 pro
         ověření adresy odesílatele.;
         :Dispečer zkontroluje, že zpáteční adresa
         odesílatele je stejná jako je na monitoru;
         if (Jsou adresy shodé?) then (Ano, jsou shodné)
         else (Nejsou shodné)
-            #CDDDFF: Systém zobrazí S-201 pro
+            $col2:Systém zobrazí S-201 pro
             zadání zpáteční adresy ;
             :Dispečer zadá zpáteční adresu
             odesílatele a potvrdí.;
         endif
     else (Ne)
-        #CDDDFF: Systém zobrazí S-201 pro
+        $col2:Systém zobrazí S-201 pro
         zadání zpáteční adresy ;
         :Dispečer zadá zpáteční adresu
         odesílatele a potvrdí.;
     endif
 else (Ne)
     :Dispečer to do systému stiskem tlačitka potvrdí;
-    #CDDDFF: Systém zobrazí S-201 pro
+    $col2:Systém zobrazí S-201 pro
     zadání zpáteční adresy ;
     :Dispečer zadá zpáteční adresu
     odesílatele a potvrdí.;
 endif
-
+$col2:Systém pokračuje k dalším kroku:
+Řešení případně poškozeného balíku a tisk štítku;
 stop
 
 @enduml

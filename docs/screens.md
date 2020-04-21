@@ -71,7 +71,7 @@ Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-orde
 
 ![Vytvořit záznam do komunikační historie](./imgs/s-047.png "Vytvořit záznam do komunikační historie")
 
-## <a name="S-05"></a>S-05 - Detail balíku
+## <a name="S-05"></a>S-05 - Detail balíku 📦
 
 Číslo balíku v nadpisu stránky bude kód balíku. Pokud balík kód balíku namá, pak zde bude kód interního štítku.
 
@@ -173,15 +173,15 @@ Odkaz na tuto stránku povede přímo z hlavního rozcestníku [S-01](./#S-01).
 
 Poslední uživatel Milan Strnad není aktivní a nebude se moc přihlásit do systému.
 
-## <a name="S-13"></a>S-13 - Přidat uživatele
+## <a name="S-13"></a>S-13 - Přidat uživatele 👱
 
 ![Přidat uživatele](./imgs/s-13.png "Přidat uživatele")
 
-## <a name="S-14"></a>S-14 - Upravit uživatele
+## <a name="S-14"></a>S-14 - Upravit uživatele 👱
 
 ![Upravit uživatele](./imgs/s-14.png "Upravit uživatele")
 
-## <a name="S-15"></a>S-15 - Nastavit heslo uživatele
+## <a name="S-15"></a>S-15 - Nastavit heslo uživatele 👱
 
 ![Nastavit heslo uživatele](./imgs/s-15.png "Nastavit heslo uživatele")
 
@@ -243,7 +243,7 @@ Stejná stránka jako je S-209 s tím, že na obrazovce je možnost zadat, že b
 
 ![Načtení interního štítku](./imgs/s-211.png "Načtení interního štítku")
 
-## <a name="S-212"></a>S-212 - Tisk štítku dopravce
+## <a name="S-212"></a>S-212 - Tisk štítku dopravce 🖨
 
 Zároveň se zobrazením této obrazovky se vytiskne štítek dopravce.
 
