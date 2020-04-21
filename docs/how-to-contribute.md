@@ -24,6 +24,12 @@ Aby jste mohli texty upravovat a publikovat změny, pak budete potřebovat:
 * Nainstalovaný MkDocs
 * Stáhnutý projekt [github.com/jajir/postman](https://github.com/jajir/postman).
 
+Projekt má několik závislostí. Mkdocs včetně potřebných pluginů lze nainstalovat příkazem:
+
+```
+pip3 install mkdocs mkdocs-build-plantuml-plugin mkdocs-material
+```
+
 ## Jak upravovat texty
 
 Texty jsou v adresari ``docs/src``. Pro úpravu stači znát jednoduchou strukuru markdownu a začít upravovat. Markdown je popsaný například [zde](https://daringfireball.net/projects/markdown/syntax). Až budete s úpravami hotovi, spusťte:
