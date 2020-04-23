@@ -10,7 +10,11 @@ Otevřené otázky:
 
 Na čem jsme se domluvili:
 
-* ...
+* Štítek na balíku bude právě jeden. Pokud poytřebuji nalepit nový a již tam je jeden nebo více je, tak starý štítek nebo štítky zničím nebo přelepím.
+* Nikdy netisknem jeden štítek dvakrát. Pokud je potřeba vytisknout jakýkoliv štítek podruhé, pak se vygeneruje nový. Je to obrana před náhodným nalepením jednoho štítku na dva balíky. Musím tedy evidovat, kdy jaký štítek prošel načtením kde v procesu.
+* Zavedeme termín aktivní štítek, to bude ten o kterém si myslíme, že je na balíku.
+* Ukládání plateb z banky je buď pouze ruční nebo pouze automatické.
+* V pátek udělam schůzku, kde proberem user mangement, authentication a authorization.
 
 ## 14.04.2020
 Na čem jsme se domluvili:
