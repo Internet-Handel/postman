@@ -2,6 +2,34 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
+### Šablona zápisu schůzky
+```
+## Datum
+Co chcem probrat a otevřené otázky:
+
+* ...
+* ...
+
+Na čem jsme se domluvili:
+
+* ...
+* ...
+```
+
+
+
+## 21.04.2020
+Co chcem probrat a otevřené otázky:
+
+* Zavedu dokumentaci na druhou fázi. Ať evidujem podobné dohody https://bitbucket.org/internethandel/postman/issues/35/.
+* ...
+
+Na čem jsme se domluvili:
+
+* ...
+* ...
+
+
 ## 21.04.2020
 Otevřené otázky:
 
@@ -12,9 +40,11 @@ Na čem jsme se domluvili:
 
 * Štítek na balíku bude právě jeden. Pokud poytřebuji nalepit nový a již tam je jeden nebo více je, tak starý štítek nebo štítky zničím nebo přelepím.
 * Nikdy netisknem jeden štítek dvakrát. Pokud je potřeba vytisknout jakýkoliv štítek podruhé, pak se vygeneruje nový. Je to obrana před náhodným nalepením jednoho štítku na dva balíky. Musím tedy evidovat, kdy jaký štítek prošel načtením kde v procesu.
+* Vlastní transakce nebudem evidovat. Pouze platby. Jedna transakce vede na více plateb. Pokud se podívam na detail platby, tak zde bude tlačítko rozdělit platbu, pak vyberu zákázku zvolím částku a příslušná částka se převede jako nová platba na zadanou objednávku. 
 * Zavedeme termín aktivní štítek, to bude ten o kterém si myslíme, že je na balíku.
 * Ukládání plateb z banky je buď pouze ruční nebo pouze automatické.
 * V pátek udělam schůzku, kde proberem user mangement, authentication a authorization.
+* Prozkoumáme moduly v symfony, jestli se tam nevyloupne nějaký, co by nám neusnadnil život.
 
 ## 14.04.2020
 Na čem jsme se domluvili:
