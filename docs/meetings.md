@@ -18,10 +18,10 @@ Na čem jsme se domluvili:
 
 
 
-## 21.04.2020
+## 28.04.2020
 Co chcem probrat a otevřené otázky:
 
-* Zavedu dokumentaci na druhou fázi. Ať evidujem podobné dohody https://bitbucket.org/internethandel/postman/issues/35/.
+* Zavedu dokumentaci na druhou fázi. Ať evidujem podobné dohody jako je https://bitbucket.org/internethandel/postman/issues/35/.
 * ...
 
 Na čem jsme se domluvili:
@@ -29,6 +29,13 @@ Na čem jsme se domluvili:
 * ...
 * ...
 
+
+## 24.04.2020
+Na čem jsme se domluvili:
+
+* Řízení rolí a oprávnění podle [https://bitbucket.org/internethandel/postman/issues/19](https://bitbucket.org/internethandel/postman/issues/19) vypadá dobře. Oprávnění symfony lze snadno dodělat. Používají se hierarchické role s využitím dědičnosti. Systém voters je fajn, docela dobře s tím dosáhnem, toho co potřebujem.
+* Půjdem touto cestou.
+* Potřebujem ukládat doručovací a odesílací adresy v různých formátech. Zvážíme dědičnost v doctrine, jinak to nasypem do jedné tabule.
 
 ## 21.04.2020
 Otevřené otázky:
