@@ -330,6 +330,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#bezpecnost" class="md-nav__link">
+    Bezpečnost
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kod-baliku" class="md-nav__link">
     Kód balíku
   </a>
@@ -524,6 +531,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#bezpecnost" class="md-nav__link">
+    Bezpečnost
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kod-baliku" class="md-nav__link">
     Kód balíku
   </a>
@@ -645,6 +659,9 @@
                 
                 <h1 id="architektura">Architektura</h1>
 <p>Technický návrh systému. Nebude možné zde popsat všechny aspekty řešení. Jsou zde popsané jen některé části.</p>
+<h2 id="bezpecnost">Bezpečnost</h2>
+<p>V návrhu budeme vycházet z toho, co nabízí symfony framewok. Detaily jsou popsané na <a href="https://symfony.com/doc/current/security.html">symfony.com/doc/current/security.html</a>. Systém využívá hierarchické role. V našem případě hierarchie bude vypadat takto:</p>
+<p><img alt="Hierarchie rolí" src="../diagrams/out/arch-04.png" title="Hierarchie rolí" /></p>
 <h2 id="kod-baliku">Kód balíku</h2>
 <p>Kód balíku musí splňovat několik vlastností:</p>
 <ul>
@@ -680,7 +697,7 @@
 <h2 id="cislo-danoveho-dokladu">Číslo daňového dokladu</h2>
 <p>Daňové doklady jako jsou faktury a dobropisy musí být rozlišitelné podle jejich čísla. Pro všechny daňové doklady použijem 13 místné číslo složene z čísla objednávky doplněné pořadovým číslem daňového dokladu v objednávce. Například pro objednávku č.: <code>9812563321</code> bude mít faktura č.: <code>9812563321001</code>.</p>
 <h2 id="entita-zakaznika">Entita zákazníka</h2>
-<p>V některých případech by bylo dobré mít samostatnou entitu zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Toto teď nebudem implementovat.</p>
+<p>V některých případech by bylo dobré mít samostatnou entitu zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Toto teď nebudem implementovat. Entitu zákazníka odvodíme od entity uživatele.</p>
 <h2 id="entitni-model">Entitní model</h2>
 <p>Zde budou popsány vztajy mezi objekty a základní set attributů.</p>
 <p>Vztahy mezi základními objekty budou vypadat takto:

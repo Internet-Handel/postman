@@ -62,3 +62,8 @@ skinparam object {
     BackgroundColor $col1
 }
 
+skinparam class {
+    BorderColor $col4
+    BackgroundColor $col1
+}
+
