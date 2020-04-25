@@ -1,0 +1,29 @@
+@startuml
+!include color_def.txt
+
+hide empty members
+
+interface Uživatel << (C,$col2) >> {
+}
+
+
+interface Dispečer << (C,$col2) >> {
+}
+
+
+interface Podpora << (C,$col2) >> {
+}
+
+
+interface Zákazník << (C,$col2) >> {
+}
+
+
+interface Admin << (C,$col2) >> {
+}
+
+Uživatel <|--- Dispečer
+Uživatel <|--- Podpora
+Uživatel <|--- Zákazník
+Podpora <|--- Admin
+Dispečer <|--- Admin

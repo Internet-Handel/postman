@@ -2,6 +2,12 @@
 
 Technický návrh systému. Nebude možné zde popsat všechny aspekty řešení. Jsou zde popsané jen některé části.
 
+## Bezpečnost
+
+V návrhu budeme vycházet z toho, co nabízí symfony framewok. Detaily jsou popsané na [symfony.com/doc/current/security.html](https://symfony.com/doc/current/security.html). Systém využívá hierarchické role. V našem případě hierarchie bude vypadat takto:
+
+![Hierarchie rolí](./diagrams/out/arch-04.png "Hierarchie rolí")
+
 ## Kód balíku
 
 Kód balíku musí splňovat několik vlastností:
@@ -47,7 +53,7 @@ Daňové doklady jako jsou faktury a dobropisy musí být rozlišitelné podle j
 
 ## Entita zákazníka
 
-V některých případech by bylo dobré mít samostatnou entitu zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Toto teď nebudem implementovat.
+V některých případech by bylo dobré mít samostatnou entitu zákazníka a k ní napojené objednávky. Například bychom mohli lépe určit zákazníka podle čísla účtu příchozí platby. Toto teď nebudem implementovat. Entitu zákazníka odvodíme od entity uživatele.
 
 ## Entitní model
 Zde budou popsány vztajy mezi objekty a základní set attributů.

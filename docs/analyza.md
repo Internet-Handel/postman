@@ -70,16 +70,17 @@ Pracovník podpory může být fyzicky na centrále. Pracovník podpory je odpov
 
 ![UCs pro pracovníka podpory pro práci s platbou a daňovým dokladem](./diagrams/out/ucs-support-finance.png "UCs pro pracovníka podpory pro práci s platbou a daňovým dokladem")
 
-* UC-40 - [Kontrola bankovního účtu](../uc-40/#UC-40 "Kontrola bankovního účtu").
-* UC-41 - [Párování plateb](../uc-40/#UC-41 "Párování plateb").
-* UC-42 - [Odpárování platby](../uc-40/#UC-42 "Odpárování platby").
-* UC-43 - [Urgence zaplacení](../uc-40/#UC-43 "Urgence zaplacení").
-* UC-44 - [Řešení přeplacených objednávek](../uc-40/#UC-44 "Řešení přeplacených objednávek").
-* UC-45 - [Řešení zaplacených objednávek, ke kterým nedorazil balík](../uc-40/#UC-45 "Řešení zaplacených objednávek, ke kterým nedorazil balík").
-* UC-46 - [Vystavení dobropisu](../uc-40/#UC-46 "Vystavení dobropisu").
-* UC-47 - [Vystavení upravené faktury](../uc-40/#UC-47 "Vystavení upravené faktury").
-* UC-48 - [Úprava objednávky](../uc-40/#UC-48 "Úprava objednávky").
-* UC-49 - [Řešení nezaplacených objednávek, ke kterým nedorazil balík](../uc-40/#UC-49 "Řešení nezaplacených objednávek, ke kterým nedorazil balík").
+* UC-400 - [Kontrola bankovního účtu](../uc-40/#UC-400 "Kontrola bankovního účtu").
+* UC-401 - [Párování plateb](../uc-40/#UC-401 "Párování plateb").
+* UC-402 - [Odpárování platby](../uc-40/#UC-402 "Odpárování platby").
+* UC-403 - [Urgence zaplacení](../uc-40/#UC-403 "Urgence zaplacení").
+* UC-404 - [Řešení přeplacených objednávek](../uc-40/#UC-404 "Řešení přeplacených objednávek").
+* UC-405 - [Řešení zaplacených objednávek, ke kterým nedorazil balík](../uc-40/#UC-405 "Řešení zaplacených objednávek, ke kterým nedorazil balík").
+* UC-406 - [Vystavení dobropisu](../uc-40/#UC-406 "Vystavení dobropisu").
+* UC-407 - [Vystavení upravené faktury](../uc-40/#UC-407 "Vystavení upravené faktury").
+* UC-408 - [Úprava objednávky](../uc-40/#UC-408 "Úprava objednávky").
+* UC-409 - [Řešení nezaplacených objednávek, ke kterým nedorazil balík](../uc-40/#UC-409 "Řešení nezaplacených objednávek, ke kterým nedorazil balík").
+* UC-410 - [Rozdělení platby mezi dvě objednávky](../uc-40/#UC-410 "Rozdělení platby mezi dvě objednávky").
 
 
 #### Správa objednávek a balíků

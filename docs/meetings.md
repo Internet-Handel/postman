@@ -22,7 +22,8 @@ Na čem jsme se domluvili:
 Co chcem probrat a otevřené otázky:
 
 * Zavedu dokumentaci na druhou fázi. Ať evidujem podobné dohody jako je https://bitbucket.org/internethandel/postman/issues/35/.
-* ...
+* Budem implementovat kontrolní mechanizmy na platby a objednávky. Například, že nejsou platby bez objednávek, že součet platby odpovídá bankovnímu převodu? Rád bych připravil seznam kontrol.
+* Jaká data budem z bankovních systému číst? Připravit návrh. Číslo transakce, datum 
 
 Na čem jsme se domluvili:
 
@@ -31,7 +32,7 @@ Na čem jsme se domluvili:
 
 
 ## 24.04.2020
-Na čem jsme se domluvili:
+Na čem jsme se domluvili
 
 * Řízení rolí a oprávnění podle [https://bitbucket.org/internethandel/postman/issues/19](https://bitbucket.org/internethandel/postman/issues/19) vypadá dobře. Oprávnění symfony lze snadno dodělat. Používají se hierarchické role s využitím dědičnosti. Systém voters je fajn, docela dobře s tím dosáhnem, toho co potřebujem.
 * Půjdem touto cestou.
