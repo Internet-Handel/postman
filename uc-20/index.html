@@ -346,6 +346,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-210-tisk-a-nalepeni-stitku" class="md-nav__link">
+    UC-210 - Tisk a nalepení štítku
+  </a>
+  
+</li>
+      
       
       
       
@@ -454,6 +461,18 @@
   <li class="md-nav__item">
     <a href="../implementation/" title="Implementace" class="md-nav__link">
       Implementace
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../phase2/" title="Fáze 2" class="md-nav__link">
+      Fáze 2
     </a>
   </li>
 
@@ -630,6 +649,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uc-210-tisk-a-nalepeni-stitku" class="md-nav__link">
+    UC-210 - Tisk a nalepení štítku
+  </a>
+  
+</li>
+      
       
       
       
@@ -670,6 +696,7 @@
 <p><img alt="Proces čtení informací z balíku" src="../diagrams/out/uc-21-activity-2.png" title="Proces čtení informací z balíku" /></p>
 <p>V tomto stavu máme všechny dostupné informace o balíku zaznamenané.</p>
 <h3 id="reseni-pripadne-poskozeneho-baliku-a-tisk-stitku">Řešení případně poškozeného balíku a tisk štítku</h3>
+<p><strong>TODO přidat odkaz na UC-210</strong></p>
 <p>Ve všech případech dispečer na balík tiskne <a href="../templates/#T-06">interní štítek</a>. Interní štítek musí byt nalepen tak, aby nepřekrýval informace, které na balík zadal odesílatel. Informace od odesílatele se mohou hodit pro pozdější řešení chyb.</p>
 <p>Proces začíná na obrazovce <a href="../screens/#S-203">S-203</a>, kde dispečer musí rozhodnout, jestli je balík poškozen nebo ne. Jedná se o poškození obalu, nebo poškození celého balíku, které by ztížilo nebo znemožnilo další doručovaní.</p>
 <p>Pokud balík není poškozen, pak lze tisknout štítek na balík. Pokud to lze, pak systém zobrazí stránku <a href="../screens/#S-212">S-212 pro tisk štítku dopravce</a>, jinak zobrazí <a href="../screens/#S-205">stránku S-205 pro tisk interního štítku</a>, který se vytiskne podle <a href="../templates/#T-06">šablony interního štítku</a>. Pokud je balík poškozen pak se zobrazí stránka <a href="../screens/#S-204">S-204 pro popsání míry poškození a několik fotek</a>. Na stránce se také dispečer musí rozhodnout, jestli lze balík přebalit a posunout dál do procesu doručení. Pokud balík nelze přebalit, pak se vytiskne interní štítek, dispečer zadá rozměry, váhu a balík putuje do chybové fronty. Pokud lze balík přebalit zobrazí se jednoduchá stránka  <a href="../screens/#S-206">S-206 pro zadání spotřeby obalového materiálu</a>. Pak se vytiskne interní štítek.</p>
@@ -687,6 +714,7 @@
 <p>Do chybové fronty se balík přesune například, když zákazník nezaplatí déle než definovanou dobu a pracovníkovi podpory se jestě nepodařilo se zákazníkem domluvit co s balíckem dál dělat.</p>
 <p>Dispečer se může kdykoliv během zpracovávání fronty rozhodnout činnost přerušit.</p>
 <h2 id="uc-23-zpracovani-baliku-ve-fronte-dopravce"><a name="UC-23"></a>UC-23 - Zpracování balíků ve frontě dopravce</h2>
+<p><strong>TODO přidat odkaz na UC-210</strong></p>
 <p>Dispečer v systému otevře stránku pro zpracování fronty konkrétního dopravce. Pak začne zpracovávat jeden balík po druhém v libovolném pořadí takto:</p>
 <p>Čtečkou čárových kódů načte z interního štítku kód balíčku. Systém požádá o zvážení balíku. Dispečer ho zváží. Po vážení se aktuální váha balíku porovná s hodnotou naměřenou po nalepení interního štítku na balík. To by mělo snížit pravděpodobnost, že dojde k záměně balíků, nebo jiné chybě. Pokud váha nesedí balík bude vložen do chybové fronty. Pokud váha odpovídá, systém zobrazí <a href="../screens/#S-212">stránku S-212 pro tisk štítku dopravce</a>.</p>
 <p><img alt="Zpracování balíků ve frontě dopravce'" src="../diagrams/out/uc-23-activity.png" title="Zpracování balíků ve frontě dopravce" /></p>
@@ -745,6 +773,32 @@
 <li>Dispečer může od původního balíku vytvořit více balíků.</li>
 <li>Dispečer se vrátí k původnímu balíku a </li>
 <li>Hotovo.</li>
+</ol>
+<h2 id="uc-210-tisk-a-nalepeni-stitku"><a name="UC-210"></a>UC-210 - Tisk a nalepení štítku</h2>
+<p>Při přijímání balíku a při zpracovná balíků ve frontě pro dopravce je potřeba tisknout interní štíttek nebo štítek dopravce. Jeden štítek nikdy netisknem dvakrát. Je to obrana před náhodným nalepením jednoho štítku na dva balíky.</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Systém zná balík, ke kterému tiskneme štítek.</li>
+</ul>
+<p>Kroky:</p>
+<ol>
+<li>Systém zobrazí obrazovku pro <a href="../screens/#S-205">tisk interního štítku S-205</a> nebo obrazovku pro <a href="../screens/#S-212">tisk štítku dopravce S-112</a>.</li>
+<li>Zároveň se zobrazením systém provede:<ol>
+<li>Vytvoří se nový štítek a napojí se na balík.</li>
+<li>Na tiskárnu štítků se pošle pokyn k tisku nového štítku.</li>
+</ol>
+</li>
+<li>Pokud je na balíku takový štítek nebo štítky, kde by mohlo dojít k záměně s právě vysknutým štítkem, pak dispečer zvolí jednu z možností: :<ol>
+<li>Odlepí starý štítek  balíku.</li>
+<li>Starý štítek znehodnotí. <strong>TODO Jak? Utrhne ho, nebo zamaluje fixou? Neco dalsiho?</strong></li>
+</ol>
+</li>
+<li>Dispečet vezme nový štítek a nalepí ho na balík.</li>
+<li>Hotovo.</li>
+</ol>
+<p>Alternativy:</p>
+<ol>
+<li>Pokud se nalepení vytisknutého štítku z nějakého důvodu nepovede (štítek se třeba roztrhne), pak dispečer stiskne "Znovu vytisknout". Tím se spustí bod 2. </li>
 </ol>
                 
                   

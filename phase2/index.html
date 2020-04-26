@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://jajir.github.io/postman/notes/">
+        <link rel="canonical" href="https://jajir.github.io/postman/phase2/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Poznámky - Postman</title>
+        <title>Fáze 2 - Postman</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#poznamky" tabindex="0" class="md-skip">
+      <a href="#faze-2" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Poznámky
+                Fáze 2
               
             </span>
           
@@ -325,11 +325,49 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../phase2/" title="Fáze 2" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Fáze 2
+      </label>
+    
+    <a href="./" title="Fáze 2" class="md-nav__link md-nav__link--active">
       Fáze 2
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ...
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -349,56 +387,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Poznámky
-      </label>
-    
-    <a href="./" title="Poznámky" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../notes/" title="Poznámky" class="md-nav__link">
       Poznámky
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#otevrene-otazky-napady" class="md-nav__link">
-    Otevřené otázky, nápady
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kontakty-na-nas" class="md-nav__link">
-    Kontakty na nás:
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -447,15 +440,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#otevrene-otazky-napady" class="md-nav__link">
-    Otevřené otázky, nápady
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kontakty-na-nas" class="md-nav__link">
-    Kontakty na nás:
+  <a href="#_1" class="md-nav__link">
+    ...
   </a>
   
 </li>
@@ -477,160 +463,21 @@
               
                 
                 
-                <h1 id="poznamky">Poznámky</h1>
-<h2 id="otevrene-otazky-napady">Otevřené otázky, nápady</h2>
+                <h1 id="faze-2">Fáze 2</h1>
+<p>Zatím zde budeme neuspořádaně ukládat co víme, že budeme chtít.</p>
+<p>Hlavní cíl fáze 2. je umožnit hromadné podání. Z toho plyne, že bude potřeba podporovat:</p>
 <ul>
-<li>Jaký čárový kód tisknem na balíky? Je to EAN-13?</li>
-<li>Je povinnost posílat dobropis, v případě, že zákazník zruší objednávku, ale ještě neposlal penize?</li>
-<li>Pro oveření identity volajícího zákazníka se můžem optat na kód balíku. Nebo tačí spoléhat na telefonní číslo na objednávce? UC-59.</li>
-<li>Zrušíme tisknuti doručoivací adresy na interni štítek? V UC-51 se adresa muze zmenit a v pripade nesparovaneho baliku ji nemusime znat.</li>
-<li>Budem uchovávat původní hodnoty z objednávky? (Cena za dopravu, dorucovaci adresa, adresa odesilatele, ....)</li>
-<li>Pokud se nepodaří ověřit identitu volajícího zákazníka nebo příchozího emailu. Pak nechávám na domluvě, jak takovou událost pracovník podpory zaznamená k dalšímu posouzení. Řešení by mohla být kontaktní historie nenavázaná na zákazníka.</li>
-<li>Potřebujeme mít někde uloženou objednávku, tak jak jí zadal zákazník? Například pro porovnání. Určitě bude v auditním logu.</li>
-<li>U stavů mít detailní obrázek se stavy a přechodů napsané UC.</li>
-<li>Pracovník podpory si při řešení chybových stavů balíku nemůže objednat další focení nebo měření.</li>
-<li>Když označují balík za doručený, zatím nezohlednuji, že existuje více než jedno depo.</li>
-<li>Nebudem řešit stav, kdy fakturace proběhne na osobu na jedné adrese, ale zpáteční adresa balíku má být jiná.</li>
-<li>Když dojde ke storno, vystavení dobropisu možné ne povinné. Má se dobropis vystavit i když nepřisli peníze?.</li>
-</ul>
-<h2 id="kontakty-na-nas">Kontakty na nás:</h2>
-<table>
-<thead>
-<tr>
-<th>Kdo</th>
-<th>Email</th>
-<th>Github account</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bivoj</td>
-<td><a href="mailto:xbivoj@gmail.com">xbivoj@gmail.com</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Viktor Friš</td>
-<td><a href="mailto:viktorfris420@gmail.com">viktorfris420@gmail.com</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Vojta Balák</td>
-<td><a href="mailto:vojtech.balak@internet-handel.cz">vojtech.balak@internet-handel.cz</a></td>
-<td>remedan-ih</td>
-</tr>
-<tr>
-<td>David Ježek</td>
-<td><a href="mailto:david@internet-handel.cz">david@internet-handel.cz</a></td>
-<td>DDejv</td>
-</tr>
-<tr>
-<td>Honza Jirout</td>
-<td><a href="mailto:jirout@gmail.com">jirout@gmail.com</a></td>
-<td>jajir</td>
-</tr>
-<tr>
-<td>Jiří Matějka</td>
-<td><a href="mailto:jirimatejka1@gmail.com">jirimatejka1@gmail.com</a></td>
-<td>jirimatejka1</td>
-</tr>
-<tr>
-<td>Anton Loginov</td>
-<td><a href="mailto:antonloginovih@gmail.com">antonloginovih@gmail.com</a></td>
-<td>antonloginovih@gmail.com</td>
-</tr>
-<tr>
-<td>Petr Hanišák</td>
-<td><a href="mailto:petrhanisak.ih@gmail.com">petrhanisak.ih@gmail.com</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Martin Jonák</td>
-<td><a href="mailto:martinjonak.ih@gmail.com">martinjonak.ih@gmail.com</a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="zapisy-ze-starych-schuzek">Zápisy ze starých schůzek</h1>
-<h2 id="08042020">08.04.2020</h2>
-<p>Na čem jsme se domluvili:</p>
-<ul>
-<li>Vojta sepíše vývojařské desatero a přidá ho do dokumentace.</li>
-<li>Honza:<ul>
-<li>Pozve lid do repa</li>
-<li>Repo udělá privátním</li>
-<li>Nástřel UC na hromadné podávání</li>
+<li>Evidenci zákazníků. </li>
+<li>Řešení UC pro zákazníka jako přihlašování, zapomenuté heslo, zmena hesla, zapomenutý login, ... </li>
+<li>Zákazník bude platit:<ul>
+<li>Nějakou část dopředu - předplacení služeb.</li>
+<li>Budeme mu na doručování balíků nějakou částku půjčovat, po jejím vyčerpání budeme čekat na zaplacení.</li>
 </ul>
 </li>
-<li>Projekt pojedem podle analýzy, co není popsané neprogramujem.</li>
-<li>Co jsme nakousli, ale nedokončili:<ul>
-<li>Vznikne nejaká vrstva technické dokumentace mezi analýzou a php kódem.</li>
+<li>Výběr měny, lokalizace a cíle doručení v závislosti na příchozích informacích z kampaně a domény je popsáno na <a href="https://bitbucket.org/internethandel/postman/issues/35/">https://bitbucket.org/internethandel/postman/issues/35/</a>.</li>
+<li>...</li>
 </ul>
-</li>
-<li>Naplánuju schuzku na 10.4.</li>
-<li>Ostatní kluci vyzkoušíjí php frameworky a založí kostru projektu.</li>
-</ul>
-<h2 id="07032020">07.03.2020</h2>
-<ul>
-<li>Prošli jsme všechny UC.</li>
-<li>Nebudem podporovat odložené poslaní balíků.</li>
-<li>Přepravce a dopravce není to samé. Postman má blíž k činnosti dopravce. DPD a česká posta jsou dopravci.</li>
-</ul>
-<h2 id="02032020">02.03.2020</h2>
-<ul>
-<li>Prosli jsme procesy objednavky a balíků</li>
-</ul>
-<h2 id="29022020">29.02.2020</h2>
-<ul>
-<li>Nebudem aktivne rikat zakaznikovy, jakeho dopravce pouzivame. Muze pozdeji zjistit.</li>
-<li>Nebudel lidi navolavat z rozdelanych zadosti. Tede je ani nebudem ukladat.</li>
-<li>Prevazujem baliky z odchozi fronty vzdy. Radeji neodeslem, nez neprevazime.</li>
-</ul>
-<h2 id="28022020">28.02.2020</h2>
-<ul>
-<li>Omezíme pouze na Německo.</li>
-<li>Řešili jsme UC-04.</li>
-</ul>
-<h2 id="24022020">24.02.2020</h2>
-<ul>
-<li>Zakaznik se nemusi hlasit heslem/loginem a ani nema tuto moznost.</li>
-<li>Jako admin nepotrebuju videt nic, udelam ad-hoc vypis z databaze.</li>
-<li>Komunikacni kanaly pro zakaznika telefon, email, zadavaci formular pro poslani?</li>
-<li>Ano chceme zakaznikovi umet potvrdit doruceni.</li>
-<li>Nektere UC rovnou oznacime jako nizssi prioritu.</li>
-<li>Prosli jsme cast UC supportu.</li>
-<li>Vznikne zmenovy zurnal, staci standardni textovy log, kde bude cas a zmena pole u objednavky. Nebude delat vyhledavani v zurnalu.</li>
-<li>Dobropisy nebudem automatizovat v prvni fazi.</li>
-<li>Reseni odmitnutych nebo nedorucenych zasilek.</li>
-<li>Dostal jsem starsi verze obrazovek registracni formular.</li>
-<li>Od klienta data pouze sbirame, validace se dela klidne rucne.</li>
-</ul>
-<h2 id="22022020-co-jsme-si-rikali">22.02.2020 co jsme si rikali</h2>
-<ul>
-<li>Bivoj potrebuje navrh systemu. Hlavne:<ul>
-<li>Analyzu &amp; logickou architekturu.</li>
-<li>Cil je usetrit opakovane vysvetlovani reseni.</li>
-<li>Zalezi mu na moznosti dal system rozvijet.</li>
-</ul>
-</li>
-<li>Tisk stitku</li>
-<li>Napojeni na prepravce (DPL). Uz je v nejakem stavu hotove.</li>
-<li>Registrace.</li>
-<li>Web pro zakazniky. (Jmeno tel. cilova adreasa, zpatechni).</li>
-<li>Prehazovac</li>
-<li>Pokyny k uhrade pro zakaznika.</li>
-<li>Pipac.</li>
-<li>Admin.</li>
-<li>Cekani na uphradu. Zbozi neposlu dal. Denne ho projedu znovu.</li>
-<li>Rozhrani pro eshopy. Hromadna podani. V dalsich fazich API.</li>
-<li>GDPR prijatych informaci.</li>
-<li>Na balik bud vytisknout carovy kod, QR code, nebo napsat hash.</li>
-<li>bude to bezet v ruznych jazycich na ruznych domenach.</li>
-<li>Co zeme, kam dorucujem to vlastni trasa baliku.</li>
-<li>Pokud DPD nedoruci, pak vraci zpet. </li>
-</ul>
-<p><img alt="Puvodni navrh 1" src="../imgs/original-1.jpeg" title="Puvodni 1" />
-<img alt="Puvodni navrh 2" src="../imgs/original-2.jpeg" title="Puvodni 2" />
-<img alt="Puvodni navrh 3" src="../imgs/original-3.jpeg" title="Puvodni 3" /></p>
+<h2 id="_1">...</h2>
                 
                   
                 
@@ -652,7 +499,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../meetings/" title="Schůzky" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../implementation/" title="Implementace" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -661,19 +508,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Schůzky
+                Implementace
               </span>
             </div>
           </a>
         
         
-          <a href="../changelog/" title="Změny" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../meetings/" title="Schůzky" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Změny
+                Schůzky
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

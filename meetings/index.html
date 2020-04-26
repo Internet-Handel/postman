@@ -325,6 +325,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../phase2/" title="Fáze 2" class="md-nav__link">
+      Fáze 2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -352,13 +364,6 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sablona-zapisu-schuzky" class="md-nav__link">
-    Šablona zápisu schůzky
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#28042020" class="md-nav__link">
@@ -399,6 +404,19 @@
   <a href="#08042020" class="md-nav__link">
     08.04.2020
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sablona-zapisu-schuzky" class="md-nav__link">
+    Šablona zápisu schůzky
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -470,13 +488,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sablona-zapisu-schuzky" class="md-nav__link">
-    Šablona zápisu schůzky
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#28042020" class="md-nav__link">
     28.04.2020
   </a>
@@ -516,6 +527,19 @@
     08.04.2020
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sablona-zapisu-schuzky" class="md-nav__link">
+    Šablona zápisu schůzky
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -537,25 +561,17 @@
                 
                 <h1 id="schuzky">Schůzky</h1>
 <p>Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.</p>
-<h3 id="sablona-zapisu-schuzky">Šablona zápisu schůzky</h3>
-<pre><code>## Datum
-Co chcem probrat a otevřené otázky:
-
-* ...
-* ...
-
-Na čem jsme se domluvili:
-
-* ...
-* ...
-</code></pre>
-
-<h2 id="28042020">28.04.2020</h2>
-<p>Co chcem probrat a otevřené otázky:</p>
+<h2 id="28042020"><a name="28.04.2020"></a>28.04.2020</h2>
+<p>Co chcem probrat:</p>
 <ul>
-<li>Zavedu dokumentaci na druhou fázi. Ať evidujem podobné dohody jako je https://bitbucket.org/internethandel/postman/issues/35/.</li>
 <li>Budem implementovat kontrolní mechanizmy na platby a objednávky. Například, že nejsou platby bez objednávek, že součet platby odpovídá bankovnímu převodu? Rád bych připravil seznam kontrol.</li>
-<li>Jaká data budem z bankovních systému číst? Připravit návrh. Číslo transakce, datum </li>
+<li>Jaká data budem z bankovních systému číst? Připravit návrh. Číslo transakce, datum transakce, datum zaúčtování, konstantní a variabilní symbol?, název obchodníka ...</li>
+<li>Budem řešit scénáře jako jsou: Oprava zadané platby, zrušení platbu, omylem rozdělená platba?</li>
+<li>Rozmyslet, jestli budem u balíků sledovat a ověřovat rozměry. Fáze 1. s tím počítá.</li>
+<li>Pokud tisknu nový štítek na balík a už tam je starý, tak musím starý znehodnotit. Jak to udělám? Utrhne ho? Zamaluje fixou? Něco dalšího?</li>
+<li>Minule jsme se domlouvali, že zavedeme termín aktivní štítek, to bude ten, o kterém si myslíme, že je na balíku. Myslím, že to není potřeba evidovat. Je to vždy poslední vygenerovaný a vytisknutý štítek. Ví někdo o scénáři, kde by to mohlo být jinak?</li>
+<li>Pokud přijímám balík a zjistím, že je poškozený a že ho lze přebalit, pak balík přebalím. Po přebalení pošlu balík rovnou do fronty dopravce, nebo do nějaké čekací s tím, že účtuji za přebalení?</li>
+<li>Štítek dopravce, kdo zná jak to detailně funguje? Stálo by za to, začít to blíž popisovat. Od začátku budeme mít dopravce dva. Vím o české poště, kdo je ten další?</li>
 </ul>
 <p>Na čem jsme se domluvili:</p>
 <ul>
@@ -580,9 +596,9 @@ Na čem jsme se domluvili:
 <li>Štítek na balíku bude právě jeden. Pokud poytřebuji nalepit nový a již tam je jeden nebo více je, tak starý štítek nebo štítky zničím nebo přelepím.</li>
 <li>Nikdy netisknem jeden štítek dvakrát. Pokud je potřeba vytisknout jakýkoliv štítek podruhé, pak se vygeneruje nový. Je to obrana před náhodným nalepením jednoho štítku na dva balíky. Musím tedy evidovat, kdy jaký štítek prošel načtením kde v procesu.</li>
 <li>Vlastní transakce nebudem evidovat. Pouze platby. Jedna transakce vede na více plateb. Pokud se podívam na detail platby, tak zde bude tlačítko rozdělit platbu, pak vyberu zákázku zvolím částku a příslušná částka se převede jako nová platba na zadanou objednávku. </li>
-<li>Zavedeme termín aktivní štítek, to bude ten o kterém si myslíme, že je na balíku.</li>
+<li>Zavedeme termín aktivní štítek, to bude ten, o kterém si myslíme, že je na balíku.</li>
 <li>Ukládání plateb z banky je buď pouze ruční nebo pouze automatické.</li>
-<li>V pátek udělam schůzku, kde proberem user mangement, authentication a authorization.</li>
+<li>V pátek udělam schůzku, kde proberem user management, authentication a authorization.</li>
 <li>Entita zaměstnance a zákazníka bude stejná.</li>
 <li>Prozkoumáme moduly v symfony, jestli se tam nevyloupne nějaký, co by nám neusnadnil život.</li>
 </ul>
@@ -642,6 +658,18 @@ Na čem jsme se domluvili:
 <li>Naplánuju schůzku na 10.4.</li>
 <li>Ostatní kluci vyzkoušíjí php frameworky a založí kostru projektu.</li>
 </ul>
+<h3 id="sablona-zapisu-schuzky">Šablona zápisu schůzky</h3>
+<pre><code>## Datum
+Co chcem probrat a otevřené otázky:
+
+* ...
+* ...
+
+Na čem jsme se domluvili:
+
+* ...
+* ...
+</code></pre>
                 
                   
                 
@@ -663,7 +691,7 @@ Na čem jsme se domluvili:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../implementation/" title="Implementace" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../phase2/" title="Fáze 2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -672,7 +700,7 @@ Na čem jsme se domluvili:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Implementace
+                Fáze 2
               </span>
             </div>
           </a>
