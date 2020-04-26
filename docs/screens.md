@@ -30,7 +30,7 @@ Sekci "Pracovník podpory" uvidí pouze pracovník podpory, stejně se chová se
 
 ![odhlášení](./imgs/s-02-logout.png "Odhlášení")
 
-## <a name="S-03"></a>S-03 - Hledání balíků
+## <a name="S-03"></a>S-03 - Hledání balíků 📦
 
 ![Hledání balíků](./imgs/s-03-search.png "Hledání balíků")
 
@@ -106,17 +106,17 @@ Odkaz na detail je z [hledání balíků S-03](./#S-03) a z [detailu objednávky
 
 Může být součástí stránky [S-04 Detail objednávky](./#S-04)
 
-## <a name="S-052"></a>S-052 - Připojit balík
+## <a name="S-052"></a>S-052 - Připojit balík 📦
 
 ![Připojit balík](./imgs/s-052.png "Připojit balík")
 
-## <a name="S-053"></a>S-053 - Poškození balíku
+## <a name="S-053"></a>S-053 - Poškození balíku 📦
 
 Obrázky u osob nejsou nutné. Na nahrávání fotek osob není UC.
 
 ![Poškození balíku](./imgs/s-053.png "Poškození balíku")
 
-## <a name="S-054"></a>S-054 - Chyba při zpracování balíku
+## <a name="S-054"></a>S-054 - Chyba při zpracování balíku 📦
 
 Alternativou k předchozí obrazovce je obecná obrazovka pro chybu při zoracování balíku.
 
@@ -195,7 +195,7 @@ Poslední uživatel Milan Strnad není aktivní a nebude se moc přihlásit do s
 
 ![Nastavit heslo uživatele](./imgs/s-15.png "Nastavit heslo uživatele")
 
-## <a name="S-200"></a>S-200 - Zadání kódu balíku
+## <a name="S-200"></a>S-200 - Zadání kódu balíku 📦
 
 ![Zadání kódu balíku](./imgs/s-200.png "Zadání kódu balíku")
 
@@ -209,15 +209,15 @@ Stránka slouží pro opsání adresy odesílatele z balíku. Protože adresa m�
 
 ![Kontrola zpáteční adresy](./imgs/s-202.png "Kontrola zpáteční adresy")
 
-## <a name="S-203"></a>S-203 - Je balík poškozen?
+## <a name="S-203"></a>S-203 - Je balík poškozen? 📦
 
 ![Je balík poškozen?](./imgs/s-203.png "Je balík poškozen?")
 
-## <a name="S-204"></a>S-204 - Poškození balíku
+## <a name="S-204"></a>S-204 - Poškození balíku 📦
 
 ![Poškození balíku](./imgs/s-204.png "Poškození balíku")
 
-## <a name="S-205"></a>S-205 - Tisk interního štítku 🖨
+## <a name="S-205"></a>S-205 - Tisk interního štítku 🖨 🏷
 
 ![Tisk interního štítku 🖨](./imgs/s-205.png "Tisk interního štítku 🖨")
 
@@ -225,17 +225,17 @@ Stránka slouží pro opsání adresy odesílatele z balíku. Protože adresa m�
 
 ![Zadání spotřeby obalového materiálu](./imgs/s-206.png "Zadání spotřeby obalového materiálu")
 
-## <a name="S-207"></a>S-207 - Měření a vážení
+## <a name="S-207"></a>S-207 - Měření a vážení ⚖️
 
 ![Měření a vážení](./imgs/s-207.png "Měření a vážení")
 
 Všechna pole jsou povinná a musí obsahovat číselné hodnoty.
 
-## <a name="S-208"></a>S-208 - Fronta kam má být balík vložen
+## <a name="S-208"></a>S-208 - Fronta kam má být balík vložen 📦
 
 ![Fronta kam má být balík vložen](./imgs/s-208.png "Fronta kam má být balík vložen")
 
-## <a name="S-209"></a>S-209 - Načtení interního štítku
+## <a name="S-209"></a>S-209 - Načtení interního štítku 🏷
 
 Stránka pro načítání interního štítku se načte tak, ze focus je v poli pro kód interního štítku. To umožní dispečerovi čtečkou načít čárový kód bez dalšího klikání. Stejně tak by stránka měla poznat, že kód byl načten a přejít na další stránku bez potvrzování tlačítkem "pokračovat".
 
@@ -243,17 +243,17 @@ Na stránce by měla být validace, že kód interního štítku existuje a bal�
 
 ![Načtení interního štítku](./imgs/s-209.png "Načtení interního štítku")
 
-## <a name="S-210"></a>S-210 - Co dál s chybovým balíkem
+## <a name="S-210"></a>S-210 - Co dál s chybovým balíkem 📦
 
 ![Co dál s chybovým balíkem](./imgs/s-210.png "Co dál s chybovým balíkem")
 
-## <a name="S-211"></a>S-211 - Načtení interního štítku 2
+## <a name="S-211"></a>S-211 - Načtení interního štítku 2 🏷
 
 Stejná stránka jako je S-209 s tím, že na obrazovce je možnost zadat, že balík nemá interní štítek.
 
 ![Načtení interního štítku](./imgs/s-211.png "Načtení interního štítku")
 
-## <a name="S-212"></a>S-212 - Tisk štítku dopravce 🖨
+## <a name="S-212"></a>S-212 - Tisk štítku dopravce 🖨 🏷
 
 Zároveň se zobrazením této obrazovky se vytiskne štítek dopravce.
 

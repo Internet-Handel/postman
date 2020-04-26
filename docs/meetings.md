@@ -2,28 +2,17 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
-### Šablona zápisu schůzky
-```
-## Datum
-Co chcem probrat a otevřené otázky:
+## <a name="28.04.2020"></a>28.04.2020
+Co chcem probrat:
 
-* ...
-* ...
-
-Na čem jsme se domluvili:
-
-* ...
-* ...
-```
-
-
-
-## 28.04.2020
-Co chcem probrat a otevřené otázky:
-
-* Zavedu dokumentaci na druhou fázi. Ať evidujem podobné dohody jako je https://bitbucket.org/internethandel/postman/issues/35/.
 * Budem implementovat kontrolní mechanizmy na platby a objednávky. Například, že nejsou platby bez objednávek, že součet platby odpovídá bankovnímu převodu? Rád bych připravil seznam kontrol.
-* Jaká data budem z bankovních systému číst? Připravit návrh. Číslo transakce, datum 
+* Jaká data budem z bankovních systému číst? Připravit návrh. Číslo transakce, datum transakce, datum zaúčtování, konstantní a variabilní symbol?, název obchodníka ...
+* Budem řešit scénáře jako jsou: Oprava zadané platby, zrušení platbu, omylem rozdělená platba?
+* Rozmyslet, jestli budem u balíků sledovat a ověřovat rozměry. Fáze 1. s tím počítá.
+* Pokud tisknu nový štítek na balík a už tam je starý, tak musím starý znehodnotit. Jak to udělám? Utrhne ho? Zamaluje fixou? Něco dalšího?
+* Minule jsme se domlouvali, že zavedeme termín aktivní štítek, to bude ten, o kterém si myslíme, že je na balíku. Myslím, že to není potřeba evidovat. Je to vždy poslední vygenerovaný a vytisknutý štítek. Ví někdo o scénáři, kde by to mohlo být jinak?
+* Pokud přijímám balík a zjistím, že je poškozený a že ho lze přebalit, pak balík přebalím. Po přebalení pošlu balík rovnou do fronty dopravce, nebo do nějaké čekací s tím, že účtuji za přebalení?
+* Štítek dopravce, kdo zná jak to detailně funguje? Stálo by za to, začít to blíž popisovat. Od začátku budeme mít dopravce dva. Vím o české poště, kdo je ten další?
 
 Na čem jsme se domluvili:
 
@@ -49,9 +38,9 @@ Na čem jsme se domluvili:
 * Štítek na balíku bude právě jeden. Pokud poytřebuji nalepit nový a již tam je jeden nebo více je, tak starý štítek nebo štítky zničím nebo přelepím.
 * Nikdy netisknem jeden štítek dvakrát. Pokud je potřeba vytisknout jakýkoliv štítek podruhé, pak se vygeneruje nový. Je to obrana před náhodným nalepením jednoho štítku na dva balíky. Musím tedy evidovat, kdy jaký štítek prošel načtením kde v procesu.
 * Vlastní transakce nebudem evidovat. Pouze platby. Jedna transakce vede na více plateb. Pokud se podívam na detail platby, tak zde bude tlačítko rozdělit platbu, pak vyberu zákázku zvolím částku a příslušná částka se převede jako nová platba na zadanou objednávku. 
-* Zavedeme termín aktivní štítek, to bude ten o kterém si myslíme, že je na balíku.
+* Zavedeme termín aktivní štítek, to bude ten, o kterém si myslíme, že je na balíku.
 * Ukládání plateb z banky je buď pouze ruční nebo pouze automatické.
-* V pátek udělam schůzku, kde proberem user mangement, authentication a authorization.
+* V pátek udělam schůzku, kde proberem user management, authentication a authorization.
 * Entita zaměstnance a zákazníka bude stejná.
 * Prozkoumáme moduly v symfony, jestli se tam nevyloupne nějaký, co by nám neusnadnil život.
 
@@ -103,3 +92,19 @@ Na čem jsme se domluvili:
     * Vznikne nejaká vrstva technické dokumentace mezi analýzou a php kódem.
 * Naplánuju schůzku na 10.4.
 * Ostatní kluci vyzkoušíjí php frameworky a založí kostru projektu.
+
+
+### Šablona zápisu schůzky
+
+```
+## Datum
+Co chcem probrat a otevřené otázky:
+
+* ...
+* ...
+
+Na čem jsme se domluvili:
+
+* ...
+* ...
+```
