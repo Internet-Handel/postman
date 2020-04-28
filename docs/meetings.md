@@ -22,6 +22,8 @@ Co chcem probrat:
     * Sběr dat zákazníka.
     * Objednávka a její stavy.
     * Balík a jeho stavy.
+    * Šablony.
+    * Napojení na tiskárnu šítků. Jak identifikaci té správné.
 
 Na čem jsme se domluvili:
 
