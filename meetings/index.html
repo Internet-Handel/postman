@@ -573,7 +573,7 @@
 <li>Minule jsme se domlouvali, že zavedeme termín aktivní štítek, to bude ten, o kterém si myslíme, že je na balíku. Myslím, že to není potřeba evidovat. Je to vždy poslední vygenerovaný a vytisknutý štítek. Ví někdo o scénáři, kde by to mohlo být jinak?</li>
 <li>Pokud přijímám balík a zjistím, že je poškozený a že ho lze přebalit, pak balík přebalím. Po přebalení pošlu balík rovnou do fronty dopravce, nebo do nějaké čekací s tím, že účtuji za přebalení?</li>
 <li>Štítek dopravce, kdo zná jak to detailně funguje? Stálo by za to, začít to blíž popisovat. Od začátku budeme mít dopravce dva. Vím o české poště, kdo je ten další?</li>
-<li>Na čem lze pomalu začít a nělde už se začalo:<ul>
+<li>Na čem lze pomalu začít a někde už se začalo:<ul>
 <li>User management.</li>
 <li>Napojení na banku nebo banky.</li>
 <li>Platební UCs</li>
@@ -588,8 +588,22 @@
 </ul>
 <p>Na čem jsme se domluvili:</p>
 <ul>
-<li>...</li>
-<li>...</li>
+<li>Povídání o jazykových mutacích sepíše Jirka. Musím mu připravit místo, kam byt to mělo přijít. Je na to <a href="https://bitbucket.org/internethandel/postman/issues/38/">task 38</a>.</li>
+<li>Kluci mi dají vědět, jak se vyřešil zoom.</li>
+<li>Mame rozdělených 6 bundlů, kluci se založí samostatné tickety, kde proberou bližší pohled na bundle. Přistě bundly proberem. Na tomto základě se rozhodneme, jestli bundle použijeme nebo ne.</li>
+<li>UC na platby a její ověřování proberem samostatně s Davidem a Bivojem. To jsou body z přípravy.</li>
+<li>U balíků budeme sledovat a ověřovat rozměry a váhu. Budem počítat s tím, že to třeba na poslední chvíli vypnem.</li>
+<li>Likvidace neplatných štítků dispečer provede tak, že neplatný štítek přelepí novým. Pokud to není možné, pak se neplatný štítek nebo štítky odtrhnou.</li>
+<li>Aktivní štítek není nutné evidovat. Je to vždy ten poslední vytištěný štítek.</li>
+<li>Pojištění balíků. Zákazníkům budeme říkat, že balík je pojištěn jen do nějaké výše. Přesná výše bude odvozena od standardní ceny pojištění dopravce.</li>
+<li>Posílání dat o štítkách dopravce dopravcům. Při předání balíků chcem posílat vždy všechna data. I když jim aktuálně napředáváme všechny balíky, o kterých posíláme data. Bráníme se chybě, kdy dispečer nezkontroluje balík při předání dopravci. Nebude to platit pro všechny dopravce.</li>
+<li>Pokud projekt pokročí, pak by bylo dobré zpřesnit kontrolu balíků tím, že zavedem umělé jednotky - dávky. Dávka budou balíky ke zpracování v nějaké frontě. Dávku využijeme k tomu, že se nám žádné balíky v procesu neztratili. Zjednodušený popis je, že zvážíme dávku balíků před zpracováním a po něm. Mělo by to sedět.</li>
+<li>Pokud dispečer zjistí menší poškození obalu balíku a dispečer rozhodne o přebalení. Pak nebudeme ze zákaníka výmáhat platbu za přebalení. Budem posílat upozornění zákazníkovi s fotkou poškození a info o přebalení.</li>
+<li>Detaily dopravců zná Vojta a David. Dopravci budou: DPD Polsko, České pošta. Naplánuju schůzku, kde probereme detaily, jejich specifika, cokoliv, co by mohlo být důležité pro jejich integraci.</li>
+<li>S rozhodováním, kdo se zapojí do jakého tématu počkáme na příští týden.</li>
+<li>Všichní si rozmyslíme, kdo by měl zajem co dělat. Je to dnešním zápisu.</li>
+<li>Martin zjistí, jak je to testovaním UI na frontendu. Založil jsem <a href="https://bitbucket.org/internethandel/postman/issues/40/">task 40</a>.</li>
+<li>Honza rozmyslí, jak řešit situaci, že balík v nějakém procesu poškodíme sami.</li>
 </ul>
 <h2 id="24042020">24.04.2020</h2>
 <p>Na čem jsme se domluvili</p>
@@ -598,7 +612,7 @@
 <li>Půjdem touto cestou.</li>
 <li>Potřebujem ukládat doručovací a odesílací adresy v různých formátech. Zvážíme dědičnost v doctrine, jinak to nasypem do jedné tabule.</li>
 </ul>
-<h2 id="21042020">21.04.2020</h2>
+<h2 id="21042020"><a name="21.04.2020"></a>21.04.2020</h2>
 <p>Otevřené otázky:</p>
 <ul>
 <li>Štítek dopravce, kdo zná jak to detailně funguje? Stálo by za to, začít to blíž popisovat. Od začátku budeme mít dopravce dva. Vím o české poště, kdo je ten další?</li>
