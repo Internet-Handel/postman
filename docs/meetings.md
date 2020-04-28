@@ -5,6 +5,7 @@ Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 ## <a name="28.04.2020"></a>28.04.2020
 Co chcem probrat:
 
+* Jaké další symfony moduly se nám mohou hodit?
 * Budem implementovat kontrolní mechanizmy na platby a objednávky. Například, že nejsou platby bez objednávek, že součet platby odpovídá bankovnímu převodu? Rád bych připravil seznam kontrol.
 * Jaká data budem z bankovních systému číst? Připravit návrh. Číslo transakce, datum transakce, datum zaúčtování, konstantní a variabilní symbol?, název obchodníka ...
 * Budem řešit scénáře jako jsou: Oprava zadané platby, zrušení platbu, omylem rozdělená platba?
@@ -13,6 +14,14 @@ Co chcem probrat:
 * Minule jsme se domlouvali, že zavedeme termín aktivní štítek, to bude ten, o kterém si myslíme, že je na balíku. Myslím, že to není potřeba evidovat. Je to vždy poslední vygenerovaný a vytisknutý štítek. Ví někdo o scénáři, kde by to mohlo být jinak?
 * Pokud přijímám balík a zjistím, že je poškozený a že ho lze přebalit, pak balík přebalím. Po přebalení pošlu balík rovnou do fronty dopravce, nebo do nějaké čekací s tím, že účtuji za přebalení?
 * Štítek dopravce, kdo zná jak to detailně funguje? Stálo by za to, začít to blíž popisovat. Od začátku budeme mít dopravce dva. Vím o české poště, kdo je ten další?
+* Na čem lze pomalu začít a nělde už se začalo:
+    * User management.
+    * Napojení na banku nebo banky.
+    * Platební UCs
+    * Napojení na dopravce.
+    * Sběr dat zákazníka.
+    * Objednávka a její stavy.
+    * Balík a jeho stavy.
 
 Na čem jsme se domluvili:
 
