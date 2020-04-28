@@ -14,7 +14,7 @@ Co chcem probrat:
 * Minule jsme se domlouvali, že zavedeme termín aktivní štítek, to bude ten, o kterém si myslíme, že je na balíku. Myslím, že to není potřeba evidovat. Je to vždy poslední vygenerovaný a vytisknutý štítek. Ví někdo o scénáři, kde by to mohlo být jinak?
 * Pokud přijímám balík a zjistím, že je poškozený a že ho lze přebalit, pak balík přebalím. Po přebalení pošlu balík rovnou do fronty dopravce, nebo do nějaké čekací s tím, že účtuji za přebalení?
 * Štítek dopravce, kdo zná jak to detailně funguje? Stálo by za to, začít to blíž popisovat. Od začátku budeme mít dopravce dva. Vím o české poště, kdo je ten další?
-* Na čem lze pomalu začít a nělde už se začalo:
+* Na čem lze pomalu začít a někde už se začalo:
     * User management.
     * Napojení na banku nebo banky.
     * Platební UCs
@@ -27,9 +27,22 @@ Co chcem probrat:
 
 Na čem jsme se domluvili:
 
-* ...
-* ...
-
+* Povídání o jazykových mutacích sepíše Jirka. Musím mu připravit místo, kam byt to mělo přijít. Je na to [task 38](https://bitbucket.org/internethandel/postman/issues/38/).
+* Kluci mi dají vědět, jak se vyřešil zoom.
+* Mame rozdělených 6 bundlů, kluci se založí samostatné tickety, kde proberou bližší pohled na bundle. Přistě bundly proberem. Na tomto základě se rozhodneme, jestli bundle použijeme nebo ne.
+* UC na platby a její ověřování proberem samostatně s Davidem a Bivojem. To jsou body z přípravy.
+* U balíků budeme sledovat a ověřovat rozměry a váhu. Budem počítat s tím, že to třeba na poslední chvíli vypnem.
+* Likvidace neplatných štítků dispečer provede tak, že neplatný štítek přelepí novým. Pokud to není možné, pak se neplatný štítek nebo štítky odtrhnou.
+* Aktivní štítek není nutné evidovat. Je to vždy ten poslední vytištěný štítek.
+* Pojištění balíků. Zákazníkům budeme říkat, že balík je pojištěn jen do nějaké výše. Přesná výše bude odvozena od standardní ceny pojištění dopravce.
+* Posílání dat o štítkách dopravce dopravcům. Při předání balíků chcem posílat vždy všechna data. I když jim aktuálně napředáváme všechny balíky, o kterých posíláme data. Bráníme se chybě, kdy dispečer nezkontroluje balík při předání dopravci. Nebude to platit pro všechny dopravce.
+* Pokud projekt pokročí, pak by bylo dobré zpřesnit kontrolu balíků tím, že zavedem umělé jednotky - dávky. Dávka budou balíky ke zpracování v nějaké frontě. Dávku využijeme k tomu, že se nám žádné balíky v procesu neztratili. Zjednodušený popis je, že zvážíme dávku balíků před zpracováním a po něm. Mělo by to sedět.
+* Pokud dispečer zjistí menší poškození obalu balíku a dispečer rozhodne o přebalení. Pak nebudeme ze zákaníka výmáhat platbu za přebalení. Budem posílat upozornění zákazníkovi s fotkou poškození a info o přebalení.
+* Detaily dopravců zná Vojta a David. Dopravci budou: DPD Polsko, České pošta. Naplánuju schůzku, kde probereme detaily, jejich specifika, cokoliv, co by mohlo být důležité pro jejich integraci.
+* S rozhodováním, kdo se zapojí do jakého tématu počkáme na příští týden.
+* Všichní si rozmyslíme, kdo by měl zajem co dělat. Je to dnešním zápisu.
+* Martin zjistí, jak je to testovaním UI na frontendu. Založil jsem [task 40](https://bitbucket.org/internethandel/postman/issues/40/).
+* Honza rozmyslí, jak řešit situaci, že balík v nějakém procesu poškodíme sami.
 
 ## 24.04.2020
 Na čem jsme se domluvili
@@ -38,7 +51,7 @@ Na čem jsme se domluvili
 * Půjdem touto cestou.
 * Potřebujem ukládat doručovací a odesílací adresy v různých formátech. Zvážíme dědičnost v doctrine, jinak to nasypem do jedné tabule.
 
-## 21.04.2020
+## <a name="21.04.2020"></a>21.04.2020
 Otevřené otázky:
 
 * Štítek dopravce, kdo zná jak to detailně funguje? Stálo by za to, začít to blíž popisovat. Od začátku budeme mít dopravce dva. Vím o české poště, kdo je ten další?
