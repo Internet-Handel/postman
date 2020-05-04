@@ -366,6 +366,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#04052020" class="md-nav__link">
+    04.05.2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#28042020" class="md-nav__link">
     28.04.2020
   </a>
@@ -488,6 +495,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#04052020" class="md-nav__link">
+    04.05.2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#28042020" class="md-nav__link">
     28.04.2020
   </a>
@@ -561,6 +575,44 @@
                 
                 <h1 id="schuzky">Schůzky</h1>
 <p>Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.</p>
+<h2 id="04052020">04.05.2020</h2>
+<p>Co chcem probrat a otevřené otázky:</p>
+<ul>
+<li>Platby, napojení na banky a toho týkající se dotazy dole</li>
+</ul>
+<p>Na čem jsme se domluvili:</p>
+<ul>
+<li>Pole, které nám banky nmohou poskytnou:<ul>
+<li>Číslo transakce</li>
+<li>Datum transakce</li>
+<li>Datum zaúčtování</li>
+<li>Konstantní a variabilní symbol</li>
+<li>Název obchodníka</li>
+<li>Částka</li>
+<li>Měna</li>
+<li>Zpráva pro příjemce</li>
+</ul>
+</li>
+<li>Budem ukládat všechna pole.</li>
+<li>Založíme bankovní účet v Polsku v polské měně.</li>
+<li>Ve fázi 1. se potřebujeme připojit na polskou banku a na českou, to bude Fio. Na fio se připojíme automaticky a na polskou se připojíme se ručně nebo automaticky.</li>
+<li>Do budoucna by bylo dobré umět v kontaktní historii označit zákazníka "potížistu", aby dál nedostával reklamu (i vyžádanou).</li>
+<li>Všechny banky nějakou formou publikují nějaký digitalní soubor s platbami. Např.: CSV, Excel.<ul>
+<li>Když chybí id transakce, pak se to řeší tak, že se udělá hash z údajů v transakci a ten se použije jako identifikátor.</li>
+</ul>
+</li>
+<li>Upravit UC na vkládání plateb. Vždy to bude nějaký soubor s daty od banky. Pro každou banku tam bude chlívek na nahrání souboru. </li>
+<li>Zrušíme UC na ruční zadávání plateb a možnost platby mazat.</li>
+<li>Návrh je, aby se v systému se platby neprováděli. Pouze se ze připraví žádosti o provedení plateb zákazníkům. <ul>
+<li>Finálně to rozmyslíme tak, aby to bylo co nejsnažší.</li>
+<li>TODO je třeba rozmyslet, jak řešit, že to někdo interně neschválí.</li>
+</ul>
+</li>
+<li>Zkusíme s Davidem připravit analýzu a popis úkolů, jak to udělat.</li>
+<li>Kontroly pouze na konzistenci dat na zůstatky na účtech. V systému musí být možnost, po bankách a po kalendařních měsících zobrazit kolik jsme vydali a přijali. To budem porovnávat se pohybem na účtech. Z banky budem číst, co jsme poslali i přijali. Počíme stím, ze se tam mohou objevit nějaké nepravidelnosti.</li>
+<li>Nebudem řešit scénáře jako jsou: Oprava zadané platby, zrušení platbu, omylem rozdělená platba? Nebudeme teď řesit.</li>
+<li>Nemusím umět spojovat platby, stačí jí rozdělit zpět.</li>
+</ul>
 <h2 id="28042020"><a name="28.04.2020"></a>28.04.2020</h2>
 <p>Co chcem probrat:</p>
 <ul>
