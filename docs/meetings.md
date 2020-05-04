@@ -2,7 +2,7 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
-## 04.05.2020
+## <a name="04.05.2020"></a>04.05.2020
 Co chcem probrat a otevřené otázky:
 
 * Platby, napojení na banky a toho týkající se dotazy dole
