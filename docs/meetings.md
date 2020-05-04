@@ -2,6 +2,38 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
+## 04.05.2020
+Co chcem probrat a otevřené otázky:
+
+* Platby, napojení na banky a toho týkající se dotazy dole
+
+Na čem jsme se domluvili:
+
+* Pole, které nám banky nmohou poskytnou:
+    * Číslo transakce
+    * Datum transakce
+    * Datum zaúčtování
+    * Konstantní a variabilní symbol
+    * Název obchodníka
+    * Částka
+    * Měna
+    * Zpráva pro příjemce
+* Budem ukládat všechna pole.
+* Založíme bankovní účet v Polsku v polské měně.
+* Ve fázi 1. se potřebujeme připojit na polskou banku a na českou, to bude Fio. Na fio se připojíme automaticky a na polskou se připojíme se ručně nebo automaticky.
+* Do budoucna by bylo dobré umět v kontaktní historii označit zákazníka "potížistu", aby dál nedostával reklamu (i vyžádanou).
+* Všechny banky nějakou formou publikují nějaký digitalní soubor s platbami. Např.: CSV, Excel.
+    * Když chybí id transakce, pak se to řeší tak, že se udělá hash z údajů v transakci a ten se použije jako identifikátor.
+* Upravit UC na vkládání plateb. Vždy to bude nějaký soubor s daty od banky. Pro každou banku tam bude chlívek na nahrání souboru. 
+* Zrušíme UC na ruční zadávání plateb a možnost platby mazat.
+* Návrh je, aby se v systému se platby neprováděli. Pouze se ze připraví žádosti o provedení plateb zákazníkům. 
+    * Finálně to rozmyslíme tak, aby to bylo co nejsnažší.
+    * TODO je třeba rozmyslet, jak řešit, že to někdo interně neschválí.
+* Zkusíme s Davidem připravit analýzu a popis úkolů, jak to udělat.
+* Kontroly pouze na konzistenci dat na zůstatky na účtech. V systému musí být možnost, po bankách a po kalendařních měsících zobrazit kolik jsme vydali a přijali. To budem porovnávat se pohybem na účtech. Z banky budem číst, co jsme poslali i přijali. Počíme stím, ze se tam mohou objevit nějaké nepravidelnosti.
+* Nebudem řešit scénáře jako jsou: Oprava zadané platby, zrušení platbu, omylem rozdělená platba? Nebudeme teď řesit.
+* Nemusím umět spojovat platby, stačí jí rozdělit zpět.
+
 ## <a name="28.04.2020"></a>28.04.2020
 Co chcem probrat:
 
