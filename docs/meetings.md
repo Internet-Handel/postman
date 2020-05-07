@@ -3,6 +3,15 @@
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
 ## <a name="04.05.2020"></a>04.05.2020
+
+Na čem jsme se domluvili:
+
+* Automatické UI testy Martin pěkně popsal na [wiki](https://bitbucket.org/internethandel/postman/wiki/testovani). Nebudem teď plošně implementovat. Zkusíme pár kousků později.
+* Napíšeme automatický UI test na příjem objednávky. Součástí bude automatické spouštění testů po zamergovaní do nebo commitu do vývojové větve a produkční větve.
+* Jednotkové testy, ano. Udělám zchůzku na to, co chcem testovat a jak.
+* Udělám schůzku, kde zkusíme připravit pár ukolů na nějakou oblast. Cíl je mít práci, dobře připravenou.
+
+## <a name="04.05.2020"></a>04.05.2020
 Co chcem probrat a otevřené otázky:
 
 * Platby, napojení na banky a toho týkající se dotazy dole
