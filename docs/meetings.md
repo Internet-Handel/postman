@@ -1,6 +1,20 @@
-# Schůzky
+s# Schůzky
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
+
+## 12.05.2020
+Co chcem probrat a otevřené otázky:
+
+* Označovat tickety, které popisují zadání pro fázi 2 nebo nápady, které teď do fáze 1 není třeba  zpracovat. Dávat jím typ "idea". Budou na očích, neztratí se, ale nemusíme je teď řešit. Př. je [Issue 35][issue35].
+
+Na čem jsme se domluvili:
+
+* Na stránku na wiki budeme dávat odkazy na dokumentaci, kterou jsme během týdne udělali. Každé pondělí večer to Vojta shrne a pošle na všechny členy týmu. Po měsící si řekneme, jestli to pomáhá.
+* Pro fazi 1. nepotřebujeme balík v balíku. Nutno začít připravovt.
+* UC-4 problém se zobrozováním bodu 4. s platebními pokyny. Odsuneme bod 4. za tlačítko objednat. Bivoj připraví textaci.
+* Z entity položka objednávky vyndám informace o měření balíku od zákazníka a dám to do entity měření.
+* Issues typu `Proposal` budou pro další fáze. Typ `Enhancement` bude pro tuto fázi 1.
+* Petr bude odpovědný za finální připomínkování formulářů.
 
 ## <a name="04.05.2020"></a>04.05.2020
 
@@ -158,6 +172,7 @@ Na čem jsme se domluvili:
 * Naplánuju schůzku na 10.4.
 * Ostatní kluci vyzkoušíjí php frameworky a založí kostru projektu.
 
+[issue35]: https://bitbucket.org/internethandel/postman/issues/35
 
 ### Šablona zápisu schůzky
 
@@ -173,3 +188,4 @@ Na čem jsme se domluvili:
 * ...
 * ...
 ```
+
