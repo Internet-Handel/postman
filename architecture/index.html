@@ -380,6 +380,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mereni" class="md-nav__link">
+    Měření
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#objednavka" class="md-nav__link">
     Objednávka
   </a>
@@ -387,8 +394,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#balik" class="md-nav__link">
-    Balík
+  <a href="#udalosti" class="md-nav__link">
+    Události
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balik-a-jeho-stavy" class="md-nav__link">
+    Balík a jeho stavy
   </a>
   
     <nav class="md-nav">
@@ -593,6 +607,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mereni" class="md-nav__link">
+    Měření
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#objednavka" class="md-nav__link">
     Objednávka
   </a>
@@ -600,8 +621,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#balik" class="md-nav__link">
-    Balík
+  <a href="#udalosti" class="md-nav__link">
+    Události
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balik-a-jeho-stavy" class="md-nav__link">
+    Balík a jeho stavy
   </a>
   
     <nav class="md-nav">
@@ -714,8 +742,28 @@
 <p>Zde budou popsány vztajy mezi objekty a základní set attributů.</p>
 <p>Vztahy mezi základními objekty budou vypadat takto:
 <img alt="Přehled" src="../diagrams/out/arch-01.png" title="Přehled" /></p>
+<h4 id="mereni">Měření</h4>
+<p>Měření balíku děláme ve dvou prípadech. V prvním ho prvede zákazník ppři zadávání objednávky a v druhém ho provádí dispečer v interních procesech.</p>
+<p><strong>TODO: Jedná se v případě měření zákazníka z dispečera o stejná data?</strong></p>
 <h3 id="objednavka">Objednávka</h3>
-<h3 id="balik">Balík</h3>
+<p><strong>TODO</strong></p>
+<h3 id="udalosti">Události</h3>
+<p>Událost nese informaci o tom, co se v daném okamžiku s balíkem stalo. Událost je jednorázový objekt, který se pořídí a dál nemění. Chceme ho zachovat i v případě, že původní objekt zanikne, nebo se upraví. Obsahuje attributy:</p>
+<ul>
+<li>O jakou událost se jedná, příklady jsou na obrázku níž.</li>
+<li>Odkaz na balík, kterého se událost týká.</li>
+<li>Kdo událost vykonal. To můze být libovolný zaměstnanec, zákazník nebo to v budoucnu může být nějaký proces.</li>
+<li>Datum vzniku události.</li>
+<li>Odkaz na sledovaný objekt nebo atributy, které se k události pojí. Sledovaný objek je objekt, kterého se událost týká, například připárovaný balík.</li>
+</ul>
+<p>V některých případech by událost měla být samostatný objekt a sledovaný objekt druhý samostatný objekt. Událost měla být samostatně uložená od sledovaného objektu Pokud událost splní nekré z následujících bodů: </p>
+<ul>
+<li>Sledovaný objekt může být odstraněn nebo změněn, přitom stále potřebujeme znát původní hodnoty.</li>
+<li>Během existence sledovaného objektu můžeme potřebovat víc událostí.</li>
+</ul>
+<p>Návrh vztahů mezi objekty:</p>
+<p><img alt="Události" src="../diagrams/out/arch-05.png" title="Události" /></p>
+<h3 id="balik-a-jeho-stavy">Balík a jeho stavy</h3>
 <p>U balíku se uchovává:</p>
 <ul>
 <li>Stav balíku - ze stavů je možné vyčíst, co se dějě a řídit, co se má stát.</li>

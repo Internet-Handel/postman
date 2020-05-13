@@ -11,25 +11,7 @@ object pckg {
 object "Událost" as event
 object event {
     datum události: date
-}
-
-object "Měření" as measurement
-object measurement {
-    výška: numeric(6,2)
-    šířka: numeric(6,2)
-    hloubka: numeric(6,2)
-    váha: numeric(6,2)
-}
-
-object "Přebalení" as wrapping
-object wrapping {
-    jak balík vypadal: fotky
-    popis: string
-}
-
-object "Párování" as duplicity
-object duplicity {
-    napárovaný balík: Balík
+    kdo jí vykonal: Uživatel
 }
 
 object "Stav balíku" as pckgState
@@ -41,9 +23,5 @@ object pckgState {
 pckg o--> "1..*" pckgState
 
 pckg o--  "1..*" event
-event <|-- measurement
-event <|-- wrapping
-event <|-- duplicity
-
 
 @enduml

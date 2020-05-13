@@ -1,5 +1,6 @@
 @startuml
 !include color_def.txt
+hide empty members
 
 object "Objednávka" as order
 object order {
@@ -26,11 +27,6 @@ object orderStateType {
 
 object "Položka objednávky" as orderItem
 object orderItem {
-    kód balíku: string(14)
-    výška: numeric(6,2)
-    šířka: numeric(6,2)
-    hloubka: numeric(6,2)
-    váha: numeric(6,2)
     doručovací adresa
 }
 
@@ -104,9 +100,14 @@ object measures {
     čas měření: date
 }
 
+enum "Typ měření" as measureType {
+  Customer
+  Dispatcher
+}
+
 object "Balík" as pckg
 object pckg {
-    kód interního štítku
+    kód balíku: string(14)
     aktualni stav: pckgState
 }
 
@@ -128,5 +129,6 @@ pckg --> internalLabel
 emplyee --> role
 payment --> "0..1" order
 measures o--> pckg
+measures --> measureType
 
 @enduml
