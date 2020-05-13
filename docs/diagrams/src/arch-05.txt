@@ -1,0 +1,49 @@
+@startuml
+!include color_def.txt
+hide empty description
+hide empty methods
+hide empty fields
+
+
+class "Balík" as pckg
+class pckg {
+    kód interního štítku
+    aktualni stav: pckgState
+}
+
+abstract class "Událost" as event
+abstract class event {
+    datum události: date
+    kdo jí vykonal: Uživatel
+}
+
+class "Událost Měření" as eventMeasurement
+class eventMeasurement {
+}
+
+class "Měření" as measurement
+class measurement {
+    výška: numeric[6,2]
+    šířka: numeric[6,2]
+    hloubka: numeric[6,2]
+    váha: numeric[6,2]
+}
+
+class "Událost přebalení" as wrapping
+class wrapping {
+    jak balík vypadal: fotky
+    popis: string
+}
+
+class "Událost párování" as duplicity
+class duplicity {
+    napárovaný balík: Balík
+}
+
+pckg <-- event
+event <|-- eventMeasurement
+event <|-- wrapping
+event <|-- duplicity
+eventMeasurement  --> measurement 
+
+@enduml

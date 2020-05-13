@@ -61,9 +61,36 @@ Zde budou popsány vztajy mezi objekty a základní set attributů.
 Vztahy mezi základními objekty budou vypadat takto:
 ![Přehled](./diagrams/out/arch-01.png "Přehled")
 
+#### Měření
+
+Měření balíku děláme ve dvou prípadech. V prvním ho prvede zákazník ppři zadávání objednávky a v druhém ho provádí dispečer v interních procesech.
+
+**TODO: Jedná se v případě měření zákazníka z dispečera o stejná data?**
+
 ### Objednávka
 
-### Balík
+**TODO**
+
+### Události
+
+Událost nese informaci o tom, co se v daném okamžiku s balíkem stalo. Událost je jednorázový objekt, který se pořídí a dál nemění. Chceme ho zachovat i v případě, že původní objekt zanikne, nebo se upraví. Obsahuje attributy:
+ 
+* O jakou událost se jedná, příklady jsou na obrázku níž.
+* Odkaz na balík, kterého se událost týká.
+* Kdo událost vykonal. To můze být libovolný zaměstnanec, zákazník nebo to v budoucnu může být nějaký proces.
+* Datum vzniku události.
+* Odkaz na sledovaný objekt nebo atributy, které se k události pojí. Sledovaný objek je objekt, kterého se událost týká, například připárovaný balík.
+
+V některých případech by událost měla být samostatný objekt a sledovaný objekt druhý samostatný objekt. Událost měla být samostatně uložená od sledovaného objektu Pokud událost splní nekré z následujících bodů: 
+
+* Sledovaný objekt může být odstraněn nebo změněn, přitom stále potřebujeme znát původní hodnoty.
+* Během existence sledovaného objektu můžeme potřebovat víc událostí.
+
+Návrh vztahů mezi objekty:
+
+![Události](./diagrams/out/arch-05.png "Události")
+
+### Balík a jeho stavy
 U balíku se uchovává:
 
 * Stav balíku - ze stavů je možné vyčíst, co se dějě a řídit, co se má stát.
