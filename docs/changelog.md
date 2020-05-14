@@ -4,6 +4,7 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |----------------|
+| 13.05.2020 |Přidán popis události balíku. Balík a jeho stavy je vyčleněn do samostatné kapitoly.|
 | 26.04.2020 |Přidán UC-210, upravena práce se štítky.|
 | 25.04.2020 |Přidaný popis rolí a jejich hierarchie.|
 | 21.04.2020 |Upraven UC-21. Je třeba upravit u zbylých. Nahradit načítání interního štítku na načítání štítku.|

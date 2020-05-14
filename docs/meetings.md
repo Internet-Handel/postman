@@ -1,6 +1,25 @@
-s# Schůzky
+# Schůzky
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
+
+## 17.05.2020
+Co chcem probrat a otevřené otázky:
+
+* Probereme odhadovani tasku. Konkretne:
+    * Jak to lze odhadovat?
+    * Jak odhady vyhodnocovat?
+    * Jak a kde evidovat?
+    * Chceme to vubec?
+* Testovaní na projektu UI testy a jednotkové testy. Jak s tím budeme pokračovat.
+
+Na čem jsme se domluvili:
+
+* Připravím do google doc jednoduchý excel na výkazy pro každého z nás.
+* V excelu bude sloupec číslo ticketu z bitbucketu, čas od, do a případná poznámka.
+* Junit testy nemá smysl dál zkoušet, přineslo by to víc zpoždění a zátěže pro tým než užitku.
+* S UI testy počkáme až bude UC-4 a pak je vyzkoušíme.
+* V úterý poprvé zkusíme odhadnou komplexitu tasků.
+* Naplánuju schůzku na další čtvrtek - grooming.
 
 ## 12.05.2020
 Co chcem probrat a otevřené otázky:

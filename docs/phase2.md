@@ -9,6 +9,8 @@ Hlavní cíl fáze 2. je umožnit hromadné podání. Z toho plyne, že bude pot
     * Nějakou část dopředu - předplacení služeb.
     * Budeme mu na doručování balíků nějakou částku půjčovat, po jejím vyčerpání budeme čekat na zaplacení.
 * Výběr měny, lokalizace a cíle doručení v závislosti na příchozích informacích z kampaně a domény je popsáno na [https://bitbucket.org/internethandel/postman/issues/35/](https://bitbucket.org/internethandel/postman/issues/35/).
+* colli - balíky v balíku. Bude to šetřit prostředky.
+* ...
 * ...
 
 
