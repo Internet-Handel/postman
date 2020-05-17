@@ -8,13 +8,13 @@ Hlavní cíl fáze 2. je umožnit hromadné podání. Z toho plyne, že bude pot
 * Zákazník bude platit:
     * Nějakou část dopředu - předplacení služeb.
     * Budeme mu na doručování balíků nějakou částku půjčovat, po jejím vyčerpání budeme čekat na zaplacení.
-* Výběr měny, lokalizace a cíle doručení v závislosti na příchozích informacích z kampaně a domény je popsáno na [https://bitbucket.org/internethandel/postman/issues/35/](https://bitbucket.org/internethandel/postman/issues/35/).
+* Výběr měny, lokalizace a cíle doručení v závislosti na příchozích informacích z kampaně a domény je popsáno v [ticketu 35][issue35].
 * colli - balíky v balíku. Bude to šetřit prostředky.
 * ...
 * ...
 
 
-## 
+## 	
 
 ## 
 
@@ -30,9 +30,20 @@ Use case zákazníků:
 * Zákazník Čech posílá balík do Anglie, která má jiný formát adresy.
 * Zákazník Čech posílá balík z Česka do Německa a chce platit v €.
 
-## 
+Dál do toho vstupuje lokalizovaná doména, například postman.cz nebo postman.de a měna v jaké lze platit za doručení a ďaňový domicil. Otazky:
 
-## 
+- Budeme potřebovat mít různé jazykové mutace na jedné doméně?
+- Předávaní parametrů z googlu, jaké to jsou. Nemají vliv na URL? 
+
+## Zákazník
+
+Zatím spíš otázky:
+
+- Budeme chtít provozovat zadávací formulář UC-4 pro koncové zákazníky ve fázi 2?
+- Co vše potřebujeme o zákazníkovi uchovávat:
+    - fakturační adresu.
+    - zpáteční adresu.
+- Budou informace o zákaznících lokalizovány? Například počet polí se bude v různých zemí lišit?
 
 ## 
 

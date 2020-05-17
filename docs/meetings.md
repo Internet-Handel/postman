@@ -2,6 +2,31 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
+## 21.05.2020 - Grooming
+Co chcem probrat a otevřené otázky:
+
+* Projdem otevřené úkoly, co lze další týden stihnout. Projdem si, že tasku rozumíme stejně a shodnem se na jeho složitosti. 
+* ...
+
+Na čem jsme se domluvili:
+
+* ...
+* ...
+
+## 19.05.2020 - Stav & Plánování
+Co chcem probrat a otevřené otázky:
+
+* Co kdo udělal, případné problémy.
+* Odhadneme složitost tasků na další týden.
+* Bitbucket issues přestávají stačit. Chybí mi složitějši dotazy. Například tickety na mě bez closed a bez resolved. Chybi mi dashboardy, mohli bychom lepe videt, co se budem odhadovat, co máme do iterace a podobně.
+* Budeme potřebovat ve fázi 1. řešit jiné než české DPH (daňové zákony)?
+* Potvrdit si scope fáze 1. Platí, že budeme posílat pouze do Německa? Nebo začneme Polskem?
+
+Na čem jsme se domluvili:
+
+* ...
+* ...
+
 ## 17.05.2020
 Co chcem probrat a otevřené otázky:
 
