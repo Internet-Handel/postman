@@ -5,8 +5,8 @@ Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 ## 21.05.2020 - Grooming
 Co chcem probrat a otevřené otázky:
 
+* Blíž se podávame na jiru.
 * Projdem otevřené úkoly, co lze další týden stihnout. Projdem si, že tasku rozumíme stejně a shodnem se na jeho složitosti. 
-* ...
 
 Na čem jsme se domluvili:
 
@@ -24,17 +24,18 @@ Co chcem probrat a otevřené otázky:
 
 Na čem jsme se domluvili:
 
-* ...
-* ...
+* Kluci připravili jiru. Hodně dobré. Děkuji.
+* Fáze 1. je pouze českých daňových zákonů.
+* Ve Fázi 1. budeme posílat pouze do Německa.
 
 ## 17.05.2020
 Co chcem probrat a otevřené otázky:
 
-* Probereme odhadovani tasku. Konkretne:
+* Probereme odhadovani tasku. Konkrétně:
     * Jak to lze odhadovat?
     * Jak odhady vyhodnocovat?
     * Jak a kde evidovat?
-    * Chceme to vubec?
+    * Chceme to vůbec?
 * Testovaní na projektu UI testy a jednotkové testy. Jak s tím budeme pokračovat.
 
 Na čem jsme se domluvili:

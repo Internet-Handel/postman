@@ -6,7 +6,7 @@ Technický návrh systému. Nebude možné zde popsat všechny aspekty řešení
 
 V návrhu budeme vycházet z toho, co nabízí symfony framewok. Detaily jsou popsané na [symfony.com/doc/current/security.html](https://symfony.com/doc/current/security.html). Systém využívá hierarchické role. V našem případě hierarchie bude vypadat takto:
 
-![Hierarchie rolí](./diagrams/out/arch-04.png "Hierarchie rolí")
+![Hierarchie rolí][arch-04]
 
 ## Kód balíku
 
@@ -31,7 +31,7 @@ Každá čtveřice bude vygenerovaná tak, že se budou střídat náhodné znak
 
 Variant kódu balíku bude:
 
-![Variant kódu balíku](./diagrams/out/arch-03.png "Variant kódu balíku")
+![Variant kódu balíku][arch-03]
 
 Pro každý balík, bude tento kód balíku vygenerovaný a uložený. Když operátor zadá kód balíku, pomocí nějakého algoritmu pro zjištění podobnosti dvou řetězců a najdeme ten, který v nějaké toleranci odpovídá. Jako inspirace lze použít Levenshteinovu vzdálenost. Pro hledání balíků podle kódu lze využít [SOLR](https://lucene.apache.org/solr/), kde již je Levenshteinova vzdálenost implementovaná.
 
@@ -59,13 +59,12 @@ V některých případech by bylo dobré mít samostatnou entitu zákazníka a k
 Zde budou popsány vztajy mezi objekty a základní set attributů.
 
 Vztahy mezi základními objekty budou vypadat takto:
-![Přehled](./diagrams/out/arch-01.png "Přehled")
+
+![Přehled][arch-01]
 
 #### Měření
 
-Měření balíku děláme ve dvou prípadech. V prvním ho prvede zákazník ppři zadávání objednávky a v druhém ho provádí dispečer v interních procesech.
-
-**TODO: Jedná se v případě měření zákazníka z dispečera o stejná data?**
+Měření balíku děláme ve dvou prípadech. V prvním ho prvede zákazník při zadávání objednávky a v druhém ho provádí dispečer v interních procesech. V obou případech se jedná o stejná data.
 
 ### Objednávka
 
@@ -88,7 +87,7 @@ V některých případech by událost měla být samostatný objekt a sledovaný
 
 Návrh vztahů mezi objekty:
 
-![Události](./diagrams/out/arch-05.png "Události")
+![Události][arch-05]
 
 ### Balík a jeho stavy
 U balíku se uchovává:
@@ -101,7 +100,7 @@ U balíku se uchovává:
 #### Stavy balíku
 U balíku je třeba evidovat několik různých stavů. Jednotlivé stavy se od sebe mohou lišit počtem atributů a způsobem práce s nimi. Například stav "Poškozený balík" může být přiřazen na dispečera nebo pracovníka podpory. Ostatní stavy jsou vždy přiřazeny na jednu roli. Například pokud je balík ve frontě, kde čeka na zaplacení, tak pouze pracovník podpory může říct, že je balík zaplacen a přesunout ho do fronty konkrétního doporavce.
 
-![Stavy balíků](./diagrams/out/states-package-2.png "Stavy balíků")
+![Stavy balíků][arch-02]
 
 ## Návrh architektury applikace
 Z počátku nepotřebujem nic speciálního. Pouze při realizací dávat pozor, že finální UC se mohou lišit od návrhů. Například implementace napojení na konkrétního dopravce může ovlivnost způsob zpracování fronty dopravce. Například požadavek na validaci adresy ze strany dopravce může vést k tomu, že při přijetí balíku a po jeho spárování s objednávkou se musí přidat validace adresy.
@@ -133,3 +132,9 @@ Další informace jsou na:
 * Wikipedia, Levenshteinova vzdálenost - [https://en.wikipedia.org/wiki/Levenshtein_distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
 * Wikipedia, Variabilní symbol - [https://cs.wikipedia.org/wiki/Variabilní_symbol](https://cs.wikipedia.org/wiki/Variabiln%C3%AD_symbol)
 * Wikipedia, Čárový kód - [https://cs.wikipedia.org/wiki/Čárový_kód](https://cs.wikipedia.org/wiki/Čárový_kód)
+
+[arch-01]: ./diagrams/out/arch-01.png "Přehled"
+[arch-02]: ./diagrams/out/states-package-2.png "Stavy balíků"
+[arch-03]: ./diagrams/out/arch-03.png "Variant kódu balíku"
+[arch-04]: ./diagrams/out/arch-04.png "Hierarchie rolí"
+[arch-05]: ./diagrams/out/arch-05.png "Události"

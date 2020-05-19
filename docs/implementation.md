@@ -1,6 +1,6 @@
 # Implementace
 
-Aktuální demo hlavní vývojové větve se nachází na [postman.90.cz](https://postman.90.cz/) a [support.postman.90.cz](https://support.postman.90.cz/).
+Aktuální demo hlavní vývojové větve se nachází na [postman.90.cz](https://postman.90.cz/) a [support.postman.90.cz](https://support.postman.90.cz/). Testovací uživatel je postman/postman.
 
 ## Vývoj
 
