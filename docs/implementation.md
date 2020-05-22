@@ -5,7 +5,11 @@ Aktuální demo hlavní vývojové větve se nachází na [postman.90.cz](https:
 ## Vývoj
 
 * Kód projektu je umístěn v [repozitáři na Bitbucketu](https://bitbucket.org/internethandel/postman)
-* U repozitáře se nachází také [technická dokomuentace](https://bitbucket.org/internethandel/postman/wiki/Home) a [issue tracker](https://bitbucket.org/internethandel/postman)
+* U repozitáře se nachází také [technická dokomuentace](https://bitbucket.org/internethandel/postman/wiki/Home)
+* Plánování a úkoly máme v [jire][Jira]
+
+
+[Jira]: https://internet-handel.atlassian.net/secure/RapidBoard.jspa?rapidView=4&projectKey=POST&view=planning.nodetail&issueLimit=100 "Jira postman"
 
 ### Odkazy
 

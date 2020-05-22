@@ -44,6 +44,7 @@ Zatím spíš otázky:
     - fakturační adresu.
     - zpáteční adresu.
 - Budou informace o zákaznících lokalizovány? Například počet polí se bude v různých zemí lišit?
+- Daňová rezidence.
 
 ## 
 

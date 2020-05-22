@@ -2,16 +2,29 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
-## 21.05.2020 - Grooming
+## 26.05.2020 - Planning
 Co chcem probrat a otevřené otázky:
 
-* Blíž se podávame na jiru.
-* Projdem otevřené úkoly, co lze další týden stihnout. Projdem si, že tasku rozumíme stejně a shodnem se na jeho složitosti. 
+* Podle toho, co najdeme s labelem "Next", vybereme pár dalších kandidátů do sprintu a odhadneme je. Zahájíme sprint.
 
 Na čem jsme se domluvili:
 
 * ...
 * ...
+
+## 21.05.2020 - Grooming
+Co chcem probrat a otevřené otázky:
+
+* Blíž se podíváme na jiru.
+* Projdem otevřené úkoly, co lze další týden stihnout. Projdem si, že tasku rozumíme stejně a shodnem se na jeho složitosti. 
+
+Na čem jsme se domluvili:
+
+* Společně jsme prošli úkoly na domluvili se, jak budeme pracovat s jirou.
+* Nekolik tasků se podařilo naodhadovat.
+* Domluvil jsme se, že nebudeme používat pro vykazovaní připravené excely, ale budeme vykazovat přímo na jednotlivé úkoly.
+* Pro schůzky a další administrativu máme task [https://internet-handel.atlassian.net/browse/POST-73](https://internet-handel.atlassian.net/browse/POST-73).
+* Pro odhadování tasků použijeme Finobacciovu řadu [https://en.wikipedia.org/wiki/Fibonacci_number](https://en.wikipedia.org/wiki/Fibonacci_number).
 
 ## 19.05.2020 - Stav & Plánování
 Co chcem probrat a otevřené otázky:
