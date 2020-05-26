@@ -10,6 +10,7 @@ Hlavní cíl fáze 2. je umožnit hromadné podání. Z toho plyne, že bude pot
     * Budeme mu na doručování balíků nějakou částku půjčovat, po jejím vyčerpání budeme čekat na zaplacení.
 * Výběr měny, lokalizace a cíle doručení v závislosti na příchozích informacích z kampaně a domény je popsáno v [ticketu 35][issue35].
 * colli - balíky v balíku. Bude to šetřit prostředky.
+* Přidat referenční číslo pro zákazníka. Zákazníkovy by to umožnilo mít pro svoje účely na balíku svůj kód.
 * ...
 * ...
 

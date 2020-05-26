@@ -2,15 +2,32 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
-## 26.05.2020 - Planning
+## 02.06.2020
 Co chcem probrat a otevřené otázky:
 
-* Podle toho, co najdeme s labelem "Next", vybereme pár dalších kandidátů do sprintu a odhadneme je. Zahájíme sprint.
+* Naplánujeme sprint.
+* Zahájíme sprint.
+* Projdeme backlog a domluvíme se, proč jsou úkoly na konkrétních lidech.
 
 Na čem jsme se domluvili:
 
 * ...
 * ...
+
+## 26.05.2020 - Planning
+Co chcem probrat a otevřené otázky:
+
+* Podle toho, co najdeme s labelem "Next", vybereme pár dalších kandidátů do sprintu a odhadneme je.
+* Naplánujeme sprint.
+* Zahájíme sprint.
+* Projdeme backlog a domluvíme se, proč jsou úkoly na konkrétních lidech.
+
+Na čem jsme se domluvili:
+
+* Čtvrteční schůzka tentokrát nebude (jde to za mnou).
+* Balsamiq pojedem v 30 denní zkušební lhůtě zadarmo. Pak se dál domluvíme co dál.
+* Řízení změn v dokumentaci. Schůzky bude commitovat be pull-requestu ten, kdo dělá zápis. Změny analýzy půjde s pull requestem.
+* David navrhoval přidat referenční číslo pro zákazníka. Zákazníkovy by to umožnilo mít pro svoje účely na balíku svůj kód. Přidal jsem to bodu k řešení do fáze II.
 
 ## 21.05.2020 - Grooming
 Co chcem probrat a otevřené otázky:
@@ -21,7 +38,7 @@ Co chcem probrat a otevřené otázky:
 Na čem jsme se domluvili:
 
 * Společně jsme prošli úkoly na domluvili se, jak budeme pracovat s jirou.
-* Nekolik tasků se podařilo naodhadovat.
+* Několik tasků se podařilo naodhadovat.
 * Domluvil jsme se, že nebudeme používat pro vykazovaní připravené excely, ale budeme vykazovat přímo na jednotlivé úkoly.
 * Pro schůzky a další administrativu máme task [https://internet-handel.atlassian.net/browse/POST-73](https://internet-handel.atlassian.net/browse/POST-73).
 * Pro odhadování tasků použijeme Finobacciovu řadu [https://en.wikipedia.org/wiki/Fibonacci_number](https://en.wikipedia.org/wiki/Fibonacci_number).
