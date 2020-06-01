@@ -70,7 +70,7 @@ Měření balíku děláme ve dvou prípadech. V prvním ho prvede zákazník p�
 
 **TODO**
 
-### Události
+### Události balíku
 
 Událost nese informaci o tom, co se v daném okamžiku s balíkem stalo. Událost je jednorázový objekt, který se pořídí a dál nemění. Chceme ho zachovat i v případě, že původní objekt zanikne, nebo se upraví. Obsahuje attributy:
  
