@@ -43,7 +43,7 @@ Stránku může být rozdělená pomocí záložek na více. Pokud odkaz na deta
 * Obecné infromace o objednávce
 * Platby
 * Kontaktní historie
-* Historie stavů
+* Události
 * Daňové doklady
 * Číslo objednávky a variabilní symbol jsou stejné hodnoty.
 
