@@ -2,6 +2,30 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
+
+## 09.06.2020
+Co chcem probrat a otevřené otázky:
+
+* Planning
+* Domluvit definition of done.
+* V backlogu nemít tasky assignované na makáče. Pouze pokud s tickety budou před sprintem něco dělat.
+* U některých entit není datum události.
+
+Na čem jsme se domluvili:
+
+* ...
+* ...
+
+
+## 04.06.2020
+Co chcem probrat a otevřené otázky:
+
+* Grooming
+
+Na čem jsme se domluvili:
+
+* Grooming
+
 ## 02.06.2020
 Co chcem probrat a otevřené otázky:
 
@@ -11,8 +35,7 @@ Co chcem probrat a otevřené otázky:
 
 Na čem jsme se domluvili:
 
-* ...
-* ...
+* Prošli jsme grooming a planning.
 
 ## 26.05.2020 - Planning
 Co chcem probrat a otevřené otázky:
