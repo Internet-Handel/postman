@@ -2,6 +2,21 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
+## 18.06.2020
+
+Co chceme probrat a otevřené otázky:
+
+* Grooming
+* Jak nejlépe označovat věci, které mají jít skrz Bivoje
+
+## 16.06.2020
+
+Na čem jsme se domluvili:
+
+* Planning 4. sprintu
+* Budeme přidávat štítky k taskům, které mají vizuální komponent, na který se má Bivoj podívat; případně vytvářet na to specifické tasky
+* Budeme do analýzy zapisovat malé nápady a návrhy (do stránky [poznámky](https://jajir.github.io/postman/notes/#otevrene-otazky-napady))
+
 
 ## 09.06.2020
 Co chcem probrat a otevřené otázky:
