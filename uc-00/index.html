@@ -13,7 +13,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4c7052ca.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6e35a1a6.min.css">
       
       
     
@@ -44,6 +44,7 @@
   
     <body dir="ltr">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -641,27 +642,39 @@
 <p>Validace:</p>
 <ul>
 <li>Jméno<ul>
-<li>musí být vyplněno. "Pole 'Jméno' musí být vyplněno."</li>
-<li>maximální délka je 60 znaků. "Maximální délka pole 'Jméno' je 60 znaků."</li>
-<li>povolené jsou alfanumerické znaky a '-', '.', ','. Jinak vypíšem hlášku "Pole 'Jméno' obsahuje nepovolené znaky.".</li>
+<li>musí být vyplněno. "Pole musí být vyplněno."</li>
+<li>maximální délka je 255 znaků. "Maximální délka pole je 255 znaků."</li>
+<li>povolené jsou alfanumerické znaky a '-', '.', ','. Jinak vypíšem hlášku "Pole obsahuje nepovolené znaky.".</li>
 </ul>
 </li>
 <li>Ulice a č. p.<ul>
-<li>musí být vyplněno. "Pole 'Ulice a č. p.' musí být vyplněno."</li>
-<li>maximální délka je 60 znaků. "Maximální délka pole 'Ulice a č. p.' je 60 znaků."</li>
-<li>povolené jsou alfanumerické znaky a '-', '.', ','. Jinak vypíšem hlášku "Pole 'Ulice a č. p.' obsahuje nepovolené znaky.".</li>
+<li>musí být vyplněno. "Pole musí být vyplněno."</li>
+<li>maximální délka je 255 znaků. "Maximální délka pole je 255 znaků."</li>
+<li>povolené jsou alfanumerické znaky a '-', '.', ','. Jinak vypíšem hlášku "Pole obsahuje nepovolené znaky.".</li>
+</ul>
+</li>
+<li>Doplňující adresa<ul>
+<li>pole není povinné.</li>
+<li>maximální délka je 255 znaků. "Maximální délka pole je 255 znaků."</li>
+<li>povolené jsou alfanumerické znaky a '-', '.', ','. Jinak vypíšem hlášku "Pole obsahuje nepovolené znaky.".</li>
 </ul>
 </li>
 <li>Město<ul>
-<li>musí být vyplněno. "Pole 'Město' musí být vyplněno."</li>
-<li>validace na maximální délku 60 znaků bude stejná jako v prvním prípadě.</li>
-<li>validace na alfanumerické znaky bude stejná jako v prvním prípadě.</li>
+<li>musí být vyplněno. "Pole musí být vyplněno."</li>
+<li>validace na maximální délku 255 znaků bude stejná jako v prvním prípadě.</li>
 </ul>
 </li>
 <li>PSČ<ul>
-<li>musí být vyplněno. "Pole 'PSČ' musí být vyplněno."</li>
-<li>validace na maximální délku 60 znaků bude stejná jako v prvním prípadě.</li>
-<li>validace na alfanumerické znaky bude stejná jako v prvním prípadě.</li>
+<li>musí být vyplněno. "Pole musí být vyplněno."</li>
+<li>validace na maximální délku 10 znaků bude stejná jako v prvním prípadě.</li>
+<li>povolené jsou jen číslice a mezery.</li>
+</ul>
+</li>
+<li>Telefon příjemce<ul>
+<li>musí být vyplněno. "Pole musí být vyplněno."</li>
+<li>validace na maximální délku 15 znaků bude stejná jako v prvním případě.</li>
+<li>povolené je '+' na začátku, pak už jen číslice.</li>
+<li>min. délka 5 znaků.</li>
 </ul>
 </li>
 </ul>
@@ -678,10 +691,11 @@
 <p><img alt="Krok 4" src="../imgs/krok-4.png" title="Krok 4" /></p>
 <p>Validace:</p>
 <ul>
-<li>pole Jméno, Ulice, Město, PSČ, Email a Telefon:<ul>
+<li>pole Jméno, Ulice, Doplňující adresa, Město, PSČ, Email a Telefon:<ul>
 <li>musí být vyplněno. "Pole '***' musí být vyplněno."</li>
-<li>validace na maximální délku 60 znaků bude stejná jako v předchozích prípadech.</li>
+<li>validace na maximální délku 255 znaků bude stejná jako v předchozích prípadech.</li>
 <li>validace na alfanumerické znaky bude stejná jako v předchozích prípadech.</li>
+<li>validace regulárem na email - stačí základní na kontrolu zavináče a tečky.</li>
 </ul>
 </li>
 </ul>
@@ -782,15 +796,15 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.22b62ea4.min.js"></script>
-      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.f6ebf1dc.min.js"
+            worker: "../assets/javascripts/worker/search.7a2ea5ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
