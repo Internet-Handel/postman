@@ -2,6 +2,44 @@
 
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
+## 30.06.2020 - Planning
+Co chcem probrat a otevřené otázky:
+
+* Planning.
+* ...
+
+Na čem jsme se domluvili:
+
+* ...
+* ...
+
+## 25.06.2020 - Grooming
+Co chcem probrat a otevřené otázky:
+
+* Projít UC-21 na zpracování přijatých balíků. 
+* Jak evidovat stav nebo krok ve kterém se uživatel při průchodu wizarden nachází.
+* Připravit tasky na další planning.
+
+Na čem jsme se domluvili:
+
+* Vážení - Váha pošle hodnotu po sériovém portu na počítač. Tam je něco (co to vlatně je ???), co data pošle na server. Na stránce javascript zkouší načíst naměřenou váhu ze serveru. Dokud to není načtené, je tam čekací animace. Až data přijdou na server, pak se uživateli ukáze hodnota z váhy. Při měření je třeba počkat, až se čtené hodnoty ustálí na nějakém čísle. Teprve pak hodnotu poslat.
+* Měření - Máme jednoho dopravce. Stačí, když budeme rozměry řešit tak, že balík porovnáme se značkami na stole. Nebudeme tedy přesně měřit, ale pouze porovnávat. Výsledná informace od dispečera bude jestli rozměy odpovídají / neodpovídají.
+* Focení balíku. Minimálně kvůli zpáteční adrese, by bylo dobré umět balík automaticky fotit. Už máme přístroj (Vojta), který zobrazí live náhled z kamery a umožní udělat fotky po stisku tlačítka ve webu.
+* Potřebujeme se ptát, co je obsahem balíku? Toto jsme nedořešili. Pokud ano, pak by to mělo být pole na objednávkovém formuláři.
+* Proces měření a vážení přesuneme mezi kroky "Je balik poskozen?" a "Lze pouzit stitek dopravce". Hlavní důvod je ten, že pokud v některých případech tiskneme přímo štítek dopravce, pak je potřeba vědět jestli balík prošel kontrolou na váhu a rozměry. Pokud ne, pak ho s interním štítkem posílame do chybové fronty.
+- Domluvili jsme se, že balík do chybové fronty posíláme hlavně s interním štítkem. ?
+- Budeme se dispečera ptát na adresu odesílatele, ale nebudeme ho žádat, aby rozdíly uložil. Týká se to obrazovky S-201.
+- Když ukazujeme dispečerovi, aby posoudit zpáteční adresu na balíku ukážeme mu všechny informace o balíku a objednávce. 
+- Místo opisování zpáteční adresy, budeme balík fotit tak, aby to pracovník podpory mohl přečíst.
+- Na wizardy máme založený ticket na PoC, je třeba prozkoumat:
+    - Uděláme je jako SPA?
+    - Ve wizardu budou body zlomu (tisk štítku), kde už nepůjde dělat tlačítko back.
+    - Jak se to bude chovat, kdyz uživatel zavře prohlížeč a později bude chtít pokračovat v přijímání balíku.
+    - Jak ukazovat krok ve kterém se nachází?
+- Štítek dopravce tiskneme pouze tehdy, pokud všechny kontroly souhlasí.
+- Vystisklý štítek by se měl scanovat - toto tu mám pouze jako poznámku, ale nedomluvili jsem se v jakám kroku. Má to být tak, ze dispečer štítek vytiskne a hned po tom naskenuje? Co se stane, kdyz scan nebude sedět nebo štítek nenajde. To jsou spíš otázky na příště.
+
+
 
 ## 09.06.2020
 Co chcem probrat a otevřené otázky:
@@ -13,9 +51,8 @@ Co chcem probrat a otevřené otázky:
 
 Na čem jsme se domluvili:
 
-* ...
-* ...
-
+- Definition of done domluveno.
+- Uzavřené tasky neudou na nikoho assignovane.
 
 ## 04.06.2020
 Co chcem probrat a otevřené otázky:
