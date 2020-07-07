@@ -1,6 +1,17 @@
 # Implementace
 
-Aktuální demo hlavní vývojové větve se nachází na [postman.90.cz](https://postman.90.cz/) a [support.postman.90.cz](https://support.postman.90.cz/). Testovací uživatel je postman/postman.
+Aktuální demo hlavní vývojové větve se nachází na [postman.90.cz](https://postman.90.cz/) a [support.postman.90.cz](https://support.postman.90.cz/). Testovací uživatelé jsou:
+
+- testDispatcher:testDispatcherPass
+- testSupport:testSupportPass
+- testUser:testUserPass
+- testAdmin:testAdminPass
+- testDispatcher2:testDispatcher2Pass
+- testSupport2:testSupport2Pass
+- testAdmin2:testAdmin2Pass
+- testDispatcher3:testDispatcher3Pass
+- testSupport3:testSupport3Pass
+- testAdmin3:testAdmin3Pass
 
 ## Vývoj
 
@@ -11,10 +22,21 @@ Aktuální demo hlavní vývojové větve se nachází na [postman.90.cz](https:
 
 [Jira]: https://internet-handel.atlassian.net/secure/RapidBoard.jspa?rapidView=4&projectKey=POST&view=planning.nodetail&issueLimit=100 "Jira postman"
 
+#### Definition Of Done
+
+Abychom task považovali za splněný, musí být v rozumné míře splněno:
+
+1. Fukcionalita je hotova.
+1. Nad kódem je code review.
+1. V případě akvizičního epiku review s bivojem.
+1. Je zamergovano.
+1. Je nasazeno na test prostredi.
+
+
 ### Odkazy
 
-[Issues na Honzu][1]
+[Dashboard s tasky na jednotlivé makáče][1]
 
-[1]: https://bitbucket.org/internethandel/postman/issues?responsible=557058%3A8ea21399-6948-4f20-bff4-900e87929012&status=%21closed
+[1]: https://internet-handel.atlassian.net/secure/Dashboard.jspa?selectPageId=10001
 
 

@@ -1,17 +1,32 @@
 # Schůzky
-
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
+
+
+## 02.07.2020 - Planning
+Co chcem probrat a otevřené otázky:
+
+* Grooming
+* ...
+
+Na čem jsme se domluvili:
+
+* Po tisku je třeba požádat dispečera o naskenování vytištěného štítku. Naskenovaný kód štítku musí odpovídat kódu balíku se kterým aktuálně pracuje a zároveň to musím být poslední vytištěný kód balíku. Pokud jedno z toho není splněno, pak mu napíšeme "Chybný štítek a jaké číslo jsme na balíku čekali" a umožníme mu znovu tisknout. Pokud bylo splněno, pak nechame systém přejít na další obrazovku. Na další obrazovce by měla být hláška, že štítek odpovídal.
+* ...
 
 ## 30.06.2020 - Planning
 Co chcem probrat a otevřené otázky:
 
 * Planning.
-* ...
+* Potřebujeme se ptát, co je obsahem balíku?
+* Jak má probíhat scanování vytisklého štítku?
+* Projít návrh UC-21 - zpracování přijatých balíků
 
 Na čem jsme se domluvili:
 
-* ...
-* ...
+* Platí, že čas vykazujeme v jiře na jednotlivé tikety.
+* Na přístě připravím přehled vykázaných časů.
+* Na každém dalším statusu připravím přehled výkazů, aby se někdo mohl chytit za hlavu a dodatečně vykázat ;-).
+* 9.7. grooming bude v mega knihách a pak půjdeme společně na pivo. 
 
 ## 25.06.2020 - Grooming
 Co chcem probrat a otevřené otázky:
@@ -53,8 +68,6 @@ Na čem jsme se domluvili:
 * Planning 4. sprintu
 * Budeme přidávat štítky k taskům, které mají vizuální komponent, na který se má Bivoj podívat; případně vytvářet na to specifické tasky
 * Budeme do analýzy zapisovat malé nápady a návrhy (do stránky [poznámky](https://jajir.github.io/postman/notes/#otevrene-otazky-napady))
->>>>>>> 30b4dcd0acdf1feed85e18320e45f149753a6f4c
-
 
 ## 09.06.2020
 Co chcem probrat a otevřené otázky:

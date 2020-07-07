@@ -3,33 +3,27 @@
 
 start
 $col2:Systém zobrazí S-200 pro zadání kódu.;
-if (Má balík na sobě kód?) then (Ano)
+if (Má na sobě balík kód?) then (Ano)
     :Přepíše kód balíku do systému a potvrdí;
     if (Našel systém objednávku ke kódu?) then (Ano)
-        -> zobrazí se stránka na\npotvrzení adresy;
+        -> zobrazí se stránka na\npotvrzení adresy;	
         $col2:Systém zobrazí S-202 pro
         ověření adresy odesílatele.;
         :Dispečer zkontroluje, že zpáteční adresa
         odesílatele je stejná jako je na monitoru;
         if (Jsou adresy shodé?) then (Ano, jsou shodné)
         else (Nejsou shodné)
-            $col2:Systém zobrazí S-201 pro
-            zadání zpáteční adresy ;
-            :Dispečer zadá zpáteční adresu
-            odesílatele a potvrdí.;
+            $col2:Systém si uloží informaci
+            o neodpovídající zpáteční adrese.;
         endif
     else (Ne)
-        $col2:Systém zobrazí S-201 pro
-        zadání zpáteční adresy ;
-        :Dispečer zadá zpáteční adresu
-        odesílatele a potvrdí.;
+        $col2:Systém si uloží informaci,
+        že se objednávku nepodařilo dohledat.;
     endif
 else (Ne)
     :Dispečer to do systému stiskem tlačitka potvrdí;
-    $col2:Systém zobrazí S-201 pro
-    zadání zpáteční adresy ;
-    :Dispečer zadá zpáteční adresu
-    odesílatele a potvrdí.;
+    $col2:Systém informaci 
+    o chybějícím kódu balíku uloží.;
 endif
 $col2:Systém pokračuje k dalším kroku:
 Řešení případně poškozeného balíku a tisk štítku;
