@@ -265,8 +265,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#zpracovani-jednoho-baliku" class="md-nav__link">
+    Zpracování jednoho balíku
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#proces-cteni-informaci-z-baliku" class="md-nav__link">
     Proces čtení informací z balíku
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reseni-pripadne-poskozeneho-baliku-mereni-a-vazeni" class="md-nav__link">
+    Řešení případně poškozeného balíku, měření a vážení.
   </a>
   
 </li>
@@ -282,6 +297,11 @@
   <a href="#mereni-vazeni-a-trizeni-baliku-do-front" class="md-nav__link">
     Měření, vážení a třízení balíku do front
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -568,8 +588,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#zpracovani-jednoho-baliku" class="md-nav__link">
+    Zpracování jednoho balíku
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#proces-cteni-informaci-z-baliku" class="md-nav__link">
     Proces čtení informací z balíku
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reseni-pripadne-poskozeneho-baliku-mereni-a-vazeni" class="md-nav__link">
+    Řešení případně poškozeného balíku, měření a vážení.
   </a>
   
 </li>
@@ -585,6 +620,11 @@
   <a href="#mereni-vazeni-a-trizeni-baliku-do-front" class="md-nav__link">
     Měření, vážení a třízení balíku do front
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -687,22 +727,66 @@
 <h2 id="uc-20-prijeti-baliku"><a name="UC-20"></a>UC-20 - Přijetí balíků</h2>
 <p>Dispečer přijme balíky od dopravce a dá je do přijímací fronty k dalšímu zpracování. Dispečer potvrdí převzetí balíku podepsáním protokolu dopravce.</p>
 <h2 id="uc-21-zpracovani-prijatych-baliku"><a name="UC-21"></a>UC-21 - Zpracování přijatých balíků</h2>
-<p>Přijate balíky je třeba vložit do systému. Dispečer bude frontu balíků zpracovávat následovně: </p>
+<p>UC popisuje, zadání balíků do systému.</p>
+<p>Předpoklady:</p>
+<ul>
+<li>Dispečer je přihlášený do systému.</li>
+<li>Dispečer má jeden nebo více balíků ve frontě na přijetí.</li>
+</ul>
+<p>Kroky:</p>
+<p>Dispečer bude frontu balíků zpracovávat následovně: </p>
+<ol>
+<li>Dispečer si na <a href="../screens/#S-01">S-01 základním rozcestníku</a> vybere odkaz pro zpracování přijatých balíků.</li>
+<li>Tím se mu zobrazí první stránka <a href="../screens/#S-200">S-200 pro zadání kódu balíku</a>. </li>
+<li>Dispečer přijme balík.</li>
+<li>Po přijetí balíku systém nabídne jestli chce dispečer pokračovat:<ol>
+<li>Pokud zvolí, že chce pokračovat systém se vrátí na obrazovku <a href="../screens/#S-200">S-200</a>.</li>
+<li>Pokud zvolí ne, proces končí a zobrazí se hlavní rozcestník <a href="../screens/#S-01">S-01</a>.</li>
+</ol>
+</li>
+</ol>
+<p>Tento proces bude vypadat následovně:</p>
 <p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity-1.png" title="Proces zpracování přijatých balíků" /></p>
-<h3 id="proces-cteni-informaci-z-baliku">Proces čtení informací z balíku</h3>
-<p>Dispečer si na <a href="../screens/#S-01">S-01 základním rozcestníku</a> vybere odkaz pro zpracování přijatých balíků. Tím se mu zobrazí první stránka <a href="../screens/#S-200">S-200 pro zadání kódu balíku</a>. Dispečer zadá kód balíku, nebo stiskne tlačítko, že balík nemá kód. V případě, balík nemá kód se zobrazí stránka <a href="../screens/#S-201">S-201 pro zadání adresy odesílatele</a>. V případě, že balík má kód, systém se pokusí napojit balík na objednávku. Pokud se to nepovede systém požádá dispečera o zadání adresy odesílate <a href="../screens/#S-201">S-201</a>. Pokud se balík spáruje s objednávkou podle kódu balíku systém požádá o <a href="../screens/#S-202">ověření adresy odesílatele na stránce S-202</a>.</p>
-<p>Pokud má balík kód odpovídající nějaké objednávce a zároveň nesedí adresa odesílatele na balíku, pak balík spojí s touto objednávkou a sytém požádá dispečera o <a href="../screens/#S-201">zadání této odlišné adresy na S-201</a>. Balík dál zpracujem.</p>
-<p>Zpracovaní jednoho balíku je pro srozumitelnost na samostatném obrázku:</p>
+<h3 id="zpracovani-jednoho-baliku">Zpracování jednoho balíku</h3>
+<p>Zpracovnání balíku je pro srozumitelnost rozděleno do samostatných kroků.</p>
+<h4 id="proces-cteni-informaci-z-baliku">Proces čtení informací z balíku</h4>
+<p>Kroky:</p>
+<ol>
+<li>Dispečer na stránce <a href="../screens/#S-200">S-200 pro zadání kódu balíku</a>.</li>
+<li>Má balík na sobě kód?<ol>
+<li>Ano má.<ol>
+<li>Dispečer kód balíku opíše a stiskne pokračovat.</li>
+<li>Systém se pokusí k zadanému kódu dohledat objednávku.<ol>
+<li>Objednávka existuje<ol>
+<li>Systém zobrazí stránku <a href="../screens/#S-202">S-202 pro ověření adresy odesílatele</a>.</li>
+<li>Dispečer zadá, jestli zpáteční adresa uvedená na balíku odpovídá zpáteční adrese uvedené na objednávce. Výsledek zaznamená a systém si ho dál pamatuje.</li>
+</ol>
+</li>
+<li>Objednávka neexistuje. Systém si tuto informaci uloží. Sem bude patřit spíše teoretický případ, že bude nalezeno objednávek víc než jedna.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Balík na sobě nemá kód<ol>
+<li>Dispečer stiskne tlačítko, "Balík na sobě náma kód".</li>
+<li>Systém tuto informaci uloží a pokračuje dál.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>Postup je pro srozumitelnost na samostatném obrázku:</p>
 <p><img alt="Proces čtení informací z balíku" src="../diagrams/out/uc-21-activity-2.png" title="Proces čtení informací z balíku" /></p>
-<p>V tomto stavu máme všechny dostupné informace o balíku zaznamenané.</p>
-<h3 id="reseni-pripadne-poskozeneho-baliku-a-tisk-stitku">Řešení případně poškozeného balíku a tisk štítku</h3>
+<p><strong>TODO přidat krok na opisovani poznamky na baliku</strong></p>
+<h4 id="reseni-pripadne-poskozeneho-baliku-mereni-a-vazeni">Řešení případně poškozeného balíku, měření a vážení.</h4>
+<h4 id="reseni-pripadne-poskozeneho-baliku-a-tisk-stitku">Řešení případně poškozeného balíku a tisk štítku</h4>
 <p><strong>TODO přidat odkaz na UC-210</strong></p>
 <p>Ve všech případech dispečer na balík tiskne <a href="../templates/#T-06">interní štítek</a>. Interní štítek musí byt nalepen tak, aby nepřekrýval informace, které na balík zadal odesílatel. Informace od odesílatele se mohou hodit pro pozdější řešení chyb.</p>
 <p>Proces začíná na obrazovce <a href="../screens/#S-203">S-203</a>, kde dispečer musí rozhodnout, jestli je balík poškozen nebo ne. Jedná se o poškození obalu, nebo poškození celého balíku, které by ztížilo nebo znemožnilo další doručovaní.</p>
 <p>Pokud balík není poškozen, pak lze tisknout štítek na balík. Pokud to lze, pak systém zobrazí stránku <a href="../screens/#S-212">S-212 pro tisk štítku dopravce</a>, jinak zobrazí <a href="../screens/#S-205">stránku S-205 pro tisk interního štítku</a>, který se vytiskne podle <a href="../templates/#T-06">šablony interního štítku</a>. Pokud je balík poškozen pak se zobrazí stránka <a href="../screens/#S-204">S-204 pro popsání míry poškození a několik fotek</a>. Na stránce se také dispečer musí rozhodnout, jestli lze balík přebalit a posunout dál do procesu doručení. Pokud balík nelze přebalit, pak se vytiskne interní štítek, dispečer zadá rozměry, váhu a balík putuje do chybové fronty. Pokud lze balík přebalit zobrazí se jednoduchá stránka  <a href="../screens/#S-206">S-206 pro zadání spotřeby obalového materiálu</a>. Pak se vytiskne interní štítek.</p>
 <p><img alt="Proces zpracování balíku" src="../diagrams/out/uc-21-activity-3.png" title="Proces zpracování balíku" /></p>
 <p>Pokud balík nemáme v chybové frontě, můžem jít k poslednímu kroku."</p>
-<h3 id="mereni-vazeni-a-trizeni-baliku-do-front">Měření, vážení a třízení balíku do front</h3>
+<h4 id="mereni-vazeni-a-trizeni-baliku-do-front">Měření, vážení a třízení balíku do front</h4>
 <p>V tomto kroku máme balík opatřený interním štítkem. Poslední krok začíná obrazovkou <a href="../screens/#S-207">S-207 pro vážení a měření</a>. Máme-li z předchozího procesu napárovanou objednávku na balík systém vyhodnotí jestli je balík zaplacen a k jakému dopravci má dál pokračovat a podel toho vybere frontu. Pokud nebyl balík spárován s objednávkou pak půjde do chybové fronty. Informace o další frontě bude na <a href="../screens/#S-208">obrazovce S-208</a>. Proces je detailně vidět z následujícího obrázku:</p>
 <p><img alt="Proces zpracování balíčku s kódem" src="../diagrams/out/uc-21-activity-4.png" title="Proces zpracování balíčku s kódem" /></p>
 <p>To jestli naměřené rozměry odpovídají těm, které zadal zákazník do objednávky zjistíme následovně. Seřadíme hodnoty ż obou skupin podle velikosti a pak navzájem porovnáme od nejmenší dvojice po nejvyšší. Tím odstraníme chybu, kdy zákazník zadá rozměry ve špatném pořadí. Jednotlivé hodnoty porovnáme tak, že pokud se budou lišit o méně než 5 cm, pak je budem považovat za shodné. Pokud se dále nebudou odlišovat o více než 10%, pak je budem považovat za shodné. Váha se bude porovnávat s tolerancí 10%.</p>
