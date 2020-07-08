@@ -1,8 +1,36 @@
 # Schůzky
 Zde budeme zaznamenávat, na čem jsme se domluvili a co bychom rádi probrali.
 
+## 09.07.2020 - Grooming
+Co chcem probrat a otevřené otázky:
 
-## 02.07.2020 - Planning
+* Projít a odhadnout UC-21
+* ...
+
+Na čem jsme se domluvili:
+
+* ...
+* ...
+
+## 07.07.2020 - Planning
+Co chcem probrat a otevřené otázky:
+
+* S Bivojem jsme se domluvili, že velkou část UC bude pořeba zrychlit. drtivou většinu UC pro dispečera a pracovníka podpory zajistíme tak, že si zavolají. Postupně budeme zjištovat, co potřebují k práci.
+* ...
+
+Na čem jsme se domluvili:
+
+* Prosli jsme, co jsme stihli.
+* Naplánovali další sprint.
+* Do produkce potřebujeme jít v týdnu do čtvrtého září. Pak už pomalu začne příprava na vánoce, která bude mít prioritu.
+* Máme na to 8 sprintů, v to čítajíc aktuálně běžící.
+* Musíme na kost ořezat velkou část UC. V původně plánovaném rozsahu je to nestihnutelné.
+* Pro účetnictví a fakturaci použijeme [flexiBee][flexiBee].
+* Další groomin bude u Bivoje v Modřanech.
+
+[flexiBee]: https://www.flexibee.eu
+
+## 02.07.2020 - Grooming
 Co chcem probrat a otevřené otázky:
 
 * Grooming
