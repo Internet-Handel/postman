@@ -35,3 +35,5 @@ Když se podaří balík doručit na cílovou adresu, tak pošleme zákazníkovi
 Tento štítek se nalepí na balík po jeho přijetí. Než předáme koncovému přepravci, tak interní štítek přelepíme dodacím štítkem dopravce. Proto bude mit interní štítek velké bílé prazdné okraje, aby šel snadno překrýt. Zároveň tento interní štítek musí být vzhledově hodně jiný než dodací štítek přepravce, aby nedošlo k záměně.
 
 ![Interní štítek balíku](./imgs/template-06.png "Interní štítek balíku")
+
+Velké tiskací `E` značí, že štítek byl tisknut, protože nastala chyba. Podle všeho je to zbytečné, protože štítky tiskneme pouze v případěě chyby.
