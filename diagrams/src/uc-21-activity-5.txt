@@ -1,0 +1,38 @@
+@startuml
+!include color_def.txt
+
+start
+$col2:Systém zobrazí S-200 pro zadání kódu.;
+if (Má na sobě balík kód?) then (Ano)
+    :Přepíše kód balíku do systému a potvrdí.;
+    if (Našel systém objednávku ke kódu?) then (Ano)	
+        $col2:Systém si uloží nalezený balík.;
+    else (Ne)
+        $col2:Systém si uloží informaci,
+        že se objednávku nepodařilo dohledat.;
+    endif
+else (Ne)
+    :Dispečer to do systému stiskem tlačitka potvrdí;
+    $col2:Systém informaci 
+    o chybějícím kódu balíku uloží.;
+endif
+
+$col2:Pokud se podařilo dohledat balík, pak se zobrazí informace o balíku
+dále systém zobrazí dotaz, jestli je s balíkem nějaký problém?;
+
+if (Je s balíkem nějaký problém?) then (Ano)
+	$col2:Zavolejte pracovníkovi podpory;
+	if (Podařilo se s pracovníkem podpory problém vyřešit?) then (Ano)
+	else (Ne)
+	    $col2:Dispečer vyfotí balík;
+	    $col2:Dispečer popíše problém;
+	endif
+else (Ne)
+endif
+
+$col2:Měření;
+$col2:Vážení;
+$col2:Tisk štítku;
+stop
+
+@enduml

@@ -265,6 +265,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#posledni-varianta" class="md-nav__link">
+    Poslední varianta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pokracovani-puvodniho-uc" class="md-nav__link">
+    Pokračování původního UC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#zpracovani-jednoho-baliku" class="md-nav__link">
     Zpracování jednoho balíku
   </a>
@@ -588,6 +602,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#posledni-varianta" class="md-nav__link">
+    Poslední varianta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pokracovani-puvodniho-uc" class="md-nav__link">
+    Pokračování původního UC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#zpracovani-jednoho-baliku" class="md-nav__link">
     Zpracování jednoho balíku
   </a>
@@ -722,11 +750,20 @@
 <li>Chybová fronta - Fronta pro chybové balíky. Které například nelze dohledat v systému, nemají kód nebo hrubě neodpovídají rozměry.</li>
 <li>Fronty pro dopravce - Každý dopravce bude mít svojí frontu, ze které mu budem balíky připravovat na vydání. Bude to například fronta pro DPD.</li>
 </ul>
+<p>Nejdříve budeme řešit nepoškozené balíky, pak poškozené.</p>
 <h3 id="stitek-na-baliku">Štítek na balíku</h3>
 <p>Při oběhu balíku v depu v některých případech použijeme místo interního štítku štítek dopravce. K tomu, aby to bylo možné, musí dopravce poskytnout nějaký způsob, jak balíku přidělit identifikační číslo, případně další vyžadované informace dřív, než balík předáme k dopravě. Například poskytne číselnou řadu, z které budeme balíkum přidělovat čísla. Dále musí mít na balíku čárový kód, který nám umožní rychlou identifikaci balíku. Identifikace balíku s štítkem dopravce, nesmí být složitějí než identifikace balíku s interním štítkem. Také nesmí vadit, že se může stát, že některá přidělené Id nevyužijeme. Například když zákazník zruší objednávku.</p>
 <h2 id="uc-20-prijeti-baliku"><a name="UC-20"></a>UC-20 - Přijetí balíků</h2>
 <p>Dispečer přijme balíky od dopravce a dá je do přijímací fronty k dalšímu zpracování. Dispečer potvrdí převzetí balíku podepsáním protokolu dopravce.</p>
 <h2 id="uc-21-zpracovani-prijatych-baliku"><a name="UC-21"></a>UC-21 - Zpracování přijatých balíků</h2>
+<h3 id="posledni-varianta">Poslední varianta</h3>
+<p><img alt="Proces zpracování přijatých balíků" src="../diagrams/out/uc-21-activity-5.png" title="Zpracování balíčku" /></p>
+<p><img alt="screen-200" src="../imgs/s-200.png" title="Zadání kódu balíku" /></p>
+<p><img alt="screen-215" src="../imgs/s-215.png" title="Je balík vpořádku?" /></p>
+<p><img alt="screen-216" src="../imgs/s-216.png" title="Zadání problému s balíkem?" /></p>
+<p><img alt="screen-217" src="../imgs/s-217.png" title="Měření a vážení?" /></p>
+<p><img alt="screen-218" src="../imgs/s-218.png" title="Tisk štítku?" /></p>
+<h3 id="pokracovani-puvodniho-uc">Pokračování původního UC</h3>
 <p>UC popisuje, zadání balíků do systému.</p>
 <p>Předpoklady:</p>
 <ul>
