@@ -42,14 +42,12 @@ Stránku může být rozdělená pomocí záložek na více. Pokud odkaz na deta
 
 * Obecné infromace o objednávce
 * Platby
-* Kontaktní historie
+* Poznámky
 * Události
 * Daňové doklady
 * Číslo objednávky a variabilní symbol jsou stejné hodnoty.
 
 ![Detail objednávky](./imgs/s-04-order-details.png "Detail objednávky")
-
-Detaily záznamů kontaktní historie na této stránce nejsou vidět. Pro ně by měla vzniknout nová stránka s jejich seznamem a zde přibýt odkaz na ní.
 
 Tlačítka zde budou zobrazená podel aktuálních možností. Například tlačítko "Označit za nezaplacenou" nebude vidět ve stavu objednávky `Nezaplacená`.
 
@@ -69,7 +67,7 @@ Pokud pracovník podpory na obrazovce [S-04 detail objednávky](./imgs/s-04-orde
 
 ## <a name="S-047"></a>S-047 - Vytvořit záznam do komunikační historie
 
-![Vytvořit záznam do komunikační historie](./imgs/s-047.png "Vytvořit záznam do komunikační historie")
+![Vytvořit poznámku k objednávce](./imgs/s-047.png "Vytvořit záznam do komunikační historie")
 
 ## <a name="S-048"></a>S-048 - Rozdělení objednávky mezi dvě platby 💵
 
