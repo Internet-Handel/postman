@@ -4,6 +4,7 @@ Tady budem evidovat změny v dokumentaci
 
 | Datum      | Změny           |
 | ---------- |----------------|
+| 16.09.2020 |Změna konceptu 'Kontaktní historie' na 'Poznámky k objednávce'.|
 | 01.06.2020 |Změna konceptu 'Historie stavů objednávky' na 'Události objednávky'.|
 | 13.05.2020 |Přidán popis události balíku. Balík a jeho stavy je vyčleněn do samostatné kapitoly.|
 | 26.04.2020 |Přidán UC-210, upravena práce se štítky.|

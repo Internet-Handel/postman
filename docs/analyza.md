@@ -95,7 +95,7 @@ Pracovník podpory může být fyzicky na centrále. Pracovník podpory je odpov
 * UC-55 - [Řešení chybové fronty](../uc-50/#UC-55 "Řešení chybové fronty").
 * UC-56 - [Řešení poškozeného balíku](../uc-50/#UC-56 "Řešení poškozeného balíku").
 * UC-57 - [Zaznamenání doručení balíku](../uc-50/#UC-57 "Zaznamenání doručení balíku").
-* UC-58 - [Přidat záznam do kontaktní historie](../uc-50/#UC-58 "Přidat záznam do kontaktní historie").
+* UC-58 - [Přidat záznam do poznámek](../uc-50/#UC-58 "Přidat záznam do kontaktní historie").
 * UC-59 - [Ověření identity zákazníka](../uc-50/#UC-59 "Ověření identity zákazníka").
 * UC-60 - [Likvidace balíku](../uc-50/#UC-60 "Likvidace balíku").
 * UC-61 - [Odeslat balík na zpáteční adresu zákazníka](../uc-50/#UC-61 "Odeslat balík na zpáteční adresu zákazníka").
